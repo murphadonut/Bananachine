@@ -1,6 +1,6 @@
 Flow report for alu_rf
-Tue Oct 24 16:09:18 2023
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Tue Oct 24 17:19:09 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Oct 24 16:09:18 2023       ;
-; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Flow Status                     ; Successful - Tue Oct 24 17:19:09 2023       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu_rf                                      ;
 ; Top-level Entity Name           ; Datapath                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 532 / 32,070 ( 2 % )                        ;
+; Logic utilization (in ALMs)     ; 529 / 32,070 ( 2 % )                        ;
 ; Total registers                 ; 512                                         ;
 ; Total pins                      ; 50 / 457 ( 11 % )                           ;
 ; Total virtual pins              ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/24/2023 16:08:11 ;
+; Start date & time ; 10/24/2023 17:17:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; alu_rf              ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 140982220270901.169818529111384        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 140982220270901.169818944004880        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_rf_tb      ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                     ; --            ; --          ; eda_simulation ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; alu_rf_tb                              ; --            ; --          ; eda_simulation ;
@@ -106,12 +106,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4834 MB             ; 00:00:04                           ;
-; Fitter               ; 00:00:45     ; 1.1                     ; 6630 MB             ; 00:00:33                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4837 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.6                     ; 5148 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
-; Total                ; 00:01:03     ; --                      ; --                  ; 00:00:47                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4850 MB             ; 00:00:07                           ;
+; Fitter               ; 00:01:11     ; 1.1                     ; 6661 MB             ; 00:01:06                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 4834 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.6                     ; 5151 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4727 MB             ; 00:00:01                           ;
+; Total                ; 00:01:44     ; --                      ; --                  ; 00:01:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

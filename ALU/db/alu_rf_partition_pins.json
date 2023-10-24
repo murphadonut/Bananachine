@@ -88,7 +88,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "alucont[2]",
+					"name" : "alucont[1]",
 					"strict" : false
 				},
 				{
@@ -96,11 +96,31 @@
 					"strict" : false
 				},
 				{
-					"name" : "alucont[1]",
+					"name" : "alucont[2]",
 					"strict" : false
 				},
 				{
 					"name" : "alucont[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ra2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ra2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ra2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ra2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ra2[1]",
 					"strict" : false
 				},
 				{
@@ -121,26 +141,6 @@
 				},
 				{
 					"name" : "ra1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "ra2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "ra2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "ra2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "ra2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ra2[2]",
 					"strict" : false
 				},
 				{
