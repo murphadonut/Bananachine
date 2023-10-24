@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at alu_rf.v(23): always construct contains both blocking and non-blocking assignments File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 23

@@ -1,0 +1,99 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Data/School/ECE 3710/ALU/simulation/modelsim
+valu_rf
+Z1 !s110 1698185407
+!i10b 1
+!s100 51?njV:ge<O9o]Nlmn^M53
+IMNB[=O`WBPGNmmeSTH8053
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1698185288
+8C:/Data/School/ECE 3710/ALU/alu_rf.v
+FC:/Data/School/ECE 3710/ALU/alu_rf.v
+L0 6
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1698185407.000000
+!s107 C:/Data/School/ECE 3710/ALU/alu_rf.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/School/ECE 3710/ALU|C:/Data/School/ECE 3710/ALU/alu_rf.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+C:/Data/School/ECE 3710/ALU}
+Z7 tCvgOpt 0
+valu_rf_tb
+R1
+!i10b 1
+!s100 ?mJ?b17k;EYbj<H:jg8T53
+ITQYD:1dG9DdbN=J@B6RP:1
+R2
+R0
+w1697934012
+8C:/Data/School/ECE 3710/ALU/alu_rf_tb.v
+FC:/Data/School/ECE 3710/ALU/alu_rf_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/School/ECE 3710/ALU/alu_rf_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/School/ECE 3710/ALU|C:/Data/School/ECE 3710/ALU/alu_rf_tb.v|
+!i113 1
+R5
+R6
+R7
+vDatapath
+R1
+!i10b 1
+!s100 B0[HJ?WJ_NGVUc4JhafGj0
+IQ_NWBQ]<eAodBXBO^kc:Q1
+R2
+R0
+w1697756139
+8C:/Data/School/ECE 3710/ALU/Datapath.v
+FC:/Data/School/ECE 3710/ALU/Datapath.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/School/ECE 3710/ALU/Datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/School/ECE 3710/ALU|C:/Data/School/ECE 3710/ALU/Datapath.v|
+!i113 1
+R5
+R6
+R7
+n@datapath
+vregfile
+R1
+!i10b 1
+!s100 ^o>elhVe`bN;O6VBFUjQf3
+I4g^Kn2KnEfa;676<lT_RH3
+R2
+R0
+w1697755522
+8C:/Data/School/ECE 3710/ALU/regfile.v
+FC:/Data/School/ECE 3710/ALU/regfile.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/School/ECE 3710/ALU/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/School/ECE 3710/ALU|C:/Data/School/ECE 3710/ALU/regfile.v|
+!i113 1
+R5
+R6
+R7

@@ -1,0 +1,55 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Data/School/ECE 3710/ALU/simulation/modelsim
+valu_rf_tb
+Z1 !s110 1697757470
+!i10b 1
+!s100 ghVDF@z12`L<XTcoY6lo22
+IR=mU]P=Nmj`cPTG1fc`WO2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1697757005
+8C:/Data/School/ECE 3710/ALU/alu_rf_tb.v
+FC:/Data/School/ECE 3710/ALU/alu_rf_tb.v
+L0 3
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1697757470.000000
+!s107 C:/Data/School/ECE 3710/ALU/alu_rf_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/School/ECE 3710/ALU|C:/Data/School/ECE 3710/ALU/alu_rf_tb.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work {+incdir+C:/Data/School/ECE 3710/ALU}
+Z6 tCvgOpt 0
+vDatapath
+R1
+!i10b 1
+!s100 [U_C[N5E`DJlBE_h5glC12
+IneaBP`m>3P>hCPoMAOTVQ0
+R2
+R0
+w1697757420
+8alu_rf.vo
+Falu_rf.vo
+L0 31
+R3
+r1
+!s85 0
+31
+R4
+!s107 alu_rf.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|alu_rf.vo|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+.
+R6
+n@datapath
