@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu_rf
-Tue Oct 24 17:17:32 2023
+Tue Oct 24 18:22:40 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 24 17:17:32 2023       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 24 18:22:40 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu_rf                                      ;
 ; Top-level Entity Name           ; Datapath                                    ;
@@ -166,7 +166,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
@@ -337,7 +337,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -347,7 +347,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 24 17:17:19 2023
+    Info: Processing started: Tue Oct 24 18:22:31 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_rf -c alu_rf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -359,6 +359,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_rf.
     Info (12023): Found entity 1: alu_rf File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file alu_rf_tb.v
     Info (12023): Found entity 1: alu_rf_tb File: C:/Data/GIT/Bananachine/ALU/alu_rf_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file true_dual_port_ram_single_clock.v
+    Info (12023): Found entity 1: true_dual_port_ram_single_clock File: C:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file test.v
+    Info (12023): Found entity 1: test File: C:/Data/GIT/Bananachine/ALU/test.v Line: 39
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
 Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 7
 Info (10648): Verilog HDL Display System Task info at regfile.v(13): Loading register file File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 13
@@ -460,9 +464,9 @@ Info (21057): Implemented 1150 device resources after synthesis - the final reso
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 1100 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
-    Info: Peak virtual memory: 4850 megabytes
-    Info: Processing ended: Tue Oct 24 17:17:32 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Tue Oct 24 18:22:40 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:06
 
 
