@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu_rf
-Tue Oct 24 18:22:40 2023
+Tue Oct 24 22:35:10 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,14 +13,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |Datapath
- 12. Parameter Settings for User Entity Instance: regfile:rf
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |datapath
+ 10. Parameter Settings for User Entity Instance: regfile:rf
+ 11. Parameter Settings for User Entity Instance: alu_rf:alu
+ 12. Parameter Settings for User Entity Instance: instruction_reg:ins_reg
+ 13. Port Connectivity Checks: "instruction_reg:ins_reg"
+ 14. Port Connectivity Checks: "alu_rf:alu"
+ 15. Port Connectivity Checks: "regfile:rf"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +49,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 24 18:22:40 2023       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 24 22:35:09 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu_rf                                      ;
-; Top-level Entity Name           ; Datapath                                    ;
+; Top-level Entity Name           ; datapath                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 512                                         ;
+; Total registers                 ; 0                                           ;
 ; Total pins                      ; 50                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -72,7 +75,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; Datapath           ; alu_rf             ;
+; Top-level entity name                                                           ; datapath           ; alu_rf             ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -162,26 +165,24 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path           ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
-; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Data/GIT/Bananachine/ALU/regfile.v  ;         ;
-; Datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Data/GIT/Bananachine/ALU/Datapath.v ;         ;
-; Reg.dat                          ; yes             ; User Unspecified File  ; C:/Data/GIT/Bananachine/ALU/Reg.dat    ;         ;
-; alu_rf.v                         ; yes             ; User Verilog HDL File  ; C:/Data/GIT/Bananachine/ALU/alu_rf.v   ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Data/GIT/Bananachine/ALU/datapath.v        ;         ;
+; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Data/GIT/Bananachine/ALU/regfile.v         ;         ;
+; Reg.dat                          ; yes             ; User Unspecified File  ; C:/Data/GIT/Bananachine/ALU/Reg.dat           ;         ;
+; alu_rf.v                         ; yes             ; User Verilog HDL File  ; C:/Data/GIT/Bananachine/ALU/alu_rf.v          ;         ;
+; instruction_reg.v                ; yes             ; User Verilog HDL File  ; C:/Data/GIT/Bananachine/ALU/instruction_reg.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -189,69 +190,36 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 629       ;
+; Estimate of Logic utilization (ALMs needed) ; 0         ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 644       ;
-;     -- 7 input functions                    ; 259       ;
-;     -- 6 input functions                    ; 142       ;
-;     -- 5 input functions                    ; 43        ;
-;     -- 4 input functions                    ; 50        ;
-;     -- <=3 input functions                  ; 150       ;
+; Combinational ALUT usage for logic          ; 0         ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 0         ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 0         ;
+;     -- <=3 input functions                  ; 0         ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 512       ;
+; Dedicated logic registers                   ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 50        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 512       ;
-; Total fan-out                               ; 5010      ;
-; Average fan-out                             ; 3.99      ;
+; Maximum fan-out node                        ; reg_write ;
+; Maximum fan-out                             ; 1         ;
+; Total fan-out                               ; 50        ;
+; Average fan-out                             ; 0.50      ;
 +---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                        ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+-------------+--------------+
-; |Datapath                  ; 644 (0)             ; 512 (0)                   ; 0                 ; 0          ; 50   ; 0            ; |Datapath               ; Datapath    ; work         ;
-;    |alu_rf:alunit|         ; 235 (235)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu_rf:alunit ; alu_rf      ; work         ;
-;    |regfile:rf|            ; 409 (409)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |Datapath|regfile:rf    ; regfile     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |datapath                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 50   ; 0            ; |datapath           ; datapath    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                    ;
-+-----------------------------------------------------+-------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal     ; Free of Timing Hazards ;
-+-----------------------------------------------------+-------------------------+------------------------+
-; alu_rf:alunit|result[0]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[1]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[2]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[3]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[4]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[5]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[6]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[7]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[8]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[9]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[10]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[11]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[12]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[13]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[14]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[15]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|C                                     ; alu_rf:alunit|Selector1 ; yes                    ;
-; alu_rf:alunit|L                                     ; alu_rf:alunit|Decoder0  ; yes                    ;
-; alu_rf:alunit|F                                     ; alu_rf:alunit|Selector1 ; yes                    ;
-; alu_rf:alunit|Z                                     ; alu_rf:alunit|Decoder0  ; yes                    ;
-; alu_rf:alunit|N                                     ; alu_rf:alunit|Decoder0  ; yes                    ;
-; Number of user-specified and inferred latches = 21  ;                         ;                        ;
-+-----------------------------------------------------+-------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -259,35 +227,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 512   ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 512   ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Datapath|alu_rf:alunit|ShiftLeft0 ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 36 LEs               ; 4 LEs                  ; No         ; |Datapath|alu_rf:alunit|Mux4       ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|alu_rf:alunit|Mux9       ;
-; 19:1               ; 3 bits    ; 36 LEs        ; 33 LEs               ; 3 LEs                  ; No         ; |Datapath|alu_rf:alunit|Mux12      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-
-
 +--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |Datapath ;
+; Parameter Settings for User Entity Instance: Top-level Entity: |datapath ;
 +----------------+-------+-------------------------------------------------+
 ; Parameter Name ; Value ; Type                                            ;
 +----------------+-------+-------------------------------------------------+
 ; WIDTH          ; 16    ; Signed Integer                                  ;
-; REGBITS        ; 5     ; Signed Integer                                  ;
+; REG_BITS       ; 5     ; Signed Integer                                  ;
+; ALU_CONT_BITS  ; 5     ; Signed Integer                                  ;
+; IMM_BITS       ; 8     ; Signed Integer                                  ;
+; OP_BITS        ; 4     ; Signed Integer                                  ;
 +----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -298,9 +257,64 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                           ;
 +----------------+-------+--------------------------------+
 ; WIDTH          ; 16    ; Signed Integer                 ;
-; REGBITS        ; 5     ; Signed Integer                 ;
+; REG_BITS       ; 5     ; Signed Integer                 ;
 +----------------+-------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu_rf:alu ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; WIDTH          ; 16    ; Signed Integer                 ;
+; ALU_CONT_BITS  ; 5     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: instruction_reg:ins_reg ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                              ;
+; IMM_BITS       ; 8     ; Signed Integer                              ;
+; OP_BITS        ; 4     ; Signed Integer                              ;
+; REG_BITS       ; 5     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "instruction_reg:ins_reg"                                                                                                                                                           ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                                                                                                                 ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; op_code         ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
+; immediate_value ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
+; reg_A_index     ; Output ; Warning  ; Output or bidir port (5 bits) is smaller than the port expression (16 bits) it drives.  The 11 most-significant bit(s) in the port expression will be connected to GND. ;
+; reg_B_index     ; Output ; Warning  ; Output or bidir port (5 bits) is smaller than the port expression (16 bits) it drives.  The 11 most-significant bit(s) in the port expression will be connected to GND. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_rf:alu"                                                                                                                                         ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                          ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; alu_cont ; Input ; Warning  ; Input port expression (5 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "alu_cont[5..5]" will be connected to GND. ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regfile:rf"                                                                                                                                                                              ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reg_A_index ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (5 bits) it drives.  The 11 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reg_B_index ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (5 bits) it drives.  The 11 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -308,27 +322,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 512                         ;
-;     ENA               ; 512                         ;
-; arriav_lcell_comb     ; 645                         ;
-;     arith             ; 49                          ;
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 16                          ;
-;         4 data inputs ; 32                          ;
-;     extend            ; 259                         ;
-;         7 data inputs ; 259                         ;
-;     normal            ; 337                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 56                          ;
-;         2 data inputs ; 42                          ;
-;         3 data inputs ; 35                          ;
-;         4 data inputs ; 18                          ;
-;         5 data inputs ; 43                          ;
-;         6 data inputs ; 142                         ;
 ; boundary_port         ; 50                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 8.11                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -347,126 +347,176 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 24 18:22:31 2023
+    Info: Processing started: Tue Oct 24 22:35:02 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_rf -c alu_rf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
-    Info (12023): Found entity 1: regfile File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: Datapath File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 1
+    Info (12023): Found entity 1: datapath File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
+    Info (12023): Found entity 1: regfile File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_rf.v
     Info (12023): Found entity 1: alu_rf File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file alu_rf_tb.v
     Info (12023): Found entity 1: alu_rf_tb File: C:/Data/GIT/Bananachine/ALU/alu_rf_tb.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file true_dual_port_ram_single_clock.v
-    Info (12023): Found entity 1: true_dual_port_ram_single_clock File: C:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file test.v
-    Info (12023): Found entity 1: test File: C:/Data/GIT/Bananachine/ALU/test.v Line: 39
-Info (12127): Elaborating entity "Datapath" for the top level hierarchy
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 7
-Info (10648): Verilog HDL Display System Task info at regfile.v(13): Loading register file File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 13
-Warning (10850): Verilog HDL warning at regfile.v(15): number of words (17) in memory file does not match the number of elements in the address range [0:31] File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 15
-Info (10648): Verilog HDL Display System Task info at regfile.v(16): done with RF load File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 16
-Warning (10230): Verilog HDL assignment warning at regfile.v(26): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 26
-Warning (10230): Verilog HDL assignment warning at regfile.v(27): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 27
-Info (12128): Elaborating entity "alu_rf" for hierarchy "alu_rf:alunit" File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 8
-Warning (10036): Verilog HDL or VHDL warning at alu_rf.v(8): object "sinB" assigned a value but never read File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 8
-Warning (10230): Verilog HDL assignment warning at alu_rf.v(15): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 15
-Warning (10230): Verilog HDL assignment warning at alu_rf.v(47): truncated value with size 32 to match size of target (1) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 47
-Warning (10230): Verilog HDL assignment warning at alu_rf.v(63): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 63
-Warning (10270): Verilog HDL Case Statement warning at alu_rf.v(20): incomplete case statement has no default case item File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "F", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "N", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "L", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "Z", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "Z" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "L" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "N" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "F" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "C" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[0]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[1]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[2]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[3]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[4]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[5]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[6]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[7]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[8]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[9]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[10]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[11]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[12]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[13]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[14]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[15]" at alu_rf.v(20) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "regfile:rf|RAM" is uninferred due to asynchronous read logic File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 10
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Data/GIT/Bananachine/ALU/db/alu_rf.ram0_regfile_da4ae4bd.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (13012): Latch alu_rf:alunit|result[0] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[1] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[2] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[3] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[4] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[5] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[6] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[7] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[8] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[9] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[10] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[11] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[12] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[13] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[14] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[15] has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|C has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[0] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|F has unsafe behavior File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[0] File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file fucker.v
+    Info (12023): Found entity 1: FUCKER File: C:/Data/GIT/Bananachine/ALU/FUCKER.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
+    Info (12023): Found entity 1: CPU File: C:/Data/GIT/Bananachine/ALU/CPU.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file muxes.v
+    Info (12023): Found entity 1: mux2 File: C:/Data/GIT/Bananachine/ALU/muxes.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_reg.v
+    Info (12023): Found entity 1: instruction_reg File: C:/Data/GIT/Bananachine/ALU/instruction_reg.v Line: 1
+Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 26
+Info (10648): Verilog HDL Display System Task info at regfile.v(12): Loading register file File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 12
+Warning (10850): Verilog HDL warning at regfile.v(13): number of words (17) in memory file does not match the number of elements in the address range [0:31] File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 13
+Info (10648): Verilog HDL Display System Task info at regfile.v(14): done with RF load File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 14
+Warning (10230): Verilog HDL assignment warning at regfile.v(24): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 24
+Warning (10230): Verilog HDL assignment warning at regfile.v(25): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 25
+Info (12128): Elaborating entity "alu_rf" for hierarchy "alu_rf:alu" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 36
+Warning (10230): Verilog HDL assignment warning at alu_rf.v(18): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 18
+Warning (10230): Verilog HDL assignment warning at alu_rf.v(65): truncated value with size 32 to match size of target (1) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 65
+Warning (10230): Verilog HDL assignment warning at alu_rf.v(87): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 87
+Warning (10270): Verilog HDL Case Statement warning at alu_rf.v(22): incomplete case statement has no default case item File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "alu_out", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "c_flag", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "f_flag", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "n_flag", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "l_flag", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "z_flag", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "z_flag" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "l_flag" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "n_flag" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "f_flag" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "c_flag" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[0]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[1]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[2]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[3]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[4]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[5]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[6]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[7]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[8]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[9]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[10]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[11]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[12]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[13]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[14]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[15]" at alu_rf.v(22) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Info (12128): Elaborating entity "instruction_reg" for hierarchy "instruction_reg:ins_reg" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 46
+Warning (10034): Output port "op_code" at instruction_reg.v(3) has no driver File: C:/Data/GIT/Bananachine/ALU/instruction_reg.v Line: 3
+Warning (10034): Output port "immediate_value" at instruction_reg.v(4) has no driver File: C:/Data/GIT/Bananachine/ALU/instruction_reg.v Line: 4
+Warning (10034): Output port "reg_A_index" at instruction_reg.v(5) has no driver File: C:/Data/GIT/Bananachine/ALU/instruction_reg.v Line: 5
+Warning (10034): Output port "reg_B_index" at instruction_reg.v(6) has no driver File: C:/Data/GIT/Bananachine/ALU/instruction_reg.v Line: 6
+Warning (12158): Entity "instruction_reg" contains only dangling pins File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 46
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "reg_A_index[15]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_A_index[14]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_A_index[13]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_A_index[12]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_A_index[11]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_A_index[10]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_A_index[9]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_A_index[8]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_A_index[7]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_A_index[6]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_A_index[5]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_B_index[15]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_B_index[14]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_B_index[13]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_B_index[12]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_B_index[11]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_B_index[10]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_B_index[9]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_B_index[8]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_B_index[7]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_B_index[6]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+    Warning (12110): Net "reg_B_index[5]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 9
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[1]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[2]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[3]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[4]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[5]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[6]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[7]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[8]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[9]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[10]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[11]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[12]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[13]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[14]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "alu_rf:alu|alu_out[15]" is permanently enabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14025): LATCH primitive "alu_rf:alu|n_flag" is permanently disabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14025): LATCH primitive "alu_rf:alu|l_flag" is permanently disabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14025): LATCH primitive "alu_rf:alu|z_flag" is permanently disabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14025): LATCH primitive "alu_rf:alu|c_flag" is permanently disabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14025): LATCH primitive "alu_rf:alu|f_flag" is permanently disabled File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 22
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "psr_flags[1]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[3]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[4]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[8]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[9]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[10]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[11]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[12]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[13]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[14]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[15]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 4
-Info (286030): Timing-Driven Synthesis is running
+    Warning (13410): Pin "datapath_out[0]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[1]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[2]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[3]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[4]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[5]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[6]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[7]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[8]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[9]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[10]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[11]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[12]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[13]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[14]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "datapath_out[15]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 4
+    Warning (13410): Pin "psr_flags[0]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[1]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[2]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[3]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[4]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[5]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[6]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[7]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[8]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[9]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[10]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[11]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[12]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[13]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[14]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
+    Warning (13410): Pin "psr_flags[15]" is stuck at GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 5
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "alucont[5]" File: C:/Data/GIT/Bananachine/ALU/Datapath.v Line: 2
-Info (21057): Implemented 1150 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 18 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reg_write" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 2
+    Warning (15610): No output dependent on input pin "clk" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 2
+    Warning (15610): No output dependent on input pin "instruction[0]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[1]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[2]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[3]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[4]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[5]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[6]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[7]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[8]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[9]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[10]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[11]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[12]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[13]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[14]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[15]" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 3
+Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 1100 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
-    Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Tue Oct 24 18:22:40 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 115 warnings
+    Info: Peak virtual memory: 4799 megabytes
+    Info: Processing ended: Tue Oct 24 22:35:10 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:04
 
 
