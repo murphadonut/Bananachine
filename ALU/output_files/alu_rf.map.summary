@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Oct 24 22:35:09 2023
+Analysis & Synthesis Status : Successful - Wed Oct 25 22:00:32 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : alu_rf
 Top-level Entity Name : datapath
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 50
+Total registers : 16
+Total pins : 93
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

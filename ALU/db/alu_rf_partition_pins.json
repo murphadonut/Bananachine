@@ -2,7 +2,124 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "pc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[15]",
+					"strict" : false
+				},
+				{
+					"name" : "psr_flags[2]",
+					"strict" : false
+				},
+				{
+					"name" : "psr_flags[6]",
+					"strict" : false
+				},
+				{
+					"name" : "psr_flags[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "pc_src",
+					"strict" : false
+				},
+				{
+					"name" : "pc_en",
+					"strict" : false
+				},
+				{
+					"name" : "alu_A_src",
+					"strict" : false
+				},
+				{
+					"name" : "alu_cont[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_cont[1]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_cont[2]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_cont[3]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_cont[4]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

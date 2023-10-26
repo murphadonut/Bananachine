@@ -1,4 +1,4 @@
-
+might want to add a default case to alu_cont switch statement
 			// B note
 			// a is displacement
 			// b is just where the pc counter is at. 
