@@ -14,12 +14,13 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		clk, 
 		reset, 
 		pc_en, 
-		alu_A_src, 
-		alu_B_src,
+		alu_A_src,
 		pc_src,
 		reg_write_src,
+		destination_reg,
 		
 	// Multi bit inputs
+	input		[1 : 0] alu_B_src,
 	input		[ALU_CONT_BITS - 1 : 0]	alu_cont,
 	input 	[WIDTH - 1:0] 
 		instruction, 
@@ -47,6 +48,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		B_data, 
 		A_index, 
 		B_index, 
+		write_index,
 		immediate_from_ins_reg,
 		next_pc;
 		
@@ -71,6 +73,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		.reg_write(reg_write), 							// Input: write register A to register file?
 		.A_index(A_index),								// Input: access which register? (1-15), 0 reserved
 		.B_index(B_index),								// Input: see above
+		.write_index(write_index),
 		.write_data(file_reg_write_data),			// Input: what data to write to register A
 		.A_data(A_data), 									// Output: data stored in register A
 		.B_data(B_data)									// Output: data stored in register B
@@ -121,6 +124,15 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		.q(reg_mdr)											// Output: current value of memory data register
 	);
 	
+	// Input address mux for memory
+	mux2 #(WIDTH)
+	address_mux(
+		.selection(destination_reg),
+		.input_1(A_index),
+		.input_2(B_index),
+		.mux2_output(write_index)
+	);
+	
 	// ALU A input mux, 
 	// 0 for branch displacement using the program counter, 
 	// 1 for data from register file output A
@@ -135,12 +147,14 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 	// ALU B input mux, 
 	// 0 for data from register file output B, 
 	// 1 for immediate value from instruction
-	mux2 #(WIDTH)
+	// 2 for hardcoded one, used for pc increment
+	mux4 #(WIDTH)
 	alu_B_mux(
 		.selection(alu_B_src),							// Input: see alu_A_mux for stupid descriptions of these
 		.input_1(reg_B),									// Input
 		.input_2(reg_immediate),						// Input
-		.mux2_output(alu_B_in)							// Output
+		.input_3(1'b1),									// Input
+		.mux4_output(alu_B_in)							// Output
 	);
 	
 	// PC source mux, 
@@ -149,8 +163,8 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 	mux2 #(WIDTH)
 	pc_src_mux(
 		.selection(pc_src),								// Input: see alu_A_mux for stupid descriptions of these
-		.input_1(alu_out),								// Input
-		.input_2(B_data),									// Input
+		.input_1(reg_alu),								// Input
+		.input_2(reg_B),									// Input
 		.mux2_output(next_pc)							// Output
 	);
 		

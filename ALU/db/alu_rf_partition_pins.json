@@ -68,7 +68,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "psr_flags[0]",
+					"strict" : false
+				},
+				{
 					"name" : "psr_flags[2]",
+					"strict" : false
+				},
+				{
+					"name" : "psr_flags[5]",
 					"strict" : false
 				},
 				{
@@ -96,11 +104,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "alu_A_src",
-					"strict" : false
-				},
-				{
-					"name" : "alu_cont[0]",
+					"name" : "alu_cont[4]",
 					"strict" : false
 				},
 				{
@@ -112,11 +116,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "alu_cont[0]",
+					"strict" : false
+				},
+				{
 					"name" : "alu_cont[3]",
 					"strict" : false
 				},
 				{
-					"name" : "alu_cont[4]",
+					"name" : "alu_A_src",
+					"strict" : false
+				},
+				{
+					"name" : "alu_B_src[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_B_src[1]",
 					"strict" : false
 				}
 			]
