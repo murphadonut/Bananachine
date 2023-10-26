@@ -85,5 +85,6 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 5)(
 			5'b01000: alu_out <= b<<8;							// LUI
 			5'b01001: alu_out <= a;								// JCOND
 			5'b01010: alu_out <= a+1;							// JAL
+			5'b01011: alu_out <= b;								// LOAD
 		endcase
 endmodule
