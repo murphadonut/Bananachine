@@ -4,6 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
+<<<<<<< Updated upstream
 					"name" : "result[0]",
 					"strict" : false
 				},
@@ -153,6 +154,77 @@
 				},
 				{
 					"name" : "regwrite",
+=======
+					"name" : "addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "read[0]",
+					"strict" : false
+				},
+				{
+					"name" : "read[1]",
+					"strict" : false
+				},
+				{
+					"name" : "read[2]",
+					"strict" : false
+				},
+				{
+					"name" : "read[3]",
+					"strict" : false
+				},
+				{
+					"name" : "read[4]",
+					"strict" : false
+				},
+				{
+					"name" : "read[5]",
+					"strict" : false
+				},
+				{
+					"name" : "read[6]",
+					"strict" : false
+				},
+				{
+					"name" : "st[0]",
+					"strict" : false
+				},
+				{
+					"name" : "st[1]",
+					"strict" : false
+				},
+				{
+					"name" : "st[2]",
+					"strict" : false
+				},
+				{
+					"name" : "st[3]",
+					"strict" : false
+				},
+				{
+					"name" : "st[4]",
+					"strict" : false
+				},
+				{
+					"name" : "st[5]",
+					"strict" : false
+				},
+				{
+					"name" : "st[6]",
+					"strict" : false
+				},
+				{
+					"name" : "butt",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+>>>>>>> Stashed changes
 					"strict" : false
 				}
 			]

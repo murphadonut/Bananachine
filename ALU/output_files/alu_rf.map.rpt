@@ -1,9 +1,13 @@
 Analysis & Synthesis report for alu_rf
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Tue Oct 24 16:08:19 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 =======
 Fri Oct 27 15:37:23 2023
+=======
+Fri Oct 27 16:04:12 2023
+>>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 >>>>>>> Stashed changes
 
@@ -19,6 +23,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
+<<<<<<< Updated upstream
   8. User-Specified and Inferred Latches
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -29,6 +34,42 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  15. Analysis & Synthesis Messages
 =======
   5. Analysis & Synthesis Messages
+>>>>>>> Stashed changes
+=======
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |datapathFSM
+ 13. Parameter Settings for User Entity Instance: flipflop:ff
+ 14. Parameter Settings for User Entity Instance: datapath:d
+ 15. Parameter Settings for User Entity Instance: datapath:d|zerodetect:zero_thingy
+ 16. Parameter Settings for User Entity Instance: datapath:d|flopenr:pc_flopenr
+ 17. Parameter Settings for User Entity Instance: datapath:d|regfile:reg_file
+ 18. Parameter Settings for User Entity Instance: datapath:d|flopr:immediate_flopr
+ 19. Parameter Settings for User Entity Instance: datapath:d|flopr:reg_A_flopr
+ 20. Parameter Settings for User Entity Instance: datapath:d|flopr:reg_B_flopr
+ 21. Parameter Settings for User Entity Instance: datapath:d|flopr:reg_alu_flopr
+ 22. Parameter Settings for User Entity Instance: datapath:d|flopr:mdr_flopr
+ 23. Parameter Settings for User Entity Instance: datapath:d|mux2:mem_address_mux
+ 24. Parameter Settings for User Entity Instance: datapath:d|mux2:alu_A_mux
+ 25. Parameter Settings for User Entity Instance: datapath:d|mux4:alu_B_mux
+ 26. Parameter Settings for User Entity Instance: datapath:d|mux2:pc_src_mux
+ 27. Parameter Settings for User Entity Instance: datapath:d|mux2:reg_write_src_mux
+ 28. Parameter Settings for User Entity Instance: datapath:d|alu_rf:alu_unit
+ 29. Parameter Settings for User Entity Instance: datapath:d|instruction_reg:ins_reg
+ 30. Port Connectivity Checks: "datapath:d|instruction_reg:ins_reg"
+ 31. Port Connectivity Checks: "datapath:d|alu_rf:alu_unit"
+ 32. Port Connectivity Checks: "datapath:d|mux4:alu_B_mux"
+ 33. Port Connectivity Checks: "datapath:d|mux2:mem_address_mux"
+ 34. Port Connectivity Checks: "datapath:d|regfile:reg_file"
+ 35. Port Connectivity Checks: "datapath:d"
+ 36. Port Connectivity Checks: "hexTo7Seg:stateDisplay"
+ 37. Port Connectivity Checks: "hexTo7Seg:writeData"
+ 38. Port Connectivity Checks: "flipflop:ff"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
 >>>>>>> Stashed changes
 
 
@@ -56,6 +97,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis Status     ; Successful - Tue Oct 24 16:08:19 2023       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu_rf                                      ;
@@ -64,6 +106,16 @@ refer to the applicable agreement for further details.
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 512                                         ;
 ; Total pins                      ; 50                                          ;
+=======
+; Analysis & Synthesis Status     ; Successful - Fri Oct 27 16:04:12 2023       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; alu_rf                                      ;
+; Top-level Entity Name           ; datapathFSM                                 ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 26                                          ;
+; Total pins                      ; 32                                          ;
+>>>>>>> Stashed changes
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -101,7 +153,11 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Top-level entity name                                                           ; Datapath           ; alu_rf             ;
+=======
+; Top-level entity name                                                           ; datapathFSM        ; alu_rf             ;
+>>>>>>> Stashed changes
 =======
 ; Top-level entity name                                                           ; datapathFSM        ; alu_rf             ;
 >>>>>>> Stashed changes
@@ -194,6 +250,7 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
+<<<<<<< Updated upstream
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -287,21 +344,715 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
+=======
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; regfile.v                        ; yes             ; User Verilog HDL File        ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v         ;         ;
+; muxes.v                          ; yes             ; User Verilog HDL File        ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v           ;         ;
+; instruction_reg.v                ; yes             ; User Verilog HDL File        ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/instruction_reg.v ;         ;
+; datapathFSM.v                    ; yes             ; User Verilog HDL File        ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v     ;         ;
+; Datapath.v                       ; yes             ; User Verilog HDL File        ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Datapath.v        ;         ;
+; alu_rf.v                         ; yes             ; User Verilog HDL File        ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v          ;         ;
+; reg.dat                          ; yes             ; Auto-Found Unspecified File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/reg.dat           ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimate of Logic utilization (ALMs needed) ; 22               ;
+;                                             ;                  ;
+; Combinational ALUT usage for logic          ; 41               ;
+;     -- 7 input functions                    ; 0                ;
+;     -- 6 input functions                    ; 0                ;
+;     -- 5 input functions                    ; 7                ;
+;     -- 4 input functions                    ; 15               ;
+;     -- <=3 input functions                  ; 19               ;
+;                                             ;                  ;
+; Dedicated logic registers                   ; 26               ;
+;                                             ;                  ;
+; I/O pins                                    ; 32               ;
+;                                             ;                  ;
+; Total DSP Blocks                            ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; flipflop:ff|q[2] ;
+; Maximum fan-out                             ; 25               ;
+; Total fan-out                               ; 269              ;
+; Average fan-out                             ; 2.05             ;
++---------------------------------------------+------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+-------------+--------------+
+; |datapathFSM                  ; 41 (6)              ; 26 (0)                    ; 0                 ; 0          ; 32   ; 0            ; |datapathFSM                                  ; datapathFSM ; work         ;
+;    |datapath:d|               ; 21 (0)              ; 23 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|datapath:d                       ; datapath    ; work         ;
+;       |alu_rf:alu_unit|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|datapath:d|alu_rf:alu_unit       ; alu_rf      ; work         ;
+;       |flopenr:pc_flopenr|    ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|datapath:d|flopenr:pc_flopenr    ; flopenr     ; work         ;
+;       |flopr:immediate_flopr| ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|datapath:d|flopr:immediate_flopr ; flopr       ; work         ;
+;       |flopr:reg_A_flopr|     ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|datapath:d|flopr:reg_A_flopr     ; flopr       ; work         ;
+;       |flopr:reg_B_flopr|     ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|datapath:d|flopr:reg_B_flopr     ; flopr       ; work         ;
+;       |flopr:reg_alu_flopr|   ; 1 (1)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|datapath:d|flopr:reg_alu_flopr   ; flopr       ; work         ;
+;       |mux2:alu_A_mux|        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|datapath:d|mux2:alu_A_mux        ; mux2        ; work         ;
+;       |mux4:alu_B_mux|        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|datapath:d|mux4:alu_B_mux        ; mux4        ; work         ;
+;       |regfile:reg_file|      ; 9 (9)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|datapath:d|regfile:reg_file      ; regfile     ; work         ;
+;    |flipflop:ff|              ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|flipflop:ff                      ; flipflop    ; work         ;
+;    |hexTo7Seg:stateDisplay|   ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|hexTo7Seg:stateDisplay           ; hexTo7Seg   ; work         ;
+;    |hexTo7Seg:writeData|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapathFSM|hexTo7Seg:writeData              ; hexTo7Seg   ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++-------------------------------------------+---------------------------------------------+
+; Register name                             ; Reason for Removal                          ;
++-------------------------------------------+---------------------------------------------+
+; datapath:d|flopr:mdr_flopr|q[0..15]       ; Lost fanout                                 ;
+; datapath:d|flopr:immediate_flopr|q[3..15] ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~128       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~129       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~130       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~131       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~132       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~133       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~134       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~135       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~136       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~137       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~138       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~139       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~140       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~141       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~142       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~143       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~144       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~145       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~146       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~147       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~148       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~149       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~150       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~151       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~152       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~153       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~154       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~155       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~156       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~157       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~158       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~159       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~160       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~161       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~162       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~163       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~164       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~165       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~166       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~167       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~168       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~169       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~170       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~171       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~172       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~173       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~174       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~175       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~176       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~177       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~178       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~179       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~180       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~181       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~182       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~183       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~184       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~185       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~186       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~187       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~188       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~189       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~190       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~191       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~192       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~193       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~194       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~195       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~196       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~197       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~198       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~199       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~200       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~201       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~202       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~203       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~204       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~205       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~206       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~207       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~208       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~209       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~210       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~211       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~212       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~213       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~214       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~215       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~216       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~217       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~218       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~219       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~220       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~221       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~222       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~223       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~224       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~225       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~226       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~227       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~228       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~229       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~230       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~231       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~232       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~233       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~234       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~235       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~236       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~237       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~238       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~239       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~240       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~241       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~242       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~243       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~244       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~245       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~246       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~247       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~248       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~249       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~250       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~251       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~252       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~253       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~254       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~255       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~256       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~257       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~258       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~259       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~260       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~261       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~262       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~263       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~264       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~265       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~266       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~267       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~268       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~269       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~270       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~271       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~272       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~273       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~274       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~275       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~276       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~277       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~278       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~279       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~280       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~281       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~282       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~283       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~284       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~285       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~286       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~287       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~288       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~289       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~290       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~291       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~292       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~293       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~294       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~295       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~296       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~297       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~298       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~299       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~300       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~301       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~302       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~303       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~304       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~305       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~306       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~307       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~308       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~309       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~310       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~311       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~312       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~313       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~314       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~315       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~316       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~317       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~318       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~319       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~320       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~321       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~322       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~323       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~324       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~325       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~326       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~327       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~328       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~329       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~330       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~331       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~332       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~333       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~334       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~335       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~336       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~337       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~338       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~339       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~340       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~341       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~342       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~343       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~344       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~345       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~346       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~347       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~348       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~349       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~350       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~351       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~352       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~353       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~354       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~355       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~356       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~357       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~358       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~359       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~360       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~361       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~362       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~363       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~364       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~365       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~366       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~367       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~368       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~369       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~370       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~371       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~372       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~373       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~374       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~375       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~376       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~377       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~378       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~379       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~380       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~381       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~382       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~383       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~384       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~385       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~386       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~387       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~388       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~389       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~390       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~391       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~392       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~393       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~394       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~395       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~396       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~397       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~398       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~399       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~400       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~401       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~402       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~403       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~404       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~405       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~406       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~407       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~408       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~409       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~410       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~411       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~412       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~413       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~414       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~415       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~416       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~417       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~418       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~419       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~420       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~421       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~422       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~423       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~424       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~425       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~426       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~427       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~428       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~429       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~430       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~431       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~432       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~433       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~434       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~435       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~436       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~437       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~438       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~439       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~440       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~441       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~442       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~443       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~444       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~445       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~446       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~447       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~448       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~449       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~450       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~451       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~452       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~453       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~454       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~455       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~456       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~457       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~458       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~459       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~460       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~461       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~462       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~463       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~464       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~465       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~466       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~467       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~468       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~469       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~470       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~471       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~472       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~473       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~474       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~475       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~476       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~477       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~478       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~479       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~480       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~481       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~482       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~483       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~484       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~485       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~486       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~487       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~488       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~489       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~490       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~491       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~492       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~493       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~494       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~495       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~496       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~497       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~498       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~499       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~500       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~501       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~502       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~503       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~504       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~505       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~506       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~507       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~508       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~509       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~510       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~511       ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~0         ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~48        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~1         ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~49        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~2         ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~50        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~3         ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~51        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~4         ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~52        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~5         ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~53        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~6         ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~54        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~7         ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~55        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~8         ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~56        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~9         ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~57        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~10        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~58        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~11        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~59        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~12        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~60        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~13        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~61        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~14        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~62        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~15        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~63        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~112       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~96        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~80        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~64        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~113       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~97        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~81        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~65        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~114       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~98        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~82        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~66        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~115       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~99        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~83        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~67        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~116       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~100       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~84        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~68        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~117       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~101       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~85        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~69        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~118       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~102       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~86        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~70        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~119       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~103       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~87        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~71        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~120       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~104       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~88        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~72        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~121       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~105       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~89        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~73        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~122       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~106       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~90        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~74        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~123       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~107       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~91        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~75        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~124       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~108       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~92        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~76        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~125       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~109       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~93        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~77        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~126       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~110       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~94        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~78        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~127       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~111       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~95        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|regfile:reg_file|RAM~79        ; Stuck at GND due to stuck port data_in      ;
+; datapath:d|flopenr:pc_flopenr|q[4]        ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[4]         ; Lost fanout                                 ;
+; datapath:d|flopenr:pc_flopenr|q[5]        ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[5]         ; Lost fanout                                 ;
+; datapath:d|flopenr:pc_flopenr|q[6]        ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[6]         ; Lost fanout                                 ;
+; datapath:d|flopenr:pc_flopenr|q[7]        ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[7]         ; Lost fanout                                 ;
+; datapath:d|flopenr:pc_flopenr|q[8]        ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[8]         ; Lost fanout                                 ;
+; datapath:d|flopenr:pc_flopenr|q[9]        ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[9]         ; Lost fanout                                 ;
+; datapath:d|flopenr:pc_flopenr|q[10]       ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[10]        ; Lost fanout                                 ;
+; datapath:d|flopenr:pc_flopenr|q[11]       ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[11]        ; Lost fanout                                 ;
+; datapath:d|flopenr:pc_flopenr|q[12]       ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[12]        ; Lost fanout                                 ;
+; datapath:d|flopenr:pc_flopenr|q[13]       ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[13]        ; Lost fanout                                 ;
+; datapath:d|flopenr:pc_flopenr|q[14]       ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[14]        ; Lost fanout                                 ;
+; datapath:d|flopenr:pc_flopenr|q[15]       ; Lost fanout                                 ;
+; datapath:d|flopr:reg_A_flopr|q[15]        ; Lost fanout                                 ;
+; datapath:d|flopr:reg_B_flopr|q[4..15]     ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~20        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~36        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~21        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~37        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~22        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~38        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~23        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~39        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~24        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~40        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~25        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~41        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~26        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~42        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~27        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~43        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~28        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~44        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~29        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~45        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~30        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~46        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~31        ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~47        ; Lost fanout                                 ;
+; datapath:d|flopr:reg_alu_flopr|q[4..15]   ; Lost fanout                                 ;
+; datapath:d|regfile:reg_file|RAM~32        ; Stuck at GND due to stuck port clock_enable ;
+; datapath:d|regfile:reg_file|RAM~33        ; Stuck at GND due to stuck port clock_enable ;
+; datapath:d|regfile:reg_file|RAM~34        ; Stuck at GND due to stuck port clock_enable ;
+; datapath:d|regfile:reg_file|RAM~35        ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 585   ;                                             ;
++-------------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                   ;
++----------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; Register name                          ; Reason for Removal        ; Registers Removed due to This Register                                   ;
++----------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; datapath:d|flopr:immediate_flopr|q[3]  ; Stuck at GND              ; datapath:d|flopenr:pc_flopenr|q[11], datapath:d|flopr:reg_A_flopr|q[11], ;
+;                                        ; due to stuck port data_in ; datapath:d|flopenr:pc_flopenr|q[12], datapath:d|flopr:reg_A_flopr|q[12], ;
+;                                        ;                           ; datapath:d|flopenr:pc_flopenr|q[13], datapath:d|flopr:reg_A_flopr|q[13], ;
+;                                        ;                           ; datapath:d|flopenr:pc_flopenr|q[14], datapath:d|flopr:reg_A_flopr|q[14], ;
+;                                        ;                           ; datapath:d|flopenr:pc_flopenr|q[15], datapath:d|flopr:reg_A_flopr|q[15]  ;
+; datapath:d|flopr:immediate_flopr|q[4]  ; Stuck at GND              ; datapath:d|flopenr:pc_flopenr|q[4], datapath:d|flopr:reg_A_flopr|q[4],   ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_B_flopr|q[4]                                        ;
+; datapath:d|flopr:immediate_flopr|q[5]  ; Stuck at GND              ; datapath:d|flopenr:pc_flopenr|q[5], datapath:d|flopr:reg_A_flopr|q[5],   ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_B_flopr|q[5]                                        ;
+; datapath:d|flopr:immediate_flopr|q[6]  ; Stuck at GND              ; datapath:d|flopenr:pc_flopenr|q[6], datapath:d|flopr:reg_A_flopr|q[6],   ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_B_flopr|q[6]                                        ;
+; datapath:d|flopr:immediate_flopr|q[7]  ; Stuck at GND              ; datapath:d|flopenr:pc_flopenr|q[7], datapath:d|flopr:reg_A_flopr|q[7],   ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_B_flopr|q[7]                                        ;
+; datapath:d|flopr:immediate_flopr|q[8]  ; Stuck at GND              ; datapath:d|flopenr:pc_flopenr|q[8], datapath:d|flopr:reg_A_flopr|q[8],   ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_B_flopr|q[8]                                        ;
+; datapath:d|regfile:reg_file|RAM~4      ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~20, datapath:d|regfile:reg_file|RAM~36,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[4]                                      ;
+; datapath:d|regfile:reg_file|RAM~5      ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~21, datapath:d|regfile:reg_file|RAM~37,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[5]                                      ;
+; datapath:d|regfile:reg_file|RAM~6      ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~22, datapath:d|regfile:reg_file|RAM~38,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[6]                                      ;
+; datapath:d|regfile:reg_file|RAM~7      ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~23, datapath:d|regfile:reg_file|RAM~39,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[7]                                      ;
+; datapath:d|regfile:reg_file|RAM~8      ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~24, datapath:d|regfile:reg_file|RAM~40,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[8]                                      ;
+; datapath:d|regfile:reg_file|RAM~9      ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~25, datapath:d|regfile:reg_file|RAM~41,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[9]                                      ;
+; datapath:d|regfile:reg_file|RAM~10     ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~26, datapath:d|regfile:reg_file|RAM~42,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[10]                                     ;
+; datapath:d|regfile:reg_file|RAM~11     ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~27, datapath:d|regfile:reg_file|RAM~43,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[11]                                     ;
+; datapath:d|regfile:reg_file|RAM~12     ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~28, datapath:d|regfile:reg_file|RAM~44,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[12]                                     ;
+; datapath:d|regfile:reg_file|RAM~13     ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~29, datapath:d|regfile:reg_file|RAM~45,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[13]                                     ;
+; datapath:d|regfile:reg_file|RAM~14     ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~30, datapath:d|regfile:reg_file|RAM~46,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[14]                                     ;
+; datapath:d|regfile:reg_file|RAM~15     ; Stuck at GND              ; datapath:d|regfile:reg_file|RAM~31, datapath:d|regfile:reg_file|RAM~47,  ;
+;                                        ; due to stuck port data_in ; datapath:d|flopr:reg_alu_flopr|q[15]                                     ;
+; datapath:d|flopr:immediate_flopr|q[9]  ; Stuck at GND              ; datapath:d|flopr:reg_B_flopr|q[9]                                        ;
+;                                        ; due to stuck port data_in ;                                                                          ;
+; datapath:d|flopr:immediate_flopr|q[10] ; Stuck at GND              ; datapath:d|flopr:reg_B_flopr|q[10]                                       ;
+;                                        ; due to stuck port data_in ;                                                                          ;
+; datapath:d|flopr:immediate_flopr|q[11] ; Stuck at GND              ; datapath:d|flopr:reg_B_flopr|q[11]                                       ;
+;                                        ; due to stuck port data_in ;                                                                          ;
+; datapath:d|flopr:immediate_flopr|q[12] ; Stuck at GND              ; datapath:d|flopr:reg_B_flopr|q[12]                                       ;
+;                                        ; due to stuck port data_in ;                                                                          ;
+; datapath:d|flopr:immediate_flopr|q[13] ; Stuck at GND              ; datapath:d|flopr:reg_B_flopr|q[13]                                       ;
+;                                        ; due to stuck port data_in ;                                                                          ;
+; datapath:d|flopr:immediate_flopr|q[14] ; Stuck at GND              ; datapath:d|flopr:reg_B_flopr|q[14]                                       ;
+;                                        ; due to stuck port data_in ;                                                                          ;
+; datapath:d|flopr:immediate_flopr|q[15] ; Stuck at GND              ; datapath:d|flopr:reg_B_flopr|q[15]                                       ;
+;                                        ; due to stuck port data_in ;                                                                          ;
+; datapath:d|flopenr:pc_flopenr|q[9]     ; Lost Fanouts              ; datapath:d|flopr:reg_A_flopr|q[9]                                        ;
+; datapath:d|flopenr:pc_flopenr|q[10]    ; Lost Fanouts              ; datapath:d|flopr:reg_A_flopr|q[10]                                       ;
++----------------------------------------+---------------------------+--------------------------------------------------------------------------+
+
+
+>>>>>>> Stashed changes
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
+<<<<<<< Updated upstream
 ; Total registers                              ; 512   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 512   ;
+=======
+; Total registers                              ; 26    ;
+; Number of registers using Synchronous Clear  ; 19    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
+>>>>>>> Stashed changes
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
+<<<<<<< Updated upstream
 +--------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
@@ -316,15 +1067,93 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 +--------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |Datapath ;
+=======
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |datapathFSM|datapath:d|flopr:reg_alu_flopr|q[0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |datapathFSM|datapath:d|flopr:reg_alu_flopr|q[12] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |datapathFSM|datapath:d|alu_rf:alu_unit|Add0      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |datapathFSM ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; li1            ; 000   ; Unsigned Binary                                    ;
+; li2            ; 001   ; Unsigned Binary                                    ;
+; add            ; 010   ; Unsigned Binary                                    ;
+; store          ; 011   ; Unsigned Binary                                    ;
+; load           ; 100   ; Unsigned Binary                                    ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flipflop:ff ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; size           ; 3     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; WIDTH          ; 16    ; Signed Integer                 ;
+; REG_BITS       ; 5     ; Signed Integer                 ;
+; ALU_CONT_BITS  ; 5     ; Signed Integer                 ;
+; IMM_BITS       ; 8     ; Signed Integer                 ;
+; OP_BITS        ; 4     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|zerodetect:zero_thingy ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|flopenr:pc_flopenr ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|regfile:reg_file ;
+>>>>>>> Stashed changes
 +----------------+-------+-------------------------------------------------+
 ; Parameter Name ; Value ; Type                                            ;
 +----------------+-------+-------------------------------------------------+
 ; WIDTH          ; 16    ; Signed Integer                                  ;
+<<<<<<< Updated upstream
 ; REGBITS        ; 5     ; Signed Integer                                  ;
+=======
+; REG_BITS       ; 5     ; Signed Integer                                  ;
+>>>>>>> Stashed changes
 +----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
+<<<<<<< Updated upstream
 +---------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: regfile:rf ;
 +----------------+-------+--------------------------------+
@@ -336,11 +1165,244 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
+=======
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|flopr:immediate_flopr ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|flopr:reg_A_flopr ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|flopr:reg_B_flopr ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|flopr:reg_alu_flopr ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|flopr:mdr_flopr ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|mux2:mem_address_mux ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|mux2:alu_A_mux ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|mux4:alu_B_mux ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|mux2:pc_src_mux ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|mux2:reg_write_src_mux ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|alu_rf:alu_unit ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                 ;
+; ALU_CONT_BITS  ; 5     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:d|instruction_reg:ins_reg ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                         ;
+; IMM_BITS       ; 8     ; Signed Integer                                         ;
+; OP_BITS        ; 4     ; Signed Integer                                         ;
+; REG_BITS       ; 5     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:d|instruction_reg:ins_reg"                                                                                                                                                     ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                                                                                                                 ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; op_code              ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
+; ext_op_code          ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
+; immediate_value      ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (16 bits) it drives.  The 8 most-significant bit(s) in the port expression will be connected to GND.  ;
+; A_index_out          ; Output ; Warning  ; Output or bidir port (5 bits) is smaller than the port expression (16 bits) it drives.  The 11 most-significant bit(s) in the port expression will be connected to GND. ;
+; B_index_out          ; Output ; Warning  ; Output or bidir port (5 bits) is smaller than the port expression (16 bits) it drives.  The 11 most-significant bit(s) in the port expression will be connected to GND. ;
+; is_immediate         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; is_alu_non_immediate ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; is_bcond             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:d|alu_rf:alu_unit"                                                                                                                         ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                          ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; alu_cont ; Input ; Warning  ; Input port expression (5 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "alu_cont[5..5]" will be connected to GND. ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:d|mux4:alu_B_mux"                                                                                                                          ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                           ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; input_3 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "input_3[15..1]" will be connected to GND. ;
+; input_3 ; Input ; Info     ; Stuck at VCC                                                                                                                                      ;
+; input_4 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.      ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:d|mux2:mem_address_mux"                                                                                                                    ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                           ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; input_2 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "input_2[15..1]" will be connected to GND. ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:d|regfile:reg_file"                                                                                                                                                         ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; A_index ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (5 bits) it drives.  The 11 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; B_index ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (5 bits) it drives.  The 11 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:d"                                                                                                                                                                                       ;
++---------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; pc_en               ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; pc_en[-1]           ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; pc_src              ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; pc_src[-1]          ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; reg_write_src       ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; address_src         ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; alu_B_src[1]        ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; alu_cont[4]         ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; alu_cont[2]         ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; instruction[15..10] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; instruction[7..3]   ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; zero                ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (16 bits) it drives.  The 15 most-significant bit(s) in the port expression will be connected to GND.            ;
+; zero[-1]            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; psr_flags           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
+; data_to_mem         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++---------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hexTo7Seg:stateDisplay"                                                                                                                                                         ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input ; Warning  ; Input port expression (6 bits) is wider than the input port (4 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hexTo7Seg:writeData"                                                                                                                                                              ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (4 bits) it drives.  The 12 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "flipflop:ff"                                                                                                                                                                     ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; d    ; Input  ; Warning  ; Input port expression (6 bits) is wider than the input port (3 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; q    ; Output ; Warning  ; Output or bidir port (3 bits) is smaller than the port expression (6 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND.            ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+>>>>>>> Stashed changes
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
+<<<<<<< Updated upstream
 ; arriav_ff             ; 512                         ;
 ;     ENA               ; 512                         ;
 ; arriav_lcell_comb     ; 640                         ;
@@ -362,6 +1424,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;                       ;                             ;
 ; Max LUT depth         ; 9.50                        ;
 ; Average LUT depth     ; 7.82                        ;
+=======
+; arriav_ff             ; 26                          ;
+;     CLR               ; 3                           ;
+;     ENA               ; 4                           ;
+;     SCLR              ; 19                          ;
+; arriav_lcell_comb     ; 45                          ;
+;     arith             ; 4                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 3                           ;
+;     normal            ; 41                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 12                          ;
+;         5 data inputs ; 7                           ;
+; boundary_port         ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 2.30                        ;
+; Average LUT depth     ; 1.54                        ;
+>>>>>>> Stashed changes
 +-----------------------+-----------------------------+
 
 
@@ -384,6 +1467,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
     Info: Processing started: Tue Oct 24 16:08:11 2023
@@ -548,6 +1632,178 @@ Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 3 warnings
     Error: Processing ended: Fri Oct 27 15:37:23 2023
     Error: Elapsed time: 00:00:22
     Error: Total CPU time (on all processors): 00:00:25
+>>>>>>> Stashed changes
+=======
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Fri Oct 27 16:03:47 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_rf -c alu_rf
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file shifter.v
+    Info (12023): Found entity 1: shifter File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/shifter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
+    Info (12023): Found entity 1: regfile File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v Line: 1
+Info (12021): Found 5 design units, including 5 entities, in source file muxes.v
+    Info (12023): Found entity 1: mux2 File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v Line: 1
+    Info (12023): Found entity 2: mux4 File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v Line: 9
+    Info (12023): Found entity 3: flopenr File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v Line: 23
+    Info (12023): Found entity 4: flopr File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v Line: 34
+    Info (12023): Found entity 5: zerodetect File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_reg.v
+    Info (12023): Found entity 1: instruction_reg File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/instruction_reg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fucker.v
+    Info (12023): Found entity 1: FUCKER File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/FUCKER.v Line: 39
+Info (12021): Found 3 design units, including 3 entities, in source file datapathfsm.v
+    Info (12023): Found entity 1: datapathFSM File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Info (12023): Found entity 2: flipflop File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 119
+    Info (12023): Found entity 3: hexTo7Seg File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 131
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: datapath File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Datapath.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
+    Info (12023): Found entity 1: CPU File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/CPU.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file basic_mem_given_to_us.v
+    Info (12023): Found entity 1: true_dual_port_ram_single_clock File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/basic_mem_given_to_us.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file alu_rf_tb.v
+    Info (12023): Found entity 1: alu_rf_tb File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file alu_rf.v
+    Info (12023): Found entity 1: alu_rf File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(140): created implicit net for "reg_b" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Datapath.v Line: 140
+Info (12127): Elaborating entity "datapathFSM" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at datapathFSM.v(53): inferring latch(es) for variable "reg_write_src", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 53
+Warning (10240): Verilog HDL Always Construct warning at datapathFSM.v(53): inferring latch(es) for variable "destination_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 53
+Info (10041): Inferred latch for "destination_reg" at datapathFSM.v(53) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 53
+Info (10041): Inferred latch for "reg_write_src" at datapathFSM.v(53) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 53
+Info (12128): Elaborating entity "flipflop" for hierarchy "flipflop:ff" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 17
+Info (12128): Elaborating entity "hexTo7Seg" for hierarchy "hexTo7Seg:readData" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 25
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:d" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 31
+Info (12128): Elaborating entity "zerodetect" for hierarchy "datapath:d|zerodetect:zero_thingy" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 63
+Info (12128): Elaborating entity "flopenr" for hierarchy "datapath:d|flopenr:pc_flopenr" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 74
+Info (12128): Elaborating entity "regfile" for hierarchy "datapath:d|regfile:reg_file" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 86
+Info (10648): Verilog HDL Display System Task info at regfile.v(12): Loading register file File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v Line: 12
+Warning (10850): Verilog HDL warning at regfile.v(13): number of words (17) in memory file does not match the number of elements in the address range [0:31] File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v Line: 13
+Info (10648): Verilog HDL Display System Task info at regfile.v(14): done with RF load File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v Line: 14
+Warning (10230): Verilog HDL assignment warning at regfile.v(24): truncated value with size 32 to match size of target (16) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v Line: 24
+Warning (10230): Verilog HDL assignment warning at regfile.v(25): truncated value with size 32 to match size of target (16) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v Line: 25
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:d|flopr:immediate_flopr" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 95
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:d|mux2:mem_address_mux" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 142
+Info (12128): Elaborating entity "mux4" for hierarchy "datapath:d|mux4:alu_B_mux" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 166
+Info (12128): Elaborating entity "alu_rf" for hierarchy "datapath:d|alu_rf:alu_unit" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 199
+Warning (10230): Verilog HDL assignment warning at alu_rf.v(18): truncated value with size 32 to match size of target (16) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 18
+Warning (10230): Verilog HDL assignment warning at alu_rf.v(65): truncated value with size 32 to match size of target (1) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 65
+Warning (10230): Verilog HDL assignment warning at alu_rf.v(87): truncated value with size 32 to match size of target (16) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 87
+Warning (10272): Verilog HDL Case Statement warning at alu_rf.v(88): case item expression covers a value already covered by a previous case item File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 88
+Warning (10270): Verilog HDL Case Statement warning at alu_rf.v(22): incomplete case statement has no default case item File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "alu_out", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "c_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "f_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "n_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "l_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(22): inferring latch(es) for variable "z_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "z_flag" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "l_flag" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "n_flag" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "f_flag" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "c_flag" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[0]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[1]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[2]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[3]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[4]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[5]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[6]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[7]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[8]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[9]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[10]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[11]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[12]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[13]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[14]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (10041): Inferred latch for "alu_out[15]" at alu_rf.v(22) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (12128): Elaborating entity "instruction_reg" for hierarchy "datapath:d|instruction_reg:ins_reg" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 210
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "datapath:d|A_index[15]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 50
+    Warning (12110): Net "datapath:d|A_index[14]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 50
+    Warning (12110): Net "datapath:d|A_index[13]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 50
+    Warning (12110): Net "datapath:d|A_index[12]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 50
+    Warning (12110): Net "datapath:d|A_index[11]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 50
+    Warning (12110): Net "datapath:d|A_index[10]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 50
+    Warning (12110): Net "datapath:d|A_index[9]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 50
+    Warning (12110): Net "datapath:d|A_index[8]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 50
+    Warning (12110): Net "datapath:d|A_index[7]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 50
+    Warning (12110): Net "datapath:d|A_index[6]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 50
+    Warning (12110): Net "datapath:d|A_index[5]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 50
+    Warning (12110): Net "datapath:d|B_index[15]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 51
+    Warning (12110): Net "datapath:d|B_index[14]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 51
+    Warning (12110): Net "datapath:d|B_index[13]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 51
+    Warning (12110): Net "datapath:d|B_index[12]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 51
+    Warning (12110): Net "datapath:d|B_index[11]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 51
+    Warning (12110): Net "datapath:d|B_index[10]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 51
+    Warning (12110): Net "datapath:d|B_index[9]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 51
+    Warning (12110): Net "datapath:d|B_index[8]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 51
+    Warning (12110): Net "datapath:d|B_index[7]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 51
+    Warning (12110): Net "datapath:d|B_index[6]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 51
+    Warning (12110): Net "datapath:d|B_index[5]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 51
+    Warning (12110): Net "datapath:d|immediate_from_ins_reg[15]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 53
+    Warning (12110): Net "datapath:d|immediate_from_ins_reg[14]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 53
+    Warning (12110): Net "datapath:d|immediate_from_ins_reg[13]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 53
+    Warning (12110): Net "datapath:d|immediate_from_ins_reg[12]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 53
+    Warning (12110): Net "datapath:d|immediate_from_ins_reg[11]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 53
+    Warning (12110): Net "datapath:d|immediate_from_ins_reg[10]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 53
+    Warning (12110): Net "datapath:d|immediate_from_ins_reg[9]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 53
+    Warning (12110): Net "datapath:d|immediate_from_ins_reg[8]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 53
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "state[5]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 4
+    Warning (12110): Net "state[4]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 4
+    Warning (12110): Net "state[3]" is missing source, defaulting to GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 4
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[1]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[2]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[3]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[4]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[5]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[6]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[7]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[8]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[9]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[10]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[11]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[12]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[13]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[14]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[15]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Warning (14026): LATCH primitive "datapath:d|alu_rf:alu_unit|alu_out[0]" is permanently enabled File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 22
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "datapath:d|regfile:reg_file|RAM" is uninferred due to asynchronous read logic File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v Line: 8
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/db/alu_rf.ram0_regfile_a5635d44.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "addr[0]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "addr[1]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "addr[3]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "addr[4]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "addr[5]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "addr[6]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "addr[7]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "write[0]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "write[1]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "write[2]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "write[3]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "write[4]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "write[5]" is stuck at GND File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+    Warning (13410): Pin "write[6]" is stuck at VCC File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v Line: 1
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 472 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 84 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 52 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 86 warnings
+    Info: Peak virtual memory: 4903 megabytes
+    Info: Processing ended: Fri Oct 27 16:04:12 2023
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:26
 >>>>>>> Stashed changes
 
 
