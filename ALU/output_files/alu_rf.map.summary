@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Analysis & Synthesis Status : Successful - Tue Oct 24 16:08:19 2023
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : alu_rf
@@ -15,3 +16,17 @@ Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
 Total PLLs : 0
 Total DLLs : 0
+=======
+Analysis & Synthesis Status : Failed - Fri Oct 27 15:37:23 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : alu_rf
+Top-level Entity Name : datapathFSM
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total block memory bits : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge
+Total DLLs : N/A until Partition Merge
+>>>>>>> Stashed changes
