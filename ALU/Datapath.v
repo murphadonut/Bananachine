@@ -1,8 +1,6 @@
 // notes
 // we dont have a single bit input called IorD like the minimips, 
 // pc_en may be useless
-// dont have single bit input called regdst
-// no irwrite, pretty sure this was for loading shit in four cycles instead of one
 // no zero detection stuff
 
 
@@ -17,7 +15,8 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		alu_A_src,
 		pc_src,
 		reg_write_src,
-		destination_reg,
+		address_src,
+		
 		
 	// Multi bit inputs
 	input		[1 : 0] alu_B_src,
@@ -26,9 +25,10 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		instruction, 
 		data_from_mem,			// data from memory access
 	
-	// OUTPUTUs
+	// OUTPUTs
+	output	zero,
 	output 	[WIDTH - 1:0] 	
-		pc, 						// This will hold the address for the next instruction
+		mem_address, 			// This will hold the address for the next instruction
 		psr_flags, 
 		data_to_mem 			// data from B register
 	);
@@ -43,6 +43,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		reg_B,					// Output of a flopr
 		reg_mdr,					// Output of a flopr
 		reg_immediate,			// Output of a flopr
+		reg_pc,					// Output of a flopenr
 		file_reg_write_data,
 		A_data, 
 		B_data, 
@@ -52,8 +53,14 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		immediate_from_ins_reg,
 		next_pc;
 		
-	assign data_to_mem = reg_B;
+	assign data_to_mem = reg_A;
 	
+	// Zero detect, we don't know why this needed yet
+	zerodetect #(WIDTH)
+	zero_thingy(
+		.a(alu_out),										// Input
+		.y(zero)												// Output
+	);
 	
 	// Program counter register
 	// may not need the enable part
@@ -63,7 +70,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		.reset(reset),										// Input: reset flip flop, might not be needed
 		.en(pc_en),											// Input: enable pc flip flop, also may be useless
 		.d(next_pc),										// Input: next address to put in program counter on next CPU cycle
-		.q(pc)												// Output: stored address from last CPU cycle
+		.q(reg_pc)												// Output: stored address from last CPU cycle
 	);
 	 
 	// Register file
@@ -73,7 +80,6 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		.reg_write(reg_write), 							// Input: write register A to register file?
 		.A_index(A_index),								// Input: access which register? (1-15), 0 reserved
 		.B_index(B_index),								// Input: see above
-		.write_index(write_index),
 		.write_data(file_reg_write_data),			// Input: what data to write to register A
 		.A_data(A_data), 									// Output: data stored in register A
 		.B_data(B_data)									// Output: data stored in register B
@@ -124,13 +130,15 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		.q(reg_mdr)											// Output: current value of memory data register
 	);
 	
-	// Input address mux for memory
+	// Which address to send to memory block, also called IorD for some STUPID GOD DAMN REASON, in minimips
+	// 0 for getting address from pc
+	// 1 for getting address from register B, what is shown in diagram
 	mux2 #(WIDTH)
-	address_mux(
-		.selection(destination_reg),
-		.input_1(A_index),
-		.input_2(B_index),
-		.mux2_output(write_index)
+	mem_address_mux(
+		.selection(address_src),
+		.input_1(reg_pc),	
+		.input_2(reg_b),
+		.mux2_output(mem_address)
 	);
 	
 	// ALU A input mux, 
@@ -139,7 +147,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 	mux2 #(WIDTH)
 	alu_A_mux(
 		.selection(alu_A_src),							// Input: what do I send through this here mux?
-		.input_1(pc),										// Input: do I send this? input 0??
+		.input_1(reg_pc),									// Input: do I send this? input 0??
 		.input_2(reg_A),									// Input: or do I send this little fella, input 1??
 		.mux2_output(alu_A_in)							// Output: I guess I decided to output one f em
 	);
@@ -157,20 +165,20 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		.mux4_output(alu_B_in)							// Output
 	);
 	
-	// PC source mux, 
+	// PC source mux, CHANGED FROM B TO A
 	// 0 for result from ALU, either incrementing by one or adding an immediate
-	// 1 for value (presumably an address) from register B
+	// 1 for value (presumably an address) from register A
 	mux2 #(WIDTH)
 	pc_src_mux(
 		.selection(pc_src),								// Input: see alu_A_mux for stupid descriptions of these
 		.input_1(reg_alu),								// Input
-		.input_2(reg_B),									// Input
+		.input_2(reg_A),									// Input
 		.mux2_output(next_pc)							// Output
 	);
 		
 	// Register file write source mux, 
-	// 0 for writing the value from the alu into register A
-	// 1 for writing the value from memory into register A
+	// 0 for writing the value from the alu into the specified register in write_index
+	// 1 for writing the value from memory into the specified register in write_index
 	mux2 #(WIDTH)
 	reg_write_src_mux(
 		.selection(reg_write_src),						// Input: see alu_A_mux for stupid descriptions of these

@@ -3,99 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'alu_cont[0]'
-Slack : -5.894
-TNS   : -103.769
+Slack : -8.048
+TNS   : -135.977
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -1.811
-TNS   : -21.520
+Slack : -1.779
+TNS   : -390.251
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : -1.336
-TNS   : -7.463
+Slack : 0.434
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'alu_cont[0]'
-Slack : 1.088
+Slack : 0.938
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.394
-TNS   : -16.940
+TNS   : -183.067
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'alu_cont[0]'
-Slack : 0.147
+Slack : 0.053
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'alu_cont[0]'
-Slack : -5.960
-TNS   : -107.012
+Slack : -7.980
+TNS   : -136.391
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -1.567
-TNS   : -19.077
+Slack : -1.732
+TNS   : -365.830
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : -1.493
-TNS   : -8.788
+Slack : 0.211
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'alu_cont[0]'
-Slack : 1.090
+Slack : 0.817
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.394
-TNS   : -18.284
+TNS   : -198.661
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'alu_cont[0]'
-Slack : 0.130
+Slack : 0.087
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'alu_cont[0]'
-Slack : -2.905
-TNS   : -49.863
+Slack : -4.458
+TNS   : -71.664
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -0.857
-TNS   : -6.829
+Slack : -0.807
+TNS   : -138.692
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : -0.803
-TNS   : -4.585
+Slack : 0.223
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'alu_cont[0]'
-Slack : 0.587
+Slack : 0.447
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'alu_cont[0]'
-Slack : -0.084
-TNS   : -2.066
+Slack : -0.195
+TNS   : -4.545
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.082
-TNS   : -2.502
+Slack : -0.083
+TNS   : -26.270
 
 Type  : Fast 1100mV 0C Model Setup 'alu_cont[0]'
-Slack : -2.639
-TNS   : -45.552
+Slack : -3.947
+TNS   : -63.657
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -0.640
-TNS   : -4.688
+Slack : -0.621
+TNS   : -96.795
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : -0.806
-TNS   : -4.772
+Slack : 0.108
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'alu_cont[0]'
-Slack : 0.533
+Slack : 0.413
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'alu_cont[0]'
-Slack : -0.084
-TNS   : -1.808
+Slack : -0.144
+TNS   : -3.270
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.079
-TNS   : -2.470
+Slack : -0.082
+TNS   : -26.327
 
 ------------------------------------------------------------

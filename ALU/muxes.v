@@ -39,3 +39,9 @@ module flopr #(parameter WIDTH = 8)(
       if   (~reset) q <= 0;
       else q <= d;
 endmodule 
+
+module zerodetect #(parameter WIDTH = 8)(
+	input [WIDTH-1:0] a, 
+   output y);
+   assign y = (a==0);
+endmodule 
