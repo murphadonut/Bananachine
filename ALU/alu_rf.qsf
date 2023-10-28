@@ -40,7 +40,11 @@ set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 set_global_assignment -name TOP_LEVEL_ENTITY Datapath
+=======
+set_global_assignment -name TOP_LEVEL_ENTITY datapathFSM
+>>>>>>> Stashed changes
 =======
 set_global_assignment -name TOP_LEVEL_ENTITY datapathFSM
 >>>>>>> Stashed changes
@@ -102,10 +106,43 @@ set_global_assignment -name VERILOG_FILE muxes.v
 set_global_assignment -name VERILOG_FILE instruction_reg.v
 set_global_assignment -name VERILOG_FILE shifter.v
 set_global_assignment -name VERILOG_FILE basic_mem_given_to_us.v
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+=======
+set_global_assignment -name VERILOG_FILE FUCKER.v
+set_global_assignment -name VERILOG_FILE Datapath.v
+set_global_assignment -name VERILOG_FILE datapathFSM.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_AA14 -to butt
+set_location_assignment PIN_AA15 -to reset
+set_location_assignment PIN_AE26 -to st[0]
+set_location_assignment PIN_AE28 -to st[2]
+set_location_assignment PIN_AG27 -to st[3]
+set_location_assignment PIN_AE27 -to st[1]
+set_location_assignment PIN_AG28 -to st[5]
+set_location_assignment PIN_AF28 -to st[4]
+set_location_assignment PIN_AH28 -to st[6]
+set_location_assignment PIN_AJ29 -to write[0]
+set_location_assignment PIN_AH29 -to write[1]
+set_location_assignment PIN_AH30 -to write[2]
+set_location_assignment PIN_AG30 -to write[3]
+set_location_assignment PIN_AF29 -to write[4]
+set_location_assignment PIN_AF30 -to write[5]
+set_location_assignment PIN_AD27 -to write[6]
+set_location_assignment PIN_AB23 -to read[0]
+set_location_assignment PIN_AE29 -to read[1]
+set_location_assignment PIN_AD29 -to read[2]
+set_location_assignment PIN_AC28 -to read[3]
+set_location_assignment PIN_AD30 -to read[4]
+set_location_assignment PIN_AC29 -to read[5]
+set_location_assignment PIN_AC30 -to read[6]
+>>>>>>> Stashed changes
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

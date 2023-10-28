@@ -3,6 +3,7 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Type  : Slow 1100mV 85C Model Setup 'alucont[0]'
 Slack : -9.614
 TNS   : -185.042
@@ -194,4 +195,150 @@ Slack : -0.078
 TNS   : -0.462
 >>>>>>> Stashed changes
 
+=======
+Type  : Slow 1100mV 85C Model Setup 'alu_cont[1]'
+Slack : -14.402
+TNS   : -28.243
+
+Type  : Slow 1100mV 85C Model Setup 'butt'
+Slack : -11.250
+TNS   : -998.251
+
+Type  : Slow 1100mV 85C Model Setup 'flipflop:ff|q[0]'
+Slack : -11.026
+TNS   : -111.137
+
+Type  : Slow 1100mV 85C Model Hold 'butt'
+Slack : -7.690
+TNS   : -392.102
+
+Type  : Slow 1100mV 85C Model Hold 'flipflop:ff|q[0]'
+Slack : 0.473
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'alu_cont[1]'
+Slack : 3.017
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'butt'
+Slack : -2.174
+TNS   : -261.655
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'flipflop:ff|q[0]'
+Slack : 0.192
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'alu_cont[1]'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'alu_cont[1]'
+Slack : -13.962
+TNS   : -27.380
+
+Type  : Slow 1100mV 0C Model Setup 'butt'
+Slack : -10.832
+TNS   : -940.925
+
+Type  : Slow 1100mV 0C Model Setup 'flipflop:ff|q[0]'
+Slack : -10.736
+TNS   : -108.877
+
+Type  : Slow 1100mV 0C Model Hold 'butt'
+Slack : -7.544
+TNS   : -394.998
+
+Type  : Slow 1100mV 0C Model Hold 'flipflop:ff|q[0]'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'alu_cont[1]'
+Slack : 2.995
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'butt'
+Slack : -2.174
+TNS   : -253.765
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'flipflop:ff|q[0]'
+Slack : 0.235
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'alu_cont[1]'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'alu_cont[1]'
+Slack : -8.294
+TNS   : -16.399
+
+Type  : Fast 1100mV 85C Model Setup 'butt'
+Slack : -7.491
+TNS   : -662.710
+
+Type  : Fast 1100mV 85C Model Setup 'flipflop:ff|q[0]'
+Slack : -6.663
+TNS   : -64.284
+
+Type  : Fast 1100mV 85C Model Hold 'butt'
+Slack : -4.610
+TNS   : -209.945
+
+Type  : Fast 1100mV 85C Model Hold 'flipflop:ff|q[0]'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'alu_cont[1]'
+Slack : 1.847
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'butt'
+Slack : -2.174
+TNS   : -220.405
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'flipflop:ff|q[0]'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'alu_cont[1]'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'alu_cont[1]'
+Slack : -7.680
+TNS   : -15.220
+
+Type  : Fast 1100mV 0C Model Setup 'butt'
+Slack : -6.426
+TNS   : -536.302
+
+Type  : Fast 1100mV 0C Model Setup 'flipflop:ff|q[0]'
+Slack : -6.252
+TNS   : -61.104
+
+Type  : Fast 1100mV 0C Model Hold 'butt'
+Slack : -4.505
+TNS   : -227.719
+
+Type  : Fast 1100mV 0C Model Hold 'flipflop:ff|q[0]'
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'alu_cont[1]'
+Slack : 1.744
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'butt'
+Slack : -2.174
+TNS   : -218.773
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'flipflop:ff|q[0]'
+Slack : 0.277
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'alu_cont[1]'
+Slack : 0.411
+TNS   : 0.000
+
+>>>>>>> Stashed changes
 ------------------------------------------------------------

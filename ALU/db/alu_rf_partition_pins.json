@@ -5,6 +5,7 @@
 			"pins" : [
 				{
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 					"name" : "result[0]",
 					"strict" : false
 				},
@@ -66,13 +67,81 @@
 				},
 				{
 					"name" : "result[15]",
+=======
+					"name" : "read[0]",
 					"strict" : false
 				},
 				{
-					"name" : "psr_flags[0]",
+					"name" : "read[3]",
 					"strict" : false
 				},
 				{
+					"name" : "read[4]",
+					"strict" : false
+				},
+				{
+					"name" : "read[5]",
+					"strict" : false
+				},
+				{
+					"name" : "write[0]",
+					"strict" : false
+				},
+				{
+					"name" : "write[1]",
+					"strict" : false
+				},
+				{
+					"name" : "write[2]",
+					"strict" : false
+				},
+				{
+					"name" : "write[3]",
+					"strict" : false
+				},
+				{
+					"name" : "write[4]",
+					"strict" : false
+				},
+				{
+					"name" : "write[5]",
+					"strict" : false
+				},
+				{
+					"name" : "write[6]",
+					"strict" : false
+				},
+				{
+					"name" : "st[0]",
+					"strict" : false
+				},
+				{
+					"name" : "st[1]",
+					"strict" : false
+				},
+				{
+					"name" : "st[2]",
+					"strict" : false
+				},
+				{
+					"name" : "st[3]",
+					"strict" : false
+				},
+				{
+					"name" : "st[4]",
+					"strict" : false
+				},
+				{
+					"name" : "st[5]",
+>>>>>>> Stashed changes
+					"strict" : false
+				},
+				{
+					"name" : "st[6]",
+					"strict" : false
+				},
+				{
+<<<<<<< Updated upstream
 					"name" : "psr_flags[2]",
 					"strict" : false
 				},
@@ -150,6 +219,9 @@
 				},
 				{
 					"name" : "clk",
+=======
+					"name" : "butt",
+>>>>>>> Stashed changes
 					"strict" : false
 				},
 				{
@@ -221,11 +293,14 @@
 				{
 					"name" : "reset",
 					"strict" : false
+<<<<<<< Updated upstream
 				},
 				{
 					"name" : "clk",
 >>>>>>> Stashed changes
 					"strict" : false
+=======
+>>>>>>> Stashed changes
 				}
 			]
 		}

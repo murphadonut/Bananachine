@@ -1,5 +1,6 @@
 EDA Netlist Writer report for alu_rf
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Tue Oct 24 16:09:18 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 =======
@@ -7,6 +8,9 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Thu Oct 26 17:34:08 2023
 =======
 Fri Oct 27 15:19:10 2023
+>>>>>>> Stashed changes
+=======
+Sat Oct 28 15:08:02 2023
 >>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 >>>>>>> Stashed changes
@@ -46,6 +50,7 @@ refer to the applicable agreement for further details.
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; EDA Netlist Writer Status ; Successful - Tue Oct 24 16:09:18 2023 ;
 ; Revision Name             ; alu_rf                                ;
 ; Top-level Entity Name     ; Datapath                              ;
@@ -55,6 +60,11 @@ refer to the applicable agreement for further details.
 =======
 ; EDA Netlist Writer Status ; Successful - Fri Oct 27 15:19:10 2023 ;
 >>>>>>> Stashed changes
+; Revision Name             ; alu_rf                                ;
+; Top-level Entity Name     ; datapathFSM                           ;
+>>>>>>> Stashed changes
+=======
+; EDA Netlist Writer Status ; Successful - Sat Oct 28 15:08:02 2023 ;
 ; Revision Name             ; alu_rf                                ;
 ; Top-level Entity Name     ; datapathFSM                           ;
 >>>>>>> Stashed changes
@@ -85,6 +95,7 @@ refer to the applicable agreement for further details.
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 +-----------------------------------------------------------+
 ; Simulation Generated Files                                ;
 +-----------------------------------------------------------+
@@ -93,6 +104,8 @@ refer to the applicable agreement for further details.
 ; C:/Data/School/ECE 3710/ALU/simulation/modelsim/alu_rf.vo ;
 +-----------------------------------------------------------+
 =======
+=======
+>>>>>>> Stashed changes
 +-------------------------------------------------------------------------------------------+
 ; Simulation Generated Files                                                                ;
 +-------------------------------------------------------------------------------------------+
@@ -100,6 +113,9 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------------------+
 ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/simulation/modelsim/alu_rf.vo ;
 +-------------------------------------------------------------------------------------------+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -108,6 +124,7 @@ refer to the applicable agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
     Info: Processing started: Tue Oct 24 16:09:17 2023
@@ -130,6 +147,17 @@ Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4726 megabytes
     Info: Processing ended: Tue Oct 24 16:09:18 2023
     Info: Elapsed time: 00:00:01
+=======
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sat Oct 28 15:08:00 2023
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off alu_rf -c alu_rf
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file alu_rf.vo in folder "C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4721 megabytes
+    Info: Processing ended: Sat Oct 28 15:08:02 2023
+    Info: Elapsed time: 00:00:02
+>>>>>>> Stashed changes
     Info: Total CPU time (on all processors): 00:00:01
 =======
     Info: Peak virtual memory: 4719 megabytes

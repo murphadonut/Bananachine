@@ -1,12 +1,16 @@
 Flow report for alu_rf
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Tue Oct 24 16:09:18 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 =======
 Fri Oct 27 15:37:23 2023
 =======
 Fri Oct 27 16:06:22 2023
+>>>>>>> Stashed changes
+=======
+Sat Oct 28 15:08:02 2023
 >>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 >>>>>>> Stashed changes
@@ -51,6 +55,7 @@ refer to the applicable agreement for further details.
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Flow Status                     ; Successful - Tue Oct 24 16:09:18 2023       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu_rf                                      ;
@@ -73,8 +78,20 @@ refer to the applicable agreement for further details.
 ; Total registers                 ; 29                                          ;
 ; Total pins                      ; 32 / 457 ( 7 % )                            ;
 >>>>>>> Stashed changes
+=======
+; Flow Status                     ; Successful - Sat Oct 28 15:08:02 2023       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; alu_rf                                      ;
+; Top-level Entity Name           ; datapathFSM                                 ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 132 / 32,070 ( < 1 % )                      ;
+; Total registers                 ; 151                                         ;
+; Total pins                      ; 32 / 457 ( 7 % )                            ;
+>>>>>>> Stashed changes
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
+; Total block memory bits         ; 32 / 4,065,280 ( < 1 % )                    ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -112,12 +129,16 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Start date & time ; 10/24/2023 16:08:11 ;
 =======
 ; Start date & time ; 10/27/2023 15:37:03 ;
 >>>>>>> Stashed changes
 =======
 ; Start date & time ; 10/27/2023 16:03:49 ;
+>>>>>>> Stashed changes
+=======
+; Start date & time ; 10/28/2023 15:05:31 ;
 >>>>>>> Stashed changes
 ; Main task         ; Compilation         ;
 ; Revision Name     ; alu_rf              ;
@@ -131,9 +152,13 @@ refer to the applicable agreement for further details.
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; COMPILER_SIGNATURE_ID                ; 140982220270901.169818529111384        ; --            ; --          ; --             ;
 =======
 ; COMPILER_SIGNATURE_ID                ; 189559958639954.169844262229088        ; --            ; --          ; --             ;
+>>>>>>> Stashed changes
+=======
+; COMPILER_SIGNATURE_ID                ; 189559958639954.169852713127120        ; --            ; --          ; --             ;
 >>>>>>> Stashed changes
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_rf_tb      ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                     ; --            ; --          ; eda_simulation ;
@@ -148,6 +173,7 @@ refer to the applicable agreement for further details.
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; Datapath    ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; Datapath    ; Top            ;
 ; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; Datapath    ; Top            ;
@@ -155,6 +181,17 @@ refer to the applicable agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                     ; Datapath                               ; alu_rf        ; --          ; --             ;
+=======
+; MISC_FILE                            ; FUCKER_bb.v                            ; --            ; --          ; --             ;
+; MISC_FILE                            ; FUCKER_syn.v                           ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; datapathFSM ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; datapathFSM ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; datapathFSM ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; datapathFSM                            ; alu_rf        ; --          ; --             ;
+>>>>>>> Stashed changes
 =======
 ; MISC_FILE                            ; FUCKER_bb.v                            ; --            ; --          ; --             ;
 ; MISC_FILE                            ; FUCKER_syn.v                           ; --            ; --          ; --             ;
@@ -194,6 +231,7 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4834 MB             ; 00:00:04                           ;
 ; Fitter               ; 00:00:45     ; 1.1                     ; 6630 MB             ; 00:00:33                           ;
 ; Assembler            ; 00:00:05     ; 1.0                     ; 4837 MB             ; 00:00:04                           ;
@@ -211,6 +249,14 @@ refer to the applicable agreement for further details.
 ; Timing Analyzer      ; 00:00:15     ; 1.2                     ; 5277 MB             ; 00:00:06                           ;
 ; Total                ; 00:02:29     ; --                      ; --                  ; 00:02:44                           ;
 >>>>>>> Stashed changes
+=======
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4948 MB             ; 00:00:08                           ;
+; Fitter               ; 00:01:59     ; 1.1                     ; 7947 MB             ; 00:01:58                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4834 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:06     ; 2.5                     ; 5308 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4721 MB             ; 00:00:01                           ;
+; Total                ; 00:02:26     ; --                      ; --                  ; 00:02:16                           ;
+>>>>>>> Stashed changes
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -221,10 +267,17 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 ; Fitter               ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
+>>>>>>> Stashed changes
+=======
+; Fitter               ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
 >>>>>>> Stashed changes
 +----------------------+------------------+------------+------------+----------------+
 
