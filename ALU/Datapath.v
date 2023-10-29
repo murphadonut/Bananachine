@@ -4,33 +4,16 @@
 // no zero detection stuff
 
 
-module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BITS = 8, OP_BITS = 4)(
+module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 6, IMM_BITS = 8, OP_BITS = 4)(
 
-	// Single bit inputs
-	input 	
-		reg_write, 
-		clk, 
-		reset, 
-		pc_en, 
-		alu_A_src,
-		pc_src,
-		reg_write_src,
-		address_src,
-		
-		
-	// Multi bit inputs
-	input		[1 : 0] alu_B_src,
+	input 	clk, reset, reg_write, alu_A_src, alu_B_src,			
+	input		[1 : 0] 						pc_src, reg_write_src,
 	input		[ALU_CONT_BITS - 1 : 0]	alu_cont,
-	input 	[WIDTH - 1:0] 
-		instruction, 
-		data_from_mem,			// data from memory access
+	input 	[WIDTH - 1:0] 				data_from_mem_PC, data_from_mem_load,
 	
-	// OUTPUTs
 	output	zero,
-	output 	[WIDTH - 1:0] 	
-		mem_address, 			// This will hold the address for the next instruction
-		psr_flags, 
-		data_to_mem 			// data from B register
+	output 	[OP_BITS - 1 : 0] op_code, ext_op_code,
+	output 	[WIDTH - 1:0] 		mem_address_PC, mem_address_load_stor,	psr_flags, data_to_mem_stor
 	);
 	
 	// Multi bit variables (aka wires)
@@ -41,19 +24,22 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		reg_alu,					// Output of a flopr
 		reg_A,					// Output of a flopr
 		reg_B,					// Output of a flopr
-		reg_mdr,					// Output of a flopr
+		reg_mdr_PC,				// Output of a flopr
+		reg_mdr_load
 		reg_immediate,			// Output of a flopr
-		reg_pc,					// Output of a flopenr
+		reg_pc,					// Output of a flopr
 		file_reg_write_data,
 		A_data, 
 		B_data, 
 		A_index, 
 		B_index, 
-		write_index,
 		immediate_from_ins_reg,
-		next_pc;
+		next_pc,
+		incremented_pc;
 		
-	assign data_to_mem = reg_A;
+	assign data_to_mem_stor = reg_A;
+	assign mem_address_PC = reg_PC;
+	assign mem_address_load_stor = reg_B;
 	
 	// Zero detect, we don't know why this needed yet
 	zerodetect #(WIDTH)
@@ -62,15 +48,22 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		.y(zero)												// Output
 	);
 	
+	// Incrementer by one for program counter
+	pc_counter ()
+	counter(
+		.clk(clk),											// Input
+		.reset(.reset),									// Input
+		.current_pc(reg_pc),								// Input
+		.incremented_pc(incremented_pc)				// Output
+	);
+	
 	// Program counter register
-	// may not need the enable part
 	flopenr #(WIDTH)
-	pc_flopenr(
+	pc_flopr(
 		.clk(clk),											// Input: clock signal
-		.reset(reset),										// Input: reset flip flop, might not be needed
-		.en(pc_en),											// Input: enable pc flip flop, also may be useless
+		.reset(reset),										// Input: reset flip flop
 		.d(next_pc),										// Input: next address to put in program counter on next CPU cycle
-		.q(reg_pc)												// Output: stored address from last CPU cycle
+		.q(reg_pc)											// Output: stored address from last CPU cycle
 	);
 	 
 	// Register file
@@ -85,13 +78,14 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		.B_data(B_data)									// Output: data stored in register B
 	);
 
+	// does this need to be a register?
 	// Immediate data register
 	flopr #(WIDTH)
 	immediate_flopr(
 		.clk(clk),											// Input: clock signal
 		.reset(reset),										// Input: reset flip flop, might not be needed
 		.d(immediate_from_ins_reg),					// Input: next immediate value to store in immediate_out
-		.q(reg_immediate)									// Output: current immediate value, stored
+		.q(reg_mmediate)									// Output: current immediate value, stored
 	);
 	
 	// A register, not any of the numbered registers
@@ -121,24 +115,22 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 		.q(reg_alu)											// Output: stored alu value
 	);
 	
-	// Memory data register, this holds data from input memory
+	// Memory data register, this holds the returned data from memory that specifically holds the next instruction from program counter
 	flopr #(WIDTH)
-	mdr_flopr(
+	mdr_PC_flopr(
 		.clk(clk),											// Input: clock signal
 		.reset(reset),										// Input: reset flip flop, might not be needed
-		.d(data_from_mem),								// Input: datapath input, from memory
-		.q(reg_mdr)											// Output: current value of memory data register
+		.d(data_from_mem_PC),							// Input: datapath input, from memory
+		.q(reg_mdr_PC)										// Output: current value of memory data register
 	);
 	
-	// Which address to send to memory block, also called IorD for some STUPID GOD DAMN REASON, in minimips
-	// 0 for getting address from pc
-	// 1 for getting address from register B, what is shown in diagram
-	mux2 #(WIDTH)
-	mem_address_mux(
-		.selection(address_src),
-		.input_1(reg_pc),	
-		.input_2(reg_b),
-		.mux2_output(mem_address)
+	// Memory data register, this holds data from input memory only used for loads
+	flopr #(WIDTH)
+	mdr_load_flopr(
+		.clk(clk),											// Input: clock signal
+		.reset(reset),										// Input: reset flip flop, might not be needed
+		.d(data_from_mem_load),							// Input: datapath input, from memory
+		.q(reg_mdr_load)									// Output: current value of memory data register
 	);
 	
 	// ALU A input mux, 
@@ -155,36 +147,38 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 	// ALU B input mux, 
 	// 0 for data from register file output B, 
 	// 1 for immediate value from instruction
-	// 2 for hardcoded one, used for pc increment
-	mux4 #(WIDTH)
+	mux2 #(WIDTH)
 	alu_B_mux(
 		.selection(alu_B_src),							// Input: see alu_A_mux for stupid descriptions of these
 		.input_1(reg_B),									// Input
 		.input_2(reg_immediate),						// Input
-		.input_3(1'b1),									// Input
-		.mux4_output(alu_B_in)							// Output
+		.mux2_output(alu_B_in)							// Output
 	);
 	
 	// PC source mux, CHANGED FROM B TO A
-	// 0 for result from ALU, either incrementing by one or adding an immediate
-	// 1 for value (presumably an address) from register A
-	mux2 #(WIDTH)
+	// 0 for result from ALU by adding an immediate
+	// 1 for value (presumably an address) from register B
+	// 2 for incrementeing by one, separate from alu
+	mux4 #(WIDTH)
 	pc_src_mux(
 		.selection(pc_src),								// Input: see alu_A_mux for stupid descriptions of these
 		.input_1(reg_alu),								// Input
-		.input_2(reg_A),									// Input
-		.mux2_output(next_pc)							// Output
+		.input_2(reg_B),									// Input
+		.input_3(incremented_pc),						
+		.mux4_output(next_pc)							// Output
 	);
 		
 	// Register file write source mux, 
-	// 0 for writing the value from the alu into the specified register in write_index
-	// 1 for writing the value from memory into the specified register in write_index
-	mux2 #(WIDTH)
+	// 0 for writing the value from the alu into reg a
+	// 1 for writing the value from memory into reg A
+	// 2 for writing the incremented program counter to register A, used for JAL
+	mux4 #(WIDTH)
 	reg_write_src_mux(
 		.selection(reg_write_src),						// Input: see alu_A_mux for stupid descriptions of these
 		.input_1(reg_alu),								// Input
-		.input_2(reg_mdr),								// Input
-		.mux2_output(file_reg_write_data)			// Output
+		.input_2(reg_mdr_load),							// Input
+		.input_3(incremented_pc),
+		.mux4_output(file_reg_write_data)			// Output
 	);
 	
 	
@@ -201,9 +195,9 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 5, IMM_BIT
 	// Instruction register
 	instruction_reg #(WIDTH, IMM_BITS, OP_BITS, REG_BITS)
 	ins_reg(
-		.input_instruction(instruction),				// Input: raw assembly instruction
-		.op_code(),											// Output: bits 15 - 12 of instruction
-		.ext_op_code(),									// Output: bits 7 - 4 of instruction
+		.input_instruction(reg_mdr_PC),				// Input: raw assembly instruction
+		.op_code(op_code),											// Output: bits 15 - 12 of instruction
+		.ext_op_code(ext_op_code),									// Output: bits 7 - 4 of instruction
 		.immediate_value(immediate_from_ins_reg),	// Output: oof, probably need to rework this. bits 7 - 0 I think
 		.A_index_out(A_index), 							// Output: bits 11 - 8 of instruction
 		.B_index_out(B_index)							// Output: bits 3 - 0 of instruction

@@ -1,4 +1,5 @@
 vendor_name = ModelSim
+source_file = 1, C:/Data/GIT/Bananachine/ALU/datapathFSM.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/datapath.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/regfile.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/Reg.dat
