@@ -1,4 +1,4 @@
-module regfile #(parameter WIDTH = 16, REG_BITS = 5)( // REGBITS is 5 as there are 17 registers
+module regfile #(parameter WIDTH = 16, REG_BITS = 4)( // REGBITS is 5 as there are 17 registers
 	input		clk, reg_write,
 	input		[REG_BITS - 1:0] A_index, B_index, 
 	input		[WIDTH - 1:0]   write_data, 

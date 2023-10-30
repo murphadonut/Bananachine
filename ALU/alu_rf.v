@@ -1,9 +1,18 @@
-// Authors:
-// The m&ms
-// The big K
-// The Apple Man
+// ALU_CONT_BITS is 6 as of 10/29/2023 because the first two specify which
+// category of instruction is being completed, idk if category is the right word
+// look at the ISA
+// 00 = regular ALU operation
+// 01 = not used because the "special" commands don't need to use the ALU
+// 10 = shift operations
+// 11 = bcond
+// the last 4 bits are the op-code as specified in the ISA
+// a = Rdest
+// b = Rsrc
 
+
+// TODO: finish LUI, LSH, and LSHI. Then test
 module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
+
 	input			[WIDTH - 1 : 0] 				a, b, 
 	input			[ALU_CONT_BITS - 1 : 0] 	alu_cont, 
 	output reg	[WIDTH - 1 : 0] 				alu_out, 
@@ -11,7 +20,7 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
 	);
 	
 	reg c_flag, f_flag, l_flag, z_flag, n_flag;
-	wire[WIDTH - 1 : 0] sum, diff, diff_unsigned;
+	wire[WIDTH - 1 : 0] sum, diff, diff_unsigned;	
 
 	assign psr_flags = {8'b00000000, n_flag, z_flag, f_flag, 2'b00, l_flag, 1'b0, c_flag};
 	assign sum = a + b;
@@ -20,11 +29,19 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
 	
 	always@(*)
 		case(alu_cont)
-			6'b000001: alu_out <= a & b; 	// AND, ANDI
-			6'b000010: alu_out <= a | b; 	// OR, ORI
-			6'b000011: alu_out <= a ^ b; 	// XOR, XORI
-			6'b000110,							// ADDU, ADDUI
-			6'b000101:							// ADD, ADDI
+			// AND, 	ANDI
+			6'b000001: alu_out <= a & b;
+			
+			// OR, 	ORI
+			6'b000010: alu_out <= a | b;
+			
+			// XOR,	XORI
+			6'b000011: alu_out <= a ^ b; 
+		
+			// ADDU,	ADDUI
+			6'b000110,
+			// ADD, 	ADDI
+			6'b000101:							
 				begin	
 					alu_out <= sum;
 					if(alu_cont != 6'b000110) // Don't set flags for ADDU and ADDUI
@@ -42,7 +59,9 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
 							else f_flag <= 0;
 						end
 				end
-			6'b001001:							// SUB, SUBI
+				
+			// SUB, SUBI
+			6'b001001:							
 				begin
 					alu_out <= diff;
 					
@@ -57,7 +76,9 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
 					else f_flag <= 0;
 
 				end
-			6'b001011:						// CMP, CMPI
+				
+			// CMP, CMPI
+			6'b001011:
 				begin
 					// N flag
 					// Assuming both a and b are of the same sign, if a is smaller than b,
@@ -76,15 +97,21 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
 					if(a == b) z_flag <= 1;
 					else z_flag <= 0;
 				end
-			6'b001101: alu_out <= b;		// MOV, MOVI
-			4'b00111: 						// LSH	
+				
+			// MOV, MOVI
+			6'b001101: alu_out <= b;
+	
+			// LSH
+			6'b100101: 							
 				begin
 					if(b[15] == 1) alu_out <= a>>1;
 					if(b[15] == 0) alu_out <= a<<b;			
 				end
-			6'b111111: alu_out <= b<<8;							// LUI
-			4'b01001: alu_out <= a;								// JCOND
-			4'b01010: alu_out <= a+1;							// JAL
-			4'b01011: alu_out <= b;								// LOAD
+				
+			// LSHI
+			//6'b100000:
+
+			// LUI
+			6'b111111: alu_out <= b<<8;							
 		endcase
 endmodule

@@ -1,4 +1,4 @@
-module instruction_reg #(parameter WIDTH = 16, IMM_BITS = 8, OP_BITS = 4, REG_BITS = 5)(
+module instruction_reg #(parameter WIDTH = 16, IMM_BITS = 8, OP_BITS = 4, REG_BITS = 4)(
 	input 	[WIDTH - 1 : 0]			input_instruction,
 	output	[OP_BITS - 1 : 0]			op_code, ext_op_code,
 	output	[IMM_BITS - 1 : 0]		immediate_value,

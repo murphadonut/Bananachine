@@ -1,10 +1,4 @@
-// notes
-// we dont have a single bit input called IorD like the minimips, 
-// pc_en may be useless
-// no zero detection stuff
-
-
-module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 6, IMM_BITS = 8, OP_BITS = 4)(
+module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BITS = 8, OP_BITS = 4)(
 
 	input 	clk, reset, reg_write, alu_A_src, alu_B_src,			
 	input		[1 : 0] 						pc_src, reg_write_src,
@@ -12,7 +6,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 6, IMM_BIT
 	input 	[WIDTH - 1:0] 				data_from_mem_PC, data_from_mem_load,
 	
 	output	zero,
-	output 	[OP_BITS - 1 : 0] op_code, ext_op_code,
+	output 	[OP_BITS - 1 : 0] op_code, ext_op_code, A_index, B_index, 
 	output 	[WIDTH - 1:0] 		mem_address_PC, mem_address_load_stor,	psr_flags, data_to_mem_stor
 	);
 	
@@ -25,20 +19,18 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 6, IMM_BIT
 		reg_A,					// Output of a flopr
 		reg_B,					// Output of a flopr
 		reg_mdr_PC,				// Output of a flopr
-		reg_mdr_load
+		reg_mdr_load,
 		reg_immediate,			// Output of a flopr
 		reg_pc,					// Output of a flopr
 		file_reg_write_data,
 		A_data, 
 		B_data, 
-		A_index, 
-		B_index, 
 		immediate_from_ins_reg,
 		next_pc,
 		incremented_pc;
 		
 	assign data_to_mem_stor = reg_A;
-	assign mem_address_PC = reg_PC;
+	assign mem_address_PC = reg_pc;
 	assign mem_address_load_stor = reg_B;
 	
 	// Zero detect, we don't know why this needed yet
@@ -49,10 +41,10 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 6, IMM_BIT
 	);
 	
 	// Incrementer by one for program counter
-	pc_counter ()
+	pc_counter #(WIDTH)
 	counter(
 		.clk(clk),											// Input
-		.reset(.reset),									// Input
+		.reset(reset),										// Input
 		.current_pc(reg_pc),								// Input
 		.incremented_pc(incremented_pc)				// Output
 	);
@@ -164,7 +156,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 6, IMM_BIT
 		.selection(pc_src),								// Input: see alu_A_mux for stupid descriptions of these
 		.input_1(reg_alu),								// Input
 		.input_2(reg_B),									// Input
-		.input_3(incremented_pc),						
+		.input_3(incremented_pc),						// Input
 		.mux4_output(next_pc)							// Output
 	);
 		
@@ -196,8 +188,8 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 5, ALU_CONT_BITS = 6, IMM_BIT
 	instruction_reg #(WIDTH, IMM_BITS, OP_BITS, REG_BITS)
 	ins_reg(
 		.input_instruction(reg_mdr_PC),				// Input: raw assembly instruction
-		.op_code(op_code),											// Output: bits 15 - 12 of instruction
-		.ext_op_code(ext_op_code),									// Output: bits 7 - 4 of instruction
+		.op_code(op_code),								// Output: bits 15 - 12 of instruction
+		.ext_op_code(ext_op_code),						// Output: bits 7 - 4 of instruction
 		.immediate_value(immediate_from_ins_reg),	// Output: oof, probably need to rework this. bits 7 - 0 I think
 		.A_index_out(A_index), 							// Output: bits 11 - 8 of instruction
 		.B_index_out(B_index)							// Output: bits 3 - 0 of instruction
