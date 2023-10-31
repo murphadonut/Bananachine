@@ -56,7 +56,7 @@ datapath d(reg_write, ~butt, reset, 1, alu_A_src, 1, reg_write_src, address_src,
 always@(posedge clk, negedge reset)
 	begin
 	//handles reset
-	if(reset ==0) unclockedNextState <= li1wr;
+	if(~reset) unclockedNextState <= li1wr;
 	case(state)
 	li1rd : unclockedNextState <= li1wr;
 	

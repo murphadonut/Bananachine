@@ -8,6 +8,10 @@ module pc_counter #(parameter WIDTH = 16) (
 // might not like this, if so, change to assign, should still work
 	always @(posedge clk)
 	begin
+		if(~reset) 
+			begin
+				incremented_pc <= 0;
+			end
 		incremented_pc <= current_pc + WIDTH;
 	end
 	

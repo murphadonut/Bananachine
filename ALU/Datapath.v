@@ -1,6 +1,6 @@
 module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BITS = 8, OP_BITS = 4)(
 
-	input 	clk, reset, reg_write, alu_A_src, alu_B_src,			
+	input 	clk, reset, reg_write, alu_A_src, alu_B_src,	pc_en,		
 	input		[1 : 0] 						pc_src, reg_write_src,
 	input		[ALU_CONT_BITS - 1 : 0]	alu_cont,
 	input 	[WIDTH - 1:0] 				data_from_mem_PC, data_from_mem_load,
@@ -18,8 +18,6 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 		reg_alu,					// Output of a flopr
 		reg_A,					// Output of a flopr
 		reg_B,					// Output of a flopr
-		reg_mdr_PC,				// Output of a flopr
-		reg_mdr_load,
 		reg_immediate,			// Output of a flopr
 		reg_pc,					// Output of a flopr
 		file_reg_write_data,
@@ -54,6 +52,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 	pc_flopr(
 		.clk(clk),											// Input: clock signal
 		.reset(reset),										// Input: reset flip flop
+		.en(pc_en),
 		.d(next_pc),										// Input: next address to put in program counter on next CPU cycle
 		.q(reg_pc)											// Output: stored address from last CPU cycle
 	);
@@ -77,7 +76,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 		.clk(clk),											// Input: clock signal
 		.reset(reset),										// Input: reset flip flop, might not be needed
 		.d(immediate_from_ins_reg),					// Input: next immediate value to store in immediate_out
-		.q(reg_mmediate)									// Output: current immediate value, stored
+		.q(reg_immediate)									// Output: current immediate value, stored
 	);
 	
 	// A register, not any of the numbered registers
@@ -105,24 +104,6 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 		.reset(reset),										// Input: reset flip flop, might not be needed
 		.d(alu_out),										// Input: output value from alu
 		.q(reg_alu)											// Output: stored alu value
-	);
-	
-	// Memory data register, this holds the returned data from memory that specifically holds the next instruction from program counter
-	flopr #(WIDTH)
-	mdr_PC_flopr(
-		.clk(clk),											// Input: clock signal
-		.reset(reset),										// Input: reset flip flop, might not be needed
-		.d(data_from_mem_PC),							// Input: datapath input, from memory
-		.q(reg_mdr_PC)										// Output: current value of memory data register
-	);
-	
-	// Memory data register, this holds data from input memory only used for loads
-	flopr #(WIDTH)
-	mdr_load_flopr(
-		.clk(clk),											// Input: clock signal
-		.reset(reset),										// Input: reset flip flop, might not be needed
-		.d(data_from_mem_load),							// Input: datapath input, from memory
-		.q(reg_mdr_load)									// Output: current value of memory data register
 	);
 	
 	// ALU A input mux, 
@@ -168,7 +149,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 	reg_write_src_mux(
 		.selection(reg_write_src),						// Input: see alu_A_mux for stupid descriptions of these
 		.input_1(reg_alu),								// Input
-		.input_2(reg_mdr_load),							// Input
+		.input_2(data_from_mem_load),							// Input
 		.input_3(incremented_pc),
 		.mux4_output(file_reg_write_data)			// Output
 	);
@@ -187,7 +168,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 	// Instruction register
 	instruction_reg #(WIDTH, IMM_BITS, OP_BITS, REG_BITS)
 	ins_reg(
-		.input_instruction(reg_mdr_PC),				// Input: raw assembly instruction
+		.input_instruction(data_from_mem_PC),				// Input: raw assembly instruction
 		.op_code(op_code),								// Output: bits 15 - 12 of instruction
 		.ext_op_code(ext_op_code),						// Output: bits 7 - 4 of instruction
 		.immediate_value(immediate_from_ins_reg),	// Output: oof, probably need to rework this. bits 7 - 0 I think

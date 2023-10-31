@@ -104,7 +104,7 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
 			// LSH
 			6'b100101: 							
 				begin
-					if(b[15] == 1) alu_out <= a>>1;
+					if(b[15] == 1) alu_out <= a>>(~b+1);
 					if(b[15] == 0) alu_out <= a<<b;			
 				end
 				

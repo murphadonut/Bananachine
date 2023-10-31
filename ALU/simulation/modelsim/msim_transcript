@@ -13,37 +13,37 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/datapath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:47 on Oct 29,2023
+# Start time: 17:14:12 on Oct 31,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/datapath.v 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 21:02:47 on Oct 29,2023, Elapsed time: 0:00:00
+# End time: 17:14:12 on Oct 31,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/alu_rf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:47 on Oct 29,2023
+# Start time: 17:14:12 on Oct 31,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/alu_rf.v 
 # -- Compiling module alu_rf
 # 
 # Top level modules:
 # 	alu_rf
-# End time: 21:02:47 on Oct 29,2023, Elapsed time: 0:00:00
+# End time: 17:14:12 on Oct 31,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/CPU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:47 on Oct 29,2023
+# Start time: 17:14:12 on Oct 31,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/CPU.v 
 # -- Compiling module CPU
 # 
 # Top level modules:
 # 	CPU
-# End time: 21:02:47 on Oct 29,2023, Elapsed time: 0:00:00
+# End time: 17:14:12 on Oct 31,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/muxes.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:47 on Oct 29,2023
+# Start time: 17:14:12 on Oct 31,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/muxes.v 
 # -- Compiling module mux2
 # -- Compiling module mux4
@@ -57,83 +57,83 @@
 # 	flopenr
 # 	flopr
 # 	zerodetect
-# End time: 21:02:47 on Oct 29,2023, Elapsed time: 0:00:00
+# End time: 17:14:12 on Oct 31,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/instruction_reg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:47 on Oct 29,2023
+# Start time: 17:14:12 on Oct 31,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/instruction_reg.v 
 # -- Compiling module instruction_reg
 # 
 # Top level modules:
 # 	instruction_reg
-# End time: 21:02:47 on Oct 29,2023, Elapsed time: 0:00:00
+# End time: 17:14:12 on Oct 31,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/controller.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:47 on Oct 29,2023
+# Start time: 17:14:12 on Oct 31,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/controller.v 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 21:02:47 on Oct 29,2023, Elapsed time: 0:00:00
+# End time: 17:14:13 on Oct 31,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/pc_counter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:48 on Oct 29,2023
+# Start time: 17:14:13 on Oct 31,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/pc_counter.v 
 # -- Compiling module pc_counter
 # 
 # Top level modules:
 # 	pc_counter
-# End time: 21:02:48 on Oct 29,2023, Elapsed time: 0:00:00
+# End time: 17:14:13 on Oct 31,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/Bananachine.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:48 on Oct 29,2023
+# Start time: 17:14:13 on Oct 31,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/Bananachine.v 
 # -- Compiling module Bananachine
 # 
 # Top level modules:
 # 	Bananachine
-# End time: 21:02:48 on Oct 29,2023, Elapsed time: 0:00:00
+# End time: 17:14:13 on Oct 31,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/basic_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:48 on Oct 29,2023
+# Start time: 17:14:13 on Oct 31,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/basic_mem.v 
 # -- Compiling module basic_mem
 # 
 # Top level modules:
 # 	basic_mem
-# End time: 21:02:48 on Oct 29,2023, Elapsed time: 0:00:00
+# End time: 17:14:13 on Oct 31,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/regfile.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:48 on Oct 29,2023
+# Start time: 17:14:13 on Oct 31,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 21:02:48 on Oct 29,2023, Elapsed time: 0:00:00
+# End time: 17:14:13 on Oct 31,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:48 on Oct 29,2023
+# Start time: 17:14:13 on Oct 31,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v 
 # -- Compiling module Bananachine_tb
 # 
 # Top level modules:
 # 	Bananachine_tb
-# End time: 21:02:48 on Oct 29,2023, Elapsed time: 0:00:00
+# End time: 17:14:13 on Oct 31,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Bananachine_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Bananachine_tb 
-# Start time: 21:02:48 on Oct 29,2023
+# Start time: 17:14:13 on Oct 31,2023
 # Loading work.Bananachine_tb
 # Loading work.Bananachine
 # Loading work.CPU
@@ -149,18 +149,13 @@
 # Loading work.alu_rf
 # Loading work.instruction_reg
 # Loading work.basic_mem
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(54): [TFMPC] - Too few port connections. Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/pc_flopr File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(54): [TFMPC] - Missing connection for port 'en'.
-# ** Warning: (vsim-3015) C:/Data/GIT/Bananachine/ALU/datapath.v(76): [PCDPC] - Port size (16) does not match connection size (1) for port 'q'. The port definition is at: C:/Data/GIT/Bananachine/ALU/muxes.v(37).
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/immediate_flopr File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(155): [TFMPC] - Too few port connections. Expected 6, found 5.
+# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(136): [TFMPC] - Too few port connections. Expected 6, found 5.
 #    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/pc_src_mux File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(155): [TFMPC] - Missing connection for port 'input_4'.
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(168): [TFMPC] - Too few port connections. Expected 6, found 5.
+# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(136): [TFMPC] - Missing connection for port 'input_4'.
+# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(149): [TFMPC] - Too few port connections. Expected 6, found 5.
 #    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/reg_write_src_mux File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(168): [TFMPC] - Missing connection for port 'input_4'.
-# ** Warning: (vsim-3015) C:/Data/GIT/Bananachine/ALU/datapath.v(189): [PCDPC] - Port size (8) does not match connection size (16) for port 'immediate_value'. The port definition is at: C:/Data/GIT/Bananachine/ALU/instruction_reg.v(4).
+# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(149): [TFMPC] - Missing connection for port 'input_4'.
+# ** Warning: (vsim-3015) C:/Data/GIT/Bananachine/ALU/datapath.v(170): [PCDPC] - Port size (8) does not match connection size (16) for port 'immediate_value'. The port definition is at: C:/Data/GIT/Bananachine/ALU/instruction_reg.v(4).
 #    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/ins_reg File: C:/Data/GIT/Bananachine/ALU/instruction_reg.v
 # 
 # add wave *
@@ -175,18 +170,13 @@
 # done loading
 add wave -r /*
 restart
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(54): [TFMPC] - Too few port connections. Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/pc_flopr File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(54): [TFMPC] - Missing connection for port 'en'.
-# ** Warning: (vsim-3015) C:/Data/GIT/Bananachine/ALU/datapath.v(76): [PCDPC] - Port size (16) does not match connection size (1) for port 'q'. The port definition is at: C:/Data/GIT/Bananachine/ALU/muxes.v(37).
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/immediate_flopr File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(155): [TFMPC] - Too few port connections. Expected 6, found 5.
+# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(136): [TFMPC] - Too few port connections. Expected 6, found 5.
 #    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/pc_src_mux File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(155): [TFMPC] - Missing connection for port 'input_4'.
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(168): [TFMPC] - Too few port connections. Expected 6, found 5.
+# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(136): [TFMPC] - Missing connection for port 'input_4'.
+# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(149): [TFMPC] - Too few port connections. Expected 6, found 5.
 #    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/reg_write_src_mux File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(168): [TFMPC] - Missing connection for port 'input_4'.
-# ** Warning: (vsim-3015) C:/Data/GIT/Bananachine/ALU/datapath.v(189): [PCDPC] - Port size (8) does not match connection size (16) for port 'immediate_value'. The port definition is at: C:/Data/GIT/Bananachine/ALU/instruction_reg.v(4).
+# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(149): [TFMPC] - Missing connection for port 'input_4'.
+# ** Warning: (vsim-3015) C:/Data/GIT/Bananachine/ALU/datapath.v(170): [PCDPC] - Port size (8) does not match connection size (16) for port 'immediate_value'. The port definition is at: C:/Data/GIT/Bananachine/ALU/instruction_reg.v(4).
 #    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/ins_reg File: C:/Data/GIT/Bananachine/ALU/instruction_reg.v
 run
 # Loading register file
@@ -194,65 +184,153 @@ run
 # Loading memory
 # done loading
 run
-vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:10:19 on Oct 29,2023
-# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v 
-# -- Compiling module Bananachine_tb
-# 
-# Top level modules:
-# 	Bananachine_tb
-# End time: 21:10:19 on Oct 29,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 restart
-# Loading work.Bananachine_tb
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(54): [TFMPC] - Too few port connections. Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/pc_flopr File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(54): [TFMPC] - Missing connection for port 'en'.
-# ** Warning: (vsim-3015) C:/Data/GIT/Bananachine/ALU/datapath.v(76): [PCDPC] - Port size (16) does not match connection size (1) for port 'q'. The port definition is at: C:/Data/GIT/Bananachine/ALU/muxes.v(37).
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/immediate_flopr File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(155): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/pc_src_mux File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(155): [TFMPC] - Missing connection for port 'input_4'.
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(168): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/reg_write_src_mux File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(168): [TFMPC] - Missing connection for port 'input_4'.
-# ** Warning: (vsim-3015) C:/Data/GIT/Bananachine/ALU/datapath.v(189): [PCDPC] - Port size (8) does not match connection size (16) for port 'immediate_value'. The port definition is at: C:/Data/GIT/Bananachine/ALU/instruction_reg.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/ins_reg File: C:/Data/GIT/Bananachine/ALU/instruction_reg.v
 run
-# Loading register file
-# done with RF load
-# Loading memory
-# done loading
-vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:13:12 on Oct 29,2023
-# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v 
-# -- Compiling module Bananachine_tb
-# 
-# Top level modules:
-# 	Bananachine_tb
-# End time: 21:13:12 on Oct 29,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading work.Bananachine_tb
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(54): [TFMPC] - Too few port connections. Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/pc_flopr File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(54): [TFMPC] - Missing connection for port 'en'.
-# ** Warning: (vsim-3015) C:/Data/GIT/Bananachine/ALU/datapath.v(76): [PCDPC] - Port size (16) does not match connection size (1) for port 'q'. The port definition is at: C:/Data/GIT/Bananachine/ALU/muxes.v(37).
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/immediate_flopr File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(155): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/pc_src_mux File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(155): [TFMPC] - Missing connection for port 'input_4'.
-# ** Warning: (vsim-3017) C:/Data/GIT/Bananachine/ALU/datapath.v(168): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/reg_write_src_mux File: C:/Data/GIT/Bananachine/ALU/muxes.v
-# ** Warning: (vsim-3722) C:/Data/GIT/Bananachine/ALU/datapath.v(168): [TFMPC] - Missing connection for port 'input_4'.
-# ** Warning: (vsim-3015) C:/Data/GIT/Bananachine/ALU/datapath.v(189): [PCDPC] - Port size (8) does not match connection size (16) for port 'immediate_value'. The port definition is at: C:/Data/GIT/Bananachine/ALU/instruction_reg.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb/bm/cpu/dp/ins_reg File: C:/Data/GIT/Bananachine/ALU/instruction_reg.v
 run
-# Loading register file
-# done with RF load
-# Loading memory
-# done loading
-# End time: 21:22:14 on Oct 29,2023, Elapsed time: 0:19:26
-# Errors: 0, Warnings: 32
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+# End time: 17:28:14 on Oct 31,2023, Elapsed time: 0:14:01
+# Errors: 0, Warnings: 10

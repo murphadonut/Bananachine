@@ -1,5 +1,5 @@
 Fitter report for alu_rf
-Sun Oct 29 21:02:22 2023
+Tue Oct 31 17:13:46 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Oct 29 21:02:22 2023       ;
+; Fitter Status                   ; Successful - Tue Oct 31 17:13:46 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu_rf                                      ;
 ; Top-level Entity Name           ; Bananachine                                 ;
@@ -1596,9 +1596,9 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Data/GIT/Bananachine/ALU/output_files/alu_rf.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 6509 megabytes
-    Info: Processing ended: Sun Oct 29 21:02:22 2023
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Processing ended: Tue Oct 31 17:13:47 2023
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +----------------------------+

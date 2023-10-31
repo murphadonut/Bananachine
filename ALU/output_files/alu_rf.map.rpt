@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu_rf
-Sun Oct 29 21:02:03 2023
+Tue Oct 31 17:13:25 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -26,25 +26,21 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  18. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|flopr:reg_A_flopr
  19. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|flopr:reg_B_flopr
  20. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|flopr:reg_alu_flopr
- 21. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|flopr:mdr_PC_flopr
- 22. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|flopr:mdr_load_flopr
- 23. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|mux2:alu_A_mux
- 24. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|mux2:alu_B_mux
- 25. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|mux4:pc_src_mux
- 26. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|mux4:reg_write_src_mux
- 27. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|alu_rf:alu_unit
- 28. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg
- 29. Parameter Settings for User Entity Instance: basic_mem:mem
- 30. Port Connectivity Checks: "basic_mem:mem"
- 31. Port Connectivity Checks: "CPU:cpu|datapath:dp|instruction_reg:ins_reg"
- 32. Port Connectivity Checks: "CPU:cpu|datapath:dp|mux4:reg_write_src_mux"
- 33. Port Connectivity Checks: "CPU:cpu|datapath:dp|mux4:pc_src_mux"
- 34. Port Connectivity Checks: "CPU:cpu|datapath:dp|flopr:immediate_flopr"
- 35. Port Connectivity Checks: "CPU:cpu|datapath:dp|flopenr:pc_flopr"
- 36. Port Connectivity Checks: "CPU:cpu|datapath:dp"
- 37. Post-Synthesis Netlist Statistics for Top Partition
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
+ 21. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|mux2:alu_A_mux
+ 22. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|mux2:alu_B_mux
+ 23. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|mux4:pc_src_mux
+ 24. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|mux4:reg_write_src_mux
+ 25. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|alu_rf:alu_unit
+ 26. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg
+ 27. Parameter Settings for User Entity Instance: basic_mem:mem
+ 28. Port Connectivity Checks: "basic_mem:mem"
+ 29. Port Connectivity Checks: "CPU:cpu|datapath:dp|instruction_reg:ins_reg"
+ 30. Port Connectivity Checks: "CPU:cpu|datapath:dp|mux4:reg_write_src_mux"
+ 31. Port Connectivity Checks: "CPU:cpu|datapath:dp|mux4:pc_src_mux"
+ 32. Port Connectivity Checks: "CPU:cpu|datapath:dp"
+ 33. Post-Synthesis Netlist Statistics for Top Partition
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
 
 
 
@@ -70,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Oct 29 21:02:03 2023       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 31 17:13:25 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu_rf                                      ;
 ; Top-level Entity Name           ; Bananachine                                 ;
@@ -396,26 +392,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|flopr:mdr_PC_flopr ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; WIDTH          ; 16    ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|flopr:mdr_load_flopr ;
-+----------------+-------+--------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                         ;
-+----------------+-------+--------------------------------------------------------------+
-; WIDTH          ; 16    ; Signed Integer                                               ;
-+----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|mux2:alu_A_mux ;
 +----------------+-------+--------------------------------------------------------+
@@ -527,25 +503,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CPU:cpu|datapath:dp|flopr:immediate_flopr"                                                                             ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; q    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (1 bits) it drives; bit(s) "q[15..1]" have no fanouts ;
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                    ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CPU:cpu|datapath:dp|flopenr:pc_flopr"                                                                                                       ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; en   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------+
 ; Port Connectivity Checks: "CPU:cpu|datapath:dp"   ;
 +------+--------+----------+------------------------+
@@ -582,7 +539,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Oct 29 21:01:56 2023
+    Info: Processing started: Tue Oct 31 17:13:18 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_rf -c alu_rf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -617,12 +574,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file pc_coun
 Info (12021): Found 1 design units, including 1 entities, in source file bananachine.v
     Info (12023): Found entity 1: Bananachine File: C:/Data/GIT/Bananachine/ALU/Bananachine.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bananachine_tb.v
-    Info (12023): Found entity 1: Bananachine_tb File: C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v Line: 1
+    Info (12023): Found entity 1: Bananachine_tb File: C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v Line: 2
 Warning (10236): Verilog HDL Implicit Net warning at datapathFSM.v(41): created implicit net for "mem_address2" File: C:/Data/GIT/Bananachine/ALU/datapathFSM.v Line: 41
 Warning (10236): Verilog HDL Implicit Net warning at datapathFSM.v(41): created implicit net for "bdata" File: C:/Data/GIT/Bananachine/ALU/datapathFSM.v Line: 41
 Warning (10236): Verilog HDL Implicit Net warning at datapathFSM.v(41): created implicit net for "wren_b" File: C:/Data/GIT/Bananachine/ALU/datapathFSM.v Line: 41
 Warning (10236): Verilog HDL Implicit Net warning at datapathFSM.v(41): created implicit net for "data_b" File: C:/Data/GIT/Bananachine/ALU/datapathFSM.v Line: 41
-Warning (10236): Verilog HDL Implicit Net warning at datapath.v(80): created implicit net for "reg_mmediate" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 80
 Warning (10222): Verilog HDL Parameter Declaration warning at controller.v(13): Parameter Declaration in module "controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 13
 Warning (10222): Verilog HDL Parameter Declaration warning at controller.v(14): Parameter Declaration in module "controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 14
 Warning (10222): Verilog HDL Parameter Declaration warning at controller.v(15): Parameter Declaration in module "controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 15
@@ -642,25 +598,36 @@ Warning (10222): Verilog HDL Parameter Declaration warning at controller.v(30): 
 Warning (10222): Verilog HDL Parameter Declaration warning at controller.v(31): Parameter Declaration in module "controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 31
 Warning (10222): Verilog HDL Parameter Declaration warning at controller.v(32): Parameter Declaration in module "controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 32
 Warning (10222): Verilog HDL Parameter Declaration warning at controller.v(33): Parameter Declaration in module "controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 33
+Warning (10222): Verilog HDL Parameter Declaration warning at controller.v(35): Parameter Declaration in module "controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 35
+Warning (10222): Verilog HDL Parameter Declaration warning at controller.v(36): Parameter Declaration in module "controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 36
 Info (12127): Elaborating entity "Bananachine" for the top level hierarchy
 Info (12128): Elaborating entity "CPU" for hierarchy "CPU:cpu" File: C:/Data/GIT/Bananachine/ALU/Bananachine.v Line: 18
-Info (12128): Elaborating entity "controller" for hierarchy "CPU:cpu|controller:cont" File: C:/Data/GIT/Bananachine/ALU/CPU.v Line: 32
-Warning (10270): Verilog HDL Case Statement warning at controller.v(92): incomplete case statement has no default case item File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 92
-Info (12128): Elaborating entity "datapath" for hierarchy "CPU:cpu|datapath:dp" File: C:/Data/GIT/Bananachine/ALU/CPU.v Line: 55
-Info (12128): Elaborating entity "zerodetect" for hierarchy "CPU:cpu|datapath:dp|zerodetect:zero_thingy" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 41
-Info (12128): Elaborating entity "pc_counter" for hierarchy "CPU:cpu|datapath:dp|pc_counter:counter" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 50
-Warning (10230): Verilog HDL assignment warning at pc_counter.v(11): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/pc_counter.v Line: 11
-Info (12128): Elaborating entity "flopenr" for hierarchy "CPU:cpu|datapath:dp|flopenr:pc_flopr" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 59
-Info (12128): Elaborating entity "regfile" for hierarchy "CPU:cpu|datapath:dp|regfile:reg_file" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 71
+Info (12128): Elaborating entity "controller" for hierarchy "CPU:cpu|controller:cont" File: C:/Data/GIT/Bananachine/ALU/CPU.v Line: 33
+Warning (10270): Verilog HDL Case Statement warning at controller.v(85): incomplete case statement has no default case item File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 85
+Warning (10240): Verilog HDL Always Construct warning at controller.v(85): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 85
+Warning (10270): Verilog HDL Case Statement warning at controller.v(130): incomplete case statement has no default case item File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 130
+Info (10041): Inferred latch for "next_state[0]" at controller.v(85) File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 85
+Info (10041): Inferred latch for "next_state[1]" at controller.v(85) File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 85
+Info (10041): Inferred latch for "next_state[2]" at controller.v(85) File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 85
+Info (10041): Inferred latch for "next_state[3]" at controller.v(85) File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 85
+Info (10041): Inferred latch for "next_state[4]" at controller.v(85) File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 85
+Info (10041): Inferred latch for "next_state[5]" at controller.v(85) File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 85
+Info (10041): Inferred latch for "next_state[6]" at controller.v(85) File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 85
+Info (12128): Elaborating entity "datapath" for hierarchy "CPU:cpu|datapath:dp" File: C:/Data/GIT/Bananachine/ALU/CPU.v Line: 57
+Info (12128): Elaborating entity "zerodetect" for hierarchy "CPU:cpu|datapath:dp|zerodetect:zero_thingy" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 39
+Info (12128): Elaborating entity "pc_counter" for hierarchy "CPU:cpu|datapath:dp|pc_counter:counter" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 48
+Warning (10230): Verilog HDL assignment warning at pc_counter.v(15): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/pc_counter.v Line: 15
+Info (12128): Elaborating entity "flopenr" for hierarchy "CPU:cpu|datapath:dp|flopenr:pc_flopr" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 58
+Info (12128): Elaborating entity "regfile" for hierarchy "CPU:cpu|datapath:dp|regfile:reg_file" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 70
 Info (10648): Verilog HDL Display System Task info at regfile.v(12): Loading register file File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 12
 Warning (10850): Verilog HDL warning at regfile.v(13): number of words (0) in memory file does not match the number of elements in the address range [0:15] File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 13
 Info (10648): Verilog HDL Display System Task info at regfile.v(14): done with RF load File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 14
 Warning (10230): Verilog HDL assignment warning at regfile.v(24): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 24
 Warning (10230): Verilog HDL assignment warning at regfile.v(25): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 25
-Info (12128): Elaborating entity "flopr" for hierarchy "CPU:cpu|datapath:dp|flopr:immediate_flopr" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 81
-Info (12128): Elaborating entity "mux2" for hierarchy "CPU:cpu|datapath:dp|mux2:alu_A_mux" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 137
-Info (12128): Elaborating entity "mux4" for hierarchy "CPU:cpu|datapath:dp|mux4:pc_src_mux" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 161
-Info (12128): Elaborating entity "alu_rf" for hierarchy "CPU:cpu|datapath:dp|alu_rf:alu_unit" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 185
+Info (12128): Elaborating entity "flopr" for hierarchy "CPU:cpu|datapath:dp|flopr:immediate_flopr" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 80
+Info (12128): Elaborating entity "mux2" for hierarchy "CPU:cpu|datapath:dp|mux2:alu_A_mux" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 118
+Info (12128): Elaborating entity "mux4" for hierarchy "CPU:cpu|datapath:dp|mux4:pc_src_mux" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 142
+Info (12128): Elaborating entity "alu_rf" for hierarchy "CPU:cpu|datapath:dp|alu_rf:alu_unit" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 166
 Warning (10230): Verilog HDL assignment warning at alu_rf.v(27): truncated value with size 32 to match size of target (16) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 27
 Warning (10230): Verilog HDL assignment warning at alu_rf.v(86): truncated value with size 32 to match size of target (1) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 86
 Warning (10270): Verilog HDL Case Statement warning at alu_rf.v(31): incomplete case statement has no default case item File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 31
@@ -691,21 +658,21 @@ Info (10041): Inferred latch for "alu_out[12]" at alu_rf.v(31) File: C:/Data/GIT
 Info (10041): Inferred latch for "alu_out[13]" at alu_rf.v(31) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 31
 Info (10041): Inferred latch for "alu_out[14]" at alu_rf.v(31) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 31
 Info (10041): Inferred latch for "alu_out[15]" at alu_rf.v(31) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 31
-Info (12128): Elaborating entity "instruction_reg" for hierarchy "CPU:cpu|datapath:dp|instruction_reg:ins_reg" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 196
+Info (12128): Elaborating entity "instruction_reg" for hierarchy "CPU:cpu|datapath:dp|instruction_reg:ins_reg" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 177
 Info (12128): Elaborating entity "basic_mem" for hierarchy "basic_mem:mem" File: C:/Data/GIT/Bananachine/ALU/Bananachine.v Line: 30
 Info (10648): Verilog HDL Display System Task info at basic_mem.v(17): Loading memory File: C:/Data/GIT/Bananachine/ALU/basic_mem.v Line: 17
 Warning (10850): Verilog HDL warning at basic_mem.v(18): number of words (16) in memory file does not match the number of elements in the address range [0:65535] File: C:/Data/GIT/Bananachine/ALU/basic_mem.v Line: 18
 Info (10648): Verilog HDL Display System Task info at basic_mem.v(19): done loading File: C:/Data/GIT/Bananachine/ALU/basic_mem.v Line: 19
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[15]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 28
-    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[14]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 28
-    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[13]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 28
-    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[12]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 28
-    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[11]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 28
-    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[10]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 28
-    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[9]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 28
-    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[8]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 28
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[15]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 26
+    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[14]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 26
+    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[13]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 26
+    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[12]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 26
+    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[11]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 26
+    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[10]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 26
+    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[9]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 26
+    Warning (12110): Net "CPU:cpu|datapath:dp|immediate_from_ins_reg[8]" is missing source, defaulting to GND File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 26
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
@@ -714,10 +681,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
-    Info: Peak virtual memory: 4806 megabytes
-    Info: Processing ended: Sun Oct 29 21:02:04 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Tue Oct 31 17:13:25 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 

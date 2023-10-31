@@ -1,0 +1,5 @@
+
+State Machine - |Bananachine|CPU:cpu|controller:cont|state
+Name state.DECODE 
+state.FETCH 0 
+state.DECODE 1 

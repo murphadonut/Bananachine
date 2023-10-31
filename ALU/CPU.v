@@ -6,7 +6,7 @@ module CPU #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BITS = 8
 	);
 	
 	
-	wire alu_A_src, alu_B_src, reg_write;
+	wire alu_A_src, alu_B_src, reg_write, pc_en;
 	wire [1 : 0] pc_src, reg_write_src;
 	wire [ALU_CONT_BITS - 1 : 0] alu_cont;
 	wire [OP_BITS - 1 : 0] op_code, ext_op_code, A_index, B_index;
@@ -22,6 +22,7 @@ module CPU #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BITS = 8
 		.A_index(A_index), 
 		.B_index(B_index),
 		.psr_flags(psr_flags),						// Input
+		.pc_en(pc_en),
 		.alu_A_src(alu_A_src),						// Output
 		.alu_B_src(alu_B_src), 
 		.reg_write(reg_write), 
@@ -38,6 +39,7 @@ module CPU #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BITS = 8
 		.reg_write(reg_write),
 		.alu_A_src(alu_A_src), 
 		.alu_B_src(alu_B_src),
+		.pc_en(pc_en),
 		.pc_src(pc_src), 
 		.reg_write_src(reg_write_src),
 		.alu_cont(alu_cont),
