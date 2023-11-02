@@ -6,6 +6,7 @@
 				{
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 					"name" : "result[0]",
 					"strict" : false
 				},
@@ -68,10 +69,23 @@
 				{
 					"name" : "result[15]",
 =======
+=======
+>>>>>>> Stashed changes
 					"name" : "read[0]",
 					"strict" : false
 				},
 				{
+<<<<<<< Updated upstream
+=======
+					"name" : "read[1]",
+					"strict" : false
+				},
+				{
+					"name" : "read[2]",
+					"strict" : false
+				},
+				{
+>>>>>>> Stashed changes
 					"name" : "read[3]",
 					"strict" : false
 				},
@@ -84,6 +98,13 @@
 					"strict" : false
 				},
 				{
+<<<<<<< Updated upstream
+=======
+					"name" : "read[6]",
+					"strict" : false
+				},
+				{
+>>>>>>> Stashed changes
 					"name" : "write[0]",
 					"strict" : false
 				},
@@ -133,6 +154,7 @@
 				},
 				{
 					"name" : "st[5]",
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 					"strict" : false
 				},
@@ -280,6 +302,8 @@
 				},
 				{
 					"name" : "st[5]",
+=======
+>>>>>>> Stashed changes
 					"strict" : false
 				},
 				{
@@ -294,11 +318,14 @@
 					"name" : "reset",
 					"strict" : false
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				},
 				{
 					"name" : "clk",
 >>>>>>> Stashed changes
 					"strict" : false
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 				}

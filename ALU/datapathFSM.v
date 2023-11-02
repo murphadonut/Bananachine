@@ -4,7 +4,7 @@ module datapathFSM (input clk, reset,butt,output reg[7:0] addr, output[6:0] read
 reg [5:0] state,unclockedNextState;
 wire[5:0]nextState;
 //set parameters
-parameter [3:0] li1rd = 4'b0000;
+parameter [3:0] li1rd = 4'b1010;
 parameter [3:0] li1wr = 4'b0001;
 parameter [3:0] li2rd = 4'b0010;
 parameter [3:0] li2wr = 4'b0011;
@@ -14,50 +14,79 @@ parameter [3:0] storeex = 4'b0110;
 parameter [3:0] storewr = 4'b0111;
 parameter [3:0] loadre= 4'b1000;
 parameter [3:0] loadwr= 4'b1001;
-
+parameter [3:0] res= 4'b0000;
 
 
 	// Flip-flop to hold the next state
 flipflop #(.size(4))
 ff(.clk(~butt), .rst(reset), .d(unclockedNextState), .q(nextState));
 //1 bit reg
-reg reg_write, pc_en, alu_A_src, pc_src, reg_write_src, address_src;
-//control alu b src
-reg[1:0] alu_B_src;
+reg reg_write, pc_en, alu_A_src, pc_src, alu_B_src;
+reg [1:0] reg_write_src;
 
 //alu control
-reg[4:0] alu_cont;
+reg[5:0] alu_cont;
 
 // instructions to datapath
 reg [15:0] inst;
 
 //wires to interact with data to and from memory
-wire[15:0] data_to_mem,pc,psr_flags,data_from_mem,mem_address;
-
+wire[15:0] pc,psr_flags,mem_address,data_to_mem,data_from_mem;
+wire[3:0] op_code,ext_op_code,A_index,B_index;
 //write enable for memory
 reg wren_a;
 
 //exmem module b data entries are just dummy wires for now
-FUCKER exmem(mem_address,mem_address2,~butt,data_to_mem,bdata,wren_a,wren_b,data_from_mem,data_b);
+basic_mem exmem(
+						.addr_a(mem_address),
+						.clk(butt),
+						.data_a(data_to_mem),
+						.we_a(wren_a),
+						.q_a(data_from_mem)
+						
+						
+);
 
 //data display for readData set to hex[2]
-hexTo7Seg readData( data_from_mem , write);
+hexTo7Seg readData(  data_from_mem [11:8], write);
 
 //display for the data_to_mem this is set to hex [1] 
-hexTo7Seg writeData( data_to_mem , read);
+hexTo7Seg writeData( data_to_mem [11:8] , read);
 
 //displays state to the hex [0]
 hexTo7Seg stateDisplay(state, st);
 
 //instantiate datapath, datapath's clock is set to button presses
-datapath d(reg_write, ~butt, reset, 1, alu_A_src, 1, reg_write_src, address_src, alu_B_src,alu_cont,inst,data_from_mem,mem_address,psr_flags,data_to_mem);
-
+datapath d(
+				.clk(butt),
+				.reset(reset),
+				.reg_write(reg_write),
+				.alu_A_src(alu_A_src),
+				.alu_B_src(alu_B_src),
+				.reg_write_src(reg_write_src),
+				.alu_cont(alu_cont),
+				.data_from_mem_load(data_from_mem),
+				.mem_address_load_stor(mem_address),
+				.data_to_mem_stor(data_to_mem),
+				.op_code(op_code),
+				.ext_op_code(ext_op_code),
+				.A_index(A_index),
+				.B_index(B_index),
+				.data_from_mem_PC(inst)
+				
+);
 //set the next state values
 always@(posedge clk, negedge reset)
 	begin
 	//handles reset
+<<<<<<< Updated upstream
 	if(reset ==0) unclockedNextState <= li1wr;
+=======
+	if(~reset) unclockedNextState <= res;
+>>>>>>> Stashed changes
 	case(state)
+	res : unclockedNextState <= li1rd;
+	
 	li1rd : unclockedNextState <= li1wr;
 	
 	li1wr : unclockedNextState <= li2rd;
@@ -76,7 +105,7 @@ always@(posedge clk, negedge reset)
 	
 	loadre : unclockedNextState <= loadwr;
 
-	default unclockedNextState <= li1wr;
+	default unclockedNextState <= res;
 
 	endcase
 	end
@@ -89,15 +118,19 @@ always@(posedge clk, negedge reset)
 always@(state)
 	begin
 	case(state)
+	res:begin
+	reg_write <=0;
+	wren_a <=0;
+	end
 	
 	//load 3
 	li1rd:begin
 	reg_write <= 0;
+	reg_write_src = 0;
 	alu_A_src <= 0;
 	alu_B_src <= 1;
 	inst <= 16'b0000000100000011;
-	alu_cont <= 5'b01000;
-	 addr <= 0;
+	alu_cont <= 6'b111111;
 	end
 	
 	//write 3 to register 1
@@ -108,8 +141,8 @@ always@(state)
 	//load 2
 		li2rd:begin
 	reg_write <= 0;
-	inst <= 16'b0000001000000010;
-	alu_cont <= 5'b01000;
+	inst <= 16'b0000001000000011;
+	alu_cont <= 6'b111111;
 	end
 	
 	//write 2 to register 2
@@ -123,7 +156,7 @@ always@(state)
 	alu_A_src <= 1;
 	alu_B_src <=0;
 	inst <= 16'b0000000100000010;
-	alu_cont <= 5'b00011;
+	alu_cont <= 6'b000101;
 	end
 	
 	//store value into register 1 should be 5
@@ -143,11 +176,11 @@ always@(state)
 	// write value in memory
 				storewr:begin
 	wren_a <= 1;
-	address_src <= 1;
 	end
 	
 	//load value in memory location 4
 				loadre:begin
+	wren_a <= 0;
 	reg_write_src <= 1;
 	end
 	

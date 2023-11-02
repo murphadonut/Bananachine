@@ -16,11 +16,19 @@ module regfile #(parameter WIDTH = 16, REGBITS = 5)
 	$display("done with RF load"); 
 	end
 
+<<<<<<< Updated upstream
    // dual-ported register file
    //   read two ports combinationally
    //   write third port on rising edge of clock
    always @(posedge clk)
       if (regwrite) RAM[ra1] <= wd;
+=======
+   // Dual-ported register file
+   // Read two ports combinationally
+   // Write third port on rising edge of clock
+   always @(negedge clk)
+      if (reg_write) RAM[A_index] <= write_data;
+>>>>>>> Stashed changes
 	
    // register 0 is hardwired to 0
    assign rd1 = ra1 ? RAM[ra1] : 0;

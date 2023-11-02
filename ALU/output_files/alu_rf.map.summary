@@ -1,6 +1,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Analysis & Synthesis Status : Successful - Tue Oct 24 16:08:19 2023
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : alu_rf
@@ -31,6 +32,18 @@ Total pins : 32
 >>>>>>> Stashed changes
 Total virtual pins : 0
 Total block memory bits : 32
+=======
+Analysis & Synthesis Status : Successful - Thu Nov 02 16:13:27 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : alu_rf
+Top-level Entity Name : datapathFSM
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 219
+Total pins : 32
+Total virtual pins : 0
+Total block memory bits : 1,048,576
+>>>>>>> Stashed changes
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

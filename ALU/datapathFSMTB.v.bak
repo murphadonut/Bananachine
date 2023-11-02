@@ -1,0 +1,142 @@
+module datapathFSMTB (input clk, reset, butt, output reg[7:0] addr, output[6:0] read, write,st);
+
+
+reg [5:0] state,unclockedNextState;
+wire[5:0]nextState;
+
+//1 bit reg
+reg reg_write, pc_en, alu_A_src, pc_src, reg_write_src, address_src;
+//control alu b src
+reg[1:0] alu_B_src;
+
+//alu control
+reg[4:0] alu_cont;
+
+// instructions to datapath
+reg [15:0] inst;
+
+//wires to interact with data to and from memory
+wire[15:0] data_to_mem,pc,psr_flags,data_from_mem,mem_address;
+
+//write enable for memory
+reg wren_a;
+
+//exmem module b data entries are just dummy wires for now
+basic_mem exmem(mem_address,mem_address2,clk,data_to_mem,bdata,wren_a,wren_b,data_from_mem,data_b);
+
+//data display for readData set to hex[2]
+hexTo7Seg readData( data_from_mem , write);
+
+//display for the data_to_mem this is set to hex [1] 
+hexTo7Seg writeData( data_to_mem , read);
+
+//displays state to the hex [0]
+hexTo7Seg stateDisplay(state, st);
+
+//instantiate datapath, datapath's clock is set to button presses
+datapath d(reg_write, clk, reset, 1, alu_A_src, 1, reg_write_src, address_src, alu_B_src,alu_cont,inst,data_from_mem,mem_address,psr_flags,data_to_mem);
+
+initial begin
+clk =0;
+	
+	//load 3
+
+	reg_write <= 0;
+	alu_A_src <= 0;
+	alu_B_src <= 1;
+	inst <= 16'b0000000100000011;
+	alu_cont <= 5'b01000;
+	 addr <= 0;
+clk =1;
+	
+	//write 3 to register 1
+clk =0;
+	reg_write <= 1;
+	clk =1;
+	//load 2
+
+	reg_write <= 0;
+	inst <= 16'b0000001000000010;
+	alu_cont <= 5'b01000;
+clk=0;
+	
+	//write 2 to register 2
+clk =1;
+	reg_write <= 1;
+clk =0;
+	
+	//add registers 1 and 2
+	clk =1;
+	reg_write <= 0;
+	alu_A_src <= 1;
+	alu_B_src <=0;
+	inst <= 16'b0000000100000010;
+	alu_cont <= 5'b00011;
+	clk =0;
+	
+	//store value into register 1 should be 5
+	clk=0;
+	reg_write <= 1;
+	reg_write_src <= 0;
+	clk =1;
+	
+	//store value in memory location 4
+	clk =0;
+	reg_write <= 0;
+	alu_A_src <= 1;
+	alu_B_src <=1;
+	inst <= 16'b0000000100000100;
+	clk =1;
+	
+	// write value in memory
+	clk =0;
+	wren_a <= 1;
+	address_src <= 1;
+	clk =1;
+	
+	//load value in memory location 4
+	clk =0;
+	reg_write_src <= 1;
+	clk =1;
+	
+	//write value into register a which is register 4
+	clk =0;
+	inst <= 16'b0000001100000000;
+	reg_write <= 1;
+	clk =1;
+
+	end
+endmodule
+
+
+module hexTo7Seg(
+		input [3:0]x,
+		output reg [6:0]z
+		);
+
+  // always @* guarantees that the circuit that is 
+  // synthesized is combinational 
+  // (no clocks, registers, or latches)
+  always @*
+    // Note that the 7-segment displays on the DE1-SoC board are
+    // "active low" - a 0 turns on the segment, and 1 turns it off
+    case(x)
+      4'b0000 : z = ~7'b0111111; // 0
+      4'b0001 : z = ~7'b0000110; // 1
+      4'b0010 : z = ~7'b1011011; // 2
+      4'b0011 : z = ~7'b1001111; // 3
+      4'b0100 : z = ~7'b1100110; // 4
+      4'b0101 : z = ~7'b1101101; // 5
+      4'b0110 : z = ~7'b1111101; // 6
+      4'b0111 : z = ~7'b0000111; // 7
+      4'b1000 : z = ~7'b1111111; // 8
+      4'b1001 : z = ~7'b1100111; // 9 
+      4'b1010 : z = ~7'b1110111; // A
+      4'b1011 : z = ~7'b1111100; // b
+      4'b1100 : z = ~7'b1011000; // c
+      4'b1101 : z = ~7'b1011110; // d
+      4'b1110 : z = ~7'b1111001; // E
+      4'b1111 : z = ~7'b1110001; // F
+      default : z = ~7'b0000000; // Always good to have a default! 
+    endcase
+endmodule 

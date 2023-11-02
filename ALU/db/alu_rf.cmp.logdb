@@ -31,6 +31,7 @@ IO_RULES,DEV_IO_RULE_OCT_DISCLAIMER,,,,,,,,,,
 IO_RULES_MATRIX,Pin/Rules,IO_000001;IO_000002;IO_000003;IO_000004;IO_000005;IO_000006;IO_000007;IO_000008;IO_000009;IO_000010;IO_000011;IO_000012;IO_000013;IO_000014;IO_000015;IO_000018;IO_000019;IO_000020;IO_000021;IO_000022;IO_000023;IO_000024;IO_000026;IO_000027;IO_000045;IO_000046;IO_000047;IO_000034,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 IO_RULES_MATRIX,Total Pass,0;0;0;0;0;50;0;0;50;50;0;32;0;0;0;0;32;0;0;0;0;32;0;0;0;0;0;0,
 IO_RULES_MATRIX,Total Unchecked,0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0,
 IO_RULES_MATRIX,Total Inapplicable,50;50;50;50;50;0;50;50;0;0;50;18;50;50;50;50;18;50;50;50;50;18;50;50;50;50;50;50,
@@ -97,6 +98,13 @@ IO_RULES_MATRIX,Total Inapplicable,8;32;8;32;32;0;8;32;0;0;32;3;32;32;32;32;3;32
 IO_RULES_MATRIX,Total Fail,0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0,
 IO_RULES_MATRIX,clk,Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
 >>>>>>> Stashed changes
+=======
+IO_RULES_MATRIX,Total Pass,24;0;24;0;0;32;24;0;32;32;0;29;0;0;0;0;29;0;0;0;0;29;0;0;0;0;0;0,
+IO_RULES_MATRIX,Total Unchecked,0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0,
+IO_RULES_MATRIX,Total Inapplicable,8;32;8;32;32;0;8;32;0;0;32;3;32;32;32;32;3;32;32;32;32;3;32;32;32;32;32;32,
+IO_RULES_MATRIX,Total Fail,0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0,
+IO_RULES_MATRIX,clk,Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
+>>>>>>> Stashed changes
 IO_RULES_MATRIX,addr[0],Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,addr[1],Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,addr[2],Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
@@ -105,6 +113,7 @@ IO_RULES_MATRIX,addr[4],Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inap
 IO_RULES_MATRIX,addr[5],Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,addr[6],Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,addr[7],Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 IO_RULES_MATRIX,read[0],Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,read[1],Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
@@ -132,6 +141,8 @@ IO_RULES_MATRIX,reset,Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inappl
 IO_RULES_MATRIX,clk,Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
 >>>>>>> Stashed changes
 =======
+=======
+>>>>>>> Stashed changes
 IO_RULES_MATRIX,read[0],Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,read[1],Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,read[2],Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
@@ -155,6 +166,9 @@ IO_RULES_MATRIX,st[5],Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass
 IO_RULES_MATRIX,st[6],Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,butt,Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,reset,Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable,
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 IO_RULES_SUMMARY,Total I/O Rules,28,
 IO_RULES_SUMMARY,Number of I/O Rules Passed,9,
