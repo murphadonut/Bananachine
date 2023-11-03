@@ -1,7 +1,6 @@
 vendor_name = ModelSim
 source_file = 1, C:/Data/GIT/Bananachine/ALU/memory.dat
 source_file = 1, C:/Data/GIT/Bananachine/ALU/basic_mem.v
-source_file = 1, C:/Data/GIT/Bananachine/ALU/datapathFSM.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/datapath.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/regfile.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/Reg.dat
@@ -14,6 +13,7 @@ source_file = 1, C:/Data/GIT/Bananachine/ALU/controller.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/pc_counter.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/Bananachine.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v
+source_file = 1, C:/Data/GIT/Bananachine/ALU/alu_rf.sdc
 source_file = 1, C:/Data/GIT/Bananachine/ALU/db/alu_rf.cbx.xml
 design_name = Bananachine
 instance = comp, \clk~input , clk~input, Bananachine, 1

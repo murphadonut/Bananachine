@@ -12,7 +12,7 @@
 
 // TODO: finish LUI, LSH, and LSHI. Then test
 module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
-
+	input 		reset,
 	input			[WIDTH - 1 : 0] 				a, b, 
 	input			[ALU_CONT_BITS - 1 : 0] 	alu_cont, 
 	output reg	[WIDTH - 1 : 0] 				alu_out, 
@@ -24,24 +24,35 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
 
 	assign psr_flags = {8'b00000000, n_flag, z_flag, f_flag, 2'b00, l_flag, 1'b0, c_flag};
 	assign sum = a + b;
-	assign diff = a + ~b + 1;
+	assign diff = a + ~b + 1'b1;
 	assign diff_unsigned = a - b;
 	
 	always@(*)
-		case(alu_cont)
-			// AND, 	ANDI
-			6'b000001: alu_out <= a & b;
+		if(~reset)
+		begin
+			c_flag <= 0;
+			f_flag <= 0;
+			l_flag <= 0;
+			z_flag <= 0;
+			n_flag <= 0;
+			alu_out <= 0;
+		end
+		else
+		begin
+			case(alu_cont)
+				// AND, 	ANDI
+				6'b000001: alu_out <= a & b;
 			
-			// OR, 	ORI
-			6'b000010: alu_out <= a | b;
+				// OR, 	ORI
+				6'b000010: alu_out <= a | b;
+				
+				// XOR,	XORI
+				6'b000011: alu_out <= a ^ b; 
 			
-			// XOR,	XORI
-			6'b000011: alu_out <= a ^ b; 
-		
-			// ADDU,	ADDUI
-			6'b000110,
-			// ADD, 	ADDI
-			6'b000101:							
+				// ADDU,	ADDUI
+				6'b000110,
+				// ADD, 	ADDI
+				6'b000101:							
 				begin	
 					alu_out <= sum;
 					if(alu_cont != 6'b000110) // Don't set flags for ADDU and ADDUI
@@ -60,8 +71,8 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
 						end
 				end
 				
-			// SUB, SUBI
-			6'b001001:							
+				// SUB, SUBI
+				6'b001001:							
 				begin
 					alu_out <= diff;
 					
@@ -74,16 +85,15 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
 					// Basically the exact same thing as the add instruction f flag
 					if((a[15] == 1 && b[15] == 0 && diff_unsigned[15] == 0) || (a[15] == 0 && b[15] == 1 && diff_unsigned[15] == 1)) f_flag <= 1;							
 					else f_flag <= 0;
-
 				end
-				
-			// CMP, CMPI
-			6'b001011:
+					
+				// CMP, CMPI
+				6'b001011:
 				begin
 					// N flag
 					// Assuming both a and b are of the same sign, if a is smaller than b,
 					// there will be a negative 
-					if(a[15] == b[15]) n_flag <= a < b ? 1 : 0;
+					if(a[15] == b[15]) n_flag <= (a < b ? 1'b1 : 1'b0);
 					else if (a[15] == 1) n_flag <= 1;
 					else n_flag <= 0;
 					
@@ -98,20 +108,23 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
 					else z_flag <= 0;
 				end
 				
-			// MOV, MOVI
-			6'b001101: alu_out <= b;
-	
-			// LSH
-			6'b100101: 							
+				// MOV, MOVI
+				6'b001101: alu_out <= b;
+		
+				// LSH
+				6'b100101: 							
 				begin
 					if(b[15] == 1) alu_out <= a>>(~b+1);
-					if(b[15] == 0) alu_out <= a<<b;			
+					if(b[15] == 0) alu_out <= a<<b;
+					else alu_out <= alu_out;
 				end
 				
-			// LSHI
-			//6'b100000:
+				// LSHI
+				//6'b100000:
 
-			// LUI
-			6'b111111: alu_out <= b<<8;							
-		endcase
+				// LUI
+				6'b111111: alu_out <= b<<8;	
+				default:alu_out <= 0;
+			endcase
+		end
 endmodule

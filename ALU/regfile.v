@@ -21,6 +21,6 @@ module regfile #(parameter WIDTH = 16, REG_BITS = 4)( // REGBITS is 5 as there a
       if (reg_write) RAM[A_index] <= write_data;
 	
    // Register 0 is hardwired to 0
-   assign A_data = A_index ? RAM[A_index] : 0;
-   assign B_data = B_index ? RAM[B_index] : 0;
+   assign A_data = A_index ? RAM[A_index] : 1'b0;
+   assign B_data = B_index ? RAM[B_index] : 1'b0;
 endmodule

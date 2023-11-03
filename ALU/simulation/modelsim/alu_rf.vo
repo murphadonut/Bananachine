@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "10/31/2023 17:13:59"
+// DATE "11/02/2023 23:15:40"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -35,8 +35,8 @@ input 	clk;
 input 	reset;
 
 // Design Ports Information
-// clk	=>  Location: PIN_AD20,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// reset	=>  Location: PIN_AB22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk	=>  Location: PIN_AF14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// reset	=>  Location: PIN_AA14,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -55,7 +55,7 @@ wire \reset~input_o ;
 wire \~QUARTUS_CREATED_GND~I_combout ;
 
 
-// Location: IOIBUF_X82_Y0_N41
+// Location: IOIBUF_X32_Y0_N1
 cyclonev_io_ibuf \clk~input (
 	.i(clk),
 	.ibar(gnd),
@@ -66,7 +66,7 @@ defparam \clk~input .bus_hold = "false";
 defparam \clk~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X89_Y9_N4
+// Location: IOIBUF_X36_Y0_N1
 cyclonev_io_ibuf \reset~input (
 	.i(reset),
 	.ibar(gnd),
@@ -77,7 +77,7 @@ defparam \reset~input .bus_hold = "false";
 defparam \reset~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: MLABCELL_X47_Y35_N3
+// Location: LABCELL_X31_Y59_N0
 cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 

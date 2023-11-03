@@ -6,15 +6,15 @@ module Bananachine_tb();
 	initial
 		begin
 			reset = 0;
-			#10;
+			#20;
 			reset = 1;
-			#10;
+			#20;
 		end
 	
 	
 	always
 		begin
-			clk <= 0; #10;
 			clk <= 1; #10;
+			clk <= 0; #10;
 		end
 endmodule 

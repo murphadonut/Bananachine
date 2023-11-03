@@ -1,12 +1,14 @@
-module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BITS = 8, OP_BITS = 4)(
+module datapath #(parameter WIDTH = 16, ALU_CONT_BITS = 6, REG_BITS = 4, OP_CODE_BITS = 4, EXT_OP_CODE_BITS = 4)(
 
-	input 	clk, reset, reg_write, alu_A_src, alu_B_src,	pc_en,		
+	input 	clk, reset, reg_write, alu_A_src, alu_B_src,	pc_en, loading, storing,
 	input		[1 : 0] 						pc_src, reg_write_src,
 	input		[ALU_CONT_BITS - 1 : 0]	alu_cont,
 	input 	[WIDTH - 1:0] 				data_from_mem_PC, data_from_mem_load,
 	
-	output	zero,
-	output 	[OP_BITS - 1 : 0] op_code, ext_op_code, A_index, B_index, 
+	//output	zero,
+	output 	[OP_CODE_BITS - 1 : 0] op_code, 
+	output 	[EXT_OP_CODE_BITS - 1 : 0] ext_op_code,
+	output 	[REG_BITS - 1 : 0] A_index, B_index,
 	output 	[WIDTH - 1:0] 		mem_address_PC, mem_address_load_stor,	psr_flags, data_to_mem_stor
 	);
 	
@@ -15,10 +17,10 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 		alu_A_in,
 		alu_B_in,
 		alu_out,
-		reg_alu,					// Output of a flopr
+		//reg_alu,					// Output of a flopr
 		reg_A,					// Output of a flopr
 		reg_B,					// Output of a flopr
-		reg_immediate,			// Output of a flopr
+		//reg_immediate,			// Output of a flopr
 		reg_pc,					// Output of a flopr
 		file_reg_write_data,
 		A_data, 
@@ -27,16 +29,17 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 		next_pc,
 		incremented_pc;
 		
-	assign data_to_mem_stor = reg_A;
+	assign data_to_mem_stor = storing ? reg_A : 1'b0;
 	assign mem_address_PC = reg_pc;
-	assign mem_address_load_stor = reg_B;
+	assign mem_address_load_stor = (loading || storing) ? reg_B : 1'b0;
 	
+	// was being stupid
 	// Zero detect, we don't know why this needed yet
-	zerodetect #(WIDTH)
-	zero_thingy(
-		.a(alu_out),										// Input
-		.y(zero)												// Output
-	);
+//	zerodetect #(WIDTH)
+//	zero_thingy(
+//		.a(alu_out),										// Input
+//		.y(zero)												// Output
+//	);
 	
 	// Incrementer by one for program counter
 	pc_counter #(WIDTH)
@@ -69,15 +72,16 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 		.B_data(B_data)									// Output: data stored in register B
 	);
 
+	// not sure if I want this completely gone yet.
 	// does this need to be a register?
 	// Immediate data register
-	flopr #(WIDTH)
-	immediate_flopr(
-		.clk(clk),											// Input: clock signal
-		.reset(reset),										// Input: reset flip flop, might not be needed
-		.d(immediate_from_ins_reg),					// Input: next immediate value to store in immediate_out
-		.q(reg_immediate)									// Output: current immediate value, stored
-	);
+//	flopr #(WIDTH)
+//	immediate_flopr(
+//		.clk(clk),											// Input: clock signal
+//		.reset(reset),										// Input: reset flip flop, might not be needed
+//		.d(immediate_from_ins_reg),					// Input: next immediate value to store in immediate_out
+//		.q(reg_immediate)									// Output: current immediate value, stored
+//	);
 	
 	// A register, not any of the numbered registers
 	flopr #(WIDTH)
@@ -97,14 +101,15 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 		.q(reg_B)											// Output: current reg_B value, also is an output of datapath
 	);
 	
+	// don't know if I for sure want this gone yet
 	// ALU register, alu result goes into here where its synced with the clock or something like that
-	flopr #(WIDTH)
-	reg_alu_flopr(
-		.clk(clk),											// Input: clock signal
-		.reset(reset),										// Input: reset flip flop, might not be needed
-		.d(alu_out),										// Input: output value from alu
-		.q(reg_alu)											// Output: stored alu value
-	);
+//	flopr #(WIDTH)
+//	reg_alu_flopr(
+//		.clk(clk),											// Input: clock signal
+//		.reset(reset),										// Input: reset flip flop, might not be needed
+//		.d(alu_out),										// Input: output value from alu
+//		.q(reg_alu)											// Output: stored alu value
+//	);
 	
 	// ALU A input mux, 
 	// 0 for branch displacement using the program counter, 
@@ -124,20 +129,22 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 	alu_B_mux(
 		.selection(alu_B_src),							// Input: see alu_A_mux for stupid descriptions of these
 		.input_1(reg_B),									// Input
-		.input_2(reg_immediate),						// Input
+		.input_2(immediate_from_ins_reg),//reg_immediate),						// Input, got rid of reg_immediate
 		.mux2_output(alu_B_in)							// Output
 	);
 	
-	// PC source mux, CHANGED FROM B TO A
+	// PC source mux, DEFAULT IS 2, INCREMENT BY ONE
 	// 0 for result from ALU by adding an immediate
 	// 1 for value (presumably an address) from register B
 	// 2 for incrementeing by one, separate from alu
+	// 3 null
 	mux4 #(WIDTH)
 	pc_src_mux(
 		.selection(pc_src),								// Input: see alu_A_mux for stupid descriptions of these
-		.input_1(reg_alu),								// Input
+		.input_1(alu_out),//reg_alu),								// Input
 		.input_2(reg_B),									// Input
 		.input_3(incremented_pc),						// Input
+		.input_4(),											// for reset
 		.mux4_output(next_pc)							// Output
 	);
 		
@@ -148,9 +155,10 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 	mux4 #(WIDTH)
 	reg_write_src_mux(
 		.selection(reg_write_src),						// Input: see alu_A_mux for stupid descriptions of these
-		.input_1(reg_alu),								// Input
-		.input_2(data_from_mem_load),							// Input
-		.input_3(incremented_pc),
+		.input_1(alu_out),//reg_alu),					// Input
+		.input_2(data_from_mem_load),					// Input
+		.input_3(incremented_pc),						// Input
+		.input_4(),											// Just here so no warnings show up.
 		.mux4_output(file_reg_write_data)			// Output
 	);
 	
@@ -158,6 +166,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 	// ALU unit
 	alu_rf #(WIDTH, ALU_CONT_BITS) 	
 	alu_unit(
+		.reset(reset),
 		.a(alu_A_in), 										// Input: source for first value in alu
 		.b(alu_B_in), 										// Input: second source for alu
 		.alu_cont(alu_cont),								// Input: what operation to complete
@@ -166,7 +175,7 @@ module datapath #(parameter WIDTH = 16, REG_BITS = 4, ALU_CONT_BITS = 6, IMM_BIT
 	);
 	
 	// Instruction register
-	instruction_reg #(WIDTH, IMM_BITS, OP_BITS, REG_BITS)
+	instruction_reg #(WIDTH, REG_BITS, OP_CODE_BITS, EXT_OP_CODE_BITS)
 	ins_reg(
 		.input_instruction(data_from_mem_PC),				// Input: raw assembly instruction
 		.op_code(op_code),								// Output: bits 15 - 12 of instruction

@@ -4,9 +4,9 @@
 module basic_mem
 #(parameter WIDTH = 16)
 (
-	input [WIDTH - 1 : 0] data_a, data_b,
+	input [WIDTH - 1 : 0] data_b,
 	input [WIDTH - 1 : 0] addr_a, addr_b,
-	input we_a, we_b, clk,
+	input we_b, clk, reset, reading_for_load,
 	output reg [WIDTH - 1 : 0] q_a, q_b
 );
 
@@ -22,29 +22,24 @@ module basic_mem
 	// Port A 
 	always @ (posedge clk)
 	begin
-		if (we_a) 
-		begin
-			ram[addr_a] <= data_a;
-			q_a <= data_a;
-		end
-		else 
-		begin
-			q_a <= ram[addr_a];
-		end 
+		if(~reset) q_a <= 0;
+		else q_a <= ram[addr_a];
 	end 
 
 	// Port B 
 	always @ (posedge clk)
 	begin
-		if (we_b) 
+		if(~reset) q_b <= 0;
+		else
 		begin
-			ram[addr_b] <= data_b;
-			q_b <= data_b;
+			if (we_b) 
+			begin
+				ram[addr_b] <= data_b;
+				q_b <= data_b;
+			end
+			else if (reading_for_load) q_b <= ram[addr_b];
+			else q_b <=0;
 		end
-		else 
-		begin
-			q_b <= ram[addr_b];
-		end 
 	end
 
 endmodule

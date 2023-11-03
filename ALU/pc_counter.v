@@ -12,7 +12,7 @@ module pc_counter #(parameter WIDTH = 16) (
 			begin
 				incremented_pc <= 0;
 			end
-		incremented_pc <= current_pc + WIDTH;
+		else incremented_pc <= current_pc + 1'b1;//WIDTH[WIDTH - 1 : 0];
 	end
 	
 endmodule 

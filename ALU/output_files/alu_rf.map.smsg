@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at alu_rf.v(23): always construct contains both blocking and non-blocking assignments File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 23
+Info (10281): Verilog HDL Declaration information at controller.v(3): object "reset" differs only in case from object "RESET" in the same scope File: C:/Data/GIT/Bananachine/ALU/controller.v Line: 3
