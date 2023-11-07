@@ -13,37 +13,37 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/datapath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:46 on Nov 02,2023
+# Start time: 16:37:27 on Nov 05,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/datapath.v 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 23:15:46 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 16:37:27 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/alu_rf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:46 on Nov 02,2023
+# Start time: 16:37:27 on Nov 05,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/alu_rf.v 
 # -- Compiling module alu_rf
 # 
 # Top level modules:
 # 	alu_rf
-# End time: 23:15:46 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 16:37:27 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/CPU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:46 on Nov 02,2023
+# Start time: 16:37:27 on Nov 05,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/CPU.v 
 # -- Compiling module CPU
 # 
 # Top level modules:
 # 	CPU
-# End time: 23:15:46 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 16:37:27 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/muxes.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:46 on Nov 02,2023
+# Start time: 16:37:27 on Nov 05,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/muxes.v 
 # -- Compiling module mux2
 # -- Compiling module mux4
@@ -57,83 +57,83 @@
 # 	flopenr
 # 	flopr
 # 	zerodetect
-# End time: 23:15:46 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 16:37:27 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/instruction_reg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:47 on Nov 02,2023
+# Start time: 16:37:27 on Nov 05,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/instruction_reg.v 
 # -- Compiling module instruction_reg
 # 
 # Top level modules:
 # 	instruction_reg
-# End time: 23:15:47 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 16:37:27 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/controller.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:47 on Nov 02,2023
+# Start time: 16:37:27 on Nov 05,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/controller.v 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 23:15:47 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 16:37:27 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/pc_counter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:47 on Nov 02,2023
+# Start time: 16:37:27 on Nov 05,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/pc_counter.v 
 # -- Compiling module pc_counter
 # 
 # Top level modules:
 # 	pc_counter
-# End time: 23:15:47 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 16:37:27 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/Bananachine.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:47 on Nov 02,2023
+# Start time: 16:37:27 on Nov 05,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/Bananachine.v 
 # -- Compiling module Bananachine
 # 
 # Top level modules:
 # 	Bananachine
-# End time: 23:15:47 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 16:37:27 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/basic_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:47 on Nov 02,2023
+# Start time: 16:37:27 on Nov 05,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/basic_mem.v 
 # -- Compiling module basic_mem
 # 
 # Top level modules:
 # 	basic_mem
-# End time: 23:15:47 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 16:37:27 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/regfile.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:47 on Nov 02,2023
+# Start time: 16:37:27 on Nov 05,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 23:15:47 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 16:37:27 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:47 on Nov 02,2023
+# Start time: 16:37:27 on Nov 05,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/Bananachine/ALU" C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v 
 # -- Compiling module Bananachine_tb
 # 
 # Top level modules:
 # 	Bananachine_tb
-# End time: 23:15:47 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 16:37:27 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Bananachine_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Bananachine_tb 
-# Start time: 23:15:47 on Nov 02,2023
+# Start time: 16:37:28 on Nov 05,2023
 # Loading work.Bananachine_tb
 # Loading work.Bananachine
 # Loading work.CPU
@@ -152,9 +152,9 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Luci  Hostname: PLOPTOP  ProcessID: 8216
-#           Attempting to use alternate WLF file "./wlftvi8g7e".
+#           Attempting to use alternate WLF file "./wlfts44ceg".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftvi8g7e
+#           Using alternate file: ./wlfts44ceg
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -171,5 +171,165 @@ run
 # done with RF load
 # Loading memory
 # done loading
-# End time: 23:16:54 on Nov 02,2023, Elapsed time: 0:01:07
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/alu_rf.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/alu_rf.v 
+# -- Compiling module alu_rf
+# 
+# Top level modules:
+# 	alu_rf
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/alu_rf_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/alu_rf_tb.v 
+# -- Compiling module alu_rf_tb
+# 
+# Top level modules:
+# 	alu_rf_tb
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/Bananachine.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/Bananachine.v 
+# -- Compiling module Bananachine
+# 
+# Top level modules:
+# 	Bananachine
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v 
+# -- Compiling module Bananachine_tb
+# 
+# Top level modules:
+# 	Bananachine_tb
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/basic_mem.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/basic_mem.v 
+# -- Compiling module basic_mem
+# 
+# Top level modules:
+# 	basic_mem
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/controller.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/controller.v 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/CPU.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/CPU.v 
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/datapath.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/datapath.v 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/datapathFSM.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/datapathFSM.v 
+# -- Compiling module datapathFSM
+# -- Compiling module flipflop
+# -- Compiling module hexTo7Seg
+# 
+# Top level modules:
+# 	datapathFSM
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/instruction_reg.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/instruction_reg.v 
+# -- Compiling module instruction_reg
+# 
+# Top level modules:
+# 	instruction_reg
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/muxes.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/muxes.v 
+# -- Compiling module mux2
+# -- Compiling module mux4
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module zerodetect
+# 
+# Top level modules:
+# 	mux2
+# 	mux4
+# 	flopenr
+# 	flopr
+# 	zerodetect
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/pc_counter.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/pc_counter.v 
+# -- Compiling module pc_counter
+# 
+# Top level modules:
+# 	pc_counter
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/regfile.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:33 on Nov 05,2023
+# vlog -reportprogress 300 -work work C:/Data/GIT/Bananachine/ALU/regfile.v 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 16:48:33 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.Bananachine_tb
+# Loading work.Bananachine
+# Loading work.CPU
+# Loading work.controller
+# Loading work.datapath
+# Loading work.pc_counter
+# Loading work.flopenr
+# Loading work.regfile
+# Loading work.flopr
+# Loading work.mux2
+# Loading work.mux4
+# Loading work.alu_rf
+# Loading work.instruction_reg
+# Loading work.basic_mem
+run
+# Loading register file
+# done with RF load
+# Loading memory
+# done loading
+# End time: 17:03:30 on Nov 05,2023, Elapsed time: 0:26:02
 # Errors: 0, Warnings: 2

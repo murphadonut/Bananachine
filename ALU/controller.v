@@ -119,13 +119,14 @@ module controller#(parameter WIDTH = 16, ALU_CONT_BITS = 6, REG_BITS = 4, OP_COD
 				// just for understanding, nothing goes in these
 				FETCH:
 				begin
-						// this whole cycle just puts a result into q_a, q_b, assumes addr_a and addr_b are already set
-						// use address in current addr_a and addr_b then put results into q_a and q_b
+				// this whole cycle just puts a result into q_a, q_b, assumes addr_a and addr_b are already set
+				// use address in current addr_a and addr_b then put results into q_a and q_b
 				end
+				
 				// 2nd cycle
 				DECODE:
 				begin
-						// results have been put into q_a and a_b, data_from_mem_pc and data_from_mem_load now have values, instruction reg immediately decodes and outputs its bits
+				// results have been put into q_a and a_b, data_from_mem_pc and data_from_mem_load now have values, instruction reg immediately decodes and outputs its bits
 				end
 				
 				// Really crappy way right now, I know, so far, from all the instructions I've tested
@@ -138,7 +139,7 @@ module controller#(parameter WIDTH = 16, ALU_CONT_BITS = 6, REG_BITS = 4, OP_COD
 					pc_src <= 2'b10;				// For the next instruction just increment pc by 1
 				end
 				
-				// NOT TESTED
+				// TESTED
 				is_alu_non_immediate:
 					begin
 						alu_A_src <= 1'b1;						// Set source for input a into ALU to current register loaded in A
