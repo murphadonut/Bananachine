@@ -37,8 +37,7 @@ module basic_mem
 				ram[addr_b] <= data_b;
 				q_b <= data_b;
 			end
-			else if (reading_for_load) q_b <= ram[addr_b];
-			else q_b <=0;
+			else q_b <= ram[addr_b];
 		end
 	end
 

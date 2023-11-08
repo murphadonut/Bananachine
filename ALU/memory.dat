@@ -2,4 +2,4 @@
 0101001100111111	// Load immediate value of 63 into register 3 by adding immediate 
 0100000101000011	// store value in register 1 (8) into the address stored in register 3 (63)
 0100010000000011	// load the value from address stored in register 3 (63) from memory and put result in register 4 (empty)
-0000000101010100	// add the value in register 1 (8) to the value in register 4 (7) and store in register 1 (16)
+0000000101010100	// add the value in register 1 (8) to the value in register 4 (8) and store in register 1 (16)

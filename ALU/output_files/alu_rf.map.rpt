@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu_rf
-Sun Nov 05 16:36:43 2023
+Tue Nov 07 22:59:05 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -29,12 +29,19 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  21. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|mux4:reg_write_src_mux
  22. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|alu_rf:alu_unit
  23. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg
- 24. Parameter Settings for User Entity Instance: basic_mem:mem
- 25. Port Connectivity Checks: "CPU:cpu|datapath:dp|mux4:reg_write_src_mux"
- 26. Port Connectivity Checks: "CPU:cpu|datapath:dp|mux4:pc_src_mux"
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+ 24. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:op_code_flopr
+ 25. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:ext_op_code_flopr
+ 26. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:immediate_value_flopr
+ 27. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:A_index_flopr
+ 28. Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:B_index_flopr
+ 29. Parameter Settings for User Entity Instance: basic_mem:mem
+ 30. Port Connectivity Checks: "basic_mem:mem"
+ 31. Port Connectivity Checks: "CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:immediate_value_flopr"
+ 32. Port Connectivity Checks: "CPU:cpu|datapath:dp|mux4:reg_write_src_mux"
+ 33. Port Connectivity Checks: "CPU:cpu|datapath:dp|mux4:pc_src_mux"
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
 
 
 
@@ -60,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 05 16:36:43 2023       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 07 22:59:05 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu_rf                                      ;
 ; Top-level Entity Name           ; Bananachine                                 ;
@@ -427,6 +434,56 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:op_code_flopr ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:ext_op_code_flopr ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:immediate_value_flopr ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:A_index_flopr ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:B_index_flopr ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: basic_mem:mem ;
 +----------------+-------+-----------------------------------+
@@ -435,6 +492,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH          ; 16    ; Signed Integer                    ;
 +----------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "basic_mem:mem"                                                                                                                                 ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                      ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; addr_a ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; q_a    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:immediate_value_flopr" ;
++----------+-------+----------+-------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                 ;
++----------+-------+----------+-------------------------------------------------------------------------+
+; d[15..8] ; Input ; Info     ; Stuck at GND                                                            ;
++----------+-------+----------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -482,7 +558,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 05 16:35:36 2023
+    Info: Processing started: Tue Nov 07 22:58:57 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_rf -c alu_rf
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file basic_mem.v
@@ -514,18 +590,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file bananac
 Info (12021): Found 1 design units, including 1 entities, in source file bananachine_tb.v
     Info (12023): Found entity 1: Bananachine_tb File: C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v Line: 2
 Info (12127): Elaborating entity "Bananachine" for the top level hierarchy
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:cpu" File: C:/Data/GIT/Bananachine/ALU/Bananachine.v Line: 19
-Info (12128): Elaborating entity "controller" for hierarchy "CPU:cpu|controller:cont" File: C:/Data/GIT/Bananachine/ALU/CPU.v Line: 39
-Info (12128): Elaborating entity "datapath" for hierarchy "CPU:cpu|datapath:dp" File: C:/Data/GIT/Bananachine/ALU/CPU.v Line: 65
-Info (12128): Elaborating entity "pc_counter" for hierarchy "CPU:cpu|datapath:dp|pc_counter:counter" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 51
-Info (12128): Elaborating entity "flopenr" for hierarchy "CPU:cpu|datapath:dp|flopenr:pc_flopr" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 61
-Info (12128): Elaborating entity "regfile" for hierarchy "CPU:cpu|datapath:dp|regfile:reg_file" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 73
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:cpu" File: C:/Data/GIT/Bananachine/ALU/Bananachine.v Line: 17
+Info (12128): Elaborating entity "controller" for hierarchy "CPU:cpu|controller:cont" File: C:/Data/GIT/Bananachine/ALU/CPU.v Line: 40
+Info (12128): Elaborating entity "datapath" for hierarchy "CPU:cpu|datapath:dp" File: C:/Data/GIT/Bananachine/ALU/CPU.v Line: 64
+Info (12128): Elaborating entity "pc_counter" for hierarchy "CPU:cpu|datapath:dp|pc_counter:counter" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 39
+Info (12128): Elaborating entity "flopenr" for hierarchy "CPU:cpu|datapath:dp|flopenr:pc_flopr" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 49
+Info (12128): Elaborating entity "regfile" for hierarchy "CPU:cpu|datapath:dp|regfile:reg_file" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 61
 Info (10648): Verilog HDL Display System Task info at regfile.v(12): Loading register file File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 12
 Info (10648): Verilog HDL Display System Task info at regfile.v(14): done with RF load File: C:/Data/GIT/Bananachine/ALU/regfile.v Line: 14
-Info (12128): Elaborating entity "flopr" for hierarchy "CPU:cpu|datapath:dp|flopr:reg_A_flopr" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 93
-Info (12128): Elaborating entity "mux2" for hierarchy "CPU:cpu|datapath:dp|mux2:alu_A_mux" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 123
-Info (12128): Elaborating entity "mux4" for hierarchy "CPU:cpu|datapath:dp|mux4:pc_src_mux" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 149
-Info (12128): Elaborating entity "alu_rf" for hierarchy "CPU:cpu|datapath:dp|alu_rf:alu_unit" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 175
+Info (12128): Elaborating entity "flopr" for hierarchy "CPU:cpu|datapath:dp|flopr:reg_A_flopr" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 70
+Info (12128): Elaborating entity "mux2" for hierarchy "CPU:cpu|datapath:dp|mux2:alu_A_mux" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 90
+Info (12128): Elaborating entity "mux4" for hierarchy "CPU:cpu|datapath:dp|mux4:pc_src_mux" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 116
+Info (12128): Elaborating entity "alu_rf" for hierarchy "CPU:cpu|datapath:dp|alu_rf:alu_unit" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 142
 Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(31): inferring latch(es) for variable "c_flag", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 31
 Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(31): inferring latch(es) for variable "f_flag", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 31
 Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(31): inferring latch(es) for variable "l_flag", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 31
@@ -553,11 +629,13 @@ Info (10041): Inferred latch for "z_flag" at alu_rf.v(31) File: C:/Data/GIT/Bana
 Info (10041): Inferred latch for "l_flag" at alu_rf.v(31) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 31
 Info (10041): Inferred latch for "f_flag" at alu_rf.v(31) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 31
 Info (10041): Inferred latch for "c_flag" at alu_rf.v(31) File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 31
-Info (12128): Elaborating entity "instruction_reg" for hierarchy "CPU:cpu|datapath:dp|instruction_reg:ins_reg" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 186
+Info (12128): Elaborating entity "instruction_reg" for hierarchy "CPU:cpu|datapath:dp|instruction_reg:ins_reg" File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 156
+Info (12128): Elaborating entity "flopenr" for hierarchy "CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:op_code_flopr" File: C:/Data/GIT/Bananachine/ALU/instruction_reg.v Line: 17
 Info (12128): Elaborating entity "basic_mem" for hierarchy "basic_mem:mem" File: C:/Data/GIT/Bananachine/ALU/Bananachine.v Line: 32
 Info (10648): Verilog HDL Display System Task info at basic_mem.v(17): Loading memory File: C:/Data/GIT/Bananachine/ALU/basic_mem.v Line: 17
 Warning (10850): Verilog HDL warning at basic_mem.v(18): number of words (5) in memory file does not match the number of elements in the address range [0:65535] File: C:/Data/GIT/Bananachine/ALU/basic_mem.v Line: 18
 Info (10648): Verilog HDL Display System Task info at basic_mem.v(19): done loading File: C:/Data/GIT/Bananachine/ALU/basic_mem.v Line: 19
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
@@ -566,10 +644,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4967 megabytes
-    Info: Processing ended: Sun Nov 05 16:36:43 2023
-    Info: Elapsed time: 00:01:07
-    Info: Total CPU time (on all processors): 00:00:56
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4799 megabytes
+    Info: Processing ended: Tue Nov 07 22:59:05 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:04
 
 

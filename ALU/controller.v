@@ -1,21 +1,15 @@
 module controller#(parameter WIDTH = 16, ALU_CONT_BITS = 6, REG_BITS = 4, OP_CODE_BITS = 4, EXT_OP_CODE_BITS = 4)(
 
 	input clk, reset,
-	input [OP_CODE_BITS - 1 : 0] op_code, 
+	input [OP_CODE_BITS - 1 : 0] 		op_code, 
 	input [EXT_OP_CODE_BITS - 1 : 0] ext_op_code,
-	input [REG_BITS - 1: 0] A_index, B_index,
-	input [WIDTH - 1 : 0] 	psr_flags,
+	input [REG_BITS - 1: 0] 			A_index, B_index,
+	input [WIDTH - 1 : 0] 				psr_flags,
 	
-	output reg alu_A_src,	alu_B_src, reg_write, write_to_memory, pc_en, loading, storing,
-	output reg [1 : 0] pc_src, reg_write_src, 
+	output reg alu_A_src, alu_B_src, reg_write, write_to_memory, pc_en, loading, storing, instruction_en,
+	output reg [1 : 0] 						pc_src, reg_write_src, 
 	output reg [ALU_CONT_BITS - 1 : 0] 	alu_cont
 	);
-	
-	// Special
-	localparam LOAD 	= 4'b0000;
-	localparam STOR 	= 4'b0100;
-	localparam JAL		= 4'b1000;
-	localparam JCOND 	= 4'b1100;
 	
 	// Conditions
 	localparam EQ 		= 4'b0000;
@@ -34,22 +28,9 @@ module controller#(parameter WIDTH = 16, ALU_CONT_BITS = 6, REG_BITS = 4, OP_COD
 	localparam LT		= 4'b1100;
 	localparam UC		= 4'b1110;
 	
-	// General states
-	// All these start with a 1, custom states
-	localparam FETCH 	= 5'b10001;
-	localparam DECODE = 5'b10010;
-	localparam LOAD2 	= 5'b10011;
-	
 	// Internal variables
 	wire [14:0] conds;
 	wire c_flag, f_flag, l_flag, z_flag, n_flag;
-	wire [4:0] is_alu_non_immediate, is_special, is_shift, is_bcond, is_lui;
-	// These are just the op_code values with a 0 in the MSB
-	assign is_alu_non_immediate 	= 5'b00000;
-	assign is_special					= 5'b00100;
-	assign is_shift					= 5'b01000;
-	assign is_bcond 					= 5'b01100;
-	assign is_lui						= 5'b01111;
 	
 	assign c_flag						= psr_flags[0];
 	assign f_flag						= psr_flags[5];
@@ -73,36 +54,93 @@ module controller#(parameter WIDTH = 16, ALU_CONT_BITS = 6, REG_BITS = 4, OP_COD
 	assign conds[LT] = ~n_flag && ~z_flag;
 	assign conds[UC] = 1'b1;
 		
-	//reg pc_write;
-	reg [4:0] state, next_state;       // state register and nextstate value
+	// Used to differentiate between immediate alu instructions and non immediate alu instructions
+	reg is_immediate;
+	reg [7:0] state, next_state, previous_state;
+	
+	// These states are purely abstract, they use combos of 
+	// op_code + ext_op_code that don't exist int the ISA handout
+	localparam [7:0] NULL	= 8'b00001111;
+	localparam [7:0] FETCH	= 8'b10001000;
+	localparam [7:0] DECODE	= 8'b10001100;
+	localparam [7:0] ALU_EX	= 8'b10000101;
+	localparam [7:0] WRITE	= 8'b10001001;
+	localparam [7:0] ALU		= 8'b10001110;
+	localparam [7:0] LOAD2 	= 8'b10000111;
+	
+	// These states come straight from the ISA handout,
+	// first four msb's are the op_code, followed by the ext_op_code
+	localparam [7:0] LOAD	= 8'b01000000;
+	localparam [7:0] STORE	= 8'b01000100;
+	localparam [7:0] JAL		= 8'b01001000;
+	localparam [7:0] JCOND	= 8'b01001100;
+	localparam [7:0] LSH		= 8'b10000100;
+	localparam [3:0] LUI		= 4'b1111; 
+	localparam [3:0] BCOND	= 4'b1100;
 	
 	// state register
    always @(posedge clk)
-      if(~reset) state <= FETCH;
-      else state <= next_state;
+      if(~reset) 
+		begin
+			previous_state <= NULL;
+			state <= FETCH;
+		end
+      else
+		begin 
+			previous_state <= state;
+			state <= next_state;
+		end
 	
 	
 	// Update next_state
+	// None of this needs to be changed to add new instructions
 	always @(*)
-		begin
-			case(state)
-				FETCH: next_state <= DECODE;
-				DECODE: next_state <= {1'b0, op_code};
-				is_special:
-				begin
-					case(ext_op_code)
-						LOAD: next_state <= LOAD2;
-						default: next_state <= FETCH;
-					endcase
-				end
-				default: next_state <= FETCH;			// might need to change
-			endcase
-		end
+	begin
+		// Check last two bits of op code, this is defined in the ISA handout
+		// this really only needs to be set in the ALU_EX state but I got an
+		// unknown value for is_immediate right at the start of the testbench
+		// it was red, I didn't like it.
+		is_immediate <= op_code[1:0] != 0;
+		case(state)
+			// 1st cycle
+			FETCH: next_state <= DECODE;
+			
+			// 2nd cycle
+			DECODE: next_state <= ALU_EX;
+			
+			// 3rd cycle
+			ALU_EX: 
+			begin
+				// All of this stuff sets the 4th cycle
+				// For all ALU instructions, except for the ones below.
+				if(op_code == 0 || is_immediate) next_state <= ALU;
+				
+				// For BCOND
+				else if (op_code == 4'b1100) next_state <= BCOND;
+				
+				// For LUI
+				else if (op_code == 4'b1111) next_state <= LUI;
+				
+				// Otherwise, it will use the ext_op_code
+				else next_state <= {op_code, ext_op_code};
+			end
+			
+			// Load is special, takes 6 cycles
+			LOAD: next_state <= LOAD2;
+		
+			// 5th cycle, go to next instruction
+			WRITE: next_state <= FETCH;
+			
+			// After the ALU_EX cycle, this will happen and thus be the 5th cycle	
+			default: next_state <= WRITE;
+		endcase
+	end
 	
-	// do the stuff for that state my guy
+	
+	// Do the stuff for that state
 	always @(*)
 		begin
-			// reset all the stuffs
+			// reset all the signals, this happens every clock cycle
 			alu_A_src <= 0;	
 			alu_B_src <= 0; 
 			reg_write <= 0; 
@@ -113,105 +151,82 @@ module controller#(parameter WIDTH = 16, ALU_CONT_BITS = 6, REG_BITS = 4, OP_COD
 			pc_en <= 0;
 			loading <= 0;
 			storing <= 0;
+			instruction_en <= 0;
 			
 			case (state)
 				// 1st cycle
-				// just for understanding, nothing goes in these
-				FETCH:
-				begin
-				// this whole cycle just puts a result into q_a, q_b, assumes addr_a and addr_b are already set
-				// use address in current addr_a and addr_b then put results into q_a and q_b
-				end
+				FETCH:;
 				
 				// 2nd cycle
-				DECODE:
-				begin
-				// results have been put into q_a and a_b, data_from_mem_pc and data_from_mem_load now have values, instruction reg immediately decodes and outputs its bits
-				end
+				DECODE: instruction_en <= 1'b1;
 				
-				// Really crappy way right now, I know, so far, from all the instructions I've tested
-				// Load is the only one that takes 4 cycles
+				// 3rd cycle
+				ALU_EX:;
+				
+				// For the regular alu instructions, both non immediate and immediate
+				ALU:
+				begin
+					alu_A_src <= 1'b1;									// Set source for input a into ALU to current register loaded in A
+					alu_B_src <= is_immediate;							// Set source for input a into ALU to current register loaded in B if 0 or to immediate
+					alu_cont <= {2'b00, is_immediate ? op_code : ext_op_code};				// Set ALU op code
+					reg_write <= 1'b1;									// Enable writing to register A
+					reg_write_src <= 1'b0;								// Specify where data is coming from, ALU in this case
+				end
+					
+				// start the loading cycle
+				LOAD: loading <= 1'b1;
+				
+				// finish up by writing result to file
 				LOAD2:
 				begin
-					reg_write <= 1'b1;			// Enabling writing to register A
-					reg_write_src <= 2'b01;		// Write data that is from memory reg to register A
-					pc_en <= 1'b1;					// We can now go to the next instruction
-					pc_src <= 2'b10;				// For the next instruction just increment pc by 1
+					reg_write <= 1'b1;									// Enabling writing to register A
+					reg_write_src <= 2'b01;								// Write data that is from memory reg to register A
 				end
 				
-				// TESTED
-				is_alu_non_immediate:
-					begin
-						alu_A_src <= 1'b1;						// Set source for input a into ALU to current register loaded in A
-						alu_B_src <= 1'b0;						// Set source for input a into ALU to current register loaded in B
-						alu_cont <= {2'b00, ext_op_code};	// Set ALU op code
-						reg_write <= 1'b1;						// Enable writing to register A
-						reg_write_src <= 1'b0;					// Specify where data is coming from, ALU in this case
-						pc_src <= 2'b10;							// Program counter should just increment
-					end
+				// Nothin to special here, allow memory to be written to basic_mem
+				STORE: 
+				begin
+					write_to_memory <= 1'b1;							// Enable writing to memory
+					storing <= 1'b1;										// mem_address_load_stor won't just be zeros now
+				end
+				
+				// NOW THIS IS WHERE THINGS ARE UNCERTAIN, UNFINISHED, AND UNTESTED
+				JAL:
+				begin
+					reg_write <= 1'b1;									// Also gotta write PC + 1 to reg_write
+					reg_write_src <=	2'b10;							// Set source to pc + 1
+				end
+				
+				JCOND:;
+				
+				LSH: alu_cont <= {2'b10, op_code};
+				
+				BCOND: alu_cont <= {2'b11, op_code};
+				
+				LUI:alu_cont <= {2'b11, op_code};
+				
+				// 5th cycle
+				// This is where the source for PC is decided and where it is allowed to update next cycle
+				WRITE:
+				begin
+					// For the most part, instructions just typically increment the counter by one, thats why its the default
+					case(previous_state)
 					
-				// loads and stuff
-				is_special:
-					begin
-						case (ext_op_code)
-							// Just need to set loading, again, this is not the best way to be doing this
-							LOAD: 
-								begin
-									loading <= 1'b1;
-								end
-							// works like a charm
-							STOR: 
-								begin
-									write_to_memory <= 1'b1;	// Enable writing to memory
-									storing <= 1'b1;				// mem_address_load_stor won't just be zeros now
-									pc_en <= 1'b1;					// ready for next instruction
-									pc_src <= 2'b10;				// just increment counter by one, not a jump
-								end
-							// REST NOT TESTED
-							JAL: 
-								begin
-									pc_src <= 2'b01;				// We're gonna update the program counter by getting the value in register b
-									reg_write <= 1'b1;			// Also gotta write PC + 1 to reg_write
-									reg_write_src <=	2'b10;	// Set source to pc + 1
-								end
-							JCOND:
-								begin
-									if (conds[A_index])			// Check if the right flags are set for the specified condition
-										begin
-											pc_src <= 2'b01;		// Update program counter using value in register b
-										end
-									else pc_src <= 2'b10;		// Increment program counter like normal
-								end
-							default:;
-						endcase
-					end
-				
-				// not implememted yet
-				is_shift:
-					begin
-						alu_cont <= {2'b10, op_code};
-					end
-				is_bcond:
-					begin
-						alu_cont <= {2'b11, op_code};
-					end
-				is_lui:
-					begin
-						alu_cont <= {2'b11, op_code};
-					end
-				
-				// Any other instruction with an immediate
-				// This has been tested and works phenomenally
-				default:
-					begin
-						alu_A_src <= 1'b1;				// Get value from register A
-						alu_B_src <= 1'b1;				// We gonna use an immediate for input B to alu
-						alu_cont <= {2'b00, op_code};	// Run the associated function, but put two zeros in front to differentiate from the special instructions
-						reg_write <= 1'b1;				// We are gonna want to write the result so set this to yes	
-						reg_write_src <= 2'b00;			// Data will be coming staight from the ALU
-						pc_en <= 1'b1;						// Finally, go to next instruction
-						pc_src <= 2'b10;					// For that next instruction, just increment pc by one, not a jump.
-					end
+						JAL: pc_src <= 2'b01;							// We're gonna update the program counter by getting the value in register b
+						
+						JCOND:
+						begin
+							if (conds[A_index]) pc_src <= 2'b01;	// Check if the right flags are set for the specified condition
+							else pc_src <= 2'b10;						// Increment program counter like normal
+						end
+						
+						default: pc_src <= 2'b10;						// Program counter should just increment
+					endcase
+					
+					// Finally, enable program counter
+					pc_en <= 1'b1;
+				end
+				default:;	// Should never happen.
 			endcase
 		end
 endmodule 
