@@ -1,5 +1,5 @@
 Flow report for alu_rf
-Tue Nov 07 22:59:36 2023
+Thu Nov 09 00:12:43 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Nov 07 22:59:36 2023       ;
+; Flow Status                     ; Successful - Thu Nov 09 00:12:43 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu_rf                                      ;
-; Top-level Entity Name           ; Bananachine                                 ;
+; Top-level Entity Name           ; vga                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 1 / 32,070 ( < 1 % )                        ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 2 / 457 ( < 1 % )                           ;
+; Total registers                 ; 2                                           ;
+; Total pins                      ; 31 / 457 ( 7 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/07/2023 22:58:58 ;
+; Start date & time ; 11/09/2023 00:11:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; alu_rf              ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 140982220270901.169942313805488        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 259913555675586.169951389113480        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_rf_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Bananachine_tb ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                     ; --            ; --          ; eda_simulation ;
@@ -96,13 +96,13 @@ refer to the applicable agreement for further details.
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
 ; NUM_PARALLEL_PROCESSORS              ; All                                    ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; Bananachine ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; Bananachine ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; Bananachine ; Top            ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; vga         ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; vga         ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; vga         ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; Bananachine                            ; alu_rf        ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; vga                                    ; alu_rf        ; --          ; --             ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
@@ -111,12 +111,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4789 MB             ; 00:00:04                           ;
-; Fitter               ; 00:00:20     ; 1.0                     ; 6479 MB             ; 00:00:16                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4826 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 5099 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4714 MB             ; 00:00:00                           ;
-; Total                ; 00:00:36     ; --                      ; --                  ; 00:00:25                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4885 MB             ; 00:00:09                           ;
+; Fitter               ; 00:00:44     ; 1.0                     ; 7916 MB             ; 00:01:38                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4833 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 5250 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4717 MB             ; 00:00:01                           ;
+; Total                ; 00:01:08     ; --                      ; --                  ; 00:01:56                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -125,11 +125,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Mikes-Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Mikes-Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Mikes-Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Mikes-Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Mikes-Computer   ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

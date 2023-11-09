@@ -1,5 +1,5 @@
 Assembler report for alu_rf
-Tue Nov 07 22:59:31 2023
+Thu Nov 09 00:12:36 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Data/GIT/Bananachine/ALU/output_files/alu_rf.sof
+  5. Assembler Device Options: C:/intelFPGA_lite/18.1/Bananachine/ALU/output_files/alu_rf.sof
   6. Assembler Messages
 
 
@@ -37,9 +37,9 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Nov 07 22:59:31 2023 ;
+; Assembler Status      ; Successful - Thu Nov 09 00:12:36 2023 ;
 ; Revision Name         ; alu_rf                                ;
-; Top-level Entity Name ; Bananachine                           ;
+; Top-level Entity Name ; vga                                   ;
 ; Family                ; Cyclone V                             ;
 ; Device                ; 5CSEMA5F31C6                          ;
 +-----------------------+---------------------------------------+
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------+
-; Assembler Generated Files                           ;
-+-----------------------------------------------------+
-; File Name                                           ;
-+-----------------------------------------------------+
-; C:/Data/GIT/Bananachine/ALU/output_files/alu_rf.sof ;
-+-----------------------------------------------------+
++----------------------------------------------------------------+
+; Assembler Generated Files                                      ;
++----------------------------------------------------------------+
+; File Name                                                      ;
++----------------------------------------------------------------+
+; C:/intelFPGA_lite/18.1/Bananachine/ALU/output_files/alu_rf.sof ;
++----------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Data/GIT/Bananachine/ALU/output_files/alu_rf.sof ;
-+----------------+--------------------------------------------------------------+
-; Option         ; Setting                                                      ;
-+----------------+--------------------------------------------------------------+
-; JTAG usercode  ; 0x00AF4BA5                                                   ;
-; Checksum       ; 0x00AF4BA5                                                   ;
-+----------------+--------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/intelFPGA_lite/18.1/Bananachine/ALU/output_files/alu_rf.sof ;
++----------------+-------------------------------------------------------------------------+
+; Option         ; Setting                                                                 ;
++----------------+-------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00AF7CD9                                                              ;
+; Checksum       ; 0x00AF7CD9                                                              ;
++----------------+-------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,13 +77,13 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 07 22:59:27 2023
+    Info: Processing started: Thu Nov 09 00:12:29 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off alu_rf -c alu_rf
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Tue Nov 07 22:59:31 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Thu Nov 09 00:12:36 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 

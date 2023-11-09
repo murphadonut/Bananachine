@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Nov 07 22:59:05 2023
+Analysis & Synthesis Status : Successful - Thu Nov 09 00:11:43 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : alu_rf
-Top-level Entity Name : Bananachine
+Top-level Entity Name : vga
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 2
+Total registers : 1
+Total pins : 31
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
