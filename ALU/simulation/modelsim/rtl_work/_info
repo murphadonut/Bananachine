@@ -7,408 +7,576 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Data/GIT/Bananachine/ALU/simulation/modelsim
+Z0 dC:/intelFPGA_lite/18.1/Bananachine/ALU/simulation/modelsim
 valu_rf
-Z1 !s110 1699422634
+Z1 !s110 1699572693
 !i10b 1
 !s100 D_3lK6edV=FV`55OAS>mg0
-I:Hi`]PWfTDhK2:57H0PFT1
+IT]gdedlHzOV92kC07[1fb3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1698984525
-8C:/Data/GIT/Bananachine/ALU/alu_rf.v
-FC:/Data/GIT/Bananachine/ALU/alu_rf.v
+Z3 w1699149831
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v
 L0 14
-Z3 OV;L;10.5b;63
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1699422634.000000
-!s107 C:/Data/GIT/Bananachine/ALU/alu_rf.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/alu_rf.v|
+Z5 !s108 1699572693.000000
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 valu_rf_tb
 R1
 !i10b 1
 !s100 ?mJ?b17k;EYbj<H:jg8T53
-IWLS_`oil97R^QSXLg]_;`3
+IBYXVA=1;BX;9c3=;:aAiU2
 R2
 R0
-w1697934012
-8C:/Data/GIT/Bananachine/ALU/alu_rf_tb.v
-FC:/Data/GIT/Bananachine/ALU/alu_rf_tb.v
+w1698356486
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v
 L0 3
-R3
+R4
 r1
 !s85 0
 31
-R4
-!s107 C:/Data/GIT/Bananachine/ALU/alu_rf_tb.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/alu_rf_tb.v|
-!i113 1
 R5
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v|
+!i113 1
 R6
+R7
 vBananachine
 R1
 !i10b 1
 !s100 IkO:Rm_8gc<lgjX1NLmMN3
-Iz3h]H4oOfa4kVA4oiIW?I3
+ISG]_mKDM6ml8h@CEJAEP[2
 R2
 R0
-w1699401056
-8C:/Data/GIT/Bananachine/ALU/Bananachine.v
-FC:/Data/GIT/Bananachine/ALU/Bananachine.v
+Z8 w1699506387
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R4
-!s107 C:/Data/GIT/Bananachine/ALU/Bananachine.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/Bananachine.v|
-!i113 1
 R5
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v|
+!i113 1
 R6
+R7
 n@bananachine
 vBananachine_tb
 R1
 !i10b 1
 !s100 XokGzOn9moIldd>zG^1<_1
-IT=Q;D:VkilmDi7_keP[3V0
+IfSe3@cfeBcgCU?JP29TT53
 R2
 R0
-w1699422629
-8C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v
-FC:/Data/GIT/Bananachine/ALU/Bananachine_tb.v
-L0 2
 R3
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v
+L0 2
+R4
 r1
 !s85 0
 31
-R4
-!s107 C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v|
-!i113 1
 R5
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v|
+!i113 1
 R6
+R7
 n@bananachine_tb
 vbasic_mem
 R1
 !i10b 1
 !s100 IoMXmXQ<95>6f@6[zNjhJ0
-I?ATM[Hj?anIfEQd50_57C2
+IdmILjPKWNEDJ6m>N_HlTh0
 R2
 R0
-w1699401184
-8C:/Data/GIT/Bananachine/ALU/basic_mem.v
-FC:/Data/GIT/Bananachine/ALU/basic_mem.v
+R8
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v
 L0 4
-R3
+R4
 r1
 !s85 0
 31
-R4
-!s107 C:/Data/GIT/Bananachine/ALU/basic_mem.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/basic_mem.v|
-!i113 1
 R5
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v|
+!i113 1
 R6
-vcontroller
-R1
+R7
+vBitGen
+Z9 !s110 1699572694
 !i10b 1
-!s100 MA>?RYgYHz0`k8:M4I:o^0
-IFl0H`j>5_9k4@G]^@L1j]3
+!s100 2c5o86eWNLa`VS@D_=6H;0
+IQ5BVQD^[_;ckKznjW?0BG1
 R2
 R0
-w1699422495
-8C:/Data/GIT/Bananachine/ALU/controller.v
-FC:/Data/GIT/Bananachine/ALU/controller.v
+w1699571966
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R4
-!s107 C:/Data/GIT/Bananachine/ALU/controller.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/controller.v|
-!i113 1
 R5
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v|
+!i113 1
 R6
+R7
+n@bit@gen
+vbitgen_tb
+R9
+!i10b 1
+!s100 nfedmb2k>c1^=KC8<D?Pk2
+IlQ:F491[_UCea0fo1V?[b3
+R2
+R0
+w1699571330
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v
+L0 2
+R4
+r1
+!s85 0
+31
+Z10 !s108 1699572694.000000
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v|
+!i113 1
+R6
+R7
+vcontroller
+R9
+!i10b 1
+!s100 ]_cPck@]>MT3`;mGMU^o43
+I]PDA]:iKPcafUE`cI_9F`1
+R2
+R0
+R8
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v|
+!i113 1
+R6
+R7
 vCPU
-Z7 !s110 1699422635
+R9
 !i10b 1
 !s100 z2:=U5n;icNF5ZO9MHj=f2
-IESbTTJD]PeDSh8NBjcQ4@2
+ID^W`Mem]INoS19TQ6nbO40
 R2
 R0
-w1699411641
-8C:/Data/GIT/Bananachine/ALU/CPU.v
-FC:/Data/GIT/Bananachine/ALU/CPU.v
+R8
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-Z8 !s108 1699422635.000000
-!s107 C:/Data/GIT/Bananachine/ALU/CPU.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/CPU.v|
+R10
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v|
 !i113 1
-R5
 R6
+R7
 n@c@p@u
 vdatapath
-R7
+R9
 !i10b 1
 !s100 ae:WOaiV77>3>KX9=_21Y3
-I_X;h8`j5KVkV?oZAAlhP11
+I7]9]LU5BXkGdGEoLJ1U[j2
 R2
 R0
-w1699411694
-8C:/Data/GIT/Bananachine/ALU/datapath.v
-FC:/Data/GIT/Bananachine/ALU/datapath.v
+R8
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R8
-!s107 C:/Data/GIT/Bananachine/ALU/datapath.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/datapath.v|
+R10
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v|
 !i113 1
-R5
 R6
-vdatapathFSM
 R7
+vdatapathFSM
+R9
 !i10b 1
 !s100 b@9cfU3G2XGiK^HaVM[dJ0
-INGh[TKU6H9B09NW0:REdH0
+ILIIT9igO6bNfMhe[XK9Q83
 R2
 R0
-Z9 w1698788625
-Z10 8C:/Data/GIT/Bananachine/ALU/datapathFSM.v
-Z11 FC:/Data/GIT/Bananachine/ALU/datapathFSM.v
-L0 1
 R3
+Z11 8C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v
+Z12 FC:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v
+L0 1
+R4
 r1
 !s85 0
 31
-R8
-Z12 !s107 C:/Data/GIT/Bananachine/ALU/datapathFSM.v|
-Z13 !s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/datapathFSM.v|
+R10
+Z13 !s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v|
+Z14 !s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v|
 !i113 1
-R5
 R6
-ndatapath@f@s@m
-vflipflop
 R7
+ndatapath@f@s@m
+vdisplay_480p
+!i10b 1
+R2
+r1
+!s85 0
+31
+!s100 nU5D]7__4MeL6VJzWc=S@0
+I:QWf0=]=MWnZ7VP6cdgBA0
+R0
+w1699513164
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/display_480p.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/display_480p.v
+L0 1
+R4
+!s108 1699569939.000000
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/display_480p.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/display_480p.v|
+!i113 1
+R6
+R7
+vflipflop
+R9
 !i10b 1
 !s100 Sg@ZeYOIDd5VIa00?LW;U1
-IGD1OHkE7LShEK8dkb:bZA0
+II6E=gjj<[LO48AkKI75FU0
 R2
 R0
-R9
-R10
-R11
-L0 171
 R3
+R11
+R12
+L0 171
+R4
 r1
 !s85 0
 31
-R8
-R12
+R10
 R13
+R14
 !i113 1
-R5
 R6
-vflopenr
 R7
+vflopenr
+Z15 !s110 1699572695
 !i10b 1
 !s100 ><^7UY0ggjSzTo8o[KU0Z1
-I[eg1A0chSQZzQRZnPjbjT0
+I_3LM0chW2MZN?bG8h]U>i0
 R2
 R0
-Z14 w1699404865
-Z15 8C:/Data/GIT/Bananachine/ALU/muxes.v
-Z16 FC:/Data/GIT/Bananachine/ALU/muxes.v
+Z16 w1698794112
+Z17 8C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v
+Z18 FC:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v
 L0 23
-R3
+R4
 r1
 !s85 0
 31
-R8
-Z17 !s107 C:/Data/GIT/Bananachine/ALU/muxes.v|
-Z18 !s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/muxes.v|
+Z19 !s108 1699572695.000000
+Z20 !s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v|
+Z21 !s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v|
 !i113 1
-R5
 R6
-vflopr
 R7
+vflopr
+R15
 !i10b 1
 !s100 @`4`[E=7N`HFDR`e46Pn22
-I7aLGJZ2zOF1h^@zY;LOZV2
+I>e8chn9YXnI1IH48UU>e53
 R2
 R0
-R14
-R15
 R16
+R17
+R18
 L0 34
-R3
+R4
 r1
 !s85 0
 31
-R8
-R17
-R18
+R19
+R20
+R21
 !i113 1
-R5
 R6
-vhexTo7Seg
 R7
+vhexTo7Seg
+R9
 !i10b 1
 !s100 :B<40M3ZcB1WAUjFhI21k3
-IbC=PA?<<5Xl?`NEn:@ES20
+Ieb[cCI[@Wo6m[SbZJF_a10
 R2
 R0
-R9
-R10
-R11
-L0 184
 R3
+R11
+R12
+L0 184
+R4
 r1
 !s85 0
 31
-R8
-R12
+R10
 R13
+R14
 !i113 1
-R5
 R6
+R7
 nhex@to7@seg
 vinstruction_reg
-R7
+R9
 !i10b 1
 !s100 S_7TE@Bn2?9Fk?RRD`kjj3
-Inb`[R:]18^BIaj<aN[2ZO0
+Ial@G8>BGzN=>R[L`]bKzO2
 R2
 R0
-w1699414019
-8C:/Data/GIT/Bananachine/ALU/instruction_reg.v
-FC:/Data/GIT/Bananachine/ALU/instruction_reg.v
+R8
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R8
-!s107 C:/Data/GIT/Bananachine/ALU/instruction_reg.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/instruction_reg.v|
+R10
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v|
 !i113 1
-R5
 R6
-vmux2
 R7
+vmux2
+R15
 !i10b 1
 !s100 Li[=Oo9bKXTjacNP_I3I81
-IXTB8]diQ:<m=<9XTDI6hX1
+IhRmb:W^TAbnjBhLDPYIjS3
 R2
 R0
-R14
-R15
 R16
+R17
+R18
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R8
-R17
-R18
+R19
+R20
+R21
 !i113 1
-R5
 R6
-vmux4
 R7
+vmux4
+R15
 !i10b 1
 !s100 [BR70lWD<T[BZ8:U]Kmi;3
-IF6Vb]TYi`@6hJ4e2Zgo?;3
+IbZ=2J75_zHFiU0<afSBLm2
 R2
 R0
-R14
-R15
 R16
+R17
+R18
 L0 9
-R3
+R4
 r1
 !s85 0
 31
-R8
-R17
-R18
+R19
+R20
+R21
 !i113 1
-R5
 R6
-vpc_counter
 R7
+vpc_counter
+R15
 !i10b 1
 !s100 Tf44KY=??e73Xo5J2Q<aU1
-I5FYOAFkaTm5LBiL<meL6U2
+I3RFMPWzJQamCSZAAa?mCP0
 R2
 R0
-w1698984597
-8C:/Data/GIT/Bananachine/ALU/pc_counter.v
-FC:/Data/GIT/Bananachine/ALU/pc_counter.v
-L0 1
 R3
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v
+L0 1
+R4
 r1
 !s85 0
 31
-R8
-!s107 C:/Data/GIT/Bananachine/ALU/pc_counter.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/pc_counter.v|
+R19
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v|
 !i113 1
-R5
 R6
-vregfile
 R7
+vregfile
+R15
 !i10b 1
 !s100 kjlRlcP>bJ4AP`mdVMjgJ0
-I;SA3Ac`j9EZ?X731<hRBa2
+IXP]eHA6FdhWC:Y4lD^l9S0
 R2
 R0
-w1698967808
-8C:/Data/GIT/Bananachine/ALU/regfile.v
-FC:/Data/GIT/Bananachine/ALU/regfile.v
-L0 1
 R3
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v
+L0 1
+R4
 r1
 !s85 0
 31
-R8
-!s107 C:/Data/GIT/Bananachine/ALU/regfile.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/regfile.v|
+R19
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v|
 !i113 1
-R5
 R6
-vzerodetect
 R7
+vrom_async
+R15
+!i10b 1
+!s100 <EzTSB3d9;9T9E?YXM<e?0
+I3M<z>zbMRf_=XBZ7>?DYQ2
+R2
+R0
+w1699569881
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
+L0 1
+R4
+r1
+!s85 0
+31
+R19
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v|
+!i113 1
+R6
+R7
+vsprite
+R15
+!i10b 1
+!s100 3e3QTeF0e[>[c@g=Xo>5S3
+IN2bR:OAD]dAYWfW:FnKOb0
+R2
+R0
+w1699511713
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v
+L0 1
+R4
+r1
+!s85 0
+31
+R19
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v|
+!i113 1
+R6
+R7
+vvga
+R15
+!i10b 1
+!s100 7RoSFDl74dYCb2JJ;kN0M3
+I;Hc;=9fDjMbIbXD>F:2a63
+R2
+R0
+w1699569528
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v
+L0 1
+R4
+r1
+!s85 0
+31
+R19
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v|
+!i113 1
+R6
+R7
+vvga_control
+!s110 1699573488
+!i10b 1
+!s100 6DUmEP3UnkJXTbKfSV2991
+IRzCeBPX16Dm:YYFM@1X8U2
+R2
+R0
+w1699573460
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1699573488.000000
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v|
+!i113 1
+R6
+R7
+vvga_tb
+R15
+!i10b 1
+!s100 VLUl<69d_H7_NZB6O;HYV1
+I1z:;Jebk;>:`oH?_nRf_70
+R2
+R0
+w1699570458
+8C:/intelFPGA_lite/18.1/Bananachine/ALU/vga_tb.v
+FC:/intelFPGA_lite/18.1/Bananachine/ALU/vga_tb.v
+L0 2
+R4
+r1
+!s85 0
+31
+R19
+!s107 C:/intelFPGA_lite/18.1/Bananachine/ALU/vga_tb.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/Bananachine/ALU/vga_tb.v|
+!i113 1
+R6
+R7
+vzerodetect
+R15
 !i10b 1
 !s100 `fJPERm>PLTIVL7<;d2KR1
-IkdlCPM]Af8QT6Q[[7>3GU2
+I<m[<2eT]7_Bhc]f_?Y:`A2
 R2
 R0
-R14
-R15
 R16
+R17
+R18
 L0 43
-R3
+R4
 r1
 !s85 0
 31
-R8
-R17
-R18
+R19
+R20
+R21
 !i113 1
-R5
 R6
+R7

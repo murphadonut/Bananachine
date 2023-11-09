@@ -10,8 +10,6 @@ module vga #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 	assign sync_n = 0;
 	assign blank_n = bright;
 	
-	
-	
 	BitGen bits(
 		.clk_50m(clk_50MHz),     // 50 MHz clock
 		.btn_rst_n(clear),		// reset button

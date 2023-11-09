@@ -4,39 +4,15 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "clk_25MHz",
+					"strict" : false
+				},
+				{
 					"name" : "h_sync",
 					"strict" : false
 				},
 				{
 					"name" : "v_sync",
-					"strict" : false
-				},
-				{
-					"name" : "blank_n",
-					"strict" : false
-				},
-				{
-					"name" : "red_out[0]",
-					"strict" : false
-				},
-				{
-					"name" : "green_out[0]",
-					"strict" : false
-				},
-				{
-					"name" : "green_out[1]",
-					"strict" : false
-				},
-				{
-					"name" : "blue_out[0]",
-					"strict" : false
-				},
-				{
-					"name" : "blue_out[1]",
-					"strict" : false
-				},
-				{
-					"name" : "blue_out[2]",
 					"strict" : false
 				},
 				{

@@ -1,5 +1,5 @@
 Timing Analyzer report for alu_rf
-Thu Nov 09 08:34:56 2023
+Thu Nov 09 16:30:50 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -102,15 +102,16 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.17        ;
+; Average used               ; 1.18        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.9%      ;
+;     Processor 2            ;   2.0%      ;
 ;     Processor 3            ;   1.9%      ;
 ;     Processor 4            ;   1.9%      ;
-;     Processors 5-16        ;   0.9%      ;
+;     Processor 5            ;   1.9%      ;
+;     Processors 6-16        ;   1.0%      ;
 +----------------------------+-------------+
 
 
@@ -119,7 +120,7 @@ refer to the applicable agreement for further details.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; alu_rf.sdc    ; OK     ; Thu Nov 09 08:34:49 2023 ;
+; alu_rf.sdc    ; OK     ; Thu Nov 09 16:30:43 2023 ;
 +---------------+--------+--------------------------+
 
 
@@ -140,10 +141,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+--------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                 ; Note ;
 +------------+-----------------+--------------------------------------------+------+
-; 127.15 MHz ; 127.15 MHz      ; clk_50MHz                                  ;      ;
-; 172.0 MHz  ; 172.0 MHz       ; BitGen:bits|vga_control:control|h_count[0] ;      ;
-; 282.17 MHz ; 282.17 MHz      ; BitGen:bits|vga_control:control|v_count[0] ;      ;
-; 572.74 MHz ; 572.74 MHz      ; BitGen:bits|vga_control:control|clk_25MHz  ;      ;
+; 125.28 MHz ; 125.28 MHz      ; clk_50MHz                                  ;      ;
+; 186.78 MHz ; 186.78 MHz      ; BitGen:bits|vga_control:control|h_count[0] ;      ;
+; 274.27 MHz ; 274.27 MHz      ; BitGen:bits|vga_control:control|v_count[0] ;      ;
 +------------+-----------------+--------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -159,10 +159,10 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; clk_50MHz                                  ; -6.865 ; -140.316      ;
-; BitGen:bits|vga_control:control|h_count[0] ; -6.669 ; -6.669        ;
-; BitGen:bits|vga_control:control|v_count[0] ; -5.080 ; -5.080        ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; -1.825 ; -7.997        ;
+; clk_50MHz                                  ; -6.982 ; -140.478      ;
+; BitGen:bits|vga_control:control|h_count[0] ; -6.392 ; -6.392        ;
+; BitGen:bits|vga_control:control|v_count[0] ; -4.976 ; -4.976        ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; -1.737 ; -2.758        ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -171,10 +171,10 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; BitGen:bits|vga_control:control|v_count[0] ; 0.285 ; 0.000         ;
-; clk_50MHz                                  ; 0.667 ; 0.000         ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; 0.679 ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 1.452 ; 0.000         ;
+; clk_50MHz                                  ; 0.333 ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.628 ; 0.000         ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; 0.844 ; 0.000         ;
+; BitGen:bits|vga_control:control|h_count[0] ; 1.533 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -183,8 +183,8 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; BitGen:bits|vga_control:control|h_count[0] ; -6.513 ; -6.513        ;
-; BitGen:bits|vga_control:control|v_count[0] ; -5.058 ; -5.058        ;
+; BitGen:bits|vga_control:control|h_count[0] ; -6.394 ; -6.394        ;
+; BitGen:bits|vga_control:control|v_count[0] ; -5.193 ; -5.193        ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -193,8 +193,8 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; BitGen:bits|vga_control:control|v_count[0] ; 0.381 ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 1.329 ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.837 ; 0.000         ;
+; BitGen:bits|vga_control:control|h_count[0] ; 1.560 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -203,10 +203,10 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; clk_50MHz                                  ; -0.771 ; -11.876       ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; -0.394 ; -4.633        ;
-; BitGen:bits|vga_control:control|v_count[0] ; 0.347  ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 0.427  ; 0.000         ;
+; clk_50MHz                                  ; -0.879 ; -12.086       ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; -0.394 ; -1.030        ;
+; BitGen:bits|vga_control:control|h_count[0] ; 0.312  ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.401  ; 0.000         ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -221,10 +221,9 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                 ; Note ;
 +------------+-----------------+--------------------------------------------+------+
-; 132.56 MHz ; 132.56 MHz      ; clk_50MHz                                  ;      ;
-; 173.49 MHz ; 173.49 MHz      ; BitGen:bits|vga_control:control|h_count[0] ;      ;
-; 271.3 MHz  ; 271.3 MHz       ; BitGen:bits|vga_control:control|v_count[0] ;      ;
-; 572.08 MHz ; 572.08 MHz      ; BitGen:bits|vga_control:control|clk_25MHz  ;      ;
+; 129.87 MHz ; 129.87 MHz      ; clk_50MHz                                  ;      ;
+; 184.43 MHz ; 184.43 MHz      ; BitGen:bits|vga_control:control|h_count[0] ;      ;
+; 264.83 MHz ; 264.83 MHz      ; BitGen:bits|vga_control:control|v_count[0] ;      ;
 +------------+-----------------+--------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -234,10 +233,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; BitGen:bits|vga_control:control|h_count[0] ; -6.720 ; -6.720        ;
-; clk_50MHz                                  ; -6.544 ; -134.082      ;
-; BitGen:bits|vga_control:control|v_count[0] ; -5.175 ; -5.175        ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; -1.813 ; -7.946        ;
+; clk_50MHz                                  ; -6.700 ; -133.929      ;
+; BitGen:bits|vga_control:control|h_count[0] ; -6.502 ; -6.502        ;
+; BitGen:bits|vga_control:control|v_count[0] ; -5.113 ; -5.113        ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; -1.729 ; -2.788        ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -246,10 +245,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; BitGen:bits|vga_control:control|v_count[0] ; 0.306 ; 0.000         ;
-; clk_50MHz                                  ; 0.356 ; 0.000         ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; 0.688 ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 1.458 ; 0.000         ;
+; clk_50MHz                                  ; 0.021 ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.661 ; 0.000         ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; 0.851 ; 0.000         ;
+; BitGen:bits|vga_control:control|h_count[0] ; 1.567 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -258,8 +257,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; BitGen:bits|vga_control:control|h_count[0] ; -6.528 ; -6.528        ;
-; BitGen:bits|vga_control:control|v_count[0] ; -5.087 ; -5.087        ;
+; BitGen:bits|vga_control:control|h_count[0] ; -6.452 ; -6.452        ;
+; BitGen:bits|vga_control:control|v_count[0] ; -5.322 ; -5.322        ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -268,8 +267,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; BitGen:bits|vga_control:control|v_count[0] ; 0.336 ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 1.311 ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.880 ; 0.000         ;
+; BitGen:bits|vga_control:control|h_count[0] ; 1.554 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -278,10 +277,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; clk_50MHz                                  ; -0.801 ; -12.906       ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; -0.394 ; -4.632        ;
-; BitGen:bits|vga_control:control|v_count[0] ; 0.322  ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 0.425  ; 0.000         ;
+; clk_50MHz                                  ; -0.894 ; -12.951       ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; -0.394 ; -1.026        ;
+; BitGen:bits|vga_control:control|h_count[0] ; 0.326  ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.383  ; 0.000         ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -296,10 +295,10 @@ No synchronizer chains to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; clk_50MHz                                  ; -4.078 ; -83.941       ;
-; BitGen:bits|vga_control:control|h_count[0] ; -3.364 ; -3.364        ;
-; BitGen:bits|vga_control:control|v_count[0] ; -2.377 ; -2.377        ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; -0.805 ; -2.750        ;
+; clk_50MHz                                  ; -4.345 ; -87.290       ;
+; BitGen:bits|vga_control:control|h_count[0] ; -3.213 ; -3.213        ;
+; BitGen:bits|vga_control:control|v_count[0] ; -2.271 ; -2.271        ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; -0.788 ; -1.159        ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -308,10 +307,10 @@ No synchronizer chains to report.
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; BitGen:bits|vga_control:control|v_count[0] ; 0.142 ; 0.000         ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; 0.290 ; 0.000         ;
-; clk_50MHz                                  ; 0.299 ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 0.960 ; 0.000         ;
+; clk_50MHz                                  ; 0.301 ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.317 ; 0.000         ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; 0.453 ; 0.000         ;
+; BitGen:bits|vga_control:control|h_count[0] ; 0.986 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -320,8 +319,8 @@ No synchronizer chains to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; BitGen:bits|vga_control:control|h_count[0] ; -3.388 ; -3.388        ;
-; BitGen:bits|vga_control:control|v_count[0] ; -2.496 ; -2.496        ;
+; BitGen:bits|vga_control:control|h_count[0] ; -3.229 ; -3.229        ;
+; BitGen:bits|vga_control:control|v_count[0] ; -2.413 ; -2.413        ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -330,8 +329,8 @@ No synchronizer chains to report.
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; BitGen:bits|vga_control:control|v_count[0] ; 0.322 ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 0.984 ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.437 ; 0.000         ;
+; BitGen:bits|vga_control:control|h_count[0] ; 1.018 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -340,10 +339,10 @@ No synchronizer chains to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; clk_50MHz                                  ; -0.719 ; -2.787        ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; 0.119  ; 0.000         ;
-; BitGen:bits|vga_control:control|v_count[0] ; 0.428  ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 0.453  ; 0.000         ;
+; clk_50MHz                                  ; -0.774 ; -2.929        ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; 0.158  ; 0.000         ;
+; BitGen:bits|vga_control:control|h_count[0] ; 0.432  ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.457  ; 0.000         ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -358,10 +357,10 @@ No synchronizer chains to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; clk_50MHz                                  ; -3.513 ; -72.385       ;
-; BitGen:bits|vga_control:control|h_count[0] ; -3.144 ; -3.144        ;
-; BitGen:bits|vga_control:control|v_count[0] ; -2.255 ; -2.255        ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; -0.659 ; -2.163        ;
+; clk_50MHz                                  ; -3.743 ; -74.925       ;
+; BitGen:bits|vga_control:control|h_count[0] ; -3.009 ; -3.009        ;
+; BitGen:bits|vga_control:control|v_count[0] ; -2.165 ; -2.165        ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; -0.653 ; -0.941        ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -370,10 +369,10 @@ No synchronizer chains to report.
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; BitGen:bits|vga_control:control|v_count[0] ; 0.136 ; 0.000         ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; 0.266 ; 0.000         ;
-; clk_50MHz                                  ; 0.290 ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 0.872 ; 0.000         ;
+; clk_50MHz                                  ; 0.205 ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.303 ; 0.000         ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; 0.396 ; 0.000         ;
+; BitGen:bits|vga_control:control|h_count[0] ; 0.898 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -382,8 +381,8 @@ No synchronizer chains to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; BitGen:bits|vga_control:control|h_count[0] ; -3.148 ; -3.148        ;
-; BitGen:bits|vga_control:control|v_count[0] ; -2.328 ; -2.328        ;
+; BitGen:bits|vga_control:control|h_count[0] ; -3.015 ; -3.015        ;
+; BitGen:bits|vga_control:control|v_count[0] ; -2.301 ; -2.301        ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -392,8 +391,8 @@ No synchronizer chains to report.
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; BitGen:bits|vga_control:control|v_count[0] ; 0.269 ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 0.883 ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.410 ; 0.000         ;
+; BitGen:bits|vga_control:control|h_count[0] ; 0.923 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -402,10 +401,10 @@ No synchronizer chains to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; clk_50MHz                                  ; -0.705 ; -2.769        ;
-; BitGen:bits|vga_control:control|clk_25MHz  ; 0.128  ; 0.000         ;
-; BitGen:bits|vga_control:control|v_count[0] ; 0.414  ; 0.000         ;
-; BitGen:bits|vga_control:control|h_count[0] ; 0.460  ; 0.000         ;
+; clk_50MHz                                  ; -0.740 ; -2.899        ;
+; BitGen:bits|vga_control:control|clk_25MHz  ; 0.160  ; 0.000         ;
+; BitGen:bits|vga_control:control|h_count[0] ; 0.442  ; 0.000         ;
+; BitGen:bits|vga_control:control|v_count[0] ; 0.456  ; 0.000         ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -420,16 +419,16 @@ No synchronizer chains to report.
 +---------------------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                                       ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +---------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                            ; -6.865   ; 0.136 ; -6.528   ; 0.269   ; -0.801              ;
-;  BitGen:bits|vga_control:control|clk_25MHz  ; -1.825   ; 0.266 ; N/A      ; N/A     ; -0.394              ;
-;  BitGen:bits|vga_control:control|h_count[0] ; -6.720   ; 0.872 ; -6.528   ; 0.883   ; 0.425               ;
-;  BitGen:bits|vga_control:control|v_count[0] ; -5.175   ; 0.136 ; -5.087   ; 0.269   ; 0.322               ;
-;  clk_50MHz                                  ; -6.865   ; 0.290 ; N/A      ; N/A     ; -0.801              ;
-; Design-wide TNS                             ; -160.062 ; 0.0   ; -11.615  ; 0.0     ; -17.538             ;
-;  BitGen:bits|vga_control:control|clk_25MHz  ; -7.997   ; 0.000 ; N/A      ; N/A     ; -4.633              ;
-;  BitGen:bits|vga_control:control|h_count[0] ; -6.720   ; 0.000 ; -6.528   ; 0.000   ; 0.000               ;
-;  BitGen:bits|vga_control:control|v_count[0] ; -5.175   ; 0.000 ; -5.087   ; 0.000   ; 0.000               ;
-;  clk_50MHz                                  ; -140.316 ; 0.000 ; N/A      ; N/A     ; -12.906             ;
+; Worst-case Slack                            ; -6.982   ; 0.021 ; -6.452   ; 0.410   ; -0.894              ;
+;  BitGen:bits|vga_control:control|clk_25MHz  ; -1.737   ; 0.396 ; N/A      ; N/A     ; -0.394              ;
+;  BitGen:bits|vga_control:control|h_count[0] ; -6.502   ; 0.898 ; -6.452   ; 0.923   ; 0.312               ;
+;  BitGen:bits|vga_control:control|v_count[0] ; -5.113   ; 0.303 ; -5.322   ; 0.410   ; 0.383               ;
+;  clk_50MHz                                  ; -6.982   ; 0.021 ; N/A      ; N/A     ; -0.894              ;
+; Design-wide TNS                             ; -154.604 ; 0.0   ; -11.774  ; 0.0     ; -13.977             ;
+;  BitGen:bits|vga_control:control|clk_25MHz  ; -2.788   ; 0.000 ; N/A      ; N/A     ; -1.030              ;
+;  BitGen:bits|vga_control:control|h_count[0] ; -6.502   ; 0.000 ; -6.452   ; 0.000   ; 0.000               ;
+;  BitGen:bits|vga_control:control|v_count[0] ; -5.113   ; 0.000 ; -5.322   ; 0.000   ; 0.000               ;
+;  clk_50MHz                                  ; -140.478 ; 0.000 ; N/A      ; N/A     ; -12.951             ;
 +---------------------------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -633,7 +632,6 @@ No synchronizer chains to report.
 +--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                 ; To Clock                                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
-; BitGen:bits|vga_control:control|clk_25MHz  ; BitGen:bits|vga_control:control|clk_25MHz  ; 6        ; 0        ; 0        ; 0        ;
 ; BitGen:bits|vga_control:control|h_count[0] ; BitGen:bits|vga_control:control|clk_25MHz  ; 1        ; 0        ; 0        ; 0        ;
 ; BitGen:bits|vga_control:control|v_count[0] ; BitGen:bits|vga_control:control|clk_25MHz  ; 1        ; 0        ; 0        ; 0        ;
 ; BitGen:bits|vga_control:control|h_count[0] ; BitGen:bits|vga_control:control|h_count[0] ; 1        ; 1        ; 0        ; 0        ;
@@ -653,7 +651,6 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                 ; To Clock                                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
-; BitGen:bits|vga_control:control|clk_25MHz  ; BitGen:bits|vga_control:control|clk_25MHz  ; 6        ; 0        ; 0        ; 0        ;
 ; BitGen:bits|vga_control:control|h_count[0] ; BitGen:bits|vga_control:control|clk_25MHz  ; 1        ; 0        ; 0        ; 0        ;
 ; BitGen:bits|vga_control:control|v_count[0] ; BitGen:bits|vga_control:control|clk_25MHz  ; 1        ; 0        ; 0        ; 0        ;
 ; BitGen:bits|vga_control:control|h_count[0] ; BitGen:bits|vga_control:control|h_count[0] ; 1        ; 1        ; 0        ; 0        ;
@@ -714,9 +711,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 22    ; 22   ;
-; Unconstrained Output Ports      ; 9     ; 9    ;
-; Unconstrained Output Port Paths ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 21    ; 21   ;
+; Unconstrained Output Ports      ; 3     ; 3    ;
+; Unconstrained Output Port Paths ; 3     ; 3    ;
 +---------------------------------+-------+------+
 
 
@@ -741,21 +738,15 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                           ;
-+--------------+---------------------------------------------------------------------------------------+
-; Output Port  ; Comment                                                                               ;
-+--------------+---------------------------------------------------------------------------------------+
-; blank_n      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; h_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; v_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+--------------+---------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; clk_25MHz   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; h_sync      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; v_sync      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -767,21 +758,15 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                           ;
-+--------------+---------------------------------------------------------------------------------------+
-; Output Port  ; Comment                                                                               ;
-+--------------+---------------------------------------------------------------------------------------+
-; blank_n      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; h_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; v_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+--------------+---------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; clk_25MHz   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; h_sync      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; v_sync      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------------+
@@ -790,13 +775,13 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 09 08:34:46 2023
+    Info: Processing started: Thu Nov 09 16:30:40 2023
 Info: Command: quartus_sta alu_rf -c alu_rf
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 4 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 2 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Info (332104): Reading SDC File: 'alu_rf.sdc'
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
@@ -810,152 +795,152 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.865
+Info (332146): Worst-case setup slack is -6.982
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.865            -140.316 clk_50MHz 
-    Info (332119):    -6.669              -6.669 BitGen:bits|vga_control:control|h_count[0] 
-    Info (332119):    -5.080              -5.080 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):    -1.825              -7.997 BitGen:bits|vga_control:control|clk_25MHz 
-Info (332146): Worst-case hold slack is 0.285
+    Info (332119):    -6.982            -140.478 clk_50MHz 
+    Info (332119):    -6.392              -6.392 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -4.976              -4.976 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):    -1.737              -2.758 BitGen:bits|vga_control:control|clk_25MHz 
+Info (332146): Worst-case hold slack is 0.333
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.285               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     0.667               0.000 clk_50MHz 
-    Info (332119):     0.679               0.000 BitGen:bits|vga_control:control|clk_25MHz 
-    Info (332119):     1.452               0.000 BitGen:bits|vga_control:control|h_count[0] 
-Info (332146): Worst-case recovery slack is -6.513
+    Info (332119):     0.333               0.000 clk_50MHz 
+    Info (332119):     0.628               0.000 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):     0.844               0.000 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     1.533               0.000 BitGen:bits|vga_control:control|h_count[0] 
+Info (332146): Worst-case recovery slack is -6.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.513              -6.513 BitGen:bits|vga_control:control|h_count[0] 
-    Info (332119):    -5.058              -5.058 BitGen:bits|vga_control:control|v_count[0] 
-Info (332146): Worst-case removal slack is 0.381
+    Info (332119):    -6.394              -6.394 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -5.193              -5.193 BitGen:bits|vga_control:control|v_count[0] 
+Info (332146): Worst-case removal slack is 0.837
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.381               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     1.329               0.000 BitGen:bits|vga_control:control|h_count[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.771
+    Info (332119):     0.837               0.000 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):     1.560               0.000 BitGen:bits|vga_control:control|h_count[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.879
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.771             -11.876 clk_50MHz 
-    Info (332119):    -0.394              -4.633 BitGen:bits|vga_control:control|clk_25MHz 
-    Info (332119):     0.347               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     0.427               0.000 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -0.879             -12.086 clk_50MHz 
+    Info (332119):    -0.394              -1.030 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     0.312               0.000 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):     0.401               0.000 BitGen:bits|vga_control:control|v_count[0] 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.720
+Info (332146): Worst-case setup slack is -6.700
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.720              -6.720 BitGen:bits|vga_control:control|h_count[0] 
-    Info (332119):    -6.544            -134.082 clk_50MHz 
-    Info (332119):    -5.175              -5.175 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):    -1.813              -7.946 BitGen:bits|vga_control:control|clk_25MHz 
-Info (332146): Worst-case hold slack is 0.306
+    Info (332119):    -6.700            -133.929 clk_50MHz 
+    Info (332119):    -6.502              -6.502 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -5.113              -5.113 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):    -1.729              -2.788 BitGen:bits|vga_control:control|clk_25MHz 
+Info (332146): Worst-case hold slack is 0.021
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.306               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     0.356               0.000 clk_50MHz 
-    Info (332119):     0.688               0.000 BitGen:bits|vga_control:control|clk_25MHz 
-    Info (332119):     1.458               0.000 BitGen:bits|vga_control:control|h_count[0] 
-Info (332146): Worst-case recovery slack is -6.528
+    Info (332119):     0.021               0.000 clk_50MHz 
+    Info (332119):     0.661               0.000 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):     0.851               0.000 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     1.567               0.000 BitGen:bits|vga_control:control|h_count[0] 
+Info (332146): Worst-case recovery slack is -6.452
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.528              -6.528 BitGen:bits|vga_control:control|h_count[0] 
-    Info (332119):    -5.087              -5.087 BitGen:bits|vga_control:control|v_count[0] 
-Info (332146): Worst-case removal slack is 0.336
+    Info (332119):    -6.452              -6.452 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -5.322              -5.322 BitGen:bits|vga_control:control|v_count[0] 
+Info (332146): Worst-case removal slack is 0.880
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.336               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     1.311               0.000 BitGen:bits|vga_control:control|h_count[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.801
+    Info (332119):     0.880               0.000 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):     1.554               0.000 BitGen:bits|vga_control:control|h_count[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.894
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.801             -12.906 clk_50MHz 
-    Info (332119):    -0.394              -4.632 BitGen:bits|vga_control:control|clk_25MHz 
-    Info (332119):     0.322               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     0.425               0.000 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -0.894             -12.951 clk_50MHz 
+    Info (332119):    -0.394              -1.026 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     0.326               0.000 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):     0.383               0.000 BitGen:bits|vga_control:control|v_count[0] 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.078
+Info (332146): Worst-case setup slack is -4.345
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.078             -83.941 clk_50MHz 
-    Info (332119):    -3.364              -3.364 BitGen:bits|vga_control:control|h_count[0] 
-    Info (332119):    -2.377              -2.377 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):    -0.805              -2.750 BitGen:bits|vga_control:control|clk_25MHz 
-Info (332146): Worst-case hold slack is 0.142
+    Info (332119):    -4.345             -87.290 clk_50MHz 
+    Info (332119):    -3.213              -3.213 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -2.271              -2.271 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):    -0.788              -1.159 BitGen:bits|vga_control:control|clk_25MHz 
+Info (332146): Worst-case hold slack is 0.301
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.142               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     0.290               0.000 BitGen:bits|vga_control:control|clk_25MHz 
-    Info (332119):     0.299               0.000 clk_50MHz 
-    Info (332119):     0.960               0.000 BitGen:bits|vga_control:control|h_count[0] 
-Info (332146): Worst-case recovery slack is -3.388
+    Info (332119):     0.301               0.000 clk_50MHz 
+    Info (332119):     0.317               0.000 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):     0.453               0.000 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     0.986               0.000 BitGen:bits|vga_control:control|h_count[0] 
+Info (332146): Worst-case recovery slack is -3.229
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.388              -3.388 BitGen:bits|vga_control:control|h_count[0] 
-    Info (332119):    -2.496              -2.496 BitGen:bits|vga_control:control|v_count[0] 
-Info (332146): Worst-case removal slack is 0.322
+    Info (332119):    -3.229              -3.229 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -2.413              -2.413 BitGen:bits|vga_control:control|v_count[0] 
+Info (332146): Worst-case removal slack is 0.437
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.322               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     0.984               0.000 BitGen:bits|vga_control:control|h_count[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.719
+    Info (332119):     0.437               0.000 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):     1.018               0.000 BitGen:bits|vga_control:control|h_count[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.774
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.719              -2.787 clk_50MHz 
-    Info (332119):     0.119               0.000 BitGen:bits|vga_control:control|clk_25MHz 
-    Info (332119):     0.428               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     0.453               0.000 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -0.774              -2.929 clk_50MHz 
+    Info (332119):     0.158               0.000 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     0.432               0.000 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):     0.457               0.000 BitGen:bits|vga_control:control|v_count[0] 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.513
+Info (332146): Worst-case setup slack is -3.743
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.513             -72.385 clk_50MHz 
-    Info (332119):    -3.144              -3.144 BitGen:bits|vga_control:control|h_count[0] 
-    Info (332119):    -2.255              -2.255 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):    -0.659              -2.163 BitGen:bits|vga_control:control|clk_25MHz 
-Info (332146): Worst-case hold slack is 0.136
+    Info (332119):    -3.743             -74.925 clk_50MHz 
+    Info (332119):    -3.009              -3.009 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -2.165              -2.165 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):    -0.653              -0.941 BitGen:bits|vga_control:control|clk_25MHz 
+Info (332146): Worst-case hold slack is 0.205
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.136               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     0.266               0.000 BitGen:bits|vga_control:control|clk_25MHz 
-    Info (332119):     0.290               0.000 clk_50MHz 
-    Info (332119):     0.872               0.000 BitGen:bits|vga_control:control|h_count[0] 
-Info (332146): Worst-case recovery slack is -3.148
+    Info (332119):     0.205               0.000 clk_50MHz 
+    Info (332119):     0.303               0.000 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):     0.396               0.000 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     0.898               0.000 BitGen:bits|vga_control:control|h_count[0] 
+Info (332146): Worst-case recovery slack is -3.015
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.148              -3.148 BitGen:bits|vga_control:control|h_count[0] 
-    Info (332119):    -2.328              -2.328 BitGen:bits|vga_control:control|v_count[0] 
-Info (332146): Worst-case removal slack is 0.269
+    Info (332119):    -3.015              -3.015 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -2.301              -2.301 BitGen:bits|vga_control:control|v_count[0] 
+Info (332146): Worst-case removal slack is 0.410
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.269               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     0.883               0.000 BitGen:bits|vga_control:control|h_count[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.705
+    Info (332119):     0.410               0.000 BitGen:bits|vga_control:control|v_count[0] 
+    Info (332119):     0.923               0.000 BitGen:bits|vga_control:control|h_count[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.740
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.705              -2.769 clk_50MHz 
-    Info (332119):     0.128               0.000 BitGen:bits|vga_control:control|clk_25MHz 
-    Info (332119):     0.414               0.000 BitGen:bits|vga_control:control|v_count[0] 
-    Info (332119):     0.460               0.000 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):    -0.740              -2.899 clk_50MHz 
+    Info (332119):     0.160               0.000 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     0.442               0.000 BitGen:bits|vga_control:control|h_count[0] 
+    Info (332119):     0.456               0.000 BitGen:bits|vga_control:control|v_count[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5274 megabytes
-    Info: Processing ended: Thu Nov 09 08:34:56 2023
+    Info: Peak virtual memory: 5286 megabytes
+    Info: Processing ended: Thu Nov 09 16:30:50 2023
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 

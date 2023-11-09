@@ -15,7 +15,6 @@ module BitGen (
     wire signed [CORDW-1:0] sx, sy;
     wire hsync, vsync;
     wire de, frame, line;
-	 wire clk_pix;
 	 
 	 vga_control control(
 		.clk_50MHz(clk_50m),
@@ -23,7 +22,7 @@ module BitGen (
 		.bright(bright), 
 		.h_sync(hsync), 
 		.v_sync(vsync), 
-		.clk_25MHz(clk_pix),
+		.clk_25MHz(clk_25MHz),
 		.h_count(sx), 
 		.v_count(sy),
 		.de(de),       // data enable (low in blanking interval)
@@ -50,7 +49,7 @@ module BitGen (
     reg dx;  // direction: 0 is right/down
 
     // update sprite position once per frame
-    always @(posedge clk_pix) begin
+    always @(posedge clk_25MHz) begin
         if (frame) begin
             if (dx == 0) begin  // moving right
                 if (sprx + SPR_DRAWW >= H_RES + 2*SPR_DRAWW) dx <= 1;  // move left
@@ -60,7 +59,7 @@ module BitGen (
                 else sprx <= sprx - SPR_SPX;  // continue left
             end
         end
-        if (rst_pix) begin  // centre sprite and set direction right
+        if (btn_rst_n) begin  // centre sprite and set direction right
             sprx <= H_RES/2 - SPR_DRAWW/2;
             spry <= V_RES/2 - SPR_DRAWH/2;
             dx <= 0;
@@ -78,7 +77,7 @@ module BitGen (
         .SPR_SCALE(SPR_SCALE),
         .SPR_DATAW(SPR_DATAW)
         ) sprite_f (
-        .clk(clk_pix),
+        .clk(clk_25MHz),
         .rst(rst_pix),
         .line(line),
         .sx(sx),
@@ -106,7 +105,7 @@ module BitGen (
     end
 
     // VGA Pmod output
-    always @(posedge clk_pix) begin
+    always @(posedge clk_25MHz) begin
         vga_hsync <= hsync;
         vga_vsync <= vsync;
         vga_r <= display_r;
