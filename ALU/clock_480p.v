@@ -25,8 +25,8 @@ module clock_480p (
 	localparam h_tbp 	= 48;
 	
 	// in terms of horizontal lines, not clock cycles
-	localparam v_ts		= 521;
-	localparam v_tdisp	= 480;
+	localparam v_ts	= 521;
+	localparam v_tdisp= 480;
 	localparam v_tpw	= 2;
 	localparam v_tfp	= 10;
 	localparam v_tbp	= 29;

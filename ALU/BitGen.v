@@ -1,6 +1,7 @@
 module BitGen (
     input  wire clk_50m,      // 50 MHz clock
-    input  wire btn_rst_n,    // reset button
+    input  wire btn_rst_n,
+	 output      bright, // reset button
     output reg  vga_hsync,    // horizontal sync
     output reg  vga_vsync,    // vertical sync
     output reg  [7:0] vga_r,  // 4-bit VGA red
@@ -9,35 +10,26 @@ module BitGen (
 	 output wire  clk_25MHz			 // VGA clk
     );
 
-    // generate pixel clock
-    reg clk_pix;
-    wire clk_pix_locked;
-    reg rst_pix;
-    clock_480p clock_pix_inst (
-       .clk_50m(clk_50m),
-       .rst(!btn_rst_n),  // reset button is active low
-       .clk_pix(clk_25MHz),
-       .clk_pix_locked(clk_pix_locked)
-    );
-	
-    always @(posedge clk_pix) rst_pix <= !clk_pix_locked;  // wait for clock lock
-
-    // display sync signals and coordinates
+  // display sync signals and coordinates
     localparam CORDW = 16;  // signed coordinate width (bits)
     wire signed [CORDW-1:0] sx, sy;
     wire hsync, vsync;
     wire de, frame, line;
-    display_480p #(.CORDW(CORDW)) display_inst (
-        .clk_pix(clk_pix),
-        .rst_pix(rst_pix),
-        .sx(sx),
-        .sy(sy),
-        .hsync(hsync),
-        .vsync(vsync),
-        .de(de),
-        .frame(frame),
-        .line(line)
-    );
+	 wire clk_pix;
+	 
+	 vga_control control(
+		.clk_50MHz(clk_50m),
+		.clear(btn_rst_n),
+		.bright(bright), 
+		.h_sync(hsync), 
+		.v_sync(vsync), 
+		.clk_25MHz(clk_pix),
+		.h_count(sx), 
+		.v_count(sy),
+		.de(de),       // data enable (low in blanking interval)
+		.frame(frame),    // high at start of frame
+		.line(line) 		 // high at start of line
+	);
 
     // screen dimensions (must match display_inst)
     localparam H_RES = 640;

@@ -2,7 +2,10 @@ module vga_control #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 		input clk_50MHz, clear,
 		output bright, 
 		output reg h_sync, v_sync, clk_25MHz,
-		output reg [COUNTER_BITS - 1 : 0] h_count, v_count
+		output reg [COUNTER_BITS - 1 : 0] h_count, v_count,
+		output reg  de,       // data enable (low in blanking interval)
+		output reg  frame,    // high at start of frame
+		output reg  line 		 // high at start of line
 	);
 	
 	// in terms of clock cycles
@@ -19,8 +22,34 @@ module vga_control #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 	localparam v_tfp	= 10;
 	localparam v_tbp	= 29;
 	
-	reg h_bright, v_bright;
-	assign bright = h_bright && v_bright;
+	//Horizontal timings
+	 localparam signed H_STA  = 0 - h_tfp - h_tpw - h_tbp;    // horizontal start
+    localparam signed HS_STA = H_STA + h_tfp;                // sync start
+    localparam signed HS_END = HS_STA + h_tpw;             // sync end
+    localparam signed HA_STA = 0;                           // active start
+    localparam signed HA_END = H_RES - 1;                   // active end
+
+    // vertical timings
+    localparam signed V_STA  = 0 - v_tfp - v_tpw - v_tbp;    // vertical start
+    localparam signed VS_STA = V_STA + v_tfp;                // sync start
+    localparam signed VS_END = VS_STA + v_tpw;             // sync end
+    localparam signed VA_STA = 0;                           // active start
+    localparam signed VA_END = V_RES - 1;                   // active end
+	
+	 reg h_bright, v_bright;
+	 assign bright = h_bright && v_bright;
+	
+	  // control signals
+    always @(posedge clk_25MHz) begin
+        de    <= (v_count >= VA_STA && h_count >= HA_STA);
+        frame <= (v_count == V_STA  && h_count == H_STA);
+        line  <= (h_count == H_STA);
+        if (~clear) begin
+            de <= 0;
+            frame <= 0;
+            line <= 0;
+        end
+    end
 	
 	//Using the push buttons we need to invert the clear logic
 	always @(negedge clear, posedge clk_50MHz)

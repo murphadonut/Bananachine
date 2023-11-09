@@ -4,7 +4,7 @@ module vga #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 		output [7 : 0] red_out, green_out, blue_out
 	);
 	
-	wire bright =1;
+	wire bright;
 	wire [COUNTER_BITS - 1 : 0] h_count, v_count;
 	
 	assign sync_n = 0;
@@ -14,7 +14,8 @@ module vga #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 	
 	BitGen bits(
 		.clk_50m(clk_50MHz),     // 50 MHz clock
-		.btn_rst_n(clear),    // reset button
+		.btn_rst_n(clear),		// reset button
+		.bright(bright),
 		.vga_hsync(h_sync),    // horizontal sync
 		.vga_vsync(v_sync),    // vertical sync
 		.vga_r(red_out),  // 4-bit VGA red
