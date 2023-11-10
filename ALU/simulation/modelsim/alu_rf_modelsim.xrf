@@ -2,6 +2,7 @@ vendor_name = ModelSim
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 source_file = 1, C:/Data/School/ECE 3710/ALU/regfile.v
 source_file = 1, C:/Data/School/ECE 3710/ALU/Datapath.v
 source_file = 1, C:/Data/School/ECE 3710/ALU/Reg.dat
@@ -2442,11 +2443,16 @@ source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/mem
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/basic_mem.v
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v
 >>>>>>> Stashed changes
+=======
+source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/memory.dat
+source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/basic_mem.v
+>>>>>>> Stashed changes
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Reg.dat
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf_tb.v
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/memory_init.mif
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/FUCKER.qip
@@ -2462,6 +2468,8 @@ source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/db/
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/basic_mem_given_to_us.v
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapathFSM.v
 =======
+=======
+>>>>>>> Stashed changes
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/CPU.v
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/instruction_reg.v
@@ -2469,6 +2477,7 @@ source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/con
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/pc_counter.v
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Bananachine.v
 source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Bananachine_tb.v
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc
@@ -3573,4 +3582,12 @@ instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, datapathFSM, 
 >>>>>>> Stashed changes
 =======
 instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, datapathFSM, 1
+>>>>>>> Stashed changes
+=======
+source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.sdc
+source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/db/alu_rf.cbx.xml
+design_name = Bananachine
+instance = comp, \clk~input , clk~input, Bananachine, 1
+instance = comp, \reset~input , reset~input, Bananachine, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, Bananachine, 1
 >>>>>>> Stashed changes

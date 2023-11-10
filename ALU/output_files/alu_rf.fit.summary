@@ -1,8 +1,13 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Fitter Status : Successful - Tue Oct 24 16:09:05 2023
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+=======
+Fitter Status : Successful - Thu Nov 09 16:23:38 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+>>>>>>> Stashed changes
 Revision Name : alu_rf
 Top-level Entity Name : Datapath
 Family : Cyclone V

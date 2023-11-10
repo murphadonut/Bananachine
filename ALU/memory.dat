@@ -1,0 +1,30 @@
+0101000100001000	// Load immediate value of 8 into register 1 by adding immediate 
+0101001100111111	// Load immediate value of 63 into register 3 by adding immediate 
+0100000101000011	// store value in register 1 (8) into the address stored in register 3 (63)
+0100010000000011	// load the value from address stored in register 3 (63) from memory and put result in register 4 (empty)
+0000000101010100	// add the value in register 1 (8) to the value in register 4 (8) and store in register 1 (16)
+0000000110110100	// cmp on register 1 (16) and register 4 (8).
+1100000000000010	// beq if equal jump 2 lines.
+1001000100001000	// sub 8 from register 1 (16) now (8).
+0000000110110100	// cmp on register 1 (8) and register 4 (8).
+1100000000000010	// beq if equal jump 2 lines.
+0000000101010100	// add the value in register 1 (8) to the value in register 4 (8) and store in register 1 (16)
+1001000100000111	// sub 7 from register 1 (8) now (1).
+0000000110110100	// cmp on register 1 (1) and register 4 (8).
+1100011011111101	// bcond gt if equal jump -3 lines.
+0000000110110100	// register 1 (8) at this point register 4 (8). cmp reg 4 to reg 1
+1100110000000011	//lt on register 4 and register 1 jump 3 lines if true
+1001010000000001	//sub 1 from register 4 (7)
+1100111011111101	// unconditional jump -3 lines.
+1111010100000011	//lui 3 into reg 5
+1011010100000101	//cmpi reg 5 and i 5
+0101011000011001	//addi 25 to reg 6
+0100011011000110	//jcond reg5 less than 5 jump to line 25
+0000010110010101	//subi reg 5 by reg 5
+0101011100010011	//addi 19 to reg 7
+0100000110000111	//jal to line 19
+
+
+
+
+

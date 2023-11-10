@@ -2,6 +2,7 @@ Timing Analyzer report for alu_rf
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Tue Oct 24 16:09:16 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 =======
@@ -11,6 +12,9 @@ Sat Oct 28 15:07:59 2023
 >>>>>>> Stashed changes
 =======
 Thu Nov 02 16:18:46 2023
+>>>>>>> Stashed changes
+=======
+Thu Nov 09 16:23:52 2023
 >>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 >>>>>>> Stashed changes
@@ -115,6 +119,7 @@ refer to the applicable agreement for further details.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Average used               ; 1.57        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
@@ -147,6 +152,24 @@ refer to the applicable agreement for further details.
 ;     Processor 6            ;   1.7%      ;
 ;     Processors 7-16        ;   0.8%      ;
 +----------------------------+-------------+
+=======
+; Average used               ; 1.04        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.3%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; alu_rf.sdc    ; OK     ; Thu Nov 09 16:23:51 2023 ;
++---------------+--------+--------------------------+
+>>>>>>> Stashed changes
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2090,6 +2113,7 @@ Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     Info: Processing started: Fri Oct 27 16:06:07 2023
 >>>>>>> Stashed changes
 =======
@@ -2101,6 +2125,11 @@ Info: Running Quartus Prime Timing Analyzer
 Info: Command: quartus_sta alu_rf -c alu_rf
 Info: qsta_default_script.tcl version: #2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+=======
+    Info: Processing started: Thu Nov 09 16:23:49 2023
+Info: Command: quartus_sta alu_rf -c alu_rf
+Info: qsta_default_script.tcl version: #1
+>>>>>>> Stashed changes
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -2362,6 +2391,7 @@ Info (332146): Worst-case hold slack is 0.088
     Info (332119):     0.575               0.000 alucont[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
+<<<<<<< Updated upstream
 Info (332146): Worst-case minimum pulse width slack is -0.267
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -2550,6 +2580,16 @@ Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
     Info: Processing ended: Thu Nov 02 16:18:46 2023
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:14
+>>>>>>> Stashed changes
+=======
+Info (332140): No Minimum Pulse Width paths to report
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 5239 megabytes
+    Info: Processing ended: Thu Nov 09 16:23:52 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 >>>>>>> Stashed changes
 
 

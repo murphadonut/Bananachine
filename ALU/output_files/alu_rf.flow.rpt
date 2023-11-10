@@ -3,6 +3,7 @@ Flow report for alu_rf
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Tue Oct 24 16:09:18 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 =======
@@ -15,6 +16,9 @@ Sat Oct 28 15:08:02 2023
 >>>>>>> Stashed changes
 =======
 Thu Nov 02 16:18:48 2023
+>>>>>>> Stashed changes
+=======
+Thu Nov 09 16:23:54 2023
 >>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 >>>>>>> Stashed changes
@@ -61,8 +65,13 @@ refer to the applicable agreement for further details.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Flow Status                     ; Successful - Tue Oct 24 16:09:18 2023       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+=======
+; Flow Status                     ; Successful - Thu Nov 09 16:23:54 2023       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+>>>>>>> Stashed changes
 ; Revision Name                   ; alu_rf                                      ;
 ; Top-level Entity Name           ; Datapath                                    ;
 ; Family                          ; Cyclone V                                   ;
@@ -150,6 +159,7 @@ refer to the applicable agreement for further details.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Start date & time ; 10/24/2023 16:08:11 ;
 =======
 ; Start date & time ; 10/27/2023 15:37:03 ;
@@ -162,6 +172,9 @@ refer to the applicable agreement for further details.
 >>>>>>> Stashed changes
 =======
 ; Start date & time ; 11/02/2023 16:13:17 ;
+>>>>>>> Stashed changes
+=======
+; Start date & time ; 11/09/2023 16:22:59 ;
 >>>>>>> Stashed changes
 ; Main task         ; Compilation         ;
 ; Revision Name     ; alu_rf              ;
@@ -177,6 +190,7 @@ refer to the applicable agreement for further details.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; COMPILER_SIGNATURE_ID                ; 140982220270901.169818529111384        ; --            ; --          ; --             ;
 =======
 ; COMPILER_SIGNATURE_ID                ; 189559958639954.169844262229088        ; --            ; --          ; --             ;
@@ -186,6 +200,9 @@ refer to the applicable agreement for further details.
 >>>>>>> Stashed changes
 =======
 ; COMPILER_SIGNATURE_ID                ; 189559958639954.169896319634488        ; --            ; --          ; --             ;
+>>>>>>> Stashed changes
+=======
+; COMPILER_SIGNATURE_ID                ; 189559958639954.169957217908304        ; --            ; --          ; --             ;
 >>>>>>> Stashed changes
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_rf_tb      ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                     ; --            ; --          ; eda_simulation ;
@@ -270,6 +287,7 @@ refer to the applicable agreement for further details.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4834 MB             ; 00:00:04                           ;
 ; Fitter               ; 00:00:45     ; 1.1                     ; 6630 MB             ; 00:00:33                           ;
 ; Assembler            ; 00:00:05     ; 1.0                     ; 4837 MB             ; 00:00:04                           ;
@@ -303,6 +321,14 @@ refer to the applicable agreement for further details.
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4732 MB             ; 00:00:01                           ;
 ; Total                ; 00:05:28     ; --                      ; --                  ; 00:05:56                           ;
 >>>>>>> Stashed changes
+=======
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4790 MB             ; 00:00:06                           ;
+; Fitter               ; 00:00:28     ; 1.0                     ; 7759 MB             ; 00:01:12                           ;
+; Assembler            ; 00:00:09     ; 1.0                     ; 4831 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 5239 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4713 MB             ; 00:00:01                           ;
+; Total                ; 00:00:53     ; --                      ; --                  ; 00:01:27                           ;
+>>>>>>> Stashed changes
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -315,12 +341,15 @@ refer to the applicable agreement for further details.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 ; Fitter               ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
 >>>>>>> Stashed changes
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 ; Fitter               ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
@@ -328,6 +357,9 @@ refer to the applicable agreement for further details.
 ; Timing Analyzer      ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; LAPTOP-038JB7UH  ; Windows 10 ; 10.0       ; x86_64         ;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

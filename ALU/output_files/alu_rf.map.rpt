@@ -3,6 +3,7 @@ Analysis & Synthesis report for alu_rf
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Tue Oct 24 16:08:19 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 =======
@@ -15,6 +16,9 @@ Sat Oct 28 15:05:44 2023
 >>>>>>> Stashed changes
 =======
 Thu Nov 02 16:13:27 2023
+>>>>>>> Stashed changes
+=======
+Thu Nov 09 16:23:09 2023
 >>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 >>>>>>> Stashed changes
@@ -194,8 +198,13 @@ refer to the applicable agreement for further details.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Analysis & Synthesis Status     ; Successful - Tue Oct 24 16:08:19 2023       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+=======
+; Analysis & Synthesis Status     ; Successful - Thu Nov 09 16:23:09 2023       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+>>>>>>> Stashed changes
 ; Revision Name                   ; alu_rf                                      ;
 ; Top-level Entity Name           ; Datapath                                    ;
 ; Family                          ; Cyclone V                                   ;
@@ -390,6 +399,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
+<<<<<<< Updated upstream
 +--------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                         ;
 +----------------------------------+-----------------+------------------------+----------------------------------------+---------+
@@ -400,6 +410,26 @@ refer to the applicable agreement for further details.
 ; Reg.dat                          ; yes             ; User Unspecified File  ; C:/Data/School/ECE 3710/ALU/Reg.dat    ;         ;
 ; alu_rf.v                         ; yes             ; User Verilog HDL File  ; C:/Data/School/ECE 3710/ALU/alu_rf.v   ;         ;
 +----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+=======
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+; memory.dat                       ; yes             ; User Unspecified File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/memory.dat        ;         ;
+; basic_mem.v                      ; yes             ; User Verilog HDL File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/basic_mem.v       ;         ;
+; datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v        ;         ;
+; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v         ;         ;
+; Reg.dat                          ; yes             ; User Unspecified File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Reg.dat           ;         ;
+; alu_rf.v                         ; yes             ; User Verilog HDL File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v          ;         ;
+; CPU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/CPU.v             ;         ;
+; muxes.v                          ; yes             ; User Verilog HDL File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v           ;         ;
+; instruction_reg.v                ; yes             ; User Verilog HDL File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/instruction_reg.v ;         ;
+; controller.v                     ; yes             ; User Verilog HDL File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/controller.v      ;         ;
+; pc_counter.v                     ; yes             ; User Verilog HDL File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/pc_counter.v      ;         ;
+; Bananachine.v                    ; yes             ; User Verilog HDL File  ; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Bananachine.v     ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+>>>>>>> Stashed changes
 
 
 +---------------------------------------------------------+
@@ -3361,6 +3391,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -6373,6 +6404,100 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 142 warnings
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
 The suppressed messages can be found in C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/output_files/alu_rf.map.smsg.
+>>>>>>> Stashed changes
+=======
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Nov 09 16:22:57 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_rf -c alu_rf
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file basic_mem.v
+    Info (12023): Found entity 1: basic_mem File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/basic_mem.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: datapath File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
+    Info (12023): Found entity 1: regfile File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_rf.v
+    Info (12023): Found entity 1: alu_rf File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file alu_rf_tb.v
+    Info (12023): Found entity 1: alu_rf_tb File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
+    Info (12023): Found entity 1: CPU File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/CPU.v Line: 1
+Info (12021): Found 5 design units, including 5 entities, in source file muxes.v
+    Info (12023): Found entity 1: mux2 File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v Line: 1
+    Info (12023): Found entity 2: mux4 File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v Line: 9
+    Info (12023): Found entity 3: flopenr File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v Line: 23
+    Info (12023): Found entity 4: flopr File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v Line: 34
+    Info (12023): Found entity 5: zerodetect File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_reg.v
+    Info (12023): Found entity 1: instruction_reg File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/instruction_reg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controller.v
+    Info (12023): Found entity 1: controller File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/controller.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pc_counter.v
+    Info (12023): Found entity 1: pc_counter File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/pc_counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bananachine.v
+    Info (12023): Found entity 1: Bananachine File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Bananachine.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bananachine_tb.v
+    Info (12023): Found entity 1: Bananachine_tb File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Bananachine_tb.v Line: 2
+Info (12127): Elaborating entity "Bananachine" for the top level hierarchy
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:cpu" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Bananachine.v Line: 17
+Info (12128): Elaborating entity "controller" for hierarchy "CPU:cpu|controller:cont" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/CPU.v Line: 40
+Info (12128): Elaborating entity "datapath" for hierarchy "CPU:cpu|datapath:dp" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/CPU.v Line: 64
+Info (12128): Elaborating entity "pc_counter" for hierarchy "CPU:cpu|datapath:dp|pc_counter:counter" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 39
+Info (12128): Elaborating entity "flopenr" for hierarchy "CPU:cpu|datapath:dp|flopenr:pc_flopr" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 49
+Info (12128): Elaborating entity "regfile" for hierarchy "CPU:cpu|datapath:dp|regfile:reg_file" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 61
+Info (10648): Verilog HDL Display System Task info at regfile.v(12): Loading register file File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v Line: 12
+Info (10648): Verilog HDL Display System Task info at regfile.v(14): done with RF load File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v Line: 14
+Info (12128): Elaborating entity "flopr" for hierarchy "CPU:cpu|datapath:dp|flopr:reg_A_flopr" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 70
+Info (12128): Elaborating entity "mux2" for hierarchy "CPU:cpu|datapath:dp|mux2:alu_A_mux" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 90
+Info (12128): Elaborating entity "mux4" for hierarchy "CPU:cpu|datapath:dp|mux4:pc_src_mux" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 116
+Info (12128): Elaborating entity "alu_rf" for hierarchy "CPU:cpu|datapath:dp|alu_rf:alu_unit" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 142
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(31): inferring latch(es) for variable "c_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(31): inferring latch(es) for variable "f_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(31): inferring latch(es) for variable "l_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(31): inferring latch(es) for variable "z_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(31): inferring latch(es) for variable "n_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(31): inferring latch(es) for variable "alu_out", which holds its previous value in one or more paths through the always construct File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[0]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[1]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[2]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[3]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[4]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[5]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[6]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[7]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[8]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[9]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[10]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[11]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[12]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[13]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[14]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "alu_out[15]" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "n_flag" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "z_flag" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "l_flag" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "f_flag" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (10041): Inferred latch for "c_flag" at alu_rf.v(31) File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v Line: 31
+Info (12128): Elaborating entity "instruction_reg" for hierarchy "CPU:cpu|datapath:dp|instruction_reg:ins_reg" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v Line: 156
+Info (12128): Elaborating entity "flopenr" for hierarchy "CPU:cpu|datapath:dp|instruction_reg:ins_reg|flopenr:op_code_flopr" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/instruction_reg.v Line: 17
+Info (12128): Elaborating entity "basic_mem" for hierarchy "basic_mem:mem" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Bananachine.v Line: 32
+Info (10648): Verilog HDL Display System Task info at basic_mem.v(17): Loading memory File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/basic_mem.v Line: 17
+Warning (10850): Verilog HDL warning at basic_mem.v(18): number of words (5) in memory file does not match the number of elements in the address range [0:65535] File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/basic_mem.v Line: 18
+Info (10648): Verilog HDL Display System Task info at basic_mem.v(19): done loading File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/basic_mem.v Line: 19
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Bananachine.v Line: 2
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Bananachine.v Line: 3
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4804 megabytes
+    Info: Processing ended: Thu Nov 09 16:23:09 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:06
 >>>>>>> Stashed changes
 
 

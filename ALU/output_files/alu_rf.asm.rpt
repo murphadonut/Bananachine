@@ -2,6 +2,7 @@ Assembler report for alu_rf
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Tue Oct 24 16:09:11 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 =======
@@ -11,6 +12,9 @@ Sat Oct 28 15:07:52 2023
 >>>>>>> Stashed changes
 =======
 Thu Nov 02 16:18:38 2023
+>>>>>>> Stashed changes
+=======
+Thu Nov 09 16:23:48 2023
 >>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 >>>>>>> Stashed changes
@@ -26,7 +30,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   5. Assembler Device Options: C:/Data/School/ECE 3710/ALU/output_files/alu_rf.sof
+=======
+  5. Assembler Device Options: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/output_files/alu_rf.sof
+>>>>>>> Stashed changes
 =======
   5. Assembler Device Options: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/output_files/alu_rf.sof
 >>>>>>> Stashed changes
@@ -65,7 +73,11 @@ refer to the applicable agreement for further details.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Assembler Status      ; Successful - Tue Oct 24 16:09:11 2023 ;
+=======
+; Assembler Status      ; Successful - Thu Nov 09 16:23:48 2023 ;
+>>>>>>> Stashed changes
 ; Revision Name         ; alu_rf                                ;
 ; Top-level Entity Name ; Datapath                              ;
 =======
@@ -95,6 +107,7 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -147,11 +160,23 @@ refer to the applicable agreement for further details.
 
 
 >>>>>>> Stashed changes
+=======
++-------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                           ;
++-------------------------------------------------------------------------------------+
+; File Name                                                                           ;
++-------------------------------------------------------------------------------------+
+; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/output_files/alu_rf.sof ;
++-------------------------------------------------------------------------------------+
+
+
+>>>>>>> Stashed changes
 +---------------------------------------------------------------------------------------------------------------+
 ; Assembler Device Options: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/output_files/alu_rf.sof ;
 +----------------+----------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                      ;
 +----------------+----------------------------------------------------------------------------------------------+
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 ; JTAG usercode  ; 0x00B00F62                                                                                   ;
@@ -168,6 +193,11 @@ refer to the applicable agreement for further details.
 ; Checksum       ; 0x0348CD11                                                                                   ;
 +----------------+----------------------------------------------------------------------------------------------+
 >>>>>>> Stashed changes
+=======
+; JTAG usercode  ; 0x00AF4BA5                                                                                   ;
+; Checksum       ; 0x00AF4BA5                                                                                   ;
++----------------+----------------------------------------------------------------------------------------------+
+>>>>>>> Stashed changes
 
 
 +--------------------+
@@ -182,6 +212,7 @@ Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     Info: Processing started: Fri Oct 27 16:05:46 2023
 >>>>>>> Stashed changes
 =======
@@ -190,9 +221,13 @@ Info: Running Quartus Prime Assembler
 =======
     Info: Processing started: Thu Nov 02 16:18:31 2023
 >>>>>>> Stashed changes
+=======
+    Info: Processing started: Thu Nov 09 16:23:39 2023
+>>>>>>> Stashed changes
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off alu_rf -c alu_rf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
+<<<<<<< Updated upstream
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -218,6 +253,13 @@ Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Processing ended: Thu Nov 02 16:18:38 2023
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
+>>>>>>> Stashed changes
+=======
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4832 megabytes
+    Info: Processing ended: Thu Nov 09 16:23:48 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:05
 >>>>>>> Stashed changes
 
 
