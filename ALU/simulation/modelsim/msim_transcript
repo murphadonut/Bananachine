@@ -12,1570 +12,165 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU {C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:36:38 on Nov 09,2023
+# Start time: 16:54:11 on Nov 14,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU" C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v 
 # -- Compiling module sprite
 # 
 # Top level modules:
 # 	sprite
-# End time: 15:36:38 on Nov 09,2023, Elapsed time: 0:00:00
+# End time: 16:54:12 on Nov 14,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU {C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:36:38 on Nov 09,2023
+# Start time: 16:54:12 on Nov 14,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU" C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v 
 # -- Compiling module rom_async
-# ** Error: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(6): (vlog-2730) Undefined variable: 'ADDRW'.
-# ** Error (suppressible): C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(6): (vlog-2388) 'addr' already declared in this scope (rom_async).
-# ** Error: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(11): 'ADDRW' already declared in this scope.
-# ** Error: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(12): Single value range allowed only in SystemVerilog.
-# ** Error: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(6): Identifier must be declared with a port mode: addr.
-# End time: 15:36:38 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-# ** Error: C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./alu_rf_run_msim_rtl_verilog.do line 9
-# C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU {C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v}"
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:42:38 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v 
-# -- Compiling module sprite
-# 
-# Top level modules:
-# 	sprite
-# End time: 15:42:38 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:42:38 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v 
-# -- Compiling module rom_async
-# ** Error: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(12): Single value range allowed only in SystemVerilog.
-# End time: 15:42:38 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:44:54 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v 
-# -- Compiling module sprite
-# 
-# Top level modules:
-# 	sprite
-# End time: 15:44:54 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:44:54 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v 
-# -- Compiling module rom_async
 # 
 # Top level modules:
 # 	rom_async
-# End time: 15:44:54 on Nov 09,2023, Elapsed time: 0:00:00
+# End time: 16:54:12 on Nov 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU {C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:44:58 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v 
-# -- Compiling module sprite
-# 
-# Top level modules:
-# 	sprite
-# End time: 15:44:58 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:44:59 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v 
-# -- Compiling module rom_async
-# 
-# Top level modules:
-# 	rom_async
-# End time: 15:44:59 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:44:59 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v 
-# -- Compiling module vga
-# 
-# Top level modules:
-# 	vga
-# End time: 15:44:59 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:44:59 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v 
-# -- Compiling module vga_control
-# 
-# Top level modules:
-# 	vga_control
-# End time: 15:44:59 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:10 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v 
-# -- Compiling module alu_rf
-# 
-# Top level modules:
-# 	alu_rf
-# End time: 15:45:11 on Nov 09,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:11 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v 
-# -- Compiling module alu_rf_tb
-# 
-# Top level modules:
-# 	alu_rf_tb
-# End time: 15:45:11 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:11 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v 
-# -- Compiling module Bananachine
-# 
-# Top level modules:
-# 	Bananachine
-# End time: 15:45:11 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:11 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v 
-# -- Compiling module Bananachine_tb
-# 
-# Top level modules:
-# 	Bananachine_tb
-# End time: 15:45:11 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:11 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v 
-# -- Compiling module basic_mem
-# 
-# Top level modules:
-# 	basic_mem
-# End time: 15:45:11 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:11 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v 
-# -- Compiling module BitGen
-# ** Error: C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(63): (vlog-2730) Undefined variable: 'rst_pix'.
-# End time: 15:45:11 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/clock_480p.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:11 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/clock_480p.v 
-# -- Compiling module clock_480p
-# ** Error: C:/intelFPGA_lite/18.1/Bananachine/ALU/clock_480p.v(14): (vlog-2892) Net type of 'clk_pix' must be explicitly declared.
-# End time: 15:45:11 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:11 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v 
-# -- Compiling module controller
-# 
-# Top level modules:
-# 	controller
-# End time: 15:45:12 on Nov 09,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v 
-# -- Compiling module CPU
-# 
-# Top level modules:
-# 	CPU
-# End time: 15:45:12 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v 
-# -- Compiling module datapath
-# 
-# Top level modules:
-# 	datapath
-# End time: 15:45:12 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v 
-# -- Compiling module datapathFSM
-# -- Compiling module flipflop
-# -- Compiling module hexTo7Seg
-# 
-# Top level modules:
-# 	datapathFSM
-# End time: 15:45:12 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/display_480p.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/display_480p.v 
-# -- Compiling module display_480p
-# 
-# Top level modules:
-# 	display_480p
-# End time: 15:45:12 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v 
-# -- Compiling module instruction_reg
-# 
-# Top level modules:
-# 	instruction_reg
-# End time: 15:45:12 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v 
-# -- Compiling module mux2
-# -- Compiling module mux4
-# -- Compiling module flopenr
-# -- Compiling module flopr
-# -- Compiling module zerodetect
-# 
-# Top level modules:
-# 	mux2
-# 	mux4
-# 	flopenr
-# 	flopr
-# 	zerodetect
-# End time: 15:45:12 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v 
-# -- Compiling module pc_counter
-# 
-# Top level modules:
-# 	pc_counter
-# End time: 15:45:13 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 15:45:13 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v 
-# -- Compiling module sprite
-# 
-# Top level modules:
-# 	sprite
-# End time: 15:45:13 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v 
-# -- Compiling module rom_async
-# 
-# Top level modules:
-# 	rom_async
-# End time: 15:45:13 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v 
-# -- Compiling module vga
-# 
-# Top level modules:
-# 	vga
-# End time: 15:45:13 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v 
-# -- Compiling module vga_control
-# 
-# Top level modules:
-# 	vga_control
-# End time: 15:45:13 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:37 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v 
-# -- Compiling module alu_rf
-# 
-# Top level modules:
-# 	alu_rf
-# End time: 15:45:37 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:37 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v 
-# -- Compiling module alu_rf_tb
-# 
-# Top level modules:
-# 	alu_rf_tb
-# End time: 15:45:37 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:37 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v 
-# -- Compiling module Bananachine
-# 
-# Top level modules:
-# 	Bananachine
-# End time: 15:45:37 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:37 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v 
-# -- Compiling module Bananachine_tb
-# 
-# Top level modules:
-# 	Bananachine_tb
-# End time: 15:45:38 on Nov 09,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:38 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v 
-# -- Compiling module basic_mem
-# 
-# Top level modules:
-# 	basic_mem
-# End time: 15:45:38 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:38 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v 
-# -- Compiling module BitGen
-# ** Error: C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(63): (vlog-2730) Undefined variable: 'rst_pix'.
-# End time: 15:45:38 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:38 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v 
-# -- Compiling module controller
-# 
-# Top level modules:
-# 	controller
-# End time: 15:45:38 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:38 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v 
-# -- Compiling module CPU
-# 
-# Top level modules:
-# 	CPU
-# End time: 15:45:38 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:38 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v 
-# -- Compiling module datapath
-# 
-# Top level modules:
-# 	datapath
-# End time: 15:45:38 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:38 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v 
-# -- Compiling module datapathFSM
-# -- Compiling module flipflop
-# -- Compiling module hexTo7Seg
-# 
-# Top level modules:
-# 	datapathFSM
-# End time: 15:45:38 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/display_480p.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:39 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/display_480p.v 
-# -- Compiling module display_480p
-# 
-# Top level modules:
-# 	display_480p
-# End time: 15:45:39 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:39 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v 
-# -- Compiling module instruction_reg
-# 
-# Top level modules:
-# 	instruction_reg
-# End time: 15:45:39 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:39 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v 
-# -- Compiling module mux2
-# -- Compiling module mux4
-# -- Compiling module flopenr
-# -- Compiling module flopr
-# -- Compiling module zerodetect
-# 
-# Top level modules:
-# 	mux2
-# 	mux4
-# 	flopenr
-# 	flopr
-# 	zerodetect
-# End time: 15:45:39 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:39 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v 
-# -- Compiling module pc_counter
-# 
-# Top level modules:
-# 	pc_counter
-# End time: 15:45:39 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:39 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 15:45:39 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:39 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v 
-# -- Compiling module sprite
-# 
-# Top level modules:
-# 	sprite
-# End time: 15:45:39 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:40 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v 
-# -- Compiling module rom_async
-# 
-# Top level modules:
-# 	rom_async
-# End time: 15:45:40 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:40 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v 
-# -- Compiling module vga
-# 
-# Top level modules:
-# 	vga
-# End time: 15:45:40 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:40 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v 
-# -- Compiling module vga_control
-# 
-# Top level modules:
-# 	vga_control
-# End time: 15:45:40 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:43 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v 
-# -- Compiling module BitGen
-# ** Error: C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(63): (vlog-2730) Undefined variable: 'rst_pix'.
-# End time: 15:45:44 on Nov 09,2023, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:46:41 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v 
+# Start time: 16:54:12 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU" C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v 
 # -- Compiling module BitGen
 # 
 # Top level modules:
 # 	BitGen
-# End time: 15:46:41 on Nov 09,2023, Elapsed time: 0:00:00
+# End time: 16:54:12 on Nov 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU {C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v 
-# -- Compiling module alu_rf
+# Start time: 16:54:12 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU" C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v 
+# -- Compiling module vga
 # 
 # Top level modules:
-# 	alu_rf
-# End time: 15:57:12 on Nov 09,2023, Elapsed time: 0:00:00
+# 	vga
+# End time: 16:54:12 on Nov 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU {C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v 
-# -- Compiling module alu_rf_tb
+# Start time: 16:54:12 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU" C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v 
+# -- Compiling module vga_control
 # 
 # Top level modules:
-# 	alu_rf_tb
-# End time: 15:57:12 on Nov 09,2023, Elapsed time: 0:00:00
+# 	vga_control
+# End time: 16:54:12 on Nov 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v 
-# -- Compiling module Bananachine
 # 
-# Top level modules:
-# 	Bananachine
-# End time: 15:57:12 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU {C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v 
+# Start time: 16:54:12 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Bananachine/ALU" C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v 
 # -- Compiling module Bananachine_tb
 # 
 # Top level modules:
 # 	Bananachine_tb
-# End time: 15:57:12 on Nov 09,2023, Elapsed time: 0:00:00
+# End time: 16:54:12 on Nov 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v 
-# -- Compiling module basic_mem
 # 
-# Top level modules:
-# 	basic_mem
-# End time: 15:57:12 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v 
-# -- Compiling module BitGen
-# 
-# Top level modules:
-# 	BitGen
-# End time: 15:57:12 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:12 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v 
-# -- Compiling module controller
-# 
-# Top level modules:
-# 	controller
-# End time: 15:57:13 on Nov 09,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v 
-# -- Compiling module CPU
-# 
-# Top level modules:
-# 	CPU
-# End time: 15:57:13 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v 
-# -- Compiling module datapath
-# 
-# Top level modules:
-# 	datapath
-# End time: 15:57:13 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v 
-# -- Compiling module datapathFSM
-# -- Compiling module flipflop
-# -- Compiling module hexTo7Seg
-# 
-# Top level modules:
-# 	datapathFSM
-# End time: 15:57:13 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v 
-# -- Compiling module instruction_reg
-# 
-# Top level modules:
-# 	instruction_reg
-# End time: 15:57:13 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v 
-# -- Compiling module mux2
-# -- Compiling module mux4
-# -- Compiling module flopenr
-# -- Compiling module flopr
-# -- Compiling module zerodetect
-# 
-# Top level modules:
-# 	mux2
-# 	mux4
-# 	flopenr
-# 	flopr
-# 	zerodetect
-# End time: 15:57:13 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:13 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v 
-# -- Compiling module pc_counter
-# 
-# Top level modules:
-# 	pc_counter
-# End time: 15:57:14 on Nov 09,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:14 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 15:57:14 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Bananachine_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Bananachine_tb 
+# Start time: 16:54:14 on Nov 14,2023
+# Loading work.Bananachine_tb
+# ** Error: (vsim-3033) C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v(4): Instantiation of 'Bananachine' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Bananachine_tb File: C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v
+#         Searched libraries:
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/cyclonev
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/cyclonev_hssi
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/cyclonev_pcie_hip
+#             C:/intelFPGA_lite/18.1/Bananachine/ALU/simulation/modelsim/rtl_work
+#             C:/intelFPGA_lite/18.1/Bananachine/ALU/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./alu_rf_run_msim_rtl_verilog.do PAUSED at line 16
 vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:14 on Nov 09,2023
+# Start time: 16:54:55 on Nov 14,2023
 # vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v 
 # -- Compiling module sprite
 # 
 # Top level modules:
 # 	sprite
-# End time: 15:57:14 on Nov 09,2023, Elapsed time: 0:00:00
+# End time: 16:54:55 on Nov 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:14 on Nov 09,2023
+# Start time: 16:54:55 on Nov 14,2023
 # vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v 
 # -- Compiling module rom_async
 # 
 # Top level modules:
 # 	rom_async
-# End time: 15:57:14 on Nov 09,2023, Elapsed time: 0:00:00
+# End time: 16:54:55 on Nov 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:14 on Nov 09,2023
+# Start time: 16:54:55 on Nov 14,2023
 # vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v 
 # -- Compiling module vga
 # 
 # Top level modules:
 # 	vga
-# End time: 15:57:14 on Nov 09,2023, Elapsed time: 0:00:00
+# End time: 16:54:55 on Nov 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga_tb.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:14 on Nov 09,2023
+# Start time: 16:54:55 on Nov 14,2023
 # vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga_tb.v 
 # -- Compiling module vga_tb
 # 
 # Top level modules:
 # 	vga_tb
-# End time: 15:57:14 on Nov 09,2023, Elapsed time: 0:00:00
+# End time: 16:54:55 on Nov 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:14 on Nov 09,2023
+# Start time: 16:54:55 on Nov 14,2023
 # vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v 
 # -- Compiling module vga_control
 # 
 # Top level modules:
 # 	vga_control
-# End time: 15:57:14 on Nov 09,2023, Elapsed time: 0:00:00
+# End time: 16:54:55 on Nov 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.vga_tb
 # vsim work.vga_tb 
-# Start time: 15:57:23 on Nov 09,2023
+# Start time: 16:54:14 on Nov 14,2023
 # Loading work.vga_tb
 # Loading work.vga
 # Loading work.BitGen
 # Loading work.vga_control
 # Loading work.sprite
 # Loading work.rom_async
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(20): [PCDPC] - Port size (10) does not match connection size (16) for port 'h_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/dut/bits/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(20): [PCDPC] - Port size (10) does not match connection size (16) for port 'v_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/dut/bits/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v(28): [PCDPC] - Port size (8) does not match connection size (6) for port 'addr'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/dut/bits/sprite_f/spr_rom File: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-vsim work.vga_tb
-# End time: 15:57:33 on Nov 09,2023, Elapsed time: 0:00:10
-# Errors: 0, Warnings: 3
-# vsim work.vga_tb 
-# Start time: 15:57:33 on Nov 09,2023
-# Loading work.vga_tb
-# Loading work.vga
-# Loading work.BitGen
-# Loading work.vga_control
-# Loading work.sprite
-# Loading work.rom_async
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(20): [PCDPC] - Port size (10) does not match connection size (16) for port 'h_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/dut/bits/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(20): [PCDPC] - Port size (10) does not match connection size (16) for port 'v_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/dut/bits/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v(28): [PCDPC] - Port size (8) does not match connection size (6) for port 'addr'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/dut/bits/sprite_f/spr_rom File: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
+run -all
+# Creating rom_async from init file 'letter_f.mem'.
 add wave -position insertpoint sim:/vga_tb/*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Luci  Hostname: PLOPTOP  ProcessID: 8216
-#           Attempting to use alternate WLF file "./wlft33r5q4".
+#           Attempting to use alternate WLF file "./wlft7kjzk5".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft33r5q4
-run
-# Creating rom_async from init file 'letter_f.mem'.
-run -continue
-run -all
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:04:07 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v 
-# -- Compiling module vga_tb
-# 
-# Top level modules:
-# 	vga_tb
-# End time: 16:04:07 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:04:34 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v 
-# -- Compiling module vga_tb
-# 
-# Top level modules:
-# 	vga_tb
-# End time: 16:04:34 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:04:45 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v 
-# -- Compiling module BitGen
-# 
-# Top level modules:
-# 	BitGen
-# End time: 16:04:46 on Nov 09,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:04:46 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v 
-# -- Compiling module vga_tb
-# 
-# Top level modules:
-# 	vga_tb
-# End time: 16:04:46 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work rtl_work -refresh -force_refresh
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:04:52 on Nov 09,2023
-# vlog -reportprogress 300 -work rtl_work -refresh -force_refresh 
-# -- Refreshing module alu_rf
-# -- Refreshing module alu_rf_tb
-# -- Refreshing module Bananachine
-# -- Refreshing module Bananachine_tb
-# -- Refreshing module basic_mem
-# -- Refreshing module BitGen
-# -- Refreshing module controller
-# -- Refreshing module CPU
-# -- Refreshing module datapath
-# -- Refreshing module datapathFSM
-# -- Refreshing module display_480p
-# -- Refreshing module flipflop
-# -- Refreshing module flopenr
-# -- Refreshing module flopr
-# -- Refreshing module hexTo7Seg
-# -- Refreshing module instruction_reg
-# -- Refreshing module mux2
-# -- Refreshing module mux4
-# -- Refreshing module pc_counter
-# -- Refreshing module regfile
-# -- Refreshing module rom_async
-# -- Refreshing module sprite
-# -- Refreshing module vga
-# -- Refreshing module vga_control
-# -- Refreshing module vga_tb
-# -- Refreshing module zerodetect
-# End time: 16:04:53 on Nov 09,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -work rtl_work -refresh -force_refresh
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:04:53 on Nov 09,2023
-# vcom -reportprogress 300 -work rtl_work -refresh -force_refresh 
-# -- Skipping module alu_rf
-# -- Skipping module alu_rf_tb
-# -- Skipping module Bananachine
-# -- Skipping module Bananachine_tb
-# -- Skipping module basic_mem
-# -- Skipping module BitGen
-# -- Skipping module controller
-# -- Skipping module CPU
-# -- Skipping module datapath
-# -- Skipping module datapathFSM
-# -- Skipping module display_480p
-# -- Skipping module flipflop
-# -- Skipping module flopenr
-# -- Skipping module flopr
-# -- Skipping module hexTo7Seg
-# -- Skipping module instruction_reg
-# -- Skipping module mux2
-# -- Skipping module mux4
-# -- Skipping module pc_counter
-# -- Skipping module regfile
-# -- Skipping module rom_async
-# -- Skipping module sprite
-# -- Skipping module vga
-# -- Skipping module vga_control
-# -- Skipping module vga_tb
-# -- Skipping module zerodetect
-# End time: 16:04:53 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work rtl_work -refresh -force_refresh
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:07:54 on Nov 09,2023
-# vlog -reportprogress 300 -work rtl_work -refresh -force_refresh 
-# -- Refreshing module alu_rf
-# -- Refreshing module alu_rf_tb
-# -- Refreshing module Bananachine
-# -- Refreshing module Bananachine_tb
-# -- Refreshing module basic_mem
-# -- Refreshing module BitGen
-# -- Refreshing module controller
-# -- Refreshing module CPU
-# -- Refreshing module datapath
-# -- Refreshing module datapathFSM
-# -- Refreshing module display_480p
-# -- Refreshing module flipflop
-# -- Refreshing module flopenr
-# -- Refreshing module flopr
-# -- Refreshing module hexTo7Seg
-# -- Refreshing module instruction_reg
-# -- Refreshing module mux2
-# -- Refreshing module mux4
-# -- Refreshing module pc_counter
-# -- Refreshing module regfile
-# -- Refreshing module rom_async
-# -- Refreshing module sprite
-# -- Refreshing module vga
-# -- Refreshing module vga_control
-# -- Refreshing module vga_tb
-# -- Refreshing module zerodetect
-# End time: 16:07:54 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work rtl_work -refresh -force_refresh
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:07:55 on Nov 09,2023
-# vcom -reportprogress 300 -work rtl_work -refresh -force_refresh 
-# -- Skipping module alu_rf
-# -- Skipping module alu_rf_tb
-# -- Skipping module Bananachine
-# -- Skipping module Bananachine_tb
-# -- Skipping module basic_mem
-# -- Skipping module BitGen
-# -- Skipping module controller
-# -- Skipping module CPU
-# -- Skipping module datapath
-# -- Skipping module datapathFSM
-# -- Skipping module display_480p
-# -- Skipping module flipflop
-# -- Skipping module flopenr
-# -- Skipping module flopr
-# -- Skipping module hexTo7Seg
-# -- Skipping module instruction_reg
-# -- Skipping module mux2
-# -- Skipping module mux4
-# -- Skipping module pc_counter
-# -- Skipping module regfile
-# -- Skipping module rom_async
-# -- Skipping module sprite
-# -- Skipping module vga
-# -- Skipping module vga_control
-# -- Skipping module vga_tb
-# -- Skipping module zerodetect
-# End time: 16:07:55 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:08:03 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v 
-# -- Compiling module bitgen_tb
-# 
-# Top level modules:
-# 	bitgen_tb
-# End time: 16:08:03 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.bitgen_tb
-# End time: 16:08:11 on Nov 09,2023, Elapsed time: 0:10:38
-# Errors: 0, Warnings: 5
-# vsim work.bitgen_tb 
-# Start time: 16:08:11 on Nov 09,2023
-# Loading work.bitgen_tb
-# Loading work.BitGen
-# Loading work.vga_control
-# Loading work.sprite
-# Loading work.rom_async
-# ** Error: (vsim-3063) C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v(7): Port 'clk_50MHz' not found in the connected module (1st connection).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut File: C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(20): [PCDPC] - Port size (10) does not match connection size (16) for port 'h_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(20): [PCDPC] - Port size (10) does not match connection size (16) for port 'v_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v(28): [PCDPC] - Port size (8) does not match connection size (6) for port 'addr'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/sprite_f/spr_rom File: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-# Error loading design
-# End time: 16:08:13 on Nov 09,2023, Elapsed time: 0:00:02
-# Errors: 1, Warnings: 3
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:08:59 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v 
-# -- Compiling module bitgen_tb
-# 
-# Top level modules:
-# 	bitgen_tb
-# End time: 16:08:59 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.bitgen_tb
-# vsim work.bitgen_tb 
-# Start time: 16:09:05 on Nov 09,2023
-# Loading work.bitgen_tb
-# Loading work.BitGen
-# Loading work.vga_control
-# Loading work.sprite
-# Loading work.rom_async
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(20): [PCDPC] - Port size (10) does not match connection size (16) for port 'h_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(20): [PCDPC] - Port size (10) does not match connection size (16) for port 'v_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v(28): [PCDPC] - Port size (8) does not match connection size (6) for port 'addr'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/sprite_f/spr_rom File: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-add wave -position insertpoint sim:/bitgen_tb/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Luci  Hostname: PLOPTOP  ProcessID: 8216
-#           Attempting to use alternate WLF file "./wlftj8rq15".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftj8rq15
-add wave -position insertpoint sim:/bitgen_tb/dut/sprite_f/*
-add wave -position insertpoint sim:/bitgen_tb/dut/control/*
-add wave -position insertpoint sim:/bitgen_tb/dut/sprite_f/spr_rom/*
-run -all
-# Creating rom_async from init file 'letter_f.mem'.
-add wave -position insertpoint  \
-sim:/bitgen_tb/dut/clk_pix
-add wave -position insertpoint  \
-sim:/bitgen_tb/dut/sprite_f/clk
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:08 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v 
-# -- Compiling module alu_rf
-# 
-# Top level modules:
-# 	alu_rf
-# End time: 16:20:08 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:08 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v 
-# -- Compiling module alu_rf_tb
-# 
-# Top level modules:
-# 	alu_rf_tb
-# End time: 16:20:08 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:08 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v 
-# -- Compiling module Bananachine
-# 
-# Top level modules:
-# 	Bananachine
-# End time: 16:20:08 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:08 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v 
-# -- Compiling module Bananachine_tb
-# 
-# Top level modules:
-# 	Bananachine_tb
-# End time: 16:20:09 on Nov 09,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:09 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v 
-# -- Compiling module basic_mem
-# 
-# Top level modules:
-# 	basic_mem
-# End time: 16:20:09 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:09 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v 
-# -- Compiling module BitGen
-# 
-# Top level modules:
-# 	BitGen
-# End time: 16:20:09 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:09 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v 
-# -- Compiling module bitgen_tb
-# 
-# Top level modules:
-# 	bitgen_tb
-# End time: 16:20:09 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:09 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v 
-# -- Compiling module controller
-# 
-# Top level modules:
-# 	controller
-# End time: 16:20:09 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:09 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v 
-# -- Compiling module CPU
-# 
-# Top level modules:
-# 	CPU
-# End time: 16:20:09 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:09 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v 
-# -- Compiling module datapath
-# 
-# Top level modules:
-# 	datapath
-# End time: 16:20:09 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:09 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v 
-# -- Compiling module datapathFSM
-# -- Compiling module flipflop
-# -- Compiling module hexTo7Seg
-# 
-# Top level modules:
-# 	datapathFSM
-# End time: 16:20:10 on Nov 09,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:10 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v 
-# -- Compiling module instruction_reg
-# 
-# Top level modules:
-# 	instruction_reg
-# End time: 16:20:10 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:10 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v 
-# -- Compiling module mux2
-# -- Compiling module mux4
-# -- Compiling module flopenr
-# -- Compiling module flopr
-# -- Compiling module zerodetect
-# 
-# Top level modules:
-# 	mux2
-# 	mux4
-# 	flopenr
-# 	flopr
-# 	zerodetect
-# End time: 16:20:10 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:10 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v 
-# -- Compiling module pc_counter
-# 
-# Top level modules:
-# 	pc_counter
-# End time: 16:20:10 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:10 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 16:20:10 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:10 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v 
-# -- Compiling module sprite
-# 
-# Top level modules:
-# 	sprite
-# End time: 16:20:10 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:10 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v 
-# -- Compiling module rom_async
-# 
-# Top level modules:
-# 	rom_async
-# End time: 16:20:10 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:11 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v 
-# -- Compiling module vga
-# 
-# Top level modules:
-# 	vga
-# End time: 16:20:11 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:11 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga_tb.v 
-# -- Compiling module vga_tb
-# 
-# Top level modules:
-# 	vga_tb
-# End time: 16:20:11 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:20:11 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v 
-# -- Compiling module vga_control
-# 
-# Top level modules:
-# 	vga_control
-# End time: 16:20:11 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.bitgen_tb
-# End time: 16:20:29 on Nov 09,2023, Elapsed time: 0:11:24
-# Errors: 0, Warnings: 5
-# vsim work.bitgen_tb 
-# Start time: 16:20:29 on Nov 09,2023
-# Loading work.bitgen_tb
-# Loading work.BitGen
-# Loading work.vga_control
-# Loading work.sprite
-# Loading work.rom_async
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'h_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'v_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v(28): [PCDPC] - Port size (8) does not match connection size (6) for port 'addr'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/sprite_f/spr_rom File: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-add wave -position insertpoint sim:/bitgen_tb/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Luci  Hostname: PLOPTOP  ProcessID: 8216
-#           Attempting to use alternate WLF file "./wlft7bx2ek".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft7bx2ek
-add wave -position insertpoint sim:/bitgen_tb/dut/*
-add wave -position insertpoint sim:/bitgen_tb/dut/control/*
-add wave -position insertpoint sim:/bitgen_tb/dut/sprite_f/*
-add wave -position insertpoint sim:/bitgen_tb/dut/sprite_f/spr_rom/*
-run -all
-# Creating rom_async from init file 'letter_f.mem'.
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:33 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf.v 
-# -- Compiling module alu_rf
-# 
-# Top level modules:
-# 	alu_rf
-# End time: 16:31:33 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:33 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/alu_rf_tb.v 
-# -- Compiling module alu_rf_tb
-# 
-# Top level modules:
-# 	alu_rf_tb
-# End time: 16:31:33 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:33 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine.v 
-# -- Compiling module Bananachine
-# 
-# Top level modules:
-# 	Bananachine
-# End time: 16:31:33 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:33 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Bananachine_tb.v 
-# -- Compiling module Bananachine_tb
-# 
-# Top level modules:
-# 	Bananachine_tb
-# End time: 16:31:33 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:33 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/basic_mem.v 
-# -- Compiling module basic_mem
-# 
-# Top level modules:
-# 	basic_mem
-# End time: 16:31:33 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:33 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v 
-# -- Compiling module BitGen
-# 
-# Top level modules:
-# 	BitGen
-# End time: 16:31:34 on Nov 09,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:34 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/bitgen_tb.v 
-# -- Compiling module bitgen_tb
-# 
-# Top level modules:
-# 	bitgen_tb
-# End time: 16:31:34 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:34 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/controller.v 
-# -- Compiling module controller
-# 
-# Top level modules:
-# 	controller
-# End time: 16:31:34 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:34 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/CPU.v 
-# -- Compiling module CPU
-# 
-# Top level modules:
-# 	CPU
-# End time: 16:31:34 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:34 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Datapath.v 
-# -- Compiling module datapath
-# 
-# Top level modules:
-# 	datapath
-# End time: 16:31:34 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:34 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/datapathFSM.v 
-# -- Compiling module datapathFSM
-# -- Compiling module flipflop
-# -- Compiling module hexTo7Seg
-# 
-# Top level modules:
-# 	datapathFSM
-# End time: 16:31:34 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:34 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/instruction_reg.v 
-# -- Compiling module instruction_reg
-# 
-# Top level modules:
-# 	instruction_reg
-# End time: 16:31:34 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:35 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/muxes.v 
-# -- Compiling module mux2
-# -- Compiling module mux4
-# -- Compiling module flopenr
-# -- Compiling module flopr
-# -- Compiling module zerodetect
-# 
-# Top level modules:
-# 	mux2
-# 	mux4
-# 	flopenr
-# 	flopr
-# 	zerodetect
-# End time: 16:31:35 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:35 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/pc_counter.v 
-# -- Compiling module pc_counter
-# 
-# Top level modules:
-# 	pc_counter
-# End time: 16:31:35 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:35 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/regfile.v 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 16:31:35 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:35 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v 
-# -- Compiling module sprite
-# 
-# Top level modules:
-# 	sprite
-# End time: 16:31:35 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:35 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v 
-# -- Compiling module rom_async
-# 
-# Top level modules:
-# 	rom_async
-# End time: 16:31:35 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:35 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga.v 
-# -- Compiling module vga
-# 
-# Top level modules:
-# 	vga
-# End time: 16:31:35 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:35 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/vga_tb.v 
-# -- Compiling module vga_tb
-# 
-# Top level modules:
-# 	vga_tb
-# End time: 16:31:35 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:31:36 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v 
-# -- Compiling module vga_control
-# 
-# Top level modules:
-# 	vga_control
-# End time: 16:31:36 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.bitgen_tb
-# End time: 16:31:53 on Nov 09,2023, Elapsed time: 0:11:24
-# Errors: 0, Warnings: 5
-# vsim work.bitgen_tb 
-# Start time: 16:31:53 on Nov 09,2023
-# Loading work.bitgen_tb
-# Loading work.BitGen
-# Loading work.vga_control
-# Loading work.sprite
-# Loading work.rom_async
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'h_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'v_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v(28): [PCDPC] - Port size (8) does not match connection size (6) for port 'addr'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/sprite_f/spr_rom File: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-add wave -position insertpoint sim:/bitgen_tb/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Luci  Hostname: PLOPTOP  ProcessID: 8216
-#           Attempting to use alternate WLF file "./wlft7xmi3q".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft7xmi3q
-add wave -position insertpoint sim:/bitgen_tb/dut/*
-add wave -position insertpoint sim:/bitgen_tb/dut/control/*
-add wave -position insertpoint sim:/bitgen_tb/dut/sprite_f/*
-add wave -position insertpoint sim:/bitgen_tb/dut/sprite_f/spr_rom/*
-run -all
-# Creating rom_async from init file 'letter_f.mem'.
-vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:44:48 on Nov 09,2023
-# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v 
-# -- Compiling module vga_control
-# 
-# Top level modules:
-# 	vga_control
-# End time: 16:44:48 on Nov 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.bitgen_tb
-# End time: 16:45:00 on Nov 09,2023, Elapsed time: 0:13:07
-# Errors: 0, Warnings: 5
-# vsim work.bitgen_tb 
-# Start time: 16:45:00 on Nov 09,2023
-# Loading work.bitgen_tb
-# Loading work.BitGen
-# Loading work.vga_control
-# Loading work.sprite
-# Loading work.rom_async
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'h_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'v_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v(28): [PCDPC] - Port size (8) does not match connection size (6) for port 'addr'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/sprite_f/spr_rom File: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-add wave -position insertpoint sim:/bitgen_tb/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Luci  Hostname: PLOPTOP  ProcessID: 8216
-#           Attempting to use alternate WLF file "./wlftdfxn67".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftdfxn67
-add wave -position insertpoint sim:/bitgen_tb/dut/control/*
-run -all
-# Creating rom_async from init file 'letter_f.mem'.
-add wave -position insertpoint sim:/bitgen_tb/dut/*
+#           Using alternate file: ./wlft7kjzk5
 restart
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'h_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'v_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v(28): [PCDPC] - Port size (8) does not match connection size (6) for port 'addr'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/sprite_f/spr_rom File: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
 run -all
 # Creating rom_async from init file 'letter_f.mem'.
-add wave -position insertpoint sim:/bitgen_tb/dut/sprite_f/*
-add wave -position insertpoint sim:/bitgen_tb/dut/sprite_f/spr_rom/*
+add wave -position insertpoint sim:/vga_tb/dut/*
+add wave -position insertpoint sim:/vga_tb/dut/bits/*
 restart
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'h_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'v_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v(28): [PCDPC] - Port size (8) does not match connection size (6) for port 'addr'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /bitgen_tb/dut/sprite_f/spr_rom File: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
 run -all
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
 # Creating rom_async from init file 'letter_f.mem'.
-vsim work.vga_tb
-# End time: 16:53:35 on Nov 09,2023, Elapsed time: 0:08:35
-# Errors: 0, Warnings: 11
-# vsim work.vga_tb 
-# Start time: 16:53:35 on Nov 09,2023
-# Loading work.vga_tb
-# Loading work.vga
-# Loading work.BitGen
-# Loading work.vga_control
-# Loading work.sprite
-# Loading work.rom_async
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'h_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/dut/bits/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/BitGen.v(19): [PCDPC] - Port size (10) does not match connection size (16) for port 'v_count'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v(5).
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/dut/bits/control File: C:/intelFPGA_lite/18.1/Bananachine/ALU/VgaControl.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite.v(28): [PCDPC] - Port size (8) does not match connection size (6) for port 'addr'. The port definition is at: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/dut/bits/sprite_f/spr_rom File: C:/intelFPGA_lite/18.1/Bananachine/ALU/Sprite_Rom.v
-add wave -position insertpoint sim:/vga_tb/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Luci  Hostname: PLOPTOP  ProcessID: 8216
-#           Attempting to use alternate WLF file "./wlftiyk9k1".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftiyk9k1
 run -all
-# Creating rom_async from init file 'letter_f.mem'.
-# End time: 16:55:32 on Nov 09,2023, Elapsed time: 0:01:57
-# Errors: 0, Warnings: 5
+# End time: 17:20:45 on Nov 14,2023, Elapsed time: 0:26:31
+# Errors: 1, Warnings: 2

@@ -16,6 +16,106 @@
 					"strict" : false
 				},
 				{
+					"name" : "blank_n",
+					"strict" : false
+				},
+				{
+					"name" : "red_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "red_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "red_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "red_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "red_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "red_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "red_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "red_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[7]",
+					"strict" : false
+				},
+				{
 					"name" : "clk_50MHz",
 					"strict" : false
 				},

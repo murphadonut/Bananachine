@@ -5,7 +5,6 @@ module vga #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 	);
 	
 	wire bright;
-	wire [COUNTER_BITS - 1 : 0] h_count, v_count;
 	
 	assign sync_n = 0;
 	assign blank_n = bright;

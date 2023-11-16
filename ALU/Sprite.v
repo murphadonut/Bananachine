@@ -2,7 +2,7 @@ module sprite #(
     parameter CORDW=16,      // signed coordinate width (bits)
     parameter H_RES=640,     // horizontal screen resolution (pixels)
     parameter SX_OFFS=2,     // horizontal screen offset (pixels)
-    parameter SPR_FILE="",   // sprite bitmap file ($readmemh format)
+    parameter SPR_FILE="letter_f.mem",   // sprite bitmap file ($readmemh format)
     parameter SPR_WIDTH=8,   // sprite bitmap width in pixels
     parameter SPR_HEIGHT=8,  // sprite bitmap height in pixels
     parameter SPR_SCALE=0,   // scale factor: 0=1x, 1=2x, 2=4x, 3=8x etc.
@@ -64,7 +64,7 @@ module sprite #(
    reg [2:0] state;
 
     always @(posedge clk) begin
-        if (line) begin  // prepare for new line
+        if (~line) begin  // prepare for new line
             state <= REG_POS;
             pix <= 0;
             drawing <= 0;
@@ -104,7 +104,7 @@ module sprite #(
             endcase
         end
 
-        if (rst) begin
+        if (~rst) begin
             state <= IDLE;
             spr_rom_addr <= 0;
             bmap_x <= 0;

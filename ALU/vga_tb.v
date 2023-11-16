@@ -18,6 +18,8 @@ module vga_tb();
 	
 	initial
 		begin
+		#2000 //give it some time to set up memory
+		
 			clear = 0;
 			#20;
 			clear = 1;

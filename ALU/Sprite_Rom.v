@@ -1,10 +1,9 @@
 module rom_async #(
     parameter WIDTH=8,
-    parameter DEPTH=256,
-    parameter INIT_F="",
-	 parameter ADDRW=8
+    parameter DEPTH=8,
+    parameter INIT_F=""
     ) (
-    input wire [ADDRW-1:0] addr,
+    input wire [$clog2(DEPTH)-1:0] addr,
     output reg [WIDTH-1:0] data
     );
 
@@ -18,5 +17,8 @@ module rom_async #(
         end
     end
 
-    always @(*) data = memory[addr];
+    always @(*)
+	 begin 
+	 data <= memory[addr];
+	 end
 endmodule

@@ -1,13 +1,13 @@
 module BitGen (
     input  wire clk_50m,      // 50 MHz clock
-    input  wire btn_rst_n,
-	 output      bright, // reset button
+    input  wire btn_rst_n,		// reset button
+	 output      bright, 
     output reg  vga_hsync,    // horizontal sync
     output reg  vga_vsync,    // vertical sync
     output reg  [7:0] vga_r,  // 4-bit VGA red
     output reg  [7:0] vga_g,  // 4-bit VGA green
     output reg  [7:0] vga_b,  // 4-bit VGA blue
-	 output wire  clk_25MHz			 // VGA clk
+	output wire  clk_25MHz		// VGA clk
     );
 
   // display sync signals and coordinates
@@ -78,7 +78,7 @@ module BitGen (
         .SPR_DATAW(SPR_DATAW)
         ) sprite_f (
         .clk(clk_25MHz),
-        .rst(rst_pix),
+        .rst(btn_rst_n),
         .line(line),
         .sx(sx),
         .sy(sy),
@@ -91,17 +91,17 @@ module BitGen (
     // paint colour: yellow sprite, blue background
     reg [7:0] paint_r, paint_g, paint_b;
     always @(*) begin
-        paint_r = (drawing && pix) ? 8'hF : 8'h1;
-        paint_g = (drawing && pix) ? 8'hC : 8'h3;
-        paint_b = (drawing && pix) ? 8'h0 : 8'h7;
+        paint_r = (drawing && pix) ? 8'b11111111 : 8'b00001111;
+        paint_g = (drawing && pix) ? 8'b11111111 : 8'b00001111;
+        paint_b = (drawing && pix) ? 8'b00001111 : 8'b11110000;
     end
 
     // display colour: paint colour but black in blanking interval
     reg [7:0] display_r, display_g, display_b;
     always @(*) begin
-        display_r = (de) ? paint_r : 8'h0;
-        display_g = (de) ? paint_g : 8'h0;
-        display_b = (de) ? paint_b : 8'h0;
+        display_r = (de) ? paint_r : 8'b00000000;
+        display_g = (de) ? paint_g : 8'b00000000;
+        display_b = (de) ? paint_b : 8'b00000000;
     end
 
     // VGA Pmod output

@@ -2,260 +2,100 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'clk_50MHz'
-Slack : -6.982
-TNS   : -140.478
-
-Type  : Slow 1100mV 85C Model Setup 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : -6.392
-TNS   : -6.392
-
-Type  : Slow 1100mV 85C Model Setup 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : -4.976
-TNS   : -4.976
-
 Type  : Slow 1100mV 85C Model Setup 'BitGen:bits|vga_control:control|clk_25MHz'
-Slack : -1.737
-TNS   : -2.758
+Slack : -6.849
+TNS   : -227.446
 
-Type  : Slow 1100mV 85C Model Hold 'clk_50MHz'
-Slack : 0.333
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.628
-TNS   : 0.000
+Type  : Slow 1100mV 85C Model Setup 'clk_50MHz'
+Slack : -4.080
+TNS   : -133.115
 
 Type  : Slow 1100mV 85C Model Hold 'BitGen:bits|vga_control:control|clk_25MHz'
-Slack : 0.844
+Slack : 0.148
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 1.533
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Recovery 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : -6.394
-TNS   : -6.394
-
-Type  : Slow 1100mV 85C Model Recovery 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : -5.193
-TNS   : -5.193
-
-Type  : Slow 1100mV 85C Model Removal 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.837
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Removal 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 1.560
+Type  : Slow 1100mV 85C Model Hold 'clk_50MHz'
+Slack : 0.364
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_50MHz'
-Slack : -0.879
-TNS   : -12.086
+Slack : -0.875
+TNS   : -18.450
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|clk_25MHz'
 Slack : -0.394
-TNS   : -1.030
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 0.312
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.401
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Setup 'clk_50MHz'
-Slack : -6.700
-TNS   : -133.929
-
-Type  : Slow 1100mV 0C Model Setup 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : -6.502
-TNS   : -6.502
-
-Type  : Slow 1100mV 0C Model Setup 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : -5.113
-TNS   : -5.113
+TNS   : -47.460
 
 Type  : Slow 1100mV 0C Model Setup 'BitGen:bits|vga_control:control|clk_25MHz'
-Slack : -1.729
-TNS   : -2.788
+Slack : -6.845
+TNS   : -224.374
 
-Type  : Slow 1100mV 0C Model Hold 'clk_50MHz'
-Slack : 0.021
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.661
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Setup 'clk_50MHz'
+Slack : -3.860
+TNS   : -122.628
 
 Type  : Slow 1100mV 0C Model Hold 'BitGen:bits|vga_control:control|clk_25MHz'
-Slack : 0.851
+Slack : 0.137
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 1.567
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Recovery 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : -6.452
-TNS   : -6.452
-
-Type  : Slow 1100mV 0C Model Recovery 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : -5.322
-TNS   : -5.322
-
-Type  : Slow 1100mV 0C Model Removal 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.880
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Removal 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 1.554
+Type  : Slow 1100mV 0C Model Hold 'clk_50MHz'
+Slack : 0.365
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_50MHz'
-Slack : -0.894
-TNS   : -12.951
+Slack : -0.870
+TNS   : -19.986
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|clk_25MHz'
 Slack : -0.394
-TNS   : -1.026
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 0.326
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.383
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Setup 'clk_50MHz'
-Slack : -4.345
-TNS   : -87.290
-
-Type  : Fast 1100mV 85C Model Setup 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : -3.213
-TNS   : -3.213
-
-Type  : Fast 1100mV 85C Model Setup 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : -2.271
-TNS   : -2.271
+TNS   : -46.467
 
 Type  : Fast 1100mV 85C Model Setup 'BitGen:bits|vga_control:control|clk_25MHz'
-Slack : -0.788
-TNS   : -1.159
+Slack : -3.620
+TNS   : -112.437
 
-Type  : Fast 1100mV 85C Model Hold 'clk_50MHz'
-Slack : 0.301
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.317
-TNS   : 0.000
+Type  : Fast 1100mV 85C Model Setup 'clk_50MHz'
+Slack : -3.330
+TNS   : -101.541
 
 Type  : Fast 1100mV 85C Model Hold 'BitGen:bits|vga_control:control|clk_25MHz'
-Slack : 0.453
+Slack : 0.039
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 0.986
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Recovery 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : -3.229
-TNS   : -3.229
-
-Type  : Fast 1100mV 85C Model Recovery 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : -2.413
-TNS   : -2.413
-
-Type  : Fast 1100mV 85C Model Removal 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.437
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 1.018
+Type  : Fast 1100mV 85C Model Hold 'clk_50MHz'
+Slack : 0.198
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_50MHz'
-Slack : -0.774
-TNS   : -2.929
+Slack : -0.776
+TNS   : -3.877
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|clk_25MHz'
-Slack : 0.158
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 0.432
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.457
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'clk_50MHz'
-Slack : -3.743
-TNS   : -74.925
-
-Type  : Fast 1100mV 0C Model Setup 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : -3.009
-TNS   : -3.009
-
-Type  : Fast 1100mV 0C Model Setup 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : -2.165
-TNS   : -2.165
+Slack : -0.068
+TNS   : -1.513
 
 Type  : Fast 1100mV 0C Model Setup 'BitGen:bits|vga_control:control|clk_25MHz'
-Slack : -0.653
-TNS   : -0.941
+Slack : -3.362
+TNS   : -100.528
 
-Type  : Fast 1100mV 0C Model Hold 'clk_50MHz'
-Slack : 0.205
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.303
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Setup 'clk_50MHz'
+Slack : -2.637
+TNS   : -81.107
 
 Type  : Fast 1100mV 0C Model Hold 'BitGen:bits|vga_control:control|clk_25MHz'
-Slack : 0.396
+Slack : 0.026
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 0.898
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Recovery 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : -3.015
-TNS   : -3.015
-
-Type  : Fast 1100mV 0C Model Recovery 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : -2.301
-TNS   : -2.301
-
-Type  : Fast 1100mV 0C Model Removal 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.410
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Removal 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 0.923
+Type  : Fast 1100mV 0C Model Hold 'clk_50MHz'
+Slack : 0.185
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_50MHz'
-Slack : -0.740
-TNS   : -2.899
+Slack : -0.736
+TNS   : -3.821
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|clk_25MHz'
-Slack : 0.160
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|h_count[0]'
-Slack : 0.442
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'BitGen:bits|vga_control:control|v_count[0]'
-Slack : 0.456
-TNS   : 0.000
+Slack : -0.019
+TNS   : -0.267
 
 ------------------------------------------------------------

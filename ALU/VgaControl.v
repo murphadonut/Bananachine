@@ -1,4 +1,4 @@
-module vga_control #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
+module vga_control #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 16)(
 		input clk_50MHz, clear,
 		output bright, 
 		output reg h_sync, v_sync, clk_25MHz,
@@ -64,8 +64,11 @@ module vga_control #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 					line = 1;
 					h_sync = 1;
 				end
-			else if (h_count == h_tdisp) line = 0; 
-			else if (h_count == h_tdisp + h_tfp) h_sync = 0;
+			else if (h_count == h_tdisp + h_tfp)
+			begin
+			h_sync = 0;
+			line = 0;
+			end
 			else if (h_count == h_tdisp + h_tfp + h_tpw) h_sync = 1;
 		end
 		
@@ -77,8 +80,11 @@ module vga_control #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 					frame = 1;
 					v_sync = 1;
 				end
-			else if (v_count == v_tdisp) frame = 0;
-			else if (v_count == v_tdisp + v_tfp) v_sync = 0;
+			else if (v_count == v_tdisp + v_tfp)
+			begin
+			v_sync = 0;
+			frame = 0;
+			end
 			else if (v_count == v_tdisp + v_tfp + v_tpw) v_sync = 1; //set high because it is not active
 		end
 endmodule 

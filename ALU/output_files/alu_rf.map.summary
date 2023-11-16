@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Nov 09 16:29:14 2023
+Analysis & Synthesis Status : Successful - Tue Nov 14 16:51:08 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : alu_rf
 Top-level Entity Name : vga
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 23
+Total registers : 108
 Total pins : 31
 Total virtual pins : 0
 Total block memory bits : 0
