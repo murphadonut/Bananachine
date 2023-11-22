@@ -1,5 +1,9 @@
 Flow report for alu_rf
+<<<<<<< Updated upstream
 Tue Nov 14 16:11:13 2023
+=======
+Tue Nov 21 17:47:22 2023
+>>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +44,26 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< Updated upstream
 ; Flow Status                     ; Successful - Tue Nov 14 16:11:13 2023       ;
+=======
+; Flow Status                     ; Successful - Tue Nov 21 17:47:22 2023       ;
+>>>>>>> Stashed changes
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu_rf                                      ;
 ; Top-level Entity Name           ; Bananachine                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
+<<<<<<< Updated upstream
 ; Logic utilization (in ALMs)     ; 1 / 32,070 ( < 1 % )                        ;
 ; Total registers                 ; 0                                           ;
 ; Total pins                      ; 2 / 457 ( < 1 % )                           ;
+=======
+; Logic utilization (in ALMs)     ; 126 / 32,070 ( < 1 % )                      ;
+; Total registers                 ; 111                                         ;
+; Total pins                      ; 31 / 457 ( 7 % )                            ;
+>>>>>>> Stashed changes
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -67,7 +81,11 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< Updated upstream
 ; Start date & time ; 11/14/2023 16:10:13 ;
+=======
+; Start date & time ; 11/21/2023 17:46:31 ;
+>>>>>>> Stashed changes
 ; Main task         ; Compilation         ;
 ; Revision Name     ; alu_rf              ;
 +-------------------+---------------------+
@@ -78,20 +96,28 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
+<<<<<<< Updated upstream
 ; COMPILER_SIGNATURE_ID                ; 140982220270901.170000341302868        ; --            ; --          ; --             ;
+=======
+; COMPILER_SIGNATURE_ID                ; 140982220270901.170061399102152        ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; vga_tb         ;
+>>>>>>> Stashed changes
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_rf_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Bananachine_tb ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                     ; --            ; --          ; eda_simulation ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Bananachine_tb                         ; --            ; --          ; eda_simulation ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; vga_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; vga_tb.v                               ; --            ; --          ; vga_tb         ;
 ; EDA_TEST_BENCH_FILE                  ; alu_rf_tb.v                            ; --            ; --          ; alu_rf_tb      ;
 ; EDA_TEST_BENCH_FILE                  ; Bananachine_tb.v                       ; --            ; --          ; Bananachine_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; vga_tb                                 ; --            ; --          ; vga_tb         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; alu_rf_tb                              ; --            ; --          ; alu_rf_tb      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Bananachine_tb                         ; --            ; --          ; Bananachine_tb ;
 ; EDA_TEST_BENCH_NAME                  ; alu_rf_tb                              ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; Bananachine_tb                         ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; vga_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
@@ -111,6 +137,7 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4782 MB             ; 00:00:05                           ;
 ; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4787 MB             ; 00:00:04                           ;
 ; Fitter               ; 00:00:21     ; 1.0                     ; 6478 MB             ; 00:00:18                           ;
@@ -118,6 +145,14 @@ refer to the applicable agreement for further details.
 ; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 5098 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4714 MB             ; 00:00:01                           ;
 ; Total                ; 00:00:45     ; --                      ; --                  ; 00:00:33                           ;
+=======
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4848 MB             ; 00:00:05                           ;
+; Fitter               ; 00:00:23     ; 1.0                     ; 6554 MB             ; 00:00:25                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4833 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.2                     ; 5137 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4720 MB             ; 00:00:01                           ;
+; Total                ; 00:00:46     ; --                      ; --                  ; 00:00:41                           ;
+>>>>>>> Stashed changes
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -127,7 +162,10 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
+<<<<<<< Updated upstream
 ; Analysis & Synthesis ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
+=======
+>>>>>>> Stashed changes
 ; Fitter               ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;

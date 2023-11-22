@@ -8,6 +8,7 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Data/GIT/Bananachine/ALU/simulation/modelsim
+<<<<<<< Updated upstream
 valu_rf
 Z1 !s110 1699422634
 !i10b 1
@@ -19,10 +20,24 @@ w1698984525
 8C:/Data/GIT/Bananachine/ALU/alu_rf.v
 FC:/Data/GIT/Bananachine/ALU/alu_rf.v
 L0 14
+=======
+vBitGen
+Z1 !s110 1700613782
+!i10b 1
+!s100 ^Y?UR2ooYlT6<]o4<Qa^o3
+IMn`GY6mFX^TSe_ATDa_^80
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1700613757
+8C:/Data/GIT/Bananachine/ALU/BitGen.v
+FC:/Data/GIT/Bananachine/ALU/BitGen.v
+L0 1
+>>>>>>> Stashed changes
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
+<<<<<<< Updated upstream
 Z4 !s108 1699422634.000000
 !s107 C:/Data/GIT/Bananachine/ALU/alu_rf.v|
 !s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/alu_rf.v|
@@ -60,12 +75,33 @@ R0
 w1699401056
 8C:/Data/GIT/Bananachine/ALU/Bananachine.v
 FC:/Data/GIT/Bananachine/ALU/Bananachine.v
+=======
+Z4 !s108 1700613782.000000
+!s107 C:/Data/GIT/Bananachine/ALU/BitGen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/BitGen.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU
+Z7 tCvgOpt 0
+n@bit@gen
+vclut_mem
+R1
+!i10b 1
+!s100 UcRj0G=88]cNlKUd4jKP`3
+Inh6jXDeOBo4]niJ<[74ZQ1
+R2
+R0
+w1700613116
+8C:/Data/GIT/Bananachine/ALU/clut_mem.v
+FC:/Data/GIT/Bananachine/ALU/clut_mem.v
+>>>>>>> Stashed changes
 L0 1
 R3
 r1
 !s85 0
 31
 R4
+<<<<<<< Updated upstream
 !s107 C:/Data/GIT/Bananachine/ALU/Bananachine.v|
 !s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/Bananachine.v|
 !i113 1
@@ -82,12 +118,119 @@ R0
 w1699422629
 8C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v
 FC:/Data/GIT/Bananachine/ALU/Bananachine_tb.v
+=======
+!s107 C:/Data/GIT/Bananachine/ALU/clut_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/clut_mem.v|
+!i113 1
+R5
+R6
+R7
+vrom_async
+R1
+!i10b 1
+!s100 A08;PDATEZWHd=F>AiEdE1
+I<1WW5_bRnM^HoN60n:0eR2
+R2
+R0
+Z8 w1700177729
+8C:/Data/GIT/Bananachine/ALU/Sprite_Rom.v
+FC:/Data/GIT/Bananachine/ALU/Sprite_Rom.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/GIT/Bananachine/ALU/Sprite_Rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/Sprite_Rom.v|
+!i113 1
+R5
+R6
+R7
+vsprite
+R1
+!i10b 1
+!s100 ^@mB]=8?g2>U8GAON:23L3
+I<e^4CGkZ>hd]KNMZb_FK=1
+R2
+R0
+w1700613690
+8C:/Data/GIT/Bananachine/ALU/Sprite.v
+FC:/Data/GIT/Bananachine/ALU/Sprite.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/GIT/Bananachine/ALU/Sprite.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/Sprite.v|
+!i113 1
+R5
+R6
+R7
+vvga
+R1
+!i10b 1
+!s100 X@7znkNVVjYlG2GA2^^l:2
+I>499Wd<Z_o9<8obTjO=>_1
+R2
+R0
+R8
+8C:/Data/GIT/Bananachine/ALU/vga.v
+FC:/Data/GIT/Bananachine/ALU/vga.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/GIT/Bananachine/ALU/vga.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/vga.v|
+!i113 1
+R5
+R6
+R7
+vvga_control
+R1
+!i10b 1
+!s100 WP3o@8J[]o3P0Y4]4e0=Q1
+IfI0P5nH2iGm`jPgnKYXkI0
+R2
+R0
+w1700454117
+8C:/Data/GIT/Bananachine/ALU/VgaControl.v
+FC:/Data/GIT/Bananachine/ALU/VgaControl.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/GIT/Bananachine/ALU/VgaControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/VgaControl.v|
+!i113 1
+R5
+R6
+R7
+vvga_tb
+R1
+!i10b 1
+!s100 kX_lCEc3@3eRU4<Y@6Bn72
+Ih0_llj:F2iGbzn?=8cG;>3
+R2
+R0
+R8
+8C:/Data/GIT/Bananachine/ALU/vga_tb.v
+FC:/Data/GIT/Bananachine/ALU/vga_tb.v
+>>>>>>> Stashed changes
 L0 2
 R3
 r1
 !s85 0
 31
 R4
+<<<<<<< Updated upstream
 !s107 C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v|
 !s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v|
 !i113 1
@@ -159,6 +302,13 @@ R5
 R6
 n@c@p@u
 vdatapath
+=======
+!s107 C:/Data/GIT/Bananachine/ALU/vga_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/vga_tb.v|
+!i113 1
+R5
+R6
+>>>>>>> Stashed changes
 R7
 !i10b 1
 !s100 ae:WOaiV77>3>KX9=_21Y3

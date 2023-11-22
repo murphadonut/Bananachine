@@ -1,5 +1,9 @@
 Timing Analyzer report for alu_rf
+<<<<<<< Updated upstream
 Tue Nov 14 16:11:12 2023
+=======
+Tue Nov 21 17:47:19 2023
+>>>>>>> Stashed changes
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -94,12 +98,22 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
+<<<<<<< Updated upstream
 ; Average used               ; 1.00        ;
+=======
+; Average used               ; 1.16        ;
+>>>>>>> Stashed changes
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+<<<<<<< Updated upstream
 ;     Processors 2-4         ;   0.1%      ;
+=======
+;     Processor 2            ;   5.5%      ;
+;     Processor 3            ;   5.3%      ;
+;     Processor 4            ;   5.2%      ;
+>>>>>>> Stashed changes
 +----------------------------+-------------+
 
 
@@ -108,7 +122,11 @@ refer to the applicable agreement for further details.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
+<<<<<<< Updated upstream
 ; alu_rf.sdc    ; OK     ; Tue Nov 14 16:11:10 2023 ;
+=======
+; alu_rf.sdc    ; OK     ; Tue Nov 21 17:47:14 2023 ;
+>>>>>>> Stashed changes
 +---------------+--------+--------------------------+
 
 
@@ -118,10 +136,22 @@ refer to the applicable agreement for further details.
 No clocks to report.
 
 
+<<<<<<< Updated upstream
 --------------------------------------
 ; Slow 1100mV 85C Model Fmax Summary ;
 --------------------------------------
 No paths to report.
+=======
++---------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                              ;
++------------+-----------------+-------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                ; Note ;
++------------+-----------------+-------------------------------------------+------+
+; 173.19 MHz ; 173.19 MHz      ; BitGen:bits|vga_control:control|clk_25MHz ;      ;
+; 209.95 MHz ; 209.95 MHz      ; clk_50MHz                                 ;      ;
++------------+-----------------+-------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+>>>>>>> Stashed changes
 
 
 ----------------------------------
@@ -130,6 +160,7 @@ No paths to report.
 HTML report is unavailable in plain text report export.
 
 
+<<<<<<< Updated upstream
 ---------------------------------------
 ; Slow 1100mV 85C Model Setup Summary ;
 ---------------------------------------
@@ -140,6 +171,26 @@ No paths to report.
 ; Slow 1100mV 85C Model Hold Summary ;
 --------------------------------------
 No paths to report.
+=======
++--------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                                ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; BitGen:bits|vga_control:control|clk_25MHz ; -6.302 ; -219.748      ;
+; clk_50MHz                                 ; -4.544 ; -130.328      ;
++-------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                ;
++-------------------------------------------+-------+---------------+
+; Clock                                     ; Slack ; End Point TNS ;
++-------------------------------------------+-------+---------------+
+; BitGen:bits|vga_control:control|clk_25MHz ; 0.127 ; 0.000         ;
+; clk_50MHz                                 ; 0.365 ; 0.000         ;
++-------------------------------------------+-------+---------------+
+>>>>>>> Stashed changes
 
 
 ------------------------------------------
@@ -154,10 +205,21 @@ No paths to report.
 No paths to report.
 
 
+<<<<<<< Updated upstream
 -----------------------------------------------------
 ; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
 -----------------------------------------------------
 No paths to report.
+=======
++--------------------------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary                  ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; clk_50MHz                                 ; -0.833 ; -18.436       ;
+; BitGen:bits|vga_control:control|clk_25MHz ; -0.394 ; -43.705       ;
++-------------------------------------------+--------+---------------+
+>>>>>>> Stashed changes
 
 
 -----------------------------------------------
@@ -166,6 +228,7 @@ No paths to report.
 No synchronizer chains to report.
 
 
+<<<<<<< Updated upstream
 -------------------------------------
 ; Slow 1100mV 0C Model Fmax Summary ;
 -------------------------------------
@@ -182,6 +245,37 @@ No paths to report.
 ; Slow 1100mV 0C Model Hold Summary ;
 -------------------------------------
 No paths to report.
+=======
++---------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                               ;
++------------+-----------------+-------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                ; Note ;
++------------+-----------------+-------------------------------------------+------+
+; 179.37 MHz ; 179.37 MHz      ; BitGen:bits|vga_control:control|clk_25MHz ;      ;
+; 216.5 MHz  ; 216.5 MHz       ; clk_50MHz                                 ;      ;
++------------+-----------------+-------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                                 ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; BitGen:bits|vga_control:control|clk_25MHz ; -6.516 ; -217.159      ;
+; clk_50MHz                                 ; -4.415 ; -121.231      ;
++-------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                 ;
++-------------------------------------------+-------+---------------+
+; Clock                                     ; Slack ; End Point TNS ;
++-------------------------------------------+-------+---------------+
+; BitGen:bits|vga_control:control|clk_25MHz ; 0.117 ; 0.000         ;
+; clk_50MHz                                 ; 0.369 ; 0.000         ;
++-------------------------------------------+-------+---------------+
+>>>>>>> Stashed changes
 
 
 -----------------------------------------
@@ -196,10 +290,21 @@ No paths to report.
 No paths to report.
 
 
+<<<<<<< Updated upstream
 ----------------------------------------------------
 ; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
 ----------------------------------------------------
 No paths to report.
+=======
++--------------------------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary                   ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; clk_50MHz                                 ; -0.827 ; -20.073       ;
+; BitGen:bits|vga_control:control|clk_25MHz ; -0.394 ; -42.929       ;
++-------------------------------------------+--------+---------------+
+>>>>>>> Stashed changes
 
 
 ----------------------------------------------
@@ -208,6 +313,7 @@ No paths to report.
 No synchronizer chains to report.
 
 
+<<<<<<< Updated upstream
 ---------------------------------------
 ; Fast 1100mV 85C Model Setup Summary ;
 ---------------------------------------
@@ -218,6 +324,26 @@ No paths to report.
 ; Fast 1100mV 85C Model Hold Summary ;
 --------------------------------------
 No paths to report.
+=======
++--------------------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                                ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; clk_50MHz                                 ; -3.662 ; -101.334      ;
+; BitGen:bits|vga_control:control|clk_25MHz ; -3.175 ; -105.958      ;
++-------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                ;
++-------------------------------------------+-------+---------------+
+; Clock                                     ; Slack ; End Point TNS ;
++-------------------------------------------+-------+---------------+
+; BitGen:bits|vga_control:control|clk_25MHz ; 0.023 ; 0.000         ;
+; clk_50MHz                                 ; 0.198 ; 0.000         ;
++-------------------------------------------+-------+---------------+
+>>>>>>> Stashed changes
 
 
 ------------------------------------------
@@ -232,10 +358,21 @@ No paths to report.
 No paths to report.
 
 
+<<<<<<< Updated upstream
 -----------------------------------------------------
 ; Fast 1100mV 85C Model Minimum Pulse Width Summary ;
 -----------------------------------------------------
 No paths to report.
+=======
++--------------------------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary                  ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; clk_50MHz                                 ; -0.727 ; -3.698        ;
+; BitGen:bits|vga_control:control|clk_25MHz ; -0.005 ; -0.005        ;
++-------------------------------------------+--------+---------------+
+>>>>>>> Stashed changes
 
 
 -----------------------------------------------
@@ -244,6 +381,7 @@ No paths to report.
 No synchronizer chains to report.
 
 
+<<<<<<< Updated upstream
 --------------------------------------
 ; Fast 1100mV 0C Model Setup Summary ;
 --------------------------------------
@@ -254,6 +392,26 @@ No paths to report.
 ; Fast 1100mV 0C Model Hold Summary ;
 -------------------------------------
 No paths to report.
+=======
++--------------------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                                 ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; clk_50MHz                                 ; -3.157 ; -80.925       ;
+; BitGen:bits|vga_control:control|clk_25MHz ; -3.057 ; -94.952       ;
++-------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                 ;
++-------------------------------------------+-------+---------------+
+; Clock                                     ; Slack ; End Point TNS ;
++-------------------------------------------+-------+---------------+
+; BitGen:bits|vga_control:control|clk_25MHz ; 0.010 ; 0.000         ;
+; clk_50MHz                                 ; 0.187 ; 0.000         ;
++-------------------------------------------+-------+---------------+
+>>>>>>> Stashed changes
 
 
 -----------------------------------------
@@ -268,10 +426,21 @@ No paths to report.
 No paths to report.
 
 
+<<<<<<< Updated upstream
 ----------------------------------------------------
 ; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
 ----------------------------------------------------
 No paths to report.
+=======
++--------------------------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary                   ;
++-------------------------------------------+--------+---------------+
+; Clock                                     ; Slack  ; End Point TNS ;
++-------------------------------------------+--------+---------------+
+; clk_50MHz                                 ; -0.696 ; -3.644        ;
+; BitGen:bits|vga_control:control|clk_25MHz ; 0.033  ; 0.000         ;
++-------------------------------------------+--------+---------------+
+>>>>>>> Stashed changes
 
 
 ----------------------------------------------
@@ -280,6 +449,7 @@ No paths to report.
 No synchronizer chains to report.
 
 
+<<<<<<< Updated upstream
 +----------------------------------------------------------------------------+
 ; Multicorner Timing Analysis Summary                                        ;
 +------------------+-------+------+----------+---------+---------------------+
@@ -288,6 +458,20 @@ No synchronizer chains to report.
 ; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
 ; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
 +------------------+-------+------+----------+---------+---------------------+
+=======
++----------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                      ;
++--------------------------------------------+----------+-------+----------+---------+---------------------+
+; Clock                                      ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack                           ; -6.516   ; 0.010 ; N/A      ; N/A     ; -0.833              ;
+;  BitGen:bits|vga_control:control|clk_25MHz ; -6.516   ; 0.010 ; N/A      ; N/A     ; -0.394              ;
+;  clk_50MHz                                 ; -4.544   ; 0.187 ; N/A      ; N/A     ; -0.833              ;
+; Design-wide TNS                            ; -350.076 ; 0.0   ; 0.0      ; 0.0     ; -63.002             ;
+;  BitGen:bits|vga_control:control|clk_25MHz ; -219.748 ; 0.000 ; N/A      ; N/A     ; -43.705             ;
+;  clk_50MHz                                 ; -130.328 ; 0.000 ; N/A      ; N/A     ; -20.073             ;
++--------------------------------------------+----------+-------+----------+---------+---------------------+
+>>>>>>> Stashed changes
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -335,10 +519,37 @@ No synchronizer chains to report.
 +-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
+<<<<<<< Updated upstream
 -------------------
 ; Clock Transfers ;
 -------------------
 Nothing to report.
+=======
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                   ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
+; From Clock                                ; To Clock                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
+; BitGen:bits|vga_control:control|clk_25MHz ; BitGen:bits|vga_control:control|clk_25MHz ; 4941     ; 0        ; 0        ; 0        ;
+; clk_50MHz                                 ; BitGen:bits|vga_control:control|clk_25MHz ; 526      ; 0        ; 0        ; 0        ;
+; BitGen:bits|vga_control:control|clk_25MHz ; clk_50MHz                                 ; 33       ; 33       ; 0        ; 0        ;
+; clk_50MHz                                 ; clk_50MHz                                 ; 1040     ; 0        ; 0        ; 0        ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                    ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
+; From Clock                                ; To Clock                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
+; BitGen:bits|vga_control:control|clk_25MHz ; BitGen:bits|vga_control:control|clk_25MHz ; 4941     ; 0        ; 0        ; 0        ;
+; clk_50MHz                                 ; BitGen:bits|vga_control:control|clk_25MHz ; 526      ; 0        ; 0        ; 0        ;
+; BitGen:bits|vga_control:control|clk_25MHz ; clk_50MHz                                 ; 33       ; 33       ; 0        ; 0        ;
+; clk_50MHz                                 ; clk_50MHz                                 ; 1040     ; 0        ; 0        ; 0        ;
++-------------------------------------------+-------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+>>>>>>> Stashed changes
 
 
 ---------------
@@ -360,6 +571,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
+<<<<<<< Updated upstream
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
 ; Unconstrained Output Ports      ; 0     ; 0    ;
@@ -367,13 +579,102 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 
 
+=======
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 70    ; 70   ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 17    ; 17   ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                       ;
++-------------------------------------------+-------------------------------------------+------+-------------+
+; Target                                    ; Clock                                     ; Type ; Status      ;
++-------------------------------------------+-------------------------------------------+------+-------------+
+; BitGen:bits|vga_control:control|clk_25MHz ; BitGen:bits|vga_control:control|clk_25MHz ; Base ; Constrained ;
+; clk_50MHz                                 ; clk_50MHz                                 ; Base ; Constrained ;
++-------------------------------------------+-------------------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; clear      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; blank_n      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue_out[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue_out[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue_out[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue_out[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; clk_25MHz    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green_out[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green_out[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green_out[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green_out[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; h_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; v_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; clear      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; blank_n      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue_out[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue_out[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue_out[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue_out[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; clk_25MHz    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green_out[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green_out[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green_out[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green_out[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; h_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; v_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
+
+
+>>>>>>> Stashed changes
 +--------------------------+
 ; Timing Analyzer Messages ;
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+<<<<<<< Updated upstream
     Info: Processing started: Tue Nov 14 16:11:09 2023
+=======
+    Info: Processing started: Tue Nov 21 17:47:12 2023
+>>>>>>> Stashed changes
 Info: Command: quartus_sta alu_rf -c alu_rf
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -381,13 +682,20 @@ Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332104): Reading SDC File: 'alu_rf.sdc'
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+<<<<<<< Updated upstream
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
 Warning (332068): No clocks defined in design.
+=======
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name BitGen:bits|vga_control:control|clk_25MHz BitGen:bits|vga_control:control|clk_25MHz
+    Info (332105): create_clock -period 1.000 -name clk_50MHz clk_50MHz
+>>>>>>> Stashed changes
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info (332159): No clocks to report
 Info: Analyzing Slow 1100mV 85C Model
+<<<<<<< Updated upstream
 Info (332140): No fmax paths to report
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
@@ -436,5 +744,100 @@ Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Processing ended: Tue Nov 14 16:11:12 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
+=======
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -6.302
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.302            -219.748 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):    -4.544            -130.328 clk_50MHz 
+Info (332146): Worst-case hold slack is 0.127
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.127               0.000 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     0.365               0.000 clk_50MHz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.833
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.833             -18.436 clk_50MHz 
+    Info (332119):    -0.394             -43.705 BitGen:bits|vga_control:control|clk_25MHz 
+Info: Analyzing Slow 1100mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -6.516
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.516            -217.159 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):    -4.415            -121.231 clk_50MHz 
+Info (332146): Worst-case hold slack is 0.117
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.117               0.000 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     0.369               0.000 clk_50MHz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.827
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.827             -20.073 clk_50MHz 
+    Info (332119):    -0.394             -42.929 BitGen:bits|vga_control:control|clk_25MHz 
+Info: Analyzing Fast 1100mV 85C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.662
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.662            -101.334 clk_50MHz 
+    Info (332119):    -3.175            -105.958 BitGen:bits|vga_control:control|clk_25MHz 
+Info (332146): Worst-case hold slack is 0.023
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.023               0.000 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     0.198               0.000 clk_50MHz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.727
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.727              -3.698 clk_50MHz 
+    Info (332119):    -0.005              -0.005 BitGen:bits|vga_control:control|clk_25MHz 
+Info: Analyzing Fast 1100mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.157
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.157             -80.925 clk_50MHz 
+    Info (332119):    -3.057             -94.952 BitGen:bits|vga_control:control|clk_25MHz 
+Info (332146): Worst-case hold slack is 0.010
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.010               0.000 BitGen:bits|vga_control:control|clk_25MHz 
+    Info (332119):     0.187               0.000 clk_50MHz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.696
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.696              -3.644 clk_50MHz 
+    Info (332119):     0.033               0.000 BitGen:bits|vga_control:control|clk_25MHz 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 5137 megabytes
+    Info: Processing ended: Tue Nov 21 17:47:19 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
+>>>>>>> Stashed changes
 
 
