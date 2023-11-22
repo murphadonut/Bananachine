@@ -1,0 +1,108 @@
+# starting loop
+
+.start
+#create player  player coordinate x = 160 y = 96
+MOVI $160 r1
+LUI $23 r3
+ADDI $112 r3
+STOR r1 r3
+ADDI $4 r3
+STOR r1 r3
+
+#create platforms
+MOVI $150 r2
+ADDI $4 r3
+STOR r1 r3
+ADDI $4 r3
+STOR r2 r3
+#platform 2
+LUI $1 r1
+ADDI $224 r1
+MOVI $10 r2
+ADDI $4 r3
+STOR r1 r3
+ADDI $4 r3
+STOR r2 r3
+#check button input
+.loop
+LUI $255 r3
+ADDI $255 r3
+LOAD r1 r3
+MOVI $1 r2
+CMP r1 r2
+BEQ $2
+BUC .loop
+MOVI $255 r8
+.gameloop
+#check input buttons and move character
+LUI $255 r2
+ADDI $255 r2
+LOAD r1 r2
+CMP r0 r1
+BEQ noButton # jump as no buttons are pressed
+MOVI $2 r2 # check if left
+CMP r2 r1
+BNE rightCheck # jump if not left
+#handle case where left is pushed
+MOVI $0 r3
+LUI $23 r3
+ADDI $112 r3
+LOAD r4 r3 #store player x coordinate in r4
+SUBI r4 5 #subtract 5 from x coordinate
+#check if right
+.rightCheck
+MOVI $3 r2 # check if right
+CMP r2 r1
+BNE  setx # jump if not right
+MOVI $0 r3
+LUI $23 r3
+ADDI $112 r3
+LOAD r4 r3 #store player x coordinate in r4
+ADDI r4 5 #subtract 5 from x coordinate
+.setx
+STOR r4 r3 #store new x player value
+.noButton
+
+#move platforms
+
+#check if speed is positive or negative
+LUI %128 r1
+CMP r8 r1
+BGE .negativespeed
+LUI $23 r3
+ADDI $120 r3 # memory location for y coordinate 1st platform
+LOAD r4 r3
+SUB r4 r8 #subtract the speed from the 1st platform
+STOR r4 r3
+ADDI $4 r3
+LOAD r4 r3
+SUB r4 r8 #subtract the speed from the 2nd platform
+BUC endofPlatform
+.negativespeed
+
+LUI $23 r3
+ADDI $120 r3 # memory location for y coordinate 1st platform
+LOAD r4 r3
+ADD r4 r8 #subtract the speed from the 1st platform
+STOR r4 r3
+ADDI $4 r3
+LOAD r4 r3
+ADD r4 r8 #subtract the speed from the 2nd platform
+.endofPlatform
+
+
+#decrement speed
+SUBI $1 r8
+#check if platforms out of bounds
+#if out of bounds create new platform
+#check if player is out of bounds
+#check collisions
+
+
+MOVI $0 r1
+LUI $23 r3
+ADDI $112 r3
+STOR r1 r3
+
+
+#jump back to check for button input

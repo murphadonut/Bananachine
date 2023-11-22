@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Nov 07 22:59:05 2023
+Analysis & Synthesis Status : Successful - Tue Nov 21 18:31:07 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : alu_rf
 Top-level Entity Name : Bananachine
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 2
+Total pins : 5
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

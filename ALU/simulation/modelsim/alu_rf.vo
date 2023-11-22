@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "11/07/2023 22:59:36"
+// DATE "11/21/2023 18:32:52"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -30,13 +30,22 @@
 
 module Bananachine (
 	clk,
-	reset);
+	reset,
+	left,
+	right,
+	start);
 input 	clk;
 input 	reset;
+input 	left;
+input 	right;
+input 	start;
 
 // Design Ports Information
 // clk	=>  Location: PIN_AF14,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // reset	=>  Location: PIN_AA14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// left	=>  Location: PIN_AB26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// right	=>  Location: PIN_AB22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// start	=>  Location: PIN_AD19,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -52,6 +61,9 @@ tri1 devpor;
 tri1 devoe;
 wire \clk~input_o ;
 wire \reset~input_o ;
+wire \left~input_o ;
+wire \right~input_o ;
+wire \start~input_o ;
 wire \~QUARTUS_CREATED_GND~I_combout ;
 
 
@@ -77,7 +89,40 @@ defparam \reset~input .bus_hold = "false";
 defparam \reset~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LABCELL_X31_Y59_N0
+// Location: IOIBUF_X89_Y9_N55
+cyclonev_io_ibuf \left~input (
+	.i(left),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\left~input_o ));
+// synopsys translate_off
+defparam \left~input .bus_hold = "false";
+defparam \left~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y9_N4
+cyclonev_io_ibuf \right~input (
+	.i(right),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\right~input_o ));
+// synopsys translate_off
+defparam \right~input .bus_hold = "false";
+defparam \right~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X76_Y0_N18
+cyclonev_io_ibuf \start~input (
+	.i(start),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\start~input_o ));
+// synopsys translate_off
+defparam \start~input .bus_hold = "false";
+defparam \start~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X52_Y35_N0
 cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 

@@ -6,7 +6,7 @@ module basic_mem
 (
 	input [WIDTH - 1 : 0] data_b,
 	input [WIDTH - 1 : 0] addr_a, addr_b,
-	input we_b, clk, reset, reading_for_load,
+	input we_b, clk, reset, reading_for_load,left,right,start,
 	output reg [WIDTH - 1 : 0] q_a, q_b
 );
 
@@ -15,7 +15,7 @@ module basic_mem
 	
 	initial begin
 	$display("Loading memory");
-	$readmemb("memory.dat", ram);
+	$readmemh("memory.dat", ram);
 	$display("done loading");
 	end
 
@@ -23,7 +23,25 @@ module basic_mem
 	always @ (posedge clk)
 	begin
 		if(~reset) q_a <= 0;
-		else q_a <= ram[addr_a];
+		else begin
+			if(addr_a ==65535)begin
+				if(~start)begin
+				q_a <= 1;
+				end
+				else if(~left)begin
+				q_a <= 2;
+				end
+				else if(~right)begin
+				q_a <= 3;
+				end
+				else begin
+				q_a <= 0;
+				end
+			end
+			else begin
+			q_a <= ram[addr_a];
+			end
+		end
 	end 
 
 	// Port B 

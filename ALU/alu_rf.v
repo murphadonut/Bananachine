@@ -121,6 +121,12 @@ module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
 				
 				// LSHI
 				//6'b100000:
+				
+								6'b111100: begin
+				if(b [7] == 1'b0) alu_out <= a+b;
+				else alu_out <= a - (~b + 9'b100000001);
+				end
+
 
 				// LUI
 				6'b111111: alu_out <= b<<8;	
