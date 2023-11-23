@@ -111,15 +111,16 @@ module controller#(parameter WIDTH = 16, ALU_CONT_BITS = 6, REG_BITS = 4, OP_COD
 			// 3rd cycle
 			ALU_EX: 
 			begin
-				// All of this stuff sets the 4th cycle
-				// For all ALU instructions, except for the ones below.
-				if(op_code == 0 || is_immediate) next_state <= ALU;
-				
-				// For BCOND
-				else if (op_code == 4'b1100) next_state <= BCOND;
-				
+				if (op_code == 4'b1000) next_state <= LSH;
 				// For LUI
 				else if (op_code == 4'b1111) next_state <= LUI;
+				// All of this stuff sets the 4th cycle
+				// For all ALU instructions, except for the ones below.
+				else if(op_code == 0 || is_immediate) next_state <= ALU;
+				
+				// For BCOND
+				else if (op_code == 4'b1100) next_state <= WRITE;
+				
 				
 				// Otherwise, it will use the ext_op_code
 				else next_state <= {op_code, ext_op_code};
@@ -169,7 +170,9 @@ module controller#(parameter WIDTH = 16, ALU_CONT_BITS = 6, REG_BITS = 4, OP_COD
 					alu_A_src <= 1'b1;									// Set source for input a into ALU to current register loaded in A
 					alu_B_src <= is_immediate;							// Set source for input a into ALU to current register loaded in B if 0 or to immediate
 					alu_cont <= {2'b00, is_immediate ? op_code : ext_op_code};				// Set ALU op code
+					if((ext_op_code != 4'b1011) && (op_code != 4'b1011))begin
 					reg_write <= 1'b1;									// Enable writing to register A
+					end
 					reg_write_src <= 1'b0;								// Specify where data is coming from, ALU in this case
 				end
 					
@@ -199,11 +202,23 @@ module controller#(parameter WIDTH = 16, ALU_CONT_BITS = 6, REG_BITS = 4, OP_COD
 				
 				JCOND:;
 				
-				LSH: alu_cont <= {2'b10, op_code};
+				LSH:begin
+				alu_cont <= {2'b10, op_code};
+				alu_A_src <= 1'b1;
+				alu_B_src <= 1'b1;
+				reg_write <= 1'b1;									// Enable writing to register A
+				reg_write_src <= 1'b0;	
+				end
 				
-				BCOND: alu_cont <= {2'b11, op_code};
 				
-				LUI:alu_cont <= {2'b11, op_code};
+				LUI: begin 
+				alu_A_src <= 1'b1;
+				alu_B_src <= 1'b1;
+				alu_cont <= {6'b111111};
+				reg_write <= 1'b1;
+				reg_write_src <= 1'b0;
+				
+				end
 				
 				// 5th cycle
 				// This is where the source for PC is decided and where it is allowed to update next cycle
@@ -218,6 +233,14 @@ module controller#(parameter WIDTH = 16, ALU_CONT_BITS = 6, REG_BITS = 4, OP_COD
 						begin
 							if (conds[A_index]) pc_src <= 2'b01;	// Check if the right flags are set for the specified condition
 							else pc_src <= 2'b10;						// Increment program counter like normal
+						end
+						ALU_EX:
+						begin
+							alu_A_src <= 1'b0;
+							alu_B_src <= 1'b1;
+							alu_cont <= {2'b11, op_code};
+							if (conds[A_index]) pc_src <= 2'b00; 	// Check if the right flags are set for the specified condition increment by alu
+							else  pc_src <= 2'b10;						//increment normally
 						end
 						
 						default: pc_src <= 2'b10;						// Program counter should just increment
