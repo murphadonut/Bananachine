@@ -1,9 +1,22 @@
-module Bananachine #(parameter WIDTH = 16, REG_BITS = 4, OP_CODE_BITS = 4, EXT_OP_CODE_BITS = 4, ALU_CONT_BITS = 6)(
-		input clk, reset, left, right, start
+module Bananachine #(
+	parameter WIDTH = 16, 
+	parameter REG_BITS = 4, 
+	parameter OP_CODE_BITS = 4, 
+	parameter EXT_OP_CODE_BITS = 4, 
+	parameter ALU_CONT_BITS = 6) (
+	
+	input clk, 
+	input reset, 
+	input left, 
+	input right, 
+	input start
 	);
 
-	wire write_to_memory, reading_for_load;
-	wire [WIDTH - 1 : 0] data_from_mem, mem_address, data_to_mem_store;
+	wire write_to_memory;
+	wire reading_for_load;
+	wire [WIDTH - 1 : 0] data_from_mem;
+	wire [WIDTH - 1 : 0] mem_address;
+	wire [WIDTH - 1 : 0] data_to_mem_store;
 
 	
 	CPU #(WIDTH) cpu(
@@ -18,7 +31,6 @@ module Bananachine #(parameter WIDTH = 16, REG_BITS = 4, OP_CODE_BITS = 4, EXT_O
 	
 	basic_mem #(WIDTH)
 		mem( 
-		//.data_a(),
 		.data_b(data_to_mem_store),
 		//.addr_a(), 
 		.addr_b(mem_address),

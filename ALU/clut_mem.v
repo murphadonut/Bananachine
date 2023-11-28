@@ -1,7 +1,15 @@
-module clut_mem #(parameter COLOR_BITS = 4, parameter NUM_OF_COLORS = 16, parameter LINE_SIZE = 3) (
-	input 		we, clk_read, clk_write,
-	input 		[COLOR_BITS * LINE_SIZE - 1 : 0] data_in,
-	input 		[COLOR_BITS - 1 : 0] addr_read, addr_write,
+module clut_mem #(
+	parameter COLOR_BITS = 4, 
+	parameter NUM_OF_COLORS = 16, 
+	parameter LINE_SIZE = 3) (
+	
+	input we, 
+	input clk_read, 
+	input clk_write,
+	input [COLOR_BITS * LINE_SIZE - 1 : 0] data_in,
+	input [COLOR_BITS - 1 : 0] addr_read, 
+	input [COLOR_BITS - 1 : 0] addr_write,
+	
 	output reg 	[COLOR_BITS * LINE_SIZE - 1 : 0] data_out
 	
 );

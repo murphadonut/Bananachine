@@ -1,8 +1,8 @@
 module CPU #(parameter WIDTH = 16, REG_BITS = 4, OP_CODE_BITS = 4, EXT_OP_CODE_BITS = 4, ALU_CONT_BITS = 6)(
-	input clk, reset,
-	input [WIDTH - 1 : 0] data_from_mem,
-	output write_to_memory, reading_for_load,
-	output [WIDTH - 1 : 0] mem_address, data_to_mem_store
+	input 	clk, reset,
+	input 	[WIDTH - 1 : 0] data_from_mem,
+	output 	write_to_memory, reading_for_load,
+	output 	[WIDTH - 1 : 0] mem_address, data_to_mem_store
 	);
 	
 	

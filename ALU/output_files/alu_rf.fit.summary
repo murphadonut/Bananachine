@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Fitter Status : Successful - Tue Nov 14 16:11:01 2023
 =======
 Fitter Status : Successful - Tue Nov 21 17:47:02 2023
 >>>>>>> Stashed changes
+=======
+Fitter Status : Successful - Tue Nov 21 18:32:15 2023
+>>>>>>> Alex-Working-branch
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : alu_rf
 Top-level Entity Name : Bananachine
@@ -12,12 +16,16 @@ Timing Models : Final
 <<<<<<< Updated upstream
 Logic utilization (in ALMs) : 1 / 32,070 ( < 1 % )
 Total registers : 0
+<<<<<<< HEAD
 Total pins : 2 / 457 ( < 1 % )
 =======
 Logic utilization (in ALMs) : 126 / 32,070 ( < 1 % )
 Total registers : 111
 Total pins : 31 / 457 ( 7 % )
 >>>>>>> Stashed changes
+=======
+Total pins : 5 / 457 ( 1 % )
+>>>>>>> Alex-Working-branch
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )

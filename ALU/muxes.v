@@ -1,14 +1,23 @@
-module mux2 #(parameter WIDTH = 16)(
-	input 	selection,
-	input 	[WIDTH - 1 : 0] input_1, input_2,
+module mux2 #(
+	parameter WIDTH = 16) (
+	input selection,
+	input [WIDTH - 1 : 0] input_1, 
+	input [WIDTH - 1 : 0] input_2,
+	
 	output 	[WIDTH - 1 : 0] mux2_output);
+	
 	assign mux2_output = selection ? input_2 : input_1;
 endmodule 
 
 
-module mux4 #(parameter WIDTH = 16)(
+module mux4 #(
+	parameter WIDTH = 16) (
+	
    input      [1:0] selection,
-	input      [WIDTH-1:0] input_1, input_2, input_3, input_4,
+	input [WIDTH-1:0] input_1, 
+	input [WIDTH-1:0] input_2, 
+	input [WIDTH-1:0] input_3, 
+	input [WIDTH-1:0] input_4,
    output reg [WIDTH-1:0] mux4_output);
    always @(*)
       case(selection)
@@ -38,10 +47,4 @@ module flopr #(parameter WIDTH = 16)(
    always @(posedge clk)
       if   (~reset) q <= 0;
       else q <= d;
-endmodule 
-
-module zerodetect #(parameter WIDTH = 16)(
-	input [WIDTH-1:0] a, 
-   output y);
-   assign y = (a==0);
 endmodule 

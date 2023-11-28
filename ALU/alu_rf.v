@@ -8,13 +8,15 @@
 // the last 4 bits are the op-code as specified in the ISA
 // a = Rdest
 // b = Rsrc
-
-
-// TODO: finish LUI, LSH, and LSHI. Then test
-module alu_rf #(parameter WIDTH = 16, ALU_CONT_BITS = 6)(
+module alu_rf #(
+	parameter WIDTH = 16, 
+	parameter ALU_CONT_BITS = 6) (
+	
 	input 		reset,
-	input			[WIDTH - 1 : 0] 				a, b, 
+	input			[WIDTH - 1 : 0] a, 
+	input			[WIDTH - 1 : 0] b,
 	input			[ALU_CONT_BITS - 1 : 0] 	alu_cont, 
+	
 	output reg	[WIDTH - 1 : 0] 				alu_out, 
 	output		[WIDTH - 1 : 0] 				psr_flags
 	);

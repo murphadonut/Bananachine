@@ -1,8 +1,15 @@
-module regfile #(parameter WIDTH = 16, REG_BITS = 4)( // REGBITS is 5 as there are 17 registers
-	input		clk, reg_write,
-	input		[REG_BITS - 1:0] A_index, B_index, 
-	input		[WIDTH - 1:0]   write_data, 
-	output	[WIDTH - 1:0]   A_data, B_data
+module regfile #(
+	parameter WIDTH = 16, 
+	parameter REG_BITS = 4)(
+	
+	input		clk, 								// Controls when interactions with memory happen, on rising clock edge
+	input		reg_write,						// Enable writing data to register?
+	input		[REG_BITS - 1:0] A_index, 	// Current register we are to output to A_data
+	input		[REG_BITS - 1:0] B_index,  // Current register we are to output to B_data
+	input		[WIDTH - 1:0] write_data, 	// Whats getting written to register A
+	
+	output	[WIDTH - 1:0] A_data, 		// Data stored in register A
+	output	[WIDTH - 1:0] B_data			// Data stored in register B
 	);
 
    reg  [WIDTH-1:0] RAM [(1<<REG_BITS)-1:0];

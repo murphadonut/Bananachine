@@ -1,9 +1,13 @@
 Assembler report for alu_rf
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Tue Nov 14 16:11:08 2023
 =======
 Tue Nov 21 17:47:11 2023
 >>>>>>> Stashed changes
+=======
+Tue Nov 21 18:32:36 2023
+>>>>>>> Alex-Working-branch
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,7 +18,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Data/GIT/Bananachine/ALU/output_files/alu_rf.sof
+  5. Assembler Device Options: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/output_files/alu_rf.sof
   6. Assembler Messages
 
 
@@ -41,11 +45,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 ; Assembler Status      ; Successful - Tue Nov 14 16:11:08 2023 ;
 =======
 ; Assembler Status      ; Successful - Tue Nov 21 17:47:11 2023 ;
 >>>>>>> Stashed changes
+=======
+; Assembler Status      ; Successful - Tue Nov 21 18:32:36 2023 ;
+>>>>>>> Alex-Working-branch
 ; Revision Name         ; alu_rf                                ;
 ; Top-level Entity Name ; Bananachine                           ;
 ; Family                ; Cyclone V                             ;
@@ -60,15 +68,16 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------+
-; Assembler Generated Files                           ;
-+-----------------------------------------------------+
-; File Name                                           ;
-+-----------------------------------------------------+
-; C:/Data/GIT/Bananachine/ALU/output_files/alu_rf.sof ;
-+-----------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                           ;
++-------------------------------------------------------------------------------------+
+; File Name                                                                           ;
++-------------------------------------------------------------------------------------+
+; C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/output_files/alu_rf.sof ;
++-------------------------------------------------------------------------------------+
 
 
+<<<<<<< HEAD
 +-------------------------------------------------------------------------------+
 ; Assembler Device Options: C:/Data/GIT/Bananachine/ALU/output_files/alu_rf.sof ;
 +----------------+--------------------------------------------------------------+
@@ -82,6 +91,16 @@ refer to the applicable agreement for further details.
 ; Checksum       ; 0x00B3B28F                                                   ;
 >>>>>>> Stashed changes
 +----------------+--------------------------------------------------------------+
+=======
++---------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/output_files/alu_rf.sof ;
++----------------+----------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                      ;
++----------------+----------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00AF4BBA                                                                                   ;
+; Checksum       ; 0x00AF4BBA                                                                                   ;
++----------------+----------------------------------------------------------------------------------------------+
+>>>>>>> Alex-Working-branch
 
 
 +--------------------+
@@ -90,6 +109,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     Info: Processing started: Tue Nov 14 16:11:02 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off alu_rf -c alu_rf
@@ -109,5 +129,15 @@ Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:05
 >>>>>>> Stashed changes
+=======
+    Info: Processing started: Tue Nov 21 18:32:18 2023
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off alu_rf -c alu_rf
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Tue Nov 21 18:32:36 2023
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:08
+>>>>>>> Alex-Working-branch
 
 

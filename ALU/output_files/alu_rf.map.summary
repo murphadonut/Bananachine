@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Analysis & Synthesis Status : Successful - Tue Nov 14 16:10:39 2023
 =======
 Analysis & Synthesis Status : Successful - Tue Nov 21 17:46:38 2023
 >>>>>>> Stashed changes
+=======
+Analysis & Synthesis Status : Successful - Tue Nov 21 18:31:07 2023
+>>>>>>> Alex-Working-branch
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : alu_rf
 Top-level Entity Name : Bananachine
@@ -10,11 +14,15 @@ Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 <<<<<<< Updated upstream
 Total registers : 0
+<<<<<<< HEAD
 Total pins : 2
 =======
 Total registers : 111
 Total pins : 31
 >>>>>>> Stashed changes
+=======
+Total pins : 5
+>>>>>>> Alex-Working-branch
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
