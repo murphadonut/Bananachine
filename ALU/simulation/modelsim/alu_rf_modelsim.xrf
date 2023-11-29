@@ -1,9 +1,5 @@
 vendor_name = ModelSim
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 source_file = 1, C:/Data/GIT/Bananachine/ALU/teleport16_4b.mem
->>>>>>> Stashed changes
 source_file = 1, C:/Data/GIT/Bananachine/ALU/memory.dat
 source_file = 1, C:/Data/GIT/Bananachine/ALU/basic_mem.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/datapath.v
@@ -19,34 +15,6 @@ source_file = 1, C:/Data/GIT/Bananachine/ALU/pc_counter.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/Bananachine.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/alu_rf.sdc
-<<<<<<< Updated upstream
-source_file = 1, C:/Data/GIT/Bananachine/ALU/db/alu_rf.cbx.xml
-=======
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/memory.dat
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/basic_mem.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/datapath.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/regfile.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Reg.dat
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf_tb.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/CPU.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/muxes.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/instruction_reg.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/controller.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/pc_counter.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Bananachine.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/Bananachine_tb.v
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/alu_rf.sdc
-source_file = 1, C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/db/alu_rf.cbx.xml
->>>>>>> Alex-Working-branch
-design_name = Bananachine
-instance = comp, \clk~input , clk~input, Bananachine, 1
-instance = comp, \reset~input , reset~input, Bananachine, 1
-instance = comp, \left~input , left~input, Bananachine, 1
-instance = comp, \right~input , right~input, Bananachine, 1
-instance = comp, \start~input , start~input, Bananachine, 1
-instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, Bananachine, 1
-=======
 source_file = 1, C:/Data/GIT/Bananachine/ALU/Sprite.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/Sprite_Rom.v
 source_file = 1, C:/Data/GIT/Bananachine/ALU/BitGen.v
@@ -420,4 +388,3 @@ instance = comp, \bits|clut_mem|data_out[3] , bits|clut_mem|data_out[3], vga, 1
 instance = comp, \bits|display_b[7]~3 , bits|display_b[7]~3, vga, 1
 instance = comp, \bits|vga_b[7] , bits|vga_b[7], vga, 1
 instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, vga, 1
->>>>>>> Stashed changes

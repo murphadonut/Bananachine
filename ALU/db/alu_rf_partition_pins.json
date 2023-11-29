@@ -2,9 +2,6 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-<<<<<<< Updated upstream
-			"pins" : []
-=======
 			"pins" : [
 				{
 					"name" : "clk_25MHz",
@@ -79,7 +76,6 @@
 					"strict" : false
 				}
 			]
->>>>>>> Stashed changes
 		}
 	]
 }

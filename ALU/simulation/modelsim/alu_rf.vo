@@ -16,15 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-// DATE "11/14/2023 16:11:13"
-=======
-// DATE "11/21/2023 17:47:22"
->>>>>>> Stashed changes
-=======
-// DATE "11/21/2023 18:32:52"
->>>>>>> Alex-Working-branch
+// DATE "11/28/2023 19:01:06"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -36,24 +28,60 @@
 
 `timescale 1 ps/ 1 ps
 
-module Bananachine (
-	clk,
-	reset,
-	left,
-	right,
-	start);
-input 	clk;
-input 	reset;
-input 	left;
-input 	right;
-input 	start;
+module vga (
+	clk_50MHz,
+	clear,
+	clk_25MHz,
+	h_sync,
+	v_sync,
+	sync_n,
+	blank_n,
+	red_out,
+	green_out,
+	blue_out);
+input 	clk_50MHz;
+input 	clear;
+output 	clk_25MHz;
+output 	h_sync;
+output 	v_sync;
+output 	sync_n;
+output 	blank_n;
+output 	[7:0] red_out;
+output 	[7:0] green_out;
+output 	[7:0] blue_out;
 
 // Design Ports Information
-// clk	=>  Location: PIN_AF14,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// reset	=>  Location: PIN_AA14,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// left	=>  Location: PIN_AB26,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// right	=>  Location: PIN_AB22,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// start	=>  Location: PIN_AD19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk_25MHz	=>  Location: PIN_A11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// h_sync	=>  Location: PIN_B11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// v_sync	=>  Location: PIN_D11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sync_n	=>  Location: PIN_C10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// blank_n	=>  Location: PIN_F10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// red_out[0]	=>  Location: PIN_A13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// red_out[1]	=>  Location: PIN_C13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// red_out[2]	=>  Location: PIN_E13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// red_out[3]	=>  Location: PIN_B12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// red_out[4]	=>  Location: PIN_C12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// red_out[5]	=>  Location: PIN_D12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// red_out[6]	=>  Location: PIN_E12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// red_out[7]	=>  Location: PIN_F13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// green_out[0]	=>  Location: PIN_J9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// green_out[1]	=>  Location: PIN_J10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// green_out[2]	=>  Location: PIN_H12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// green_out[3]	=>  Location: PIN_G10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// green_out[4]	=>  Location: PIN_G11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// green_out[5]	=>  Location: PIN_G12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// green_out[6]	=>  Location: PIN_F11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// green_out[7]	=>  Location: PIN_E11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// blue_out[0]	=>  Location: PIN_B13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// blue_out[1]	=>  Location: PIN_G13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// blue_out[2]	=>  Location: PIN_H13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// blue_out[3]	=>  Location: PIN_F14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// blue_out[4]	=>  Location: PIN_H14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// blue_out[5]	=>  Location: PIN_F15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// blue_out[6]	=>  Location: PIN_G15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// blue_out[7]	=>  Location: PIN_J14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk_50MHz	=>  Location: PIN_AF14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clear	=>  Location: PIN_Y16,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -67,16 +95,7 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \clk~input_o ;
-wire \reset~input_o ;
-wire \left~input_o ;
-wire \right~input_o ;
-wire \start~input_o ;
 wire \~QUARTUS_CREATED_GND~I_combout ;
-<<<<<<< Updated upstream
-
-
-=======
 wire \clk_50MHz~input_o ;
 wire \bits|control|clk_25MHz~0_combout ;
 wire \clear~input_o ;
@@ -870,23 +889,17 @@ defparam \blue_out[7]~output .open_drain_output = "false";
 defparam \blue_out[7]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
->>>>>>> Stashed changes
 // Location: IOIBUF_X32_Y0_N1
-cyclonev_io_ibuf \clk~input (
-	.i(clk),
+cyclonev_io_ibuf \clk_50MHz~input (
+	.i(clk_50MHz),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\clk~input_o ));
+	.o(\clk_50MHz~input_o ));
 // synopsys translate_off
-defparam \clk~input .bus_hold = "false";
-defparam \clk~input .simulate_z_as = "z";
+defparam \clk_50MHz~input .bus_hold = "false";
+defparam \clk_50MHz~input .simulate_z_as = "z";
 // synopsys translate_on
 
-<<<<<<< Updated upstream
-// Location: IOIBUF_X36_Y0_N1
-cyclonev_io_ibuf \reset~input (
-	.i(reset),
-=======
 // Location: LABCELL_X35_Y66_N27
 cyclonev_lcell_comb \bits|control|clk_25MHz~0 (
 // Equation(s):
@@ -914,19 +927,14 @@ defparam \bits|control|clk_25MHz~0 .shared_arith = "off";
 // Location: IOIBUF_X40_Y0_N18
 cyclonev_io_ibuf \clear~input (
 	.i(clear),
->>>>>>> Stashed changes
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\reset~input_o ));
+	.o(\clear~input_o ));
 // synopsys translate_off
-defparam \reset~input .bus_hold = "false";
-defparam \reset~input .simulate_z_as = "z";
+defparam \clear~input .bus_hold = "false";
+defparam \clear~input .simulate_z_as = "z";
 // synopsys translate_on
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-// Location: LABCELL_X31_Y59_N0
-=======
 // Location: FF_X35_Y68_N59
 dffeas \bits|control|clk_25MHz (
 	.clk(\clk_50MHz~input_o ),
@@ -8434,43 +8442,6 @@ defparam \bits|vga_b[7] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X39_Y27_N3
->>>>>>> Stashed changes
-=======
-// Location: IOIBUF_X89_Y9_N55
-cyclonev_io_ibuf \left~input (
-	.i(left),
-	.ibar(gnd),
-	.dynamicterminationcontrol(gnd),
-	.o(\left~input_o ));
-// synopsys translate_off
-defparam \left~input .bus_hold = "false";
-defparam \left~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X89_Y9_N4
-cyclonev_io_ibuf \right~input (
-	.i(right),
-	.ibar(gnd),
-	.dynamicterminationcontrol(gnd),
-	.o(\right~input_o ));
-// synopsys translate_off
-defparam \right~input .bus_hold = "false";
-defparam \right~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X76_Y0_N18
-cyclonev_io_ibuf \start~input (
-	.i(start),
-	.ibar(gnd),
-	.dynamicterminationcontrol(gnd),
-	.o(\start~input_o ));
-// synopsys translate_off
-defparam \start~input .bus_hold = "false";
-defparam \start~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: MLABCELL_X52_Y35_N0
->>>>>>> Alex-Working-branch
 cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 

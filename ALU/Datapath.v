@@ -47,7 +47,7 @@ module datapath #(											// Instantiated by CPU
 	
 	// Incrementer by one for program counter
 	pc_counter #(WIDTH)
-	pc_counter(
+	pc_counter_i(
 		.clk(clk),												// Input: clock signal
 		.reset(reset),											// Input: resets incremented_pc to zero
 		.current_pc(reg_pc),									// Input: Current state of program counter
@@ -66,7 +66,7 @@ module datapath #(											// Instantiated by CPU
 	 
 	// Register file
 	regfile #(WIDTH, REG_BITS) 
-	regfile(
+	regfile_i(
 		.clk(clk), 											// Input: clock signal
 		.reg_write(reg_write), 							// Input: write register A to register file?
 		.A_index(A_index),								// Input: access which register? (1-15), 0 reserved
@@ -148,7 +148,7 @@ module datapath #(											// Instantiated by CPU
 	
 	// ALU unit
 	alu_rf #(WIDTH, ALU_CONT_BITS) 	
-	alu_rf(
+	alu_rf_i(
 		.reset(reset),
 		.a(alu_A_in), 										// Input: source for first value in alu
 		.b(alu_B_in), 										// Input: second source for alu
@@ -159,7 +159,7 @@ module datapath #(											// Instantiated by CPU
 	
 	// Instruction register
 	instruction_reg #(WIDTH, REG_BITS, OP_CODE_BITS, EXT_OP_CODE_BITS)
-	instruction_reg(
+	instruction_reg_i(
 		.clk(clk),
 		.reset(reset),
 		.instruction_en(instruction_en),
