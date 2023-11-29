@@ -1,4 +1,4 @@
-module regfile #(
+module reg_file #(
 	parameter WIDTH = 16, 
 	parameter REG_BITS = 4)(
 	
@@ -17,7 +17,7 @@ module regfile #(
 	// Load register file change file location
 	initial begin
 		$display("Loading register file");
-		$readmemb("Reg.dat", RAM); 
+		$readmemb("reg.dat", RAM); 
 		$display("done with RF load"); 
 	end
 

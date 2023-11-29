@@ -21,7 +21,7 @@ module clut_mem #(
 	// Load the color pallet file, will be different for everyone
 	initial begin
 		$display("Loading color pallete");
-		$readmemh("teleport16_4b.mem", ram);
+		$readmemh("palette.mem", ram);
 		$display("done loading");
     end
 	

@@ -1,4 +1,4 @@
-module BitGen (
+module bit_gen (
     input  wire clk_50m,      // 50 MHz clock
     input  wire btn_rst_n,		// reset button
 	 output      bright, 

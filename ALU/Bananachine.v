@@ -1,4 +1,4 @@
-module Bananachine #(
+module bananachine #(
 	parameter WIDTH = 16, 
 	parameter REG_BITS = 4, 
 	parameter OP_CODE_BITS = 4, 
@@ -19,7 +19,7 @@ module Bananachine #(
 	wire [WIDTH - 1 : 0] data_to_mem_store;
 
 	
-	CPU #(WIDTH) cpu(
+	cpu #(WIDTH) cpu(
 		.clk(clk), 
 		.reset(reset),
 		.data_from_mem(data_from_mem),

@@ -1,38 +1,38 @@
 |vga
 clk_50MHz => clk_50MHz.IN1
 clear => clear.IN1
-clk_25MHz <= BitGen:bits.clk_25MHz
-h_sync <= BitGen:bits.vga_hsync
-v_sync <= BitGen:bits.vga_vsync
-sync_n <= <GND>
-blank_n <= BitGen:bits.bright
-red_out[0] <= BitGen:bits.vga_r
-red_out[1] <= BitGen:bits.vga_r
-red_out[2] <= BitGen:bits.vga_r
-red_out[3] <= BitGen:bits.vga_r
-red_out[4] <= BitGen:bits.vga_r
-red_out[5] <= BitGen:bits.vga_r
-red_out[6] <= BitGen:bits.vga_r
-red_out[7] <= BitGen:bits.vga_r
-green_out[0] <= BitGen:bits.vga_g
-green_out[1] <= BitGen:bits.vga_g
-green_out[2] <= BitGen:bits.vga_g
-green_out[3] <= BitGen:bits.vga_g
-green_out[4] <= BitGen:bits.vga_g
-green_out[5] <= BitGen:bits.vga_g
-green_out[6] <= BitGen:bits.vga_g
-green_out[7] <= BitGen:bits.vga_g
-blue_out[0] <= BitGen:bits.vga_b
-blue_out[1] <= BitGen:bits.vga_b
-blue_out[2] <= BitGen:bits.vga_b
-blue_out[3] <= BitGen:bits.vga_b
-blue_out[4] <= BitGen:bits.vga_b
-blue_out[5] <= BitGen:bits.vga_b
-blue_out[6] <= BitGen:bits.vga_b
-blue_out[7] <= BitGen:bits.vga_b
+clk_25MHz << bit_gen:bit_gen.clk_25MHz
+h_sync << bit_gen:bit_gen.vga_hsync
+v_sync << bit_gen:bit_gen.vga_vsync
+sync_n << <GND>
+blank_n << bit_gen:bit_gen.bright
+red_out[0] << bit_gen:bit_gen.vga_r
+red_out[1] << bit_gen:bit_gen.vga_r
+red_out[2] << bit_gen:bit_gen.vga_r
+red_out[3] << bit_gen:bit_gen.vga_r
+red_out[4] << bit_gen:bit_gen.vga_r
+red_out[5] << bit_gen:bit_gen.vga_r
+red_out[6] << bit_gen:bit_gen.vga_r
+red_out[7] << bit_gen:bit_gen.vga_r
+green_out[0] << bit_gen:bit_gen.vga_g
+green_out[1] << bit_gen:bit_gen.vga_g
+green_out[2] << bit_gen:bit_gen.vga_g
+green_out[3] << bit_gen:bit_gen.vga_g
+green_out[4] << bit_gen:bit_gen.vga_g
+green_out[5] << bit_gen:bit_gen.vga_g
+green_out[6] << bit_gen:bit_gen.vga_g
+green_out[7] << bit_gen:bit_gen.vga_g
+blue_out[0] << bit_gen:bit_gen.vga_b
+blue_out[1] << bit_gen:bit_gen.vga_b
+blue_out[2] << bit_gen:bit_gen.vga_b
+blue_out[3] << bit_gen:bit_gen.vga_b
+blue_out[4] << bit_gen:bit_gen.vga_b
+blue_out[5] << bit_gen:bit_gen.vga_b
+blue_out[6] << bit_gen:bit_gen.vga_b
+blue_out[7] << bit_gen:bit_gen.vga_b
 
 
-|vga|BitGen:bits
+|vga|bit_gen:bit_gen
 clk_50m => clk_50m.IN1
 btn_rst_n => btn_rst_n.IN2
 bright <= vga_control:control.bright
@@ -65,7 +65,7 @@ vga_b[7] <= vga_b[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clk_25MHz <= clk_25MHz.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|BitGen:bits|vga_control:control
+|vga|bit_gen:bit_gen|vga_control:control
 clk_50MHz => clk_25MHz~reg0.CLK
 clk_50MHz => v_count[0]~reg0.CLK
 clk_50MHz => v_count[1]~reg0.CLK
@@ -172,7 +172,7 @@ frame <= frame$latch.DB_MAX_OUTPUT_PORT_TYPE
 line <= line$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|BitGen:bits|sprite:sprite_f
+|vga|bit_gen:bit_gen|sprite:sprite_f
 clk => cnt_x[0].CLK
 clk => cnt_x[1].CLK
 clk => cnt_x[2].CLK
@@ -439,7 +439,7 @@ pix[3] <= pix[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 drawing <= drawing~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vga|BitGen:bits|sprite:sprite_f|rom_async:spr_rom
+|vga|bit_gen:bit_gen|sprite:sprite_f|rom_async:spr_rom
 addr[0] => memory.RADDR
 addr[1] => memory.RADDR1
 addr[2] => memory.RADDR2
@@ -452,7 +452,7 @@ data[2] <= memory.DATAOUT2
 data[3] <= memory.DATAOUT3
 
 
-|vga|BitGen:bits|clut_mem:clut_mem
+|vga|bit_gen:bit_gen|clut_mem:clut_mem
 we => ram.we_a.DATAIN
 we => ram.WE
 clk_read => data_out[0]~reg0.CLK

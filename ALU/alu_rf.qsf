@@ -94,31 +94,6 @@ set_location_assignment PIN_C13 -to red_out[1]
 set_location_assignment PIN_A13 -to red_out[0]
 set_location_assignment PIN_C10 -to sync_n
 set_location_assignment PIN_D11 -to v_sync
-set_global_assignment -name SOURCE_FILE teleport16_4b.mem
-set_global_assignment -name LICENSE_FILE memory.dat
-set_global_assignment -name VERILOG_FILE basic_mem.v
-set_global_assignment -name VERILOG_FILE datapath.v
-set_global_assignment -name VERILOG_FILE regfile.v
-set_global_assignment -name LICENSE_FILE Reg.dat
-set_global_assignment -name VERILOG_FILE alu_rf.v
-set_global_assignment -name VERILOG_FILE alu_rf_tb.v
-set_global_assignment -name VERILOG_FILE CPU.v
-set_global_assignment -name VERILOG_FILE muxes.v
-set_global_assignment -name VERILOG_FILE instruction_reg.v
-set_global_assignment -name VERILOG_FILE controller.v
-set_global_assignment -name VERILOG_FILE pc_counter.v
-set_global_assignment -name VERILOG_FILE Bananachine.v
-set_global_assignment -name VERILOG_FILE Bananachine_tb.v
-set_global_assignment -name SDC_FILE alu_rf.sdc
-set_global_assignment -name VERILOG_FILE Sprite.v
-set_global_assignment -name VERILOG_FILE Sprite_Rom.v
-set_global_assignment -name VERILOG_FILE BitGen.v
-set_global_assignment -name VERILOG_FILE vga.v
-set_global_assignment -name VERILOG_FILE VgaControl.v
-set_global_assignment -name SOURCE_FILE letter_f.mem
-set_global_assignment -name VERILOG_FILE vga_tb.v
-set_global_assignment -name VERILOG_FILE bitgen_tb.v
-set_global_assignment -name VERILOG_FILE clut_mem.v
 set_global_assignment -name EDA_TEST_BENCH_NAME vga_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id vga_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME vga_tb -section_id vga_tb
@@ -128,4 +103,26 @@ set_global_assignment -name EDA_TEST_BENCH_FILE Bananachine_tb.v -section_id Ban
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE reg_file.v
+set_global_assignment -name VERILOG_FILE vga_control.v
+set_global_assignment -name VERILOG_FILE bit_gen.v
+set_global_assignment -name VERILOG_FILE rom_async.v
+set_global_assignment -name VERILOG_FILE sprite.v
+set_global_assignment -name VERILOG_FILE bananachine_tb.v
+set_global_assignment -name VERILOG_FILE bananachine.v
+set_global_assignment -name VERILOG_FILE cpu.v
+set_global_assignment -name LICENSE_FILE reg.dat
+set_global_assignment -name SOURCE_FILE palette.mem
+set_global_assignment -name LICENSE_FILE memory.dat
+set_global_assignment -name VERILOG_FILE basic_mem.v
+set_global_assignment -name VERILOG_FILE datapath.v
+set_global_assignment -name VERILOG_FILE alu_rf.v
+set_global_assignment -name VERILOG_FILE muxes.v
+set_global_assignment -name VERILOG_FILE instruction_reg.v
+set_global_assignment -name VERILOG_FILE controller.v
+set_global_assignment -name VERILOG_FILE pc_counter.v
+set_global_assignment -name SDC_FILE alu_rf.sdc
+set_global_assignment -name VERILOG_FILE vga.v
+set_global_assignment -name SOURCE_FILE letter_f.mem
+set_global_assignment -name VERILOG_FILE clut_mem.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,5 +1,5 @@
 
-State Machine - |vga|BitGen:bits|sprite:sprite_f|state
+State Machine - |vga|bit_gen:bit_gen|sprite:sprite_f|state
 Name state.WAIT_DATA state.SPR_LINE state.WAIT_POS state.ACTIVE state.REG_POS state.IDLE 
 state.IDLE 0 0 0 0 0 0 
 state.REG_POS 0 0 0 0 1 1 

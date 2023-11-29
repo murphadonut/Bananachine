@@ -1,5 +1,5 @@
 `timescale 1 ns / 1 ns
-module Bananachine_tb();
+module bananachine_tb();
 	reg clk, reset;
 	Bananachine bm(clk, reset);
 	
