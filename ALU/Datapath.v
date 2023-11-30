@@ -65,8 +65,8 @@ module datapath #(											// Instantiated by CPU
 	);
 	 
 	// Register file
-	regfile #(WIDTH, REG_BITS) 
-	regfile_i(
+	reg_file #(WIDTH, REG_BITS) 
+	reg_file(
 		.clk(clk), 											// Input: clock signal
 		.reg_write(reg_write), 							// Input: write register A to register file?
 		.A_index(A_index),								// Input: access which register? (1-15), 0 reserved
