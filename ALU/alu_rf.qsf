@@ -104,10 +104,11 @@ set_location_assignment PIN_B11 -to vga_h_sync
 set_location_assignment PIN_AA15 -to left
 set_location_assignment PIN_W15 -to right
 set_location_assignment PIN_Y16 -to start
+set_global_assignment -name SOURCE_FILE monkeBIG.mem
+set_global_assignment -name SOURCE_FILE monke.mem
 set_global_assignment -name SOURCE_FILE letter_m.mem
 set_global_assignment -name VERILOG_FILE vga_tb.v
 set_global_assignment -name SOURCE_FILE real_banana.mem
-set_global_assignment -name SOURCE_FILE banana.mem
 set_global_assignment -name VERILOG_FILE reg_file.v
 set_global_assignment -name VERILOG_FILE vga_control.v
 set_global_assignment -name VERILOG_FILE bit_gen.v

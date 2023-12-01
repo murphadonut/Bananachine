@@ -52,7 +52,7 @@ module bit_gen (
     localparam SPR_DRAWH  = SPR_HEIGHT * 2**SPR_SCALE;  // draw height
     localparam SPR_SPX    = 4;  // horizontal speed (pixels/frame)
     localparam SPR_FILE   = "real_banana.mem";  // bitmap file
-	 localparam SPR_FILE2	= "letter_f.mem";
+	 localparam SPR_FILE2	= "real_banana.mem";
 
     // draw sprite at position (sprx,spry)
     reg signed [CORDW-1:0] sprx, spry;
@@ -125,10 +125,10 @@ module bit_gen (
 	 sprite #(
 		  .CORDW(CORDW),
         .H_RES(H_RES),
-        .SPR_FILE("letter_m.mem"),
-        .SPR_WIDTH(SPR_WIDTH),
-        .SPR_HEIGHT(SPR_HEIGHT),
-        .SPR_SCALE(SPR_SCALE),
+        .SPR_FILE("monkeBIG.mem"),
+        .SPR_WIDTH(32),
+        .SPR_HEIGHT(20),
+        .SPR_SCALE(2),
         .SPR_DATAW(SPR_DATAW)
         ) sprite_f3 (
         .clk(clk_25MHz),
