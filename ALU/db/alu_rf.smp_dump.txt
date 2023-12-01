@@ -1,4 +1,13 @@
 
+State Machine - |bananachine|vga:vga|bit_gen:bit_gen|sprite:sprite_f3|state
+Name state.WAIT_DATA state.SPR_LINE state.WAIT_POS state.ACTIVE state.REG_POS state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.REG_POS 0 0 0 0 1 1 
+state.ACTIVE 0 0 0 1 0 1 
+state.WAIT_POS 0 0 1 0 0 1 
+state.SPR_LINE 0 1 0 0 0 1 
+state.WAIT_DATA 1 0 0 0 0 1 
+
 State Machine - |bananachine|vga:vga|bit_gen:bit_gen|sprite:sprite_f2|state
 Name state.WAIT_DATA state.SPR_LINE state.WAIT_POS state.ACTIVE state.REG_POS state.IDLE 
 state.IDLE 0 0 0 0 0 0 

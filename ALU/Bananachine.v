@@ -6,7 +6,7 @@ module bananachine #(
 	parameter ALU_CONT_BITS = 6,
 	parameter H_RES = 640,
 	parameter V_RES = 480,
-	parameter COUNTER_BITS = 10
+	parameter COUNTER_BITS = 10,
 	parameter MX = 6000, 
 	parameter MY = 6004, 
 	parameter P1X = 6008, 

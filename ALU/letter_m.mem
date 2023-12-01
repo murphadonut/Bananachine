@@ -1,8 +1,10 @@
-F F F F F F F F
-1 F F F F F F 1
-1 1 F F F F 1 1
-1 1 1 F 1 1 1 1
-1 1 1 1 1 1 1 1
-1 1 F 1 1 F 1 1
-1 1 F F F F 1 1
-1 1 F F F F 1 1
+F F F F F F F F F F F F F F F F
+1 F F F F F F 1 1 F F F F F F 1
+1 1 F F F F 1 1 1 1 F F F F 1 1
+1 1 1 F 1 1 1 1 1 1 1 F 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 F 1 1 F 1 1 1 1 F 1 1 F 1 1
+1 1 F F F F 1 1 1 1 F F F F 1 1
+1 1 F F F F 1 1 1 1 F F F F 1 1
+F F F F F F F F F F F F F F F F
+F F F F F F F F F F F F F F F F

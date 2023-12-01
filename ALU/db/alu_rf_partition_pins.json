@@ -64,6 +64,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "vga_blue[7]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
