@@ -8,557 +8,156 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Data/GIT/Bananachine/ALU/simulation/modelsim
-<<<<<<< Updated upstream
-valu_rf
-Z1 !s110 1699422634
+vbit_gen
+!s110 1701389618
 !i10b 1
-!s100 D_3lK6edV=FV`55OAS>mg0
-I:Hi`]PWfTDhK2:57H0PFT1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s100 o0f5K_gM<;]i[l5ae29cJ2
+I4@Sn^<4W1^kOWLdJne^]d2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1698984525
-8C:/Data/GIT/Bananachine/ALU/alu_rf.v
-FC:/Data/GIT/Bananachine/ALU/alu_rf.v
-L0 14
-=======
-vBitGen
-Z1 !s110 1700613782
-!i10b 1
-!s100 ^Y?UR2ooYlT6<]o4<Qa^o3
-IMn`GY6mFX^TSe_ATDa_^80
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1700613757
-8C:/Data/GIT/Bananachine/ALU/BitGen.v
-FC:/Data/GIT/Bananachine/ALU/BitGen.v
+w1701389596
+8C:/Data/GIT/Bananachine/ALU/bit_gen.v
+FC:/Data/GIT/Bananachine/ALU/bit_gen.v
 L0 1
->>>>>>> Stashed changes
-Z3 OV;L;10.5b;63
+Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
-<<<<<<< Updated upstream
-Z4 !s108 1699422634.000000
-!s107 C:/Data/GIT/Bananachine/ALU/alu_rf.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/alu_rf.v|
+!s108 1701389618.000000
+!s107 C:/Data/GIT/Bananachine/ALU/bit_gen.v|
+!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/bit_gen.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
-valu_rf_tb
-R1
-!i10b 1
-!s100 ?mJ?b17k;EYbj<H:jg8T53
-IWLS_`oil97R^QSXLg]_;`3
-R2
-R0
-w1697934012
-8C:/Data/GIT/Bananachine/ALU/alu_rf_tb.v
-FC:/Data/GIT/Bananachine/ALU/alu_rf_tb.v
-L0 3
-R3
-r1
-!s85 0
-31
-R4
-!s107 C:/Data/GIT/Bananachine/ALU/alu_rf_tb.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/alu_rf_tb.v|
-!i113 1
-R5
-R6
-vBananachine
-R1
-!i10b 1
-!s100 IkO:Rm_8gc<lgjX1NLmMN3
-Iz3h]H4oOfa4kVA4oiIW?I3
-R2
-R0
-w1699401056
-8C:/Data/GIT/Bananachine/ALU/Bananachine.v
-FC:/Data/GIT/Bananachine/ALU/Bananachine.v
-=======
-Z4 !s108 1700613782.000000
-!s107 C:/Data/GIT/Bananachine/ALU/BitGen.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/BitGen.v|
-!i113 1
-Z5 o-vlog01compat -work work
-Z6 !s92 -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU
-Z7 tCvgOpt 0
-n@bit@gen
+o-work work
+Z3 tCvgOpt 0
 vclut_mem
-R1
+Z4 !s110 1701389431
 !i10b 1
-!s100 UcRj0G=88]cNlKUd4jKP`3
-Inh6jXDeOBo4]niJ<[74ZQ1
-R2
+!s100 7;2k7MgBRa>]a0?8JQ?nQ2
+I106:`Q4Ih0lQ9<@aPTU]21
+R1
 R0
-w1700613116
+Z5 w1701225672
 8C:/Data/GIT/Bananachine/ALU/clut_mem.v
 FC:/Data/GIT/Bananachine/ALU/clut_mem.v
->>>>>>> Stashed changes
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R4
-<<<<<<< Updated upstream
-!s107 C:/Data/GIT/Bananachine/ALU/Bananachine.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/Bananachine.v|
-!i113 1
-R5
-R6
-n@bananachine
-vBananachine_tb
-R1
-!i10b 1
-!s100 XokGzOn9moIldd>zG^1<_1
-IT=Q;D:VkilmDi7_keP[3V0
-R2
-R0
-w1699422629
-8C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v
-FC:/Data/GIT/Bananachine/ALU/Bananachine_tb.v
-=======
+Z6 !s108 1701389431.000000
 !s107 C:/Data/GIT/Bananachine/ALU/clut_mem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/clut_mem.v|
 !i113 1
-R5
-R6
-R7
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU
+R3
 vrom_async
-R1
+R4
 !i10b 1
 !s100 A08;PDATEZWHd=F>AiEdE1
-I<1WW5_bRnM^HoN60n:0eR2
-R2
+ISh3CK5[Q9em8APe>b90CV1
+R1
 R0
-Z8 w1700177729
-8C:/Data/GIT/Bananachine/ALU/Sprite_Rom.v
-FC:/Data/GIT/Bananachine/ALU/Sprite_Rom.v
+R5
+8C:/Data/GIT/Bananachine/ALU/rom_async.v
+FC:/Data/GIT/Bananachine/ALU/rom_async.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R4
-!s107 C:/Data/GIT/Bananachine/ALU/Sprite_Rom.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/Sprite_Rom.v|
-!i113 1
-R5
 R6
-R7
-vsprite
-R1
-!i10b 1
-!s100 ^@mB]=8?g2>U8GAON:23L3
-I<e^4CGkZ>hd]KNMZb_FK=1
-R2
-R0
-w1700613690
-8C:/Data/GIT/Bananachine/ALU/Sprite.v
-FC:/Data/GIT/Bananachine/ALU/Sprite.v
-L0 1
-R3
-r1
-!s85 0
-31
-R4
-!s107 C:/Data/GIT/Bananachine/ALU/Sprite.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/Sprite.v|
+!s107 C:/Data/GIT/Bananachine/ALU/rom_async.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/rom_async.v|
 !i113 1
-R5
-R6
 R7
-vvga
-R1
-!i10b 1
-!s100 X@7znkNVVjYlG2GA2^^l:2
-I>499Wd<Z_o9<8obTjO=>_1
-R2
-R0
 R8
+R3
+vsprite
+R4
+!i10b 1
+!s100 _zcbZnX=M=zEoZQRo[AIU3
+IAXhgKcDbm<=hb71kXGoal0
+R1
+R0
+w1701386142
+8C:/Data/GIT/Bananachine/ALU/sprite.v
+FC:/Data/GIT/Bananachine/ALU/sprite.v
+L0 1
+R2
+r1
+!s85 0
+31
+R6
+!s107 C:/Data/GIT/Bananachine/ALU/sprite.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/sprite.v|
+!i113 1
+R7
+R8
+R3
+vvga
+R4
+!i10b 1
+!s100 LdL_OnaP0I9AM_JFAaWPP1
+IUAOhaT2S^`EBnoQ?QP7X70
+R1
+R0
+R5
 8C:/Data/GIT/Bananachine/ALU/vga.v
 FC:/Data/GIT/Bananachine/ALU/vga.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R4
+R6
 !s107 C:/Data/GIT/Bananachine/ALU/vga.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/vga.v|
 !i113 1
-R5
-R6
 R7
+R8
+R3
 vvga_control
-R1
+R4
 !i10b 1
 !s100 WP3o@8J[]o3P0Y4]4e0=Q1
-IfI0P5nH2iGm`jPgnKYXkI0
-R2
+IkakJ`j]GRk@_PQYa]m68e2
+R1
 R0
-w1700454117
-8C:/Data/GIT/Bananachine/ALU/VgaControl.v
-FC:/Data/GIT/Bananachine/ALU/VgaControl.v
+R5
+8C:/Data/GIT/Bananachine/ALU/vga_control.v
+FC:/Data/GIT/Bananachine/ALU/vga_control.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R4
-!s107 C:/Data/GIT/Bananachine/ALU/VgaControl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/VgaControl.v|
-!i113 1
-R5
 R6
+!s107 C:/Data/GIT/Bananachine/ALU/vga_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/vga_control.v|
+!i113 1
 R7
+R8
+R3
 vvga_tb
-R1
+R4
 !i10b 1
 !s100 kX_lCEc3@3eRU4<Y@6Bn72
 Ih0_llj:F2iGbzn?=8cG;>3
-R2
+R1
 R0
-R8
+R5
 8C:/Data/GIT/Bananachine/ALU/vga_tb.v
 FC:/Data/GIT/Bananachine/ALU/vga_tb.v
->>>>>>> Stashed changes
 L0 2
-R3
-r1
-!s85 0
-31
-R4
-<<<<<<< Updated upstream
-!s107 C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/Bananachine_tb.v|
-!i113 1
-R5
-R6
-n@bananachine_tb
-vbasic_mem
-R1
-!i10b 1
-!s100 IoMXmXQ<95>6f@6[zNjhJ0
-I?ATM[Hj?anIfEQd50_57C2
 R2
-R0
-w1699401184
-8C:/Data/GIT/Bananachine/ALU/basic_mem.v
-FC:/Data/GIT/Bananachine/ALU/basic_mem.v
-L0 4
-R3
 r1
 !s85 0
 31
-R4
-!s107 C:/Data/GIT/Bananachine/ALU/basic_mem.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/basic_mem.v|
-!i113 1
-R5
 R6
-vcontroller
-R1
-!i10b 1
-!s100 MA>?RYgYHz0`k8:M4I:o^0
-IFl0H`j>5_9k4@G]^@L1j]3
-R2
-R0
-w1699422495
-8C:/Data/GIT/Bananachine/ALU/controller.v
-FC:/Data/GIT/Bananachine/ALU/controller.v
-L0 1
-R3
-r1
-!s85 0
-31
-R4
-!s107 C:/Data/GIT/Bananachine/ALU/controller.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/controller.v|
-!i113 1
-R5
-R6
-vCPU
-Z7 !s110 1699422635
-!i10b 1
-!s100 z2:=U5n;icNF5ZO9MHj=f2
-IESbTTJD]PeDSh8NBjcQ4@2
-R2
-R0
-w1699411641
-8C:/Data/GIT/Bananachine/ALU/CPU.v
-FC:/Data/GIT/Bananachine/ALU/CPU.v
-L0 1
-R3
-r1
-!s85 0
-31
-Z8 !s108 1699422635.000000
-!s107 C:/Data/GIT/Bananachine/ALU/CPU.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/CPU.v|
-!i113 1
-R5
-R6
-n@c@p@u
-vdatapath
-=======
 !s107 C:/Data/GIT/Bananachine/ALU/vga_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/vga_tb.v|
 !i113 1
-R5
-R6
->>>>>>> Stashed changes
 R7
-!i10b 1
-!s100 ae:WOaiV77>3>KX9=_21Y3
-I_X;h8`j5KVkV?oZAAlhP11
-R2
-R0
-w1699411694
-8C:/Data/GIT/Bananachine/ALU/datapath.v
-FC:/Data/GIT/Bananachine/ALU/datapath.v
-L0 1
-R3
-r1
-!s85 0
-31
 R8
-!s107 C:/Data/GIT/Bananachine/ALU/datapath.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/datapath.v|
-!i113 1
-R5
-R6
-vdatapathFSM
-R7
-!i10b 1
-!s100 b@9cfU3G2XGiK^HaVM[dJ0
-INGh[TKU6H9B09NW0:REdH0
-R2
-R0
-Z9 w1698788625
-Z10 8C:/Data/GIT/Bananachine/ALU/datapathFSM.v
-Z11 FC:/Data/GIT/Bananachine/ALU/datapathFSM.v
-L0 1
 R3
-r1
-!s85 0
-31
-R8
-Z12 !s107 C:/Data/GIT/Bananachine/ALU/datapathFSM.v|
-Z13 !s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/datapathFSM.v|
-!i113 1
-R5
-R6
-ndatapath@f@s@m
-vflipflop
-R7
-!i10b 1
-!s100 Sg@ZeYOIDd5VIa00?LW;U1
-IGD1OHkE7LShEK8dkb:bZA0
-R2
-R0
-R9
-R10
-R11
-L0 171
-R3
-r1
-!s85 0
-31
-R8
-R12
-R13
-!i113 1
-R5
-R6
-vflopenr
-R7
-!i10b 1
-!s100 ><^7UY0ggjSzTo8o[KU0Z1
-I[eg1A0chSQZzQRZnPjbjT0
-R2
-R0
-Z14 w1699404865
-Z15 8C:/Data/GIT/Bananachine/ALU/muxes.v
-Z16 FC:/Data/GIT/Bananachine/ALU/muxes.v
-L0 23
-R3
-r1
-!s85 0
-31
-R8
-Z17 !s107 C:/Data/GIT/Bananachine/ALU/muxes.v|
-Z18 !s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/muxes.v|
-!i113 1
-R5
-R6
-vflopr
-R7
-!i10b 1
-!s100 @`4`[E=7N`HFDR`e46Pn22
-I7aLGJZ2zOF1h^@zY;LOZV2
-R2
-R0
-R14
-R15
-R16
-L0 34
-R3
-r1
-!s85 0
-31
-R8
-R17
-R18
-!i113 1
-R5
-R6
-vhexTo7Seg
-R7
-!i10b 1
-!s100 :B<40M3ZcB1WAUjFhI21k3
-IbC=PA?<<5Xl?`NEn:@ES20
-R2
-R0
-R9
-R10
-R11
-L0 184
-R3
-r1
-!s85 0
-31
-R8
-R12
-R13
-!i113 1
-R5
-R6
-nhex@to7@seg
-vinstruction_reg
-R7
-!i10b 1
-!s100 S_7TE@Bn2?9Fk?RRD`kjj3
-Inb`[R:]18^BIaj<aN[2ZO0
-R2
-R0
-w1699414019
-8C:/Data/GIT/Bananachine/ALU/instruction_reg.v
-FC:/Data/GIT/Bananachine/ALU/instruction_reg.v
-L0 1
-R3
-r1
-!s85 0
-31
-R8
-!s107 C:/Data/GIT/Bananachine/ALU/instruction_reg.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/instruction_reg.v|
-!i113 1
-R5
-R6
-vmux2
-R7
-!i10b 1
-!s100 Li[=Oo9bKXTjacNP_I3I81
-IXTB8]diQ:<m=<9XTDI6hX1
-R2
-R0
-R14
-R15
-R16
-L0 1
-R3
-r1
-!s85 0
-31
-R8
-R17
-R18
-!i113 1
-R5
-R6
-vmux4
-R7
-!i10b 1
-!s100 [BR70lWD<T[BZ8:U]Kmi;3
-IF6Vb]TYi`@6hJ4e2Zgo?;3
-R2
-R0
-R14
-R15
-R16
-L0 9
-R3
-r1
-!s85 0
-31
-R8
-R17
-R18
-!i113 1
-R5
-R6
-vpc_counter
-R7
-!i10b 1
-!s100 Tf44KY=??e73Xo5J2Q<aU1
-I5FYOAFkaTm5LBiL<meL6U2
-R2
-R0
-w1698984597
-8C:/Data/GIT/Bananachine/ALU/pc_counter.v
-FC:/Data/GIT/Bananachine/ALU/pc_counter.v
-L0 1
-R3
-r1
-!s85 0
-31
-R8
-!s107 C:/Data/GIT/Bananachine/ALU/pc_counter.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/pc_counter.v|
-!i113 1
-R5
-R6
-vregfile
-R7
-!i10b 1
-!s100 kjlRlcP>bJ4AP`mdVMjgJ0
-I;SA3Ac`j9EZ?X731<hRBa2
-R2
-R0
-w1698967808
-8C:/Data/GIT/Bananachine/ALU/regfile.v
-FC:/Data/GIT/Bananachine/ALU/regfile.v
-L0 1
-R3
-r1
-!s85 0
-31
-R8
-!s107 C:/Data/GIT/Bananachine/ALU/regfile.v|
-!s90 -reportprogress|300|-work|work|C:/Data/GIT/Bananachine/ALU/regfile.v|
-!i113 1
-R5
-R6
-vzerodetect
-R7
-!i10b 1
-!s100 `fJPERm>PLTIVL7<;d2KR1
-IkdlCPM]Af8QT6Q[[7>3GU2
-R2
-R0
-R14
-R15
-R16
-L0 43
-R3
-r1
-!s85 0
-31
-R8
-R17
-R18
-!i113 1
-R5
-R6

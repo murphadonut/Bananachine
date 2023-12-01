@@ -4,75 +4,71 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "clk_25MHz",
+					"name" : "vga_clk",
 					"strict" : false
 				},
 				{
-					"name" : "h_sync",
+					"name" : "vga_h_sync",
 					"strict" : false
 				},
 				{
-					"name" : "v_sync",
+					"name" : "vga_v_sync",
 					"strict" : false
 				},
 				{
-					"name" : "blank_n",
+					"name" : "vga_blank",
 					"strict" : false
 				},
 				{
-					"name" : "red_out[4]",
+					"name" : "vga_red[4]",
 					"strict" : false
 				},
 				{
-					"name" : "red_out[5]",
+					"name" : "vga_red[5]",
 					"strict" : false
 				},
 				{
-					"name" : "red_out[6]",
+					"name" : "vga_red[6]",
 					"strict" : false
 				},
 				{
-					"name" : "red_out[7]",
+					"name" : "vga_red[7]",
 					"strict" : false
 				},
 				{
-					"name" : "green_out[4]",
+					"name" : "vga_green[4]",
 					"strict" : false
 				},
 				{
-					"name" : "green_out[5]",
+					"name" : "vga_green[5]",
 					"strict" : false
 				},
 				{
-					"name" : "green_out[6]",
+					"name" : "vga_green[6]",
 					"strict" : false
 				},
 				{
-					"name" : "green_out[7]",
+					"name" : "vga_green[7]",
 					"strict" : false
 				},
 				{
-					"name" : "blue_out[4]",
+					"name" : "vga_blue[4]",
 					"strict" : false
 				},
 				{
-					"name" : "blue_out[5]",
+					"name" : "vga_blue[5]",
 					"strict" : false
 				},
 				{
-					"name" : "blue_out[6]",
+					"name" : "vga_blue[6]",
 					"strict" : false
 				},
 				{
-					"name" : "blue_out[7]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk_50MHz",
-					"strict" : false
-				},
-				{
-					"name" : "clear",
+					"name" : "reset",
 					"strict" : false
 				}
 			]

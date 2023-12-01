@@ -14,7 +14,7 @@ module bit_gen (
     localparam CORDW = 16;  // signed coordinate width (bits)
     wire signed [CORDW-1:0] sx, sy;
     wire hsync, vsync;
-    wire de, frame, line;
+    wire frame, line;
 	 
 	 vga_control control(
 		.clk_50MHz(clk_50m),
@@ -42,14 +42,17 @@ module bit_gen (
     localparam BG_COLR = 'h137;   // background colour
 			
     // sprite parameters
-    localparam SPR_WIDTH  = 8;  // bitmap width in pixels
-    localparam SPR_HEIGHT = 8;  // bitmap height in pixels
+    localparam SPR_WIDTH  = 16;  // bitmap width in pixels
+    localparam SPR_HEIGHT = 10;  // bitmap height in pixels
+    localparam SPR_WIDTH2  = 8;  // bitmap width in pixels
+    localparam SPR_HEIGHT2 = 8;  // bitmap height in pixels
     localparam SPR_SCALE  = 3;  // 2^3 = 8x scale
     localparam SPR_DATAW  = 4;  // bits per pixel
     localparam SPR_DRAWW  = SPR_WIDTH  * 2**SPR_SCALE;  // draw width
     localparam SPR_DRAWH  = SPR_HEIGHT * 2**SPR_SCALE;  // draw height
     localparam SPR_SPX    = 4;  // horizontal speed (pixels/frame)
-    localparam SPR_FILE   = "letter_f.mem";  // bitmap file
+    localparam SPR_FILE   = "real_banana.mem";  // bitmap file
+	 localparam SPR_FILE2	= "letter_f.mem";
 
     // draw sprite at position (sprx,spry)
     reg signed [CORDW-1:0] sprx, spry;
@@ -95,6 +98,31 @@ module bit_gen (
         .drawing(drawing)
     );
 	 
+	 wire drawing2;  // drawing at (sx,sy)
+    wire [SPR_DATAW-1:0] pix2;  // pixel colour index
+    sprite #(
+        .CORDW(CORDW),
+        .H_RES(H_RES),
+        .SPR_FILE(SPR_FILE2),
+        .SPR_WIDTH(SPR_WIDTH),
+        .SPR_HEIGHT(SPR_HEIGHT),
+        .SPR_SCALE(SPR_SCALE),
+        .SPR_DATAW(SPR_DATAW)
+        ) sprite_f2 (
+        .clk(clk_25MHz),
+        .rst(btn_rst_n),
+        .line(line),
+        .sx(sx),
+        .sy(sy),
+        .sprx(100),
+        .spry(32),
+        .pix(pix2),
+        .drawing(drawing2)
+    );
+	 
+	 wire [SPR_DATAW-1:0] pixel;
+	 assign pixel = (drawing && (pix != TRANS_INDX)) ? pix : pix2;
+	 
 	 
 	// colour lookup table
 	wire [COLRW-1:0] spr_pix_colr;
@@ -110,7 +138,7 @@ module bit_gen (
 
 	 reg drawing_t1;
 	 always @(posedge clk_25MHz) begin
-		drawing_t1 <= drawing && (pix != TRANS_INDX);
+		drawing_t1 <= (drawing && (pix != TRANS_INDX)) || (drawing2 && (pix2 != TRANS_INDX));
 	 end
 	 
     // paint colour: yellow sprite, blue background

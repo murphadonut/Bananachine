@@ -1,4 +1,4 @@
-`timescale 1 ns / 1 ns
+ `timescale 1 ns / 1 ns
 module vga_tb();
 	reg clk, clear;
 	wire haclk, hsync, vsync, syncn, blankn;
