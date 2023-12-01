@@ -115,14 +115,44 @@ module bit_gen (
         .sx(sx),
         .sy(sy),
         .sprx(100),
-        .spry(32),
+        .spry(25),
         .pix(pix2),
         .drawing(drawing2)
     );
 	 
-	 wire [SPR_DATAW-1:0] pixel;
-	 assign pixel = (drawing && (pix != TRANS_INDX)) ? pix : pix2;
-	 
+	 wire drawing3;  // drawing at (sx,sy)
+    wire [SPR_DATAW-1:0] pix3;  // pixel colour index
+	 sprite #(
+		  .CORDW(CORDW),
+        .H_RES(H_RES),
+        .SPR_FILE("letter_m.mem"),
+        .SPR_WIDTH(SPR_WIDTH),
+        .SPR_HEIGHT(SPR_HEIGHT),
+        .SPR_SCALE(SPR_SCALE),
+        .SPR_DATAW(SPR_DATAW)
+        ) sprite_f3 (
+        .clk(clk_25MHz),
+        .rst(btn_rst_n),
+        .line(line),
+        .sx(sx),
+        .sy(sy),
+        .sprx(200),
+        .spry(125),
+        .pix(pix3),
+        .drawing(drawing3)
+    );
+	
+	reg [SPR_DATAW-1:0] pixel;
+	
+	always@(*)begin
+		if(drawing && (pix != TRANS_INDX))begin
+		pixel = pix;
+		end else if(drawing2 && (pix2 != TRANS_INDX)) begin
+		pixel = pix2;
+		end else begin
+		pixel = pix3;
+		end
+	end
 	 
 	// colour lookup table
 	wire [COLRW-1:0] spr_pix_colr;
@@ -131,14 +161,14 @@ module bit_gen (
         .clk_read(clk_25MHz),
         .clk_write(clk_25MHz),
         .data_in(12'b000000000000),
-		  .addr_read(pix),
+		  .addr_read(pixel),
 		  .addr_write(1'b0),
         .data_out(spr_pix_colr)
     );
 
 	 reg drawing_t1;
 	 always @(posedge clk_25MHz) begin
-		drawing_t1 <= (drawing && (pix != TRANS_INDX)) || (drawing2 && (pix2 != TRANS_INDX));
+		drawing_t1 <= (drawing && (pix != TRANS_INDX)) || (drawing2 && (pix2 != TRANS_INDX)) || (drawing3 && (pix3 != TRANS_INDX));
 	 end
 	 
     // paint colour: yellow sprite, blue background
