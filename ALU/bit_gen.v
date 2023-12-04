@@ -50,13 +50,11 @@ module bit_gen (
 			
     // sprite parameters
     localparam SPR_WIDTH  = 16;  // bitmap width in pixels
-    localparam SPR_HEIGHT = 10;  // bitmap height in pixels
+    localparam SPR_HEIGHT = 16;  // bitmap height in pixels
     localparam SPR_WIDTH2  = 8;  // bitmap width in pixels
     localparam SPR_HEIGHT2 = 8;  // bitmap height in pixels
     localparam SPR_SCALE  = 3;  // 2^3 = 8x scale
     localparam SPR_DATAW  = 4;  // bits per pixel
-    localparam SPR_DRAWW  = SPR_WIDTH  * 2**SPR_SCALE;  // draw width
-    localparam SPR_DRAWH  = SPR_HEIGHT * 2**SPR_SCALE;  // draw height
     localparam SPR_SPX    = 4;  // horizontal speed (pixels/frame)
     localparam SPR_FILE   = "real_banana.mem";  // bitmap file
 	 localparam SPR_FILE2	= "letter_f.mem";

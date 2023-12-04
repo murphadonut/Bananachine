@@ -28,6 +28,32 @@ module mux4 #(
       endcase
 endmodule
 
+module mux8 #(
+	parameter WIDTH = 16) (
+	
+   input      [2:0] selection,
+	input [WIDTH-1:0] input_1, 
+	input [WIDTH-1:0] input_2, 
+	input [WIDTH-1:0] input_3, 
+	input [WIDTH-1:0] input_4,
+	input [WIDTH-1:0] input_5,
+	input [WIDTH-1:0] input_6,
+	input [WIDTH-1:0] input_7,
+	input [WIDTH-1:0] input_8,
+   output reg [WIDTH-1:0] mux8_output);
+   always @(*)
+      case(selection)
+         3'b000: mux8_output <= input_1;
+         3'b001: mux8_output <= input_2;
+         3'b010: mux8_output <= input_3;
+         3'b011: mux8_output <= input_4;
+			3'b100: mux8_output <= input_5;
+			3'b101: mux8_output <= input_6;
+			3'b110: mux8_output <= input_7;
+			3'b111: mux8_output <= input_8;
+      endcase
+endmodule
+
 
 module flopenr #(parameter WIDTH = 16)(
 	input 		clk, reset, en,
