@@ -1,4 +1,13 @@
 
+State Machine - |bananachine|sprite_state
+Name sprite_state.MOVE_P2Y sprite_state.MOVE_P2X sprite_state.MOVE_P1Y sprite_state.MOVE_P1X sprite_state.MOVE_MY sprite_state.MOVE_MX 
+sprite_state.MOVE_MX 0 0 0 0 0 0 
+sprite_state.MOVE_MY 0 0 0 0 1 1 
+sprite_state.MOVE_P1X 0 0 0 1 0 1 
+sprite_state.MOVE_P1Y 0 0 1 0 0 1 
+sprite_state.MOVE_P2X 0 1 0 0 0 1 
+sprite_state.MOVE_P2Y 1 0 0 0 0 1 
+
 State Machine - |bananachine|vga:vga|bit_gen:bit_gen|sprite:sprite_f3|state
 Name state.WAIT_DATA state.SPR_LINE state.WAIT_POS state.ACTIVE state.REG_POS state.IDLE 
 state.IDLE 0 0 0 0 0 0 

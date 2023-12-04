@@ -7,12 +7,12 @@ module bananachine #(
 	parameter H_RES = 640,
 	parameter V_RES = 480,
 	parameter COUNTER_BITS = 10,
-	parameter MX = 6000, 
-	parameter MY = 6004, 
-	parameter P1X = 6008, 
-	parameter P1Y = 6012, 
-	parameter P2X = 6016, 
-	parameter P2Y = 6020
+	parameter[15:0] MXP = 6000, 
+	parameter[15:0] MYP = 6004, 
+	parameter[15:0] P1XP = 6008, 
+	parameter[15:0] P1YP = 6012, 
+	parameter[15:0] P2XP = 6016, 
+	parameter[15:0] P2YP = 6020
 	) (
 	
 	input clk, 
@@ -33,9 +33,98 @@ module bananachine #(
 
 	wire write_to_memory;
 	wire reading_for_load;
-	wire [WIDTH - 1 : 0] data_from_mem;
-	wire [WIDTH - 1 : 0] mem_address;
-	wire [WIDTH - 1 : 0] data_to_mem_store;
+	wire [WIDTH-1:0] data_from_mem;
+	wire [WIDTH-1:0] data_from_mem_vga;
+	wire [WIDTH-1:0] mem_address;
+	wire [WIDTH-1:0] data_to_mem_store;
+	reg [WIDTH-1:0] vga_address;
+	reg[15:0] mx;
+	reg[15:0] my; 
+	reg[15:0] p1x; 
+	reg[15:0] p1y; 
+	reg[15:0] p2x; 
+	reg[15:0] p2y;
+	
+	reg[2:0] sprite_state;
+	reg[2:0] sprite_next_state;
+	
+	localparam[2:0] MOVE_MX = 3'b000;
+	localparam[2:0] MOVE_MY = 3'b001;
+	localparam[2:0] MOVE_P1X = 3'b010;
+	localparam[2:0] MOVE_P1Y = 3'b011;
+	localparam[2:0] MOVE_P2X = 3'b100;
+	localparam[2:0] MOVE_P2Y = 3'b101;
+	
+	always @(posedge clk) begin
+		if(~reset) sprite_state <= MOVE_MX;
+		else sprite_state <= sprite_next_state;
+	end
+	
+	always @(*) begin
+		case(sprite_state)
+			MOVE_MX: begin
+				vga_address <= MXP;
+				sprite_next_state <= MOVE_MY;
+				mx <= mx;
+				my <= my;
+				p1x <= p1x;
+				p1y <= p1y;
+				p2x <= p2x;
+				p2y <= data_from_mem_vga;
+			end
+			MOVE_MY: begin
+				vga_address <= MYP;
+				sprite_next_state <= MOVE_P1X;
+				my <= my;
+				p1x <= p1x;
+				p1y <= p1y;
+				p2x <= p2x;
+				p2y <= p2y;
+				mx <= data_from_mem_vga;
+			end
+			MOVE_P1X: begin
+				vga_address <= P1XP;
+				sprite_next_state <= MOVE_P1Y;
+				mx <= mx;
+				p1x <= p1x;
+				p1y <= p1y;
+				p2x <= p2x;
+				p2y <= p2y;
+				my <= data_from_mem_vga;
+			end
+			MOVE_P1Y: begin
+				vga_address <= P1YP;
+				sprite_next_state <= MOVE_P2X;
+				mx <= mx;
+				my <= my;
+				p1y <= p1y;
+				p2x <= p2x;
+				p2y <= p2y;
+				p1x <= data_from_mem_vga;
+			end
+			MOVE_P2X: begin
+				vga_address <= P2XP;
+				sprite_next_state <= MOVE_P2Y;
+				mx <= mx;
+				my <= my;
+				p1x <= p1x;
+				p2x <= p2x;
+				p2y <= p2y;
+				p1y <= data_from_mem_vga;
+			end
+			MOVE_P2Y: begin
+				vga_address <= P2YP;
+				sprite_next_state <= MOVE_MX;
+				mx <= mx;
+				my <= my;
+				p1x <= p1x;
+				p1y <= p1y;
+				p2y <= p2y;
+				p2x <= data_from_mem_vga;
+			end
+			default:;
+		endcase
+	end
 
 	
 	cpu #(WIDTH) cpu(
@@ -50,14 +139,13 @@ module bananachine #(
 	
 	basic_mem #(WIDTH) mem( 
 		.data_b(data_to_mem_store),
-		//.addr_a(), 
+		.addr_a(vga_address), 
 		.addr_b(mem_address),
-		//.we_a(),
 		.we_b(write_to_memory), 
 		.clk(clk),
 		.reset(reset),
 		.reading_for_load(reading_for_load),
-		//.q_a(), 
+		.q_a(data_from_mem_vga), 
 		.q_b(data_from_mem),
 		//start
 		.start(start),
@@ -67,9 +155,15 @@ module bananachine #(
 		.right(right)
 	);
 	
-	vga #(H_RES, V_RES, COUNTER_BITS, MX, MY, P1X, P1Y, P2X, P2Y) vga(
+	vga #(H_RES, V_RES, COUNTER_BITS, MXP, MYP, P1XP, P1YP, P2XP, P2YP) vga(
 		.clk_50MHz(clk),
 		.clear(reset),
+		.mx(mx),
+		.my(my),
+		.p1x(p1x),
+		.p1y(p1y),
+		.p2x(p2x),
+		.p2y(p2y),
 		.clk_25MHz(vga_clk),
 		.h_sync(vga_h_sync),
 		.v_sync(vga_v_sync),

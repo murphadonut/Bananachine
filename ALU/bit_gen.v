@@ -1,14 +1,21 @@
 module bit_gen (
-    input  wire clk_50m,      // 50 MHz clock
-    input  wire btn_rst_n,		// reset button
-	 output      bright, 
-    output reg  vga_hsync,    // horizontal sync
-    output reg  vga_vsync,    // vertical sync
-    output reg  [7:0] vga_r,  // 4-bit VGA red
-    output reg  [7:0] vga_g,  // 4-bit VGA green
-    output reg  [7:0] vga_b,  // 4-bit VGA blue
+   input clk_50m,      // 50 MHz clock
+   input btn_rst_n,		// reset button
+	input[15:0] mx, 
+	input[15:0] my, 
+	input[15:0] p1x, 
+	input[15:0] p1y, 
+	input[15:0] p2x, 
+	input[15:0] p2y,
+	
+	output      bright, 
+   output reg  vga_hsync,    // horizontal sync
+   output reg  vga_vsync,    // vertical sync
+   output reg  [7:0] vga_r,  // 4-bit VGA red
+	output reg  [7:0] vga_g,  // 4-bit VGA green
+	output reg  [7:0] vga_b,  // 4-bit VGA blue
 	output wire  clk_25MHz		// VGA clk
-    );
+	);
 
   // display sync signals and coordinates
     localparam CORDW = 16;  // signed coordinate width (bits)
@@ -54,29 +61,7 @@ module bit_gen (
     localparam SPR_FILE   = "real_banana.mem";  // bitmap file
 	 localparam SPR_FILE2	= "letter_f.mem";
 
-    // draw sprite at position (sprx,spry)
-    reg signed [CORDW-1:0] sprx, spry;
-    reg dx;  // direction: 0 is right/down
-
-    // update sprite position once per frame
-    always @(posedge clk_25MHz) begin
-        if (frame) begin
-            if (dx == 0) begin  // moving right
-                if (sprx + SPR_DRAWW >= H_RES + 2*SPR_DRAWW) dx <= 1;  // move left
-                else sprx <= sprx + SPR_SPX;  // continue right
-            end else begin  // moving left
-                if (sprx <= -2*SPR_DRAWW) dx <= 0;  // move right
-                else sprx <= sprx - SPR_SPX;  // continue left
-            end
-        end
-        if (btn_rst_n) begin  // centre sprite and set direction right
-            sprx <= H_RES/2 - SPR_DRAWW/2;
-            spry <= V_RES/2 - SPR_DRAWH/2;
-            dx <= 0;
-        end
-    end
-
-    wire drawing;  // drawing at (sx,sy)
+    wire drawing;  // monkey
     wire [SPR_DATAW-1:0] pix;  // pixel colour index
     sprite #(
         .CORDW(CORDW),
@@ -92,13 +77,13 @@ module bit_gen (
         .line(line),
         .sx(sx),
         .sy(sy),
-        .sprx(sprx),
-        .spry(spry),
+        .sprx(mx),
+        .spry(my),
         .pix(pix),
         .drawing(drawing)
     );
 	 
-	 wire drawing2;  // drawing at (sx,sy)
+	 wire drawing2;  // platform 1
     wire [SPR_DATAW-1:0] pix2;  // pixel colour index
     sprite #(
         .CORDW(CORDW),
@@ -114,13 +99,13 @@ module bit_gen (
         .line(line),
         .sx(sx),
         .sy(sy),
-        .sprx(100),
-        .spry(25),
+        .sprx(p1x),
+        .spry(p1y),
         .pix(pix2),
         .drawing(drawing2)
     );
 	 
-	 wire drawing3;  // drawing at (sx,sy)
+	 wire drawing3;  // platform 2
     wire [SPR_DATAW-1:0] pix3;  // pixel colour index
 	 sprite #(
 		  .CORDW(CORDW),
@@ -136,8 +121,8 @@ module bit_gen (
         .line(line),
         .sx(sx),
         .sy(sy),
-        .sprx(200),
-        .spry(125),
+        .sprx(p2x),
+        .spry(p2y),
         .pix(pix3),
         .drawing(drawing3)
     );
