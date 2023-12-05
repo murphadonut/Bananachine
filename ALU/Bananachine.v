@@ -78,11 +78,6 @@ module bananachine #(
 		.q(mx)
 	);
 	
-	always @(*) begin
-		if(vga_counter == 3'b000) mx_en <= 1'b1;
-		else mx_en <= 1'b0;
-	end
-	
 	cpu #(WIDTH) cpu(
 		.clk(clk), 
 		.reset(reset),
@@ -108,15 +103,11 @@ module bananachine #(
 		.right(right)
 	);
 	
-	vga #(H_RES, V_RES, COUNTER_BITS, MXP, MYP, P1XP, P1YP, P2XP, P2YP) vga(
+	vga #(H_RES, V_RES, COUNTER_BITS) vga(
 		.clk_50MHz(clk),
 		.clear(reset),
-		.mx(mx),
-		.my(my),
-		.p1x(p1x),
-		.p1y(p1y),
-		.p2x(p2x),
-		.p2y(p2y),
+		.vga_counter(vga_counter),
+		.data_from_mem_vga(data_from_mem_vga),
 		.clk_25MHz(vga_clk),
 		.h_sync(vga_h_sync),
 		.v_sync(vga_v_sync),

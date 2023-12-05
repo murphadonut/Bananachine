@@ -1,12 +1,8 @@
 module bit_gen (
    input clk_50m,      // 50 MHz clock
    input btn_rst_n,		// reset button
-	input[15:0] mx, 
-	input[15:0] my, 
-	input[15:0] p1x, 
-	input[15:0] p1y, 
-	input[15:0] p2x, 
-	input[15:0] p2y,
+	input [15:0] data_from_mem_vga,
+	input[2:0] vga_counter, 
 	
 	output      bright, 
    output reg  vga_hsync,    // horizontal sync
@@ -20,6 +16,7 @@ module bit_gen (
   // display sync signals and coordinates
     localparam CORDW = 16;  // signed coordinate width (bits)
     wire signed [CORDW-1:0] sx, sy;
+	 reg signed [CORDW-1:0] mx, my, p1x, p1y, p2x, p2y;
     wire hsync, vsync;
     wire frame, line;
 	 
@@ -58,6 +55,25 @@ module bit_gen (
     localparam SPR_SPX    = 4;  // horizontal speed (pixels/frame)
     localparam SPR_FILE   = "real_banana.mem";  // bitmap file
 	 localparam SPR_FILE2	= "letter_f.mem";
+	 
+	 
+	 always @(*)begin
+		case(vga_counter)
+			3'b001: mx  <= data_from_mem_vga;
+			3'b010: my  <= data_from_mem_vga;
+			3'b011: p1x <= data_from_mem_vga;
+			3'b100: p1y <= data_from_mem_vga;
+			3'b101: p2x <= data_from_mem_vga;
+			3'b110: p2y <= data_from_mem_vga;
+			default:;
+		endcase
+	 end
+	 
+	 always @(posedge clk_25MHz) begin
+		if (frame) begin
+			
+		end
+	 end
 
     wire drawing;  // monkey
     wire [SPR_DATAW-1:0] pix;  // pixel colour index
