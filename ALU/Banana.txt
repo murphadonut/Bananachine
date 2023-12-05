@@ -1,23 +1,26 @@
 # starting loop
 
 .start
-#create player  player coordinate x = 160 y = 96
-MOVI $160 r1
+#create player  player coordinate x = 80 y = 96
+MOVI $80 r1
 LUI $23 r3
 ADDI $112 r3
 STOR r1 r3
 ADDI $4 r3
-STOR r1 r3
+LUI $1 r5
+ADDI $144 r5
+STOR r5 r3
 
 #create platforms
-MOVI $150 r2
+LUI $1 r2
+ADDI $154 r2 # set platform 1 y coordinate 10 below the player
 ADDI $4 r3
 STOR r1 r3
 ADDI $4 r3
 STOR r2 r3
 #platform 2
 LUI $1 r1
-ADDI $224 r1
+ADDI $144 r1
 MOVI $10 r2
 ADDI $4 r3
 STOR r1 r3
@@ -35,9 +38,11 @@ BNE $2
 BUC .loop
 LUI $255 r8
 ADDI $1 r8 # this loads value -255 into the velocity register 
+MOVI $0 r9 # load 0 into r9 for counting 
 
 #gameloop to be run
 .gameloop
+
 #check input buttons and move character
 LUI $255 r2
 ADDI $255 r2
@@ -83,10 +88,18 @@ SUB r8 r4 #sub the speed from the 2nd platform
 STOR r4 r3
 
 #decrement speed
+MOVI $60 r1
+CMP r9 r1
+BNE .incrementCount 
 ADDI $1 r8
+MOVI $0 r9
+BUC .noincrement
+.incrementCount
+ADDI $1 r9
+.noincrement
 
 #check if player is out of bounds by checking if walls are above the screen
-LUI $8 r1
+LUI $128 r1
 LUI $23 r3
 ADDI $124 r3
 LOAD r4 r3 # load y coordinate of first platform
@@ -114,10 +127,10 @@ ADDI $8 r3
 LOAD r2 r3   # puts x value of platform 1 in r2
 MOV r2 r4 # put x value of platform 1 in r4
 ADDI $50 r2 # add 50 to the x value of platform 1 
-cmp r2 r1 # cmp x value + 50 of platform 1 and x value of player
+CMP r2 r1 # cmp x value + 50 of platform 1 and x value of player
 BLT .secondPlatform
 SUBI $50 r4
-cmp r4 r1 # cmp x value - 50 of platform 1 and x value of player
+CMP r4 r1 # cmp x value - 50 of platform 1 and x value of player
 BGT .secondPlatform
 
 # check if y value of player is in range of platform 1 
@@ -126,11 +139,60 @@ LOAD r1 r3 # r1 is y value of player
 ADDI $8 r3 # move pointer to y value of platform 1
 LOAD r2 r3 # load platform 1 y value to r2
 # figure out how to check if collision on y axis
-
+#check if platform velocity is positive
+LUI $128 r5
+CMP r5 r8
+BGE .noCollisions
+#platform velocity should be positive
+CMP r1 r2 #cmp player y to platform y
+BGT .secondPlatform
+SUB r8 r2 # get upper bounds of collision
+CMP r1 r2
+BLT .secondPlatform
+# reset the velocity to full speed
+LUI $255 r8
+ADDI $1 r8 # this loads value -255 into the velocity register 
+#jump to gameloop
+BUC .gameloop
 
 .secondPlatform
 # repeat instructions from above
-.noCollsions
+LUI $23 r3	#get x value of player
+ADDI $112 r3
+LOAD r1 r3   # puts x value of player in r1
+ADDI $16 r3
+LOAD r2 r3   # puts x value of platform 2 in r2
+MOV r2 r4 # put x value of platform 1 in r4
+ADDI $50 r2 # add 50 to the x value of platform 1 
+CMP r2 r1 # cmp x value + 50 of platform 1 and x value of player
+BLT .noCollisions
+SUBI $50 r4
+CMP r4 r1 # cmp x value - 50 of platform 1 and x value of player
+BGT .noCollisions
+
+#check y value of second platform
+# check if y value of player is in range of platform 2 
+SUBI $12 r3 # move pointer to y value of player
+LOAD r1 r3 # r1 is y value of player
+ADDI $16 r3 # move pointer to y value of platform 2
+LOAD r2 r3 # load platform 2 y value to r2
+# figure out how to check if collision on y axis
+#check if platform velocity is positive
+LUI $128 r5
+CMP r5 r8
+BGE .noCollisions
+#platform velocity should be positive
+CMP r1 r2 #cmp player y to platform y
+BGT .noCollisions
+SUB r8 r2 # get upper bounds of collision
+CMP r1 r2
+BLT .noCollisions
+# reset the velocity to full speed
+LUI $255 r8
+ADDI $1 r8 # this loads value -255 into the velocity register 
+#jump to gameloop
+BUC .gameloop
+.noCollisions
 
 #jump back to check for button input
 BUC .gameloop
