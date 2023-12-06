@@ -1,13 +1,28 @@
-// Authors:
-// The m&ms
-// The big K
-// The Apple Man
-
-module alu_rf (input[15:0] a, b, input[5:0] alucont, output reg[15:0] result, output[15:0] psr_flags);
-
-	wire signed [15:0] sinB;
-	reg C, F, L, Z, N;
-	wire[15:0] sum, diff, diffU;
+// ALU_CONT_BITS is 6 as of 10/29/2023 because the first two specify which
+// category of instruction is being completed, idk if category is the right word
+// look at the ISA
+// 00 = regular ALU operation
+// 01 = not used because the "special" commands don't need to use the ALU
+// 10 = shift operations
+// 11 = bcond
+// the last 4 bits are the op-code as specified in the ISA
+// a = Rdest
+// b = Rsrc
+module alu_rf #(
+	parameter WIDTH = 16, 
+	parameter ALU_CONT_BITS = 6) (
+	
+	input 		reset, clk,
+	input			[WIDTH - 1 : 0] a, 
+	input			[WIDTH - 1 : 0] b,
+	input			[ALU_CONT_BITS - 1 : 0] 	alu_cont, 
+	
+	output reg	[WIDTH - 1 : 0] 				alu_out, 
+	output		[WIDTH - 1 : 0] 				psr_flags
+	);
+	
+	reg c_flag, f_flag, l_flag, z_flag, n_flag;
+	wire[WIDTH - 1 : 0] sum, diff, diff_unsigned;	
 
 	assign psr_flags = {8'b00000000, n_flag, z_flag, f_flag, 2'b00, l_flag, 1'b0, c_flag};
 	assign sum = a + b;
