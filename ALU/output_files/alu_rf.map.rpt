@@ -1,6 +1,6 @@
 Analysis & Synthesis report for alu_rf
-Tue Oct 24 16:08:19 2023
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Tue Dec 05 21:10:15 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -10,17 +10,8 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |Datapath
- 12. Parameter Settings for User Entity Instance: regfile:rf
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,27 +34,22 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 24 16:08:19 2023       ;
-; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
-; Revision Name                   ; alu_rf                                      ;
-; Top-level Entity Name           ; Datapath                                    ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 512                                         ;
-; Total pins                      ; 50                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Tue Dec 05 21:10:15 2023           ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name               ; alu_rf                                      ;
+; Top-level Entity Name       ; bananachine                                 ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -72,8 +58,9 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; Datapath           ; alu_rf             ;
+; Top-level entity name                                                           ; bananachine        ; alu_rf             ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -162,183 +149,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path           ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
-; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Data/School/ECE 3710/ALU/regfile.v  ;         ;
-; Datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Data/School/ECE 3710/ALU/Datapath.v ;         ;
-; Reg.dat                          ; yes             ; User Unspecified File  ; C:/Data/School/ECE 3710/ALU/Reg.dat    ;         ;
-; alu_rf.v                         ; yes             ; User Verilog HDL File  ; C:/Data/School/ECE 3710/ALU/alu_rf.v   ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 628       ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 639       ;
-;     -- 7 input functions                    ; 257       ;
-;     -- 6 input functions                    ; 145       ;
-;     -- 5 input functions                    ; 43        ;
-;     -- 4 input functions                    ; 53        ;
-;     -- <=3 input functions                  ; 141       ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 512       ;
-;                                             ;           ;
-; I/O pins                                    ; 50        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 512       ;
-; Total fan-out                               ; 5005      ;
-; Average fan-out                             ; 4.00      ;
-+---------------------------------------------+-----------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                        ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+-------------+--------------+
-; |Datapath                  ; 639 (0)             ; 512 (0)                   ; 0                 ; 0          ; 50   ; 0            ; |Datapath               ; Datapath    ; work         ;
-;    |alu_rf:alunit|         ; 230 (230)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu_rf:alunit ; alu_rf      ; work         ;
-;    |regfile:rf|            ; 409 (409)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |Datapath|regfile:rf    ; regfile     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                    ;
-+-----------------------------------------------------+-------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal     ; Free of Timing Hazards ;
-+-----------------------------------------------------+-------------------------+------------------------+
-; alu_rf:alunit|result[0]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[1]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[2]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[3]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[4]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[5]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[6]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[7]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[8]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[9]                             ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[10]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[11]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[12]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[13]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[14]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|result[15]                            ; alu_rf:alunit|Mux16     ; yes                    ;
-; alu_rf:alunit|C                                     ; alu_rf:alunit|Selector1 ; yes                    ;
-; alu_rf:alunit|L                                     ; alu_rf:alunit|Decoder0  ; yes                    ;
-; alu_rf:alunit|F                                     ; alu_rf:alunit|Selector1 ; yes                    ;
-; alu_rf:alunit|Z                                     ; alu_rf:alunit|Decoder0  ; yes                    ;
-; alu_rf:alunit|N                                     ; alu_rf:alunit|Decoder0  ; yes                    ;
-; Number of user-specified and inferred latches = 21  ;                         ;                        ;
-+-----------------------------------------------------+-------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 512   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 512   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Datapath|alu_rf:alunit|ShiftLeft0 ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |Datapath|alu_rf:alunit|Mux4       ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 36 LEs               ; 4 LEs                  ; No         ; |Datapath|alu_rf:alunit|Mux9       ;
-; 18:1               ; 4 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; No         ; |Datapath|alu_rf:alunit|Mux12      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |Datapath ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; WIDTH          ; 16    ; Signed Integer                                  ;
-; REGBITS        ; 5     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regfile:rf ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; WIDTH          ; 16    ; Signed Integer                 ;
-; REGBITS        ; 5     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 512                         ;
-;     ENA               ; 512                         ;
-; arriav_lcell_comb     ; 640                         ;
-;     arith             ; 49                          ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 16                          ;
-;         4 data inputs ; 32                          ;
-;     extend            ; 257                         ;
-;         7 data inputs ; 257                         ;
-;     normal            ; 334                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 56                          ;
-;         2 data inputs ; 36                          ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 21                          ;
-;         5 data inputs ; 43                          ;
-;         6 data inputs ; 145                         ;
-; boundary_port         ; 50                          ;
-;                       ;                             ;
-; Max LUT depth         ; 9.50                        ;
-; Average LUT depth     ; 7.82                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -346,123 +161,58 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 24 16:08:11 2023
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Tue Dec 05 21:10:08 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_rf -c alu_rf
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
-    Info (12023): Found entity 1: regfile File: C:/Data/School/ECE 3710/ALU/regfile.v Line: 3
+Warning (12019): Can't analyze file -- file vga_tb.v is missing
+Warning (12019): Can't analyze file -- file reg_file.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file vga_control.v
+    Info (12023): Found entity 1: vga_control File: C:/Data/GIT/Bananachine/ALU/vga_control.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bit_gen.v
+    Info (12023): Found entity 1: bit_gen File: C:/Data/GIT/Bananachine/ALU/bit_gen.v Line: 1
+Warning (12019): Can't analyze file -- file rom_async.v is missing
+Warning (12019): Can't analyze file -- file sprite.v is missing
+Warning (12019): Can't analyze file -- file bananachine_tb.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file bananachine.v
+    Info (12023): Found entity 1: bananachine File: C:/Data/GIT/Bananachine/ALU/bananachine.v Line: 1
+Warning (12019): Can't analyze file -- file cpu.v is missing
+Warning (12019): Can't analyze file -- file basic_mem.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: Datapath File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 1
+    Info (12023): Found entity 1: datapath File: C:/Data/GIT/Bananachine/ALU/datapath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_rf.v
-    Info (12023): Found entity 1: alu_rf File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 6
-Info (12021): Found 1 design units, including 1 entities, in source file alu_rf_tb.v
-    Info (12023): Found entity 1: alu_rf_tb File: C:/Data/School/ECE 3710/ALU/alu_rf_tb.v Line: 3
-Info (12127): Elaborating entity "Datapath" for the top level hierarchy
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 7
-Info (10648): Verilog HDL Display System Task info at regfile.v(13): Loading register file File: C:/Data/School/ECE 3710/ALU/regfile.v Line: 13
-Warning (10850): Verilog HDL warning at regfile.v(15): number of words (17) in memory file does not match the number of elements in the address range [0:31] File: C:/Data/School/ECE 3710/ALU/regfile.v Line: 15
-Info (10648): Verilog HDL Display System Task info at regfile.v(16): done with RF load File: C:/Data/School/ECE 3710/ALU/regfile.v Line: 16
-Warning (10230): Verilog HDL assignment warning at regfile.v(26): truncated value with size 32 to match size of target (16) File: C:/Data/School/ECE 3710/ALU/regfile.v Line: 26
-Warning (10230): Verilog HDL assignment warning at regfile.v(27): truncated value with size 32 to match size of target (16) File: C:/Data/School/ECE 3710/ALU/regfile.v Line: 27
-Info (12128): Elaborating entity "alu_rf" for hierarchy "alu_rf:alunit" File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 8
-Warning (10036): Verilog HDL or VHDL warning at alu_rf.v(8): object "sinB" assigned a value but never read File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 8
-Warning (10230): Verilog HDL assignment warning at alu_rf.v(15): truncated value with size 32 to match size of target (16) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 15
-Warning (10230): Verilog HDL assignment warning at alu_rf.v(47): truncated value with size 32 to match size of target (1) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 47
-Warning (10230): Verilog HDL assignment warning at alu_rf.v(62): truncated value with size 32 to match size of target (16) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 62
-Warning (10270): Verilog HDL Case Statement warning at alu_rf.v(20): incomplete case statement has no default case item File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "F", which holds its previous value in one or more paths through the always construct File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "N", which holds its previous value in one or more paths through the always construct File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "L", which holds its previous value in one or more paths through the always construct File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at alu_rf.v(20): inferring latch(es) for variable "Z", which holds its previous value in one or more paths through the always construct File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "Z" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "L" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "N" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "F" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "C" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[0]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[1]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[2]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[3]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[4]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[5]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[6]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[7]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[8]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[9]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[10]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[11]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[12]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[13]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[14]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (10041): Inferred latch for "result[15]" at alu_rf.v(20) File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "regfile:rf|RAM" is uninferred due to asynchronous read logic File: C:/Data/School/ECE 3710/ALU/regfile.v Line: 10
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Data/School/ECE 3710/ALU/db/alu_rf.ram0_regfile_da4ae4bd.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (13012): Latch alu_rf:alunit|result[0] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[1] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[2] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[3] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[4] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[5] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[6] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[7] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[8] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[9] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[10] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[11] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[2] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[12] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[0] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[13] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[0] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[14] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[0] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|result[15] has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[0] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|C has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[0] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13012): Latch alu_rf:alunit|F has unsafe behavior File: C:/Data/School/ECE 3710/ALU/alu_rf.v Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alucont[0] File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "psr_flags[1]" is stuck at GND File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[3]" is stuck at GND File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[4]" is stuck at GND File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[8]" is stuck at GND File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[9]" is stuck at GND File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[10]" is stuck at GND File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[11]" is stuck at GND File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[12]" is stuck at GND File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[13]" is stuck at GND File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[14]" is stuck at GND File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 4
-    Warning (13410): Pin "psr_flags[15]" is stuck at GND File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 4
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "alucont[5]" File: C:/Data/School/ECE 3710/ALU/Datapath.v Line: 2
-Info (21057): Implemented 1145 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 1095 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
-    Info: Peak virtual memory: 4834 megabytes
-    Info: Processing ended: Tue Oct 24 16:08:19 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:04
+    Info (12023): Found entity 1: alu_rf File: C:/Data/GIT/Bananachine/ALU/alu_rf.v Line: 11
+Warning (12019): Can't analyze file -- file muxes.v is missing
+Warning (12019): Can't analyze file -- file instruction_reg.v is missing
+Warning (12019): Can't analyze file -- file controller.v is missing
+Warning (12019): Can't analyze file -- file pc_counter.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file vga.v
+    Info (12023): Found entity 1: vga File: C:/Data/GIT/Bananachine/ALU/vga.v Line: 1
+Warning (12019): Can't analyze file -- file clut_mem.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file vga_counter.v
+    Info (12023): Found entity 1: vga_counter File: C:/Data/GIT/Bananachine/ALU/vga_counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file true_dual_port_ram_single_clock.v
+    Info (12023): Found entity 1: true_dual_port_ram_single_clock File: C:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file temp.v
+    Info (12023): Found entity 1: temp File: C:/Data/GIT/Bananachine/ALU/temp.v Line: 39
+Info (12127): Elaborating entity "bananachine" for the top level hierarchy
+Info (12128): Elaborating entity "vga_counter" for hierarchy "vga_counter:vga_counter_i" File: C:/Data/GIT/Bananachine/ALU/bananachine.v Line: 58
+Info (12128): Elaborating entity "true_dual_port_ram_single_clock" for hierarchy "true_dual_port_ram_single_clock:new_mem" File: C:/Data/GIT/Bananachine/ALU/bananachine.v Line: 128
+Info (10648): Verilog HDL Display System Task info at true_dual_port_ram_single_clock.v(17): Loading memory File: C:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v Line: 17
+Error (10054): Verilog HDL File I/O error at true_dual_port_ram_single_clock.v(18): can't open Verilog Design File "memory.dat" File: C:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v Line: 18
+Info (10648): Verilog HDL Display System Task info at true_dual_port_ram_single_clock.v(19): done loading File: C:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v Line: 19
+Error (12152): Can't elaborate user hierarchy "true_dual_port_ram_single_clock:new_mem" File: C:/Data/GIT/Bananachine/ALU/bananachine.v Line: 128
+Info (144001): Generated suppressed messages file C:/Data/GIT/Bananachine/ALU/output_files/alu_rf.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 12 warnings
+    Error: Peak virtual memory: 4962 megabytes
+    Error: Processing ended: Tue Dec 05 21:10:15 2023
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:05
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Data/GIT/Bananachine/ALU/output_files/alu_rf.map.smsg.
 
 
