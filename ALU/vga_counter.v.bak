@@ -1,0 +1,18 @@
+module vga_counter #(parameter WIDTH = 16) (
+	input clk, reset, 
+	input [WIDTH - 1 : 0] current,
+	output reg [WIDTH - 1 : 0] incremented
+);
+
+
+// might not like this, if so, change to assign, should still work
+	always @(posedge clk)
+	begin
+		if(~reset) 
+			begin
+				incremented <= 0;
+			end
+		else incremented <= current + 1'b1;//WIDTH[WIDTH - 1 : 0];
+	end
+	
+endmodule 

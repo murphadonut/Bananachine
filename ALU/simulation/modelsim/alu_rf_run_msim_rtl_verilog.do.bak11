@@ -5,9 +5,29 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+<<<<<<< Updated upstream
 vlog -vlog01compat -work work +incdir+C:/Data/School/ECE\ 3710/ALU {C:/Data/School/ECE 3710/ALU/Datapath.v}
 vlog -vlog01compat -work work +incdir+C:/Data/School/ECE\ 3710/ALU {C:/Data/School/ECE 3710/ALU/alu_rf.v}
 vlog -vlog01compat -work work +incdir+C:/Data/School/ECE\ 3710/ALU {C:/Data/School/ECE 3710/ALU/regfile.v}
+=======
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/vga_control.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/bit_gen.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/rom_async.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/sprite.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/bananachine.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/cpu.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/datapath.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/alu_rf.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/muxes.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/instruction_reg.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/controller.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/pc_counter.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/vga.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/vga_counter.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/reg_file.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/clut_mem.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v}
+>>>>>>> Stashed changes
 
 vlog -vlog01compat -work work +incdir+C:/Data/School/ECE\ 3710/ALU {C:/Data/School/ECE 3710/ALU/alu_rf_tb.v}
 

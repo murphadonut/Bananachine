@@ -7,6 +7,7 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
+<<<<<<< Updated upstream
 Z0 dC:/Data/School/ECE 3710/ALU/simulation/modelsim
 valu_rf
 Z1 !s110 1698185407
@@ -19,20 +20,44 @@ w1698185288
 8C:/Data/School/ECE 3710/ALU/alu_rf.v
 FC:/Data/School/ECE 3710/ALU/alu_rf.v
 L0 6
+=======
+Z0 dC:/Data/GIT/Bananachine/ALU/simulation/modelsim
+valu_rf
+Z1 !s110 1701827956
+!i10b 1
+!s100 XmmmzHn36mF?ZbA=zRl4O1
+IIkC5zDU3o<?N7oBWYOo6n3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1701827348
+8C:/Data/GIT/Bananachine/ALU/alu_rf.v
+FC:/Data/GIT/Bananachine/ALU/alu_rf.v
+L0 11
+>>>>>>> Stashed changes
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
+<<<<<<< Updated upstream
 Z4 !s108 1698185407.000000
 !s107 C:/Data/School/ECE 3710/ALU/alu_rf.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/School/ECE 3710/ALU|C:/Data/School/ECE 3710/ALU/alu_rf.v|
 !i113 1
 Z5 o-vlog01compat -work work
 Z6 !s92 -vlog01compat -work work {+incdir+C:/Data/School/ECE 3710/ALU}
+=======
+Z4 !s108 1701827956.000000
+!s107 C:/Data/GIT/Bananachine/ALU/alu_rf.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/alu_rf.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU
+>>>>>>> Stashed changes
 Z7 tCvgOpt 0
-valu_rf_tb
+vbananachine
 R1
 !i10b 1
+<<<<<<< Updated upstream
 !s100 ?mJ?b17k;EYbj<H:jg8T53
 ITQYD:1dG9DdbN=J@B6RP:1
 R2
@@ -41,17 +66,33 @@ w1697934012
 8C:/Data/School/ECE 3710/ALU/alu_rf_tb.v
 FC:/Data/School/ECE 3710/ALU/alu_rf_tb.v
 L0 3
+=======
+!s100 8>[O<Fo;[FYQY5Xb6aCdI3
+I_NE>h5]STb`6izEz0lC2P3
+R2
+R0
+w1701827830
+8C:/Data/GIT/Bananachine/ALU/bananachine.v
+FC:/Data/GIT/Bananachine/ALU/bananachine.v
+L0 1
+>>>>>>> Stashed changes
 R3
 r1
 !s85 0
 31
 R4
+<<<<<<< Updated upstream
 !s107 C:/Data/School/ECE 3710/ALU/alu_rf_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/School/ECE 3710/ALU|C:/Data/School/ECE 3710/ALU/alu_rf_tb.v|
+=======
+!s107 C:/Data/GIT/Bananachine/ALU/bananachine.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/bananachine.v|
+>>>>>>> Stashed changes
 !i113 1
 R5
 R6
 R7
+<<<<<<< Updated upstream
 vDatapath
 R1
 !i10b 1
@@ -62,18 +103,212 @@ R0
 w1697756139
 8C:/Data/School/ECE 3710/ALU/Datapath.v
 FC:/Data/School/ECE 3710/ALU/Datapath.v
+=======
+vbananachine_tb
+Z8 !s110 1701827957
+!i10b 1
+!s100 ^]l_DZDNGF`=@JN3RO6ei0
+IkLoSROQFUTA8CgJ1O^SgJ3
+R2
+R0
+w1701815441
+8C:/Data/GIT/Bananachine/ALU/bananachine_tb.v
+FC:/Data/GIT/Bananachine/ALU/bananachine_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+Z9 !s108 1701827957.000000
+!s107 C:/Data/GIT/Bananachine/ALU/bananachine_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/bananachine_tb.v|
+!i113 1
+R5
+R6
+R7
+vbit_gen
+R1
+!i10b 1
+!s100 j`UPdolzk;NM`2125dJzl0
+IHibUGJ`>DNC[Ac]IShKMX0
+R2
+R0
+w1701827232
+8C:/Data/GIT/Bananachine/ALU/bit_gen.v
+FC:/Data/GIT/Bananachine/ALU/bit_gen.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 C:/Data/School/ECE 3710/ALU/Datapath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/School/ECE 3710/ALU|C:/Data/School/ECE 3710/ALU/Datapath.v|
+!s107 C:/Data/GIT/Bananachine/ALU/bit_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/bit_gen.v|
 !i113 1
 R5
 R6
 R7
+vclut_mem
+R8
+!i10b 1
+!s100 7;2k7MgBRa>]a0?8JQ?nQ2
+I106:`Q4Ih0lQ9<@aPTU]21
+R2
+R0
+w1701825423
+8C:/Data/GIT/Bananachine/ALU/clut_mem.v
+FC:/Data/GIT/Bananachine/ALU/clut_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Data/GIT/Bananachine/ALU/clut_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/clut_mem.v|
+!i113 1
+R5
+R6
+R7
+vcontroller
+R1
+!i10b 1
+!s100 7jL3RWfoG[R:`?4gzaiIW2
+Ihcf`NdkkF4hPb:B4Z_B2k1
+R2
+R0
+Z10 w1701225672
+8C:/Data/GIT/Bananachine/ALU/controller.v
+FC:/Data/GIT/Bananachine/ALU/controller.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/GIT/Bananachine/ALU/controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/controller.v|
+!i113 1
+R5
+R6
+R7
+vcpu
+R1
+!i10b 1
+!s100 12:KK3HR<OnHMMCfJE?2<2
+Ic>eLCMD`X8biEHgPMmX@02
+R2
+R0
+R10
+8C:/Data/GIT/Bananachine/ALU/cpu.v
+FC:/Data/GIT/Bananachine/ALU/cpu.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/GIT/Bananachine/ALU/cpu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/cpu.v|
+!i113 1
+R5
+R6
+R7
+vdatapath
+R1
+!i10b 1
+!s100 0jjC[CJAmd?ZiLR`;_V860
+IYBg:iKSPLnSnJ?[@Q_b<S1
+R2
+R0
+w1701826139
+8C:/Data/GIT/Bananachine/ALU/datapath.v
+FC:/Data/GIT/Bananachine/ALU/datapath.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/GIT/Bananachine/ALU/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/datapath.v|
+!i113 1
+R5
+R6
+R7
+vflopenr
+R1
+!i10b 1
+!s100 3;I8N5:AETX?gS96BlczH3
+I[a>zBH?[P8G9FnBhWGbf:1
+R2
+R0
+Z11 w1701713654
+Z12 8C:/Data/GIT/Bananachine/ALU/muxes.v
+Z13 FC:/Data/GIT/Bananachine/ALU/muxes.v
+L0 58
+R3
+r1
+!s85 0
+31
+R4
+Z14 !s107 C:/Data/GIT/Bananachine/ALU/muxes.v|
+Z15 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/muxes.v|
+!i113 1
+R5
+R6
+R7
+vflopr
+R1
+!i10b 1
+!s100 b3z]PDN<Oo@TNRo<_a9d_3
+IVUW;k4CjYe7U]Mbo<OO@n3
+R2
+R0
+R11
+R12
+R13
+L0 69
+R3
+r1
+!s85 0
+31
+R4
+R14
+R15
+!i113 1
+R5
+R6
+R7
+vinstruction_reg
+R1
+!i10b 1
+!s100 8fV9k3m9Q9<k^Te[43kiM0
+IPWQd[@:UDUGidj<Ab3d5f3
+R2
+R0
+R10
+8C:/Data/GIT/Bananachine/ALU/instruction_reg.v
+FC:/Data/GIT/Bananachine/ALU/instruction_reg.v
+>>>>>>> Stashed changes
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+<<<<<<< Updated upstream
+!s107 C:/Data/School/ECE 3710/ALU/Datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/School/ECE 3710/ALU|C:/Data/School/ECE 3710/ALU/Datapath.v|
+=======
+!s107 C:/Data/GIT/Bananachine/ALU/instruction_reg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/instruction_reg.v|
+>>>>>>> Stashed changes
+!i113 1
+R5
+R6
+R7
+<<<<<<< Updated upstream
 n@datapath
 vregfile
 R1
@@ -86,13 +321,251 @@ w1697755522
 8C:/Data/School/ECE 3710/ALU/regfile.v
 FC:/Data/School/ECE 3710/ALU/regfile.v
 L0 3
+=======
+vmux2
+R1
+!i10b 1
+!s100 N3gQj006I8bd>9G@:ia7M3
+Ia[a2cGgLMHF0k468Ie`Zi2
+R2
+R0
+R11
+R12
+R13
+L0 1
+>>>>>>> Stashed changes
 R3
 r1
 !s85 0
 31
 R4
+<<<<<<< Updated upstream
 !s107 C:/Data/School/ECE 3710/ALU/regfile.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/School/ECE 3710/ALU|C:/Data/School/ECE 3710/ALU/regfile.v|
+=======
+R14
+R15
+!i113 1
+R5
+R6
+R7
+vmux4
+R1
+!i10b 1
+!s100 QcAdZ@JZD7bSjz<g5@mJ_0
+IRTXX5JaEM_0T8oToHFK;62
+R2
+R0
+R11
+R12
+R13
+L0 13
+R3
+r1
+!s85 0
+31
+R4
+R14
+R15
+!i113 1
+R5
+R6
+R7
+vmux8
+R1
+!i10b 1
+!s100 =N;6l6O4=c]:@`gR6J5M=3
+IXW8g=P>UdY2N;d5Va6KDW0
+R2
+R0
+R11
+R12
+R13
+L0 31
+R3
+r1
+!s85 0
+31
+R4
+R14
+R15
+!i113 1
+R5
+R6
+R7
+vpc_counter
+R8
+!i10b 1
+!s100 Tf44KY=??e73Xo5J2Q<aU1
+IeSS_R:@EC[_Gd3hPin03D0
+R2
+R0
+R10
+8C:/Data/GIT/Bananachine/ALU/pc_counter.v
+FC:/Data/GIT/Bananachine/ALU/pc_counter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Data/GIT/Bananachine/ALU/pc_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/pc_counter.v|
+!i113 1
+R5
+R6
+R7
+vreg_file
+R8
+!i10b 1
+!s100 RGfYWQ@cX0`8cmL;fG[3>1
+IWgBI71aCHo6GbOWCH^hb83
+R2
+R0
+R10
+8C:/Data/GIT/Bananachine/ALU/reg_file.v
+FC:/Data/GIT/Bananachine/ALU/reg_file.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Data/GIT/Bananachine/ALU/reg_file.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/reg_file.v|
+!i113 1
+R5
+R6
+R7
+vrom_async
+R1
+!i10b 1
+!s100 A08;PDATEZWHd=F>AiEdE1
+ISh3CK5[Q9em8APe>b90CV1
+R2
+R0
+R10
+8C:/Data/GIT/Bananachine/ALU/rom_async.v
+FC:/Data/GIT/Bananachine/ALU/rom_async.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/GIT/Bananachine/ALU/rom_async.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/rom_async.v|
+!i113 1
+R5
+R6
+R7
+vsprite
+R1
+!i10b 1
+!s100 _zcbZnX=M=zEoZQRo[AIU3
+IAXhgKcDbm<=hb71kXGoal0
+R2
+R0
+w1701386142
+8C:/Data/GIT/Bananachine/ALU/sprite.v
+FC:/Data/GIT/Bananachine/ALU/sprite.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/GIT/Bananachine/ALU/sprite.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/sprite.v|
+!i113 1
+R5
+R6
+R7
+vtrue_dual_port_ram_single_clock
+R8
+!i10b 1
+!s100 lW6S@YODj[KSn<bST_^dC0
+IZgl@60>N>@?A:FenHchK13
+R2
+R0
+w1701820733
+8C:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v
+FC:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v
+L0 4
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v|
+!i113 1
+R5
+R6
+R7
+vvga
+R8
+!i10b 1
+!s100 Cczdi]agL7Wf?=d3[?8hP2
+I=VX5FRY=<zA0F;Il[i1We1
+R2
+R0
+w1701823830
+8C:/Data/GIT/Bananachine/ALU/vga.v
+FC:/Data/GIT/Bananachine/ALU/vga.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Data/GIT/Bananachine/ALU/vga.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/vga.v|
+!i113 1
+R5
+R6
+R7
+vvga_control
+R1
+!i10b 1
+!s100 77Z0Hl]0b4`bH<Q?M60z<2
+I?RaUgWM[<^VH=?WecniTl3
+R2
+R0
+w1701825260
+8C:/Data/GIT/Bananachine/ALU/vga_control.v
+FC:/Data/GIT/Bananachine/ALU/vga_control.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Data/GIT/Bananachine/ALU/vga_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/vga_control.v|
+!i113 1
+R5
+R6
+R7
+vvga_counter
+R8
+!i10b 1
+!s100 oDhV`ki;La7aMRJI7FkjM1
+IVROcOlZ0jS1f^2eY1=j8?2
+R2
+R0
+w1701822700
+8C:/Data/GIT/Bananachine/ALU/vga_counter.v
+FC:/Data/GIT/Bananachine/ALU/vga_counter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Data/GIT/Bananachine/ALU/vga_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Data/GIT/Bananachine/ALU|C:/Data/GIT/Bananachine/ALU/vga_counter.v|
+>>>>>>> Stashed changes
 !i113 1
 R5
 R6
