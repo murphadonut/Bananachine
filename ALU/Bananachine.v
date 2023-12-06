@@ -13,6 +13,7 @@ module bananachine #(
 	parameter[15:0] P1YP = 6012, 
 	parameter[15:0] P2XP = 6016, 
 	parameter[15:0] P2YP = 6020
+	
 	) (
 	
 	input clk, 
@@ -33,28 +34,30 @@ module bananachine #(
 
 	wire write_to_memory;
 	wire reading_for_load;
-	wire [WIDTH-1:0] data_from_mem;
-	wire [WIDTH-1:0] data_from_mem_vga;
-	wire [WIDTH-1:0] mem_address;
-	wire [WIDTH-1:0] data_to_mem_store;
-	wire [WIDTH-1:0] vga_address;
+	wire [15:0] data_from_mem;
+	wire [15:0] data_from_mem_vga;
+	wire [15:0] mem_address;
+	wire [15:0] data_to_mem_store;
+	wire [15:0] vga_address;
 	wire [15:0] mx;
-	
-	reg mx_en;
-	reg my_en;
-	
-	reg[15:0] my; 
-	reg[15:0] p1x; 
-	reg[15:0] p1y; 
-	reg[15:0] p2x; 
-	reg[15:0] p2y;
-	
+	wire [15:0] my; 
+	wire [15:0] p1x; 
+	wire [15:0] p1y; 
+	wire [15:0] p2x; 
+	wire [15:0] p2y;
 	wire[2:0] vga_counter;
 	
 	vga_counter vga_counter_i(
 		.clk(clk),
 		.reset(reset),
-		.counter(vga_counter)
+		.data_from_mem_vga(data_from_mem_vga),
+		.counter(vga_counter),
+		.mx(mx),
+		.my(my),
+		.p1x(p1x),
+		.p1y(p1y),
+		.p2x(p2x),
+		.p2y(p2y)
 	);
 	
 	mux8 #(WIDTH) mux8_i(
@@ -70,18 +73,29 @@ module bananachine #(
 		.mux8_output(vga_address)		
 	);
 	
-	flopenr #(WIDTH) mx_reg (
-		.clk(clk),
-		.reset(reset),
-		.en(mx_en),
-		.d(data_from_mem_vga),
-		.q(mx)
-	);
+//	ram ram(
+//		.address_a(vga_address),
+//		.address_b(mem_address),
+//		.clock(clk),
+//		.data_a(),
+//		.data_b(data_to_mem_store),
+//		.wren_a(),
+//		.wren_b(write_to_memory),
+//		.q_a(data_from_mem_vga),
+//		.q_b(data_from_mem)
+//	);
 	
-	always @(*) begin
-		if(vga_counter == 3'b000) mx_en <= 1'b1;
-		else mx_en <= 1'b0;
-	end
+	true_dual_port_ram_single_clock #(WIDTH, WIDTH) new_mem (
+		.data_a(), 
+		.data_b(data_to_mem_store),
+		.addr_a(vga_address), 
+		.addr_b(mem_address),
+		.we_a(), 
+		.we_b(write_to_memory), 
+		.clk(clk),
+		.q_a(data_from_mem_vga), 
+		.q_b(data_from_mem)
+	);
 	
 	cpu #(WIDTH) cpu(
 		.clk(clk), 
@@ -93,24 +107,9 @@ module bananachine #(
 		.data_to_mem_store(data_to_mem_store)
 	);
 	
-	basic_mem #(WIDTH) mem( 
-		.data_b(data_to_mem_store),
-		.addr_a(vga_address), 
-		.addr_b(mem_address),
-		.we_b(write_to_memory), 
+	vga vga(
 		.clk(clk),
 		.reset(reset),
-		.reading_for_load(reading_for_load),
-		.q_a(data_from_mem_vga), 
-		.q_b(data_from_mem),
-		.start(start),
-		.left(left),
-		.right(right)
-	);
-	
-	vga #(H_RES, V_RES, COUNTER_BITS, MXP, MYP, P1XP, P1YP, P2XP, P2YP) vga(
-		.clk_50MHz(clk),
-		.clear(reset),
 		.mx(mx),
 		.my(my),
 		.p1x(p1x),

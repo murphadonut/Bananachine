@@ -3,7 +3,9 @@ module datapath #(											// Instantiated by CPU
 	parameter ALU_CONT_BITS = 6, 							// Used by alu_rf
 	parameter REG_BITS = 4, 								// Used by regfile and instruction_reg
 	parameter OP_CODE_BITS = 4, 							// Used by instruction_reg
-	parameter EXT_OP_CODE_BITS = 4) (					// Used by instruction_reg
+	parameter EXT_OP_CODE_BITS = 4						// Used by instruction_reg
+	
+	) (					
 	
 	input 	clk, 												// Used by pc_counter, flopenr, flopr, regfile, instruction_reg
 	input 	reset, 											// Used by pc_counter, flopenr, flopr, alu_rf, instruction_reg
@@ -149,6 +151,7 @@ module datapath #(											// Instantiated by CPU
 	// ALU unit
 	alu_rf #(WIDTH, ALU_CONT_BITS) 	
 	alu_rf_i(
+		.clk(clk),
 		.reset(reset),
 		.a(alu_A_in), 										// Input: source for first value in alu
 		.b(alu_B_in), 										// Input: second source for alu
