@@ -47,10 +47,6 @@ module bananachine #(
 	wire [15:0] p2y;
 	wire[2:0] vga_counter;
 	
-	wire [15:0] something;
-	
-	assign something = mem_address == 16'b1111111111111111 ? (~start == 0 ? 1'b1 : 0) : data_from_mem;
-	
 	vga_counter vga_counter_i(
 		.clk(clk),
 		.reset(reset),
@@ -104,7 +100,10 @@ module bananachine #(
 	cpu #(WIDTH) cpu(
 		.clk(clk), 
 		.reset(reset),
-		.data_from_mem(something),
+		.left(left),
+		.right(right),
+		.start(start),
+		.data_from_mem(data_from_mem),
 		.write_to_memory(write_to_memory),
 		.reading_for_load(reading_for_load),
 		.mem_address(mem_address),  

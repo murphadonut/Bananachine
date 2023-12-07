@@ -16,10 +16,13 @@ module datapath #(											// Instantiated by CPU
 	input		loading, 										// Used to decide what address to access in memory
 	input		storing, 										// See above
 	input		instruction_en,								// Used by instruction_en
+	input		left,
+	input		right,
+	input		start,
 	input		[1 : 0] pc_src, 								// Used as input into pc_src_mux
 	input 	[1 : 0] reg_write_src,						// Used as input into reg_write_src_mux
 	input		[ALU_CONT_BITS - 1 : 0]	alu_cont,		// Used by alu_rf
-	input 	[WIDTH - 1:0] data_from_mem,				// Used by reg_write_src_mux and instruction_reg
+	input 	[WIDTH - 1:0] 	data_from_mem,				// Used by reg_write_src_mux and instruction_reg
 	
 	output	[OP_CODE_BITS - 1 : 0] op_code, 			// Output by instruction_reg
 	output 	[EXT_OP_CODE_BITS - 1 : 0] ext_op_code,// See above
@@ -43,9 +46,33 @@ module datapath #(											// Instantiated by CPU
 	wire 		[WIDTH - 1 : 0] immediate_from_ins_reg;// Comes from instruction_reg and goes to alu_B_mux
 	wire 		[WIDTH - 1 : 0] next_pc;					// Comes from pc_src_mux and goes to pc_flopenr
 	wire 		[WIDTH - 1 : 0] incremented_pc;			// Comes from pc_counter and goes to reg_write_src_mux and pc_src_mux
-		
+	wire check_button;
+	wire [WIDTH - 1 : 0] data_from_mem_modded;
+	wire [WIDTH - 1 : 0] which_buttons_pressed;
+	wire [WIDTH - 1 : 0] previous_address;
+	
 	assign data_to_mem_store = storing ? reg_A : 1'b0;
 	assign mem_address = (loading || storing) ? reg_B : reg_pc;
+	assign check_button = previous_address == 16'b1111111111111111;
+	assign which_buttons_pressed = ~start ? 1'b1 : (~left ? 2'b10 : (~right ? 2'b11 : 0));
+	
+	mux2 #(WIDTH)
+	button_mux(
+		.selection(check_button),
+		.input_1(data_from_mem),
+		.input_2(which_buttons_pressed),
+		.mux2_output(data_from_mem_modded)
+	);
+	
+	flopr #(WIDTH)
+	button_inputs(
+		.clk(clk),
+		.reset(reset),
+		.d(mem_address),
+		.q(previous_address)
+	);
+	
+	
 	
 	// Incrementer by one for program counter
 	pc_counter #(WIDTH)
@@ -141,7 +168,7 @@ module datapath #(											// Instantiated by CPU
 	reg_write_src_mux(
 		.selection(reg_write_src),						// Input: Same basic idea as pc_src_mux but for setting wht value is written to reg A
 		.input_1(alu_out),								// Input:
-		.input_2(data_from_mem),						// Input:
+		.input_2(data_from_mem_modded),						// Input:
 		.input_3(incremented_pc),						// Input:
 		.input_4(),											// Just here so no warnings show up.
 		.mux4_output(file_reg_write_data)			// Output:
@@ -166,7 +193,7 @@ module datapath #(											// Instantiated by CPU
 		.clk(clk),
 		.reset(reset),
 		.instruction_en(instruction_en),
-		.input_instruction(data_from_mem),			// Input: raw assembly instruction
+		.input_instruction(data_from_mem_modded),			// Input: raw assembly instruction
 		.op_code(op_code),								// Output: bits 15 - 12 of instruction
 		.ext_op_code(ext_op_code),						// Output: bits 7 - 4 of instruction
 		.immediate_value(immediate_from_ins_reg),	// Output: oof, probably need to rework this. bits 7 - 0 I think

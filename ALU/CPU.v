@@ -1,5 +1,5 @@
 module cpu #(parameter WIDTH = 16, REG_BITS = 4, OP_CODE_BITS = 4, EXT_OP_CODE_BITS = 4, ALU_CONT_BITS = 6)(
-	input 	clk, reset,
+	input 	clk, reset, left, right, start,
 	input 	[WIDTH - 1 : 0] data_from_mem,
 	output 	write_to_memory, reading_for_load,
 	output 	[WIDTH - 1 : 0] mem_address, data_to_mem_store
@@ -50,6 +50,9 @@ module cpu #(parameter WIDTH = 16, REG_BITS = 4, OP_CODE_BITS = 4, EXT_OP_CODE_B
 		.loading(loading),
 		.storing(storing),
 		.instruction_en(instruction_en),
+		.left(left),
+		.right(right),
+		.start(start),
 		.pc_src(pc_src), 
 		.reg_write_src(reg_write_src),
 		.alu_cont(alu_cont),

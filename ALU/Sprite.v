@@ -73,12 +73,13 @@ module sprite #(
 		.data(spr_rom_data)
 	);
 	
-	always @(posedge clk) begin
-		spr_diff <= (sy - spry_r) >>> SPR_SCALE;  // arithmetic right-shift
-		spr_active <= (spr_diff >= 0) && (spr_diff < SPR_HEIGHT);
-		spr_begin <= (sx >= sprx_r - SX_OFFS);
-		spr_end <= (bmap_x == SPR_WIDTH-1);
-		line_end <= (sx == H_RES - SX_OFFS);
+	// guess this has to blocking in order to display sprites correctly.
+	always @(*) begin
+		spr_diff = (sy - spry_r) >>> SPR_SCALE;  // arithmetic right-shift
+		spr_active = (spr_diff >= 0) && (spr_diff < SPR_HEIGHT);
+		spr_begin = (sx >= sprx_r - SX_OFFS);
+		spr_end = (bmap_x == SPR_WIDTH-1);
+		line_end = (sx == H_RES - SX_OFFS);
 	end
 
 	// sprite state machine

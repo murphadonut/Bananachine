@@ -26,6 +26,9 @@ module bananachine_tb();
 			reset = 0;
 			#20;
 			reset = 1;
+			start = 0;
+			left = 1;
+			right = 1;
 			#20;
 		end
 	
