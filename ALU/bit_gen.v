@@ -57,14 +57,14 @@ module bit_gen (
 	 localparam SPR_FILE2	= "letter_f.mem";
 	 
 	 
-	 always @(*)begin
+	 always @(negedge clk_50m)begin
 		case(vga_counter)
-			3'b001: mx  <= data_from_mem_vga;
-			3'b010: my  <= data_from_mem_vga;
-			3'b011: p1x <= data_from_mem_vga;
-			3'b100: p1y <= data_from_mem_vga;
-			3'b101: p2x <= data_from_mem_vga;
-			3'b110: p2y <= data_from_mem_vga;
+			3'b000: mx  <= data_from_mem_vga;
+			3'b001: my  <= data_from_mem_vga;
+			3'b010: p1x <= data_from_mem_vga;
+			3'b011: p1y <= data_from_mem_vga;
+			3'b100: p2x <= data_from_mem_vga;
+			3'b101: p2y <= data_from_mem_vga;
 			default:;
 		endcase
 	 end

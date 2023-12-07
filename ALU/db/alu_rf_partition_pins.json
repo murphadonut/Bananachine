@@ -74,6 +74,18 @@
 				{
 					"name" : "reset",
 					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "left",
+					"strict" : false
+				},
+				{
+					"name" : "right",
+					"strict" : false
 				}
 			]
 		}

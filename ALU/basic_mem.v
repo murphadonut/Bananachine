@@ -29,37 +29,17 @@ module basic_mem #(
 	always @ (posedge clk) begin
 		//if(~reset) q_a <= 0;
 		/*else*/ q_a <= ram[addr_a];
-//		else begin
-//			if(addr_a ==65535) begin
-//				if(~start) begin
-//				q_a <= 1;
-//				end
-//				else if(~left) begin
-//				q_a <= 2;
-//				end
-//				else if(~right) begin
-//				q_a <= 3;
-//				end
-//				else begin
-//				q_a <= 0;
-//				end
-//			end
-//			else begin
-//			q_a <= ram[addr_a];
-//			end
-//		end
 	end 
 
 	// Port B 
-	always @ (posedge clk) begin
+	always @ (negedge clk) begin
 		//if(~reset) q_b <= 0;
-		//else begin
+
 			if (we_b) begin
 				ram[addr_b] <= data_b;
 				q_b <= data_b;
 			end
 			else q_b <= ram[addr_b];
-		//end
 	end
 
 endmodule

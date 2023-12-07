@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("C:/Data/GIT/Bananachine/ALU/output_files/") File("alu_rf.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/Users/alexa/Documents/3710/BananaMachine/Bananachine/ALU/output_files/") File("alu_rf.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

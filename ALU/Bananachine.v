@@ -88,7 +88,7 @@ module bananachine #(
 		.data_to_mem_store(data_to_mem_store)
 	);
 	
-	basic_mem #(WIDTH) mem( 
+	mem #(WIDTH) mem( 
 		.data_b(data_to_mem_store),
 		.addr_a(vga_address), 
 		.addr_b(mem_address),
