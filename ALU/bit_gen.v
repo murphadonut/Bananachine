@@ -20,10 +20,39 @@ module bit_gen (
     wire hsync, vsync;
     wire frame, line;
 	 
+<<<<<<< Updated upstream
 	 vga_control control(
 		.clk_50MHz(clk_50m),
 		.clear(btn_rst_n),
 		.bright(bright), 
+=======
+	// colour parameters
+	localparam CHANW = 4;         // colour channel width (bits)
+	localparam COLRW = 3*CHANW;   // colour width: three channels (bits)
+	localparam CIDXW = 4;         // colour index width (bits)
+	localparam TRANS_INDX = 'hF;	// transparant colour index
+	localparam BG_COLR = 'h137;	// background colour
+			
+	// sprite parameters
+	localparam SPR_WIDTH  = 16;	// bitmap width in pixels
+	localparam SPR_HEIGHT = 16;	// bitmap height in pixels
+	localparam SPR_WIDTH2  = 8;	// bitmap width in pixels
+	localparam SPR_HEIGHT2 = 8;	// bitmap height in pixels
+	localparam SPR_SCALE  = 2;		// 2^3 = 8x scale
+	localparam SPR_DATAW  = 4;		// bits per pixel
+	localparam SPR_SPX    = 4;		// horizontal speed (pixels/frame)
+	
+	// files
+	localparam SPR_FILE   = "real_banana.mem";
+	localparam SPR_FILE2	= "letter_f.mem";
+	localparam SPR_FILE3	= "letter_m.mem";
+
+	// timings
+	vga_control control(
+		.clk(clk),
+		.reset(reset),
+		.blank_n(blank_n), 
+>>>>>>> Stashed changes
 		.h_sync(hsync), 
 		.v_sync(vsync), 
 		.clk_25MHz(clk_25MHz),
