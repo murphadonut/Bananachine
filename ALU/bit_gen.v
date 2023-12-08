@@ -8,6 +8,7 @@ module bit_gen (
 	input[15:0] p1y, 
 	input[15:0] p2x, 
 	input[15:0] p2y,
+	input[15:0] cont,
 	
 	output blank_n, 
 	output clk_25MHz,
@@ -36,10 +37,10 @@ module bit_gen (
 			
 	// sprite parameters
 	localparam SPR_WIDTH  = 16;	// bitmap width in pixels
-	localparam SPR_HEIGHT = 16;	// bitmap height in pixels
+	localparam SPR_HEIGHT = 10;	// bitmap height in pixels
 	localparam SPR_WIDTH2  = 8;	// bitmap width in pixels
 	localparam SPR_HEIGHT2 = 8;	// bitmap height in pixels
-	localparam SPR_SCALE  = 3;		// 2^3 = 8x scale
+	localparam SPR_SCALE  = 2;		// 2^3 = 8x scale
 	localparam SPR_DATAW  = 4;		// bits per pixel
 	localparam SPR_SPX    = 4;		// horizontal speed (pixels/frame)
 	
@@ -47,6 +48,9 @@ module bit_gen (
 	localparam SPR_FILE   = "real_banana.mem";
 	localparam SPR_FILE2	= "letter_f.mem";
 	localparam SPR_FILE3	= "letter_m.mem";
+	localparam SPR_FILE4 = "monke.mem";
+	
+	
 
 	// timings
 	vga_control control(
@@ -67,7 +71,7 @@ module bit_gen (
 	wire [SPR_DATAW-1:0] pix;
 	sprite #(
 		.CORDW(CORDW),
-		.SPR_FILE(SPR_FILE),
+		.SPR_FILE(SPR_FILE4),
 		.SPR_WIDTH(SPR_WIDTH),
 		.SPR_HEIGHT(SPR_HEIGHT),
 		.SPR_SCALE(SPR_SCALE),
@@ -90,7 +94,7 @@ module bit_gen (
 	wire [SPR_DATAW-1:0] pix2;
 	sprite #(
 		.CORDW(CORDW),
-		.SPR_FILE(SPR_FILE2),
+		.SPR_FILE(SPR_FILE),
 		.SPR_WIDTH(SPR_WIDTH),
 		.SPR_HEIGHT(SPR_HEIGHT),
 		.SPR_SCALE(SPR_SCALE),
@@ -113,7 +117,7 @@ module bit_gen (
 	wire [SPR_DATAW-1:0] pix3;
 	sprite #(
 		.CORDW(CORDW),
-		.SPR_FILE(SPR_FILE3),
+		.SPR_FILE(SPR_FILE),
 		.SPR_WIDTH(SPR_WIDTH),
 		.SPR_HEIGHT(SPR_HEIGHT),
 		.SPR_SCALE(SPR_SCALE),
@@ -130,6 +134,16 @@ module bit_gen (
 		.pix(pix3),
 		.drawing(drawing_p2)
 	);
+	
+	//reg [17:0] bin;
+	wire [23:0] bcd;
+	//assign bin = cont;
+	
+	bin2bcd bcdee(
+		.bin(cont),
+		.bcd(bcd)
+	);
+	
 	
 	reg [SPR_DATAW-1:0] pixel;
 	
@@ -156,13 +170,1170 @@ module bit_gen (
 		drawing_t1 <= (drawing_m && (pix != TRANS_INDX)) || (drawing_p1 && (pix2 != TRANS_INDX)) || (drawing_p2 && (pix3 != TRANS_INDX));
 	 end
 	 
-    // paint colour: yellow sprite, blue background
-    reg [7:0] paint_r, paint_g, paint_b;
+ reg [7:0] paint_r, paint_g, paint_b;
     always @(*) begin
-        paint_r = (drawing_t1) ? {spr_pix_colr[COLRW - 1 : COLRW - CHANW], 4'b0000} : {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
-        paint_g = (drawing_t1) ? {spr_pix_colr[COLRW - 1 - CHANW : COLRW - 2*CHANW], 4'b0000} : {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
-        paint_b = (drawing_t1) ? {spr_pix_colr[COLRW - 1 - 2*CHANW : COLRW - 3*CHANW], 4'b0000} : {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
-    end
+	 if(sx > 540 && sx < 560 && sy < 30 && sy > 0)begin// first number
+		 case(bcd[15:12])
+			4'b0000: begin //0
+			 if(sx < 545) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 555 ) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0001:begin//1
+			 if(sx > 545 && sx < 555) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0010:begin//2
+			 if(sx < 545 && sy > 15) begin //left bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 555 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0011: begin//3
+			  if(sx > 555 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 555 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0100:begin//4
+			 if(sx > 555 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 555 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 545 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0101: begin//5
+			 if(sx < 545 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 555 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			   else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0110: begin//6 
+			 if(sx < 545 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 555 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			   else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 545 && sy > 15) begin //left bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0111:begin//7
+			 if(sx > 555) begin //right
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b1000: begin//8
+			 if(sx < 545) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 555) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b1001:begin//9
+			 if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 545 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 555) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			default: begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			end
+		 endcase
+		end
+		else if(sx > 565 && sx < 585 && sy < 30 && sy > 0)begin// Second number
+		 case(bcd[11:8])
+			4'b0000: begin //0
+			 if(sx < 570) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 580 ) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0001:begin//1
+			 if(sx > 570 && sx < 580) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0010:begin//2
+			 if(sx < 570 && sy > 15) begin //left bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 580 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0011: begin//3
+			  if(sx > 580 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 580 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0100:begin//4
+			 if(sx > 580 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 580 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 570 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0101: begin//5
+			 if(sx < 570 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 580 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			   else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0110: begin//6 
+			 if(sx < 570 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 580 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			   else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 570 && sy > 15) begin //left bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0111:begin//7
+			 if(sx > 580) begin //right
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b1000: begin//8
+			 if(sx < 570) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 580) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b1001:begin//9
+			 if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 570 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 580) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			default: begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			end
+		 endcase
+		end
+		else if(sx > 590 && sx < 610 && sy < 30 && sy > 0)begin// first number
+		 case(bcd[7:4])
+			4'b0000: begin //0
+			 if(sx < 595) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 605 ) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0001:begin//1
+			 if(sx > 595 && sx < 605) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0010:begin//2
+			 if(sx < 595 && sy > 15) begin //left bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 605 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0011: begin//3
+			  if(sx > 605 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 605 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0100:begin//4
+			 if(sx > 605 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 605 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 595 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0101: begin//5
+			 if(sx < 595 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 605 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			   else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0110: begin//6 
+			 if(sx < 595 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 605 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			   else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 595 && sy > 15) begin //left bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0111:begin//7
+			 if(sx > 605) begin //right
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b1000: begin//8
+			 if(sx < 595) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 605) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b1001:begin//9
+			 if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 595 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 605) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			default: begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			end
+		 endcase
+		end
+		else if(sx > 615 && sx < 635 && sy < 30 && sy > 0)begin// first number
+		 case(bcd[3:0])
+			4'b0000: begin //0
+			 if(sx < 620) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 630 ) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0001:begin//1
+			 if(sx > 620 && sx < 630) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0010:begin//2
+			 if(sx < 620 && sy > 15) begin //left bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 630 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0011: begin//3
+			  if(sx > 630 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 630 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0100:begin//4
+			 if(sx > 630 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 630 && sy < 15) begin//right top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 620 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0101: begin//5
+			 if(sx < 620 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 630 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			   else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0110: begin//6 
+			 if(sx < 620 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 630 && sy > 15) begin //right bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			   else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 620 && sy > 15) begin //left bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b0111:begin//7
+			 if(sx > 630) begin //right
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b1000: begin//8
+			 if(sx < 620) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 630) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			4'b1001:begin//9
+			 if(sy < 5) begin //top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx < 620 && sy < 15) begin//left top
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			  else if(sy > 25) begin // bottom
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sy > 12 && sy < 17) begin // middle
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else if(sx > 630) begin
+				paint_r = 8'b11110000;
+				paint_g = 8'b11110000;
+				paint_b = 8'b11110000;
+			 end
+			 else begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			 end
+			 end
+			default: begin
+				paint_r = {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+				paint_g = {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+				paint_b = {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+			end
+		 endcase
+		end
+		else begin
+		 paint_r = (drawing_t1) ? {spr_pix_colr[COLRW - 1 : COLRW - CHANW], 4'b0000} : {BG_COLR[COLRW - 1 : COLRW - CHANW], 4'b0000};
+		 paint_g = (drawing_t1) ? {spr_pix_colr[COLRW - 1 - CHANW : COLRW - 2*CHANW], 4'b0000} : {BG_COLR[COLRW - 1 - CHANW: COLRW - 2*CHANW], 4'b0000};
+		 paint_b = (drawing_t1) ? {spr_pix_colr[COLRW - 1 - 2*CHANW : COLRW - 3*CHANW], 4'b0000} : {BG_COLR[COLRW - 1 - 2*CHANW: COLRW - 3 *CHANW], 4'b0000};
+		end
+	 end
 
     // display colour: paint colour but black in blanking interval
     reg [7:0] display_r, display_g, display_b;

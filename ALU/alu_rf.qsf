@@ -100,6 +100,11 @@ set_location_assignment PIN_B11 -to vga_h_sync
 set_location_assignment PIN_AA15 -to left
 set_location_assignment PIN_W15 -to right
 set_location_assignment PIN_Y16 -to start
+set_global_assignment -name EDA_TEST_BENCH_NAME bananachine_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_FILE alu_rf_tb.v -section_id alu_rf_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE vga_tb.v -section_id vga_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE bananachine_tb.v -section_id bananachine_tb
+set_global_assignment -name SOURCE_FILE monke.mem
 set_global_assignment -name SOURCE_FILE letter_m.mem
 set_global_assignment -name VERILOG_FILE vga_tb.v
 set_global_assignment -name SOURCE_FILE real_banana.mem
@@ -129,9 +134,6 @@ set_global_assignment -name VERILOG_FILE clut_mem.v
 set_global_assignment -name VERILOG_FILE vga_counter.v
 set_global_assignment -name MIF_FILE loaded_mem.mif
 set_global_assignment -name QIP_FILE ram.qip
-set_global_assignment -name EDA_TEST_BENCH_NAME bananachine_tb -section_id eda_simulation
 set_global_assignment -name VERILOG_FILE true_dual_port_ram_single_clock.v
-set_global_assignment -name EDA_TEST_BENCH_FILE alu_rf_tb.v -section_id alu_rf_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE vga_tb.v -section_id vga_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE bananachine_tb.v -section_id bananachine_tb
+set_global_assignment -name VERILOG_FILE bin2bcd.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

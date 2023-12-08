@@ -12,7 +12,8 @@ module bananachine #(
 	parameter[15:0] P1XP = 6008, 
 	parameter[15:0] P1YP = 6012, 
 	parameter[15:0] P2XP = 6016, 
-	parameter[15:0] P2YP = 6020
+	parameter[15:0] P2YP = 6020,
+	parameter[15:0] CONT = 6024
 	
 	) (
 	
@@ -45,6 +46,7 @@ module bananachine #(
 	wire [15:0] p1y; 
 	wire [15:0] p2x; 
 	wire [15:0] p2y;
+	wire [15:0] cont;
 	wire[2:0] vga_counter;
 	
 	vga_counter vga_counter_i(
@@ -57,7 +59,8 @@ module bananachine #(
 		.p1x(p1x),
 		.p1y(p1y),
 		.p2x(p2x),
-		.p2y(p2y)
+		.p2y(p2y),
+		.cont(cont)
 	);
 	
 	mux8 #(WIDTH) mux8_i(
@@ -68,7 +71,7 @@ module bananachine #(
 		.input_4(P1YP),
 		.input_5(P2XP),
 		.input_6(P2YP),
-		.input_7(),
+		.input_7(CONT),
 		.input_8(),
 		.mux8_output(vga_address)		
 	);
@@ -119,6 +122,7 @@ module bananachine #(
 		.p1y(p1y),
 		.p2x(p2x),
 		.p2y(p2y),
+		.cont(cont),
 		.clk_25MHz(vga_clk),
 		.h_sync(vga_h_sync),
 		.v_sync(vga_v_sync),

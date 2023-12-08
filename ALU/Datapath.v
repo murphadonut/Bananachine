@@ -54,7 +54,7 @@ module datapath #(											// Instantiated by CPU
 	assign data_to_mem_store = storing ? reg_A : 1'b0;
 	assign mem_address = (loading || storing) ? reg_B : reg_pc;
 	assign check_button = previous_address == 16'b1111111111111111;
-	assign which_buttons_pressed = ~start ? 1'b1 : (~left ? 2'b10 : (~right ? 2'b11 : 0));
+	assign which_buttons_pressed = ~start ? 16'b1 : (~left ? 16'b10 : (~right ? 16'b11 : 16'b0));
 	
 	mux2 #(WIDTH)
 	button_mux(

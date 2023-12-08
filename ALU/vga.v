@@ -8,6 +8,7 @@ module vga (
 	input[15:0] p1y, 
 	input[15:0] p2x, 
 	input[15:0] p2y,
+	input[15:0] cont,
 	
 	output clk_25MHz, 
 	output h_sync, 
@@ -30,6 +31,7 @@ module vga (
 		.p1y(p1y),
 		.p2x(p2x),
 		.p2y(p2y),
+		.cont(cont),
 		.blank_n(blank_n),
 		.vga_hsync(h_sync),
 		.vga_vsync(v_sync),
