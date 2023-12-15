@@ -19,6 +19,7 @@ vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/B
 vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/pc_counter.v}
 vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/vga.v}
 vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/vga_counter.v}
+vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/bin2bcd.v}
 vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/reg_file.v}
 vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/clut_mem.v}
 vlog -vlog01compat -work work +incdir+C:/Data/GIT/Bananachine/ALU {C:/Data/GIT/Bananachine/ALU/true_dual_port_ram_single_clock.v}
