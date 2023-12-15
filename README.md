@@ -1,4 +1,7 @@
 
+# Bananachine
+
+A very simplified computer to run a Doodle Jump inspired game that uses a monkey and bananas. 
 ## Files Submitted
 - vga.v: Container class for bit_gen, really could have been bypassed.
 - vga_tb.v: Testbench for vga, mainly used to view timings.
@@ -23,3 +26,10 @@
 - banana.txt: Text format of the assembly code with comments.
 - alu_rf.v: ALU module, instantiated by the data path
 - alu_rf_tb.v: Testbench for testing basic ALU functions.
+## Authors
+
+- [@murphadonut](https://www.github.com/murphadonut)
+- [@Cromie1](https://github.com/Cromie1)
+- [@kylakunz](https://github.com/kylakunz)
+- [@Mickey-Cloud](https://github.com/Mickey-Cloud)
+
